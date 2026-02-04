@@ -1,4 +1,4 @@
-# Ossie
+# Ossie Nwokedi
 
 ## Context for AI
 Ossie is a front-end engineer in the Merchant team, graded at level 3, equivalent to a mid-to-senior level.  He is based in London.
@@ -42,4 +42,5 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Running Notes
 
-2026-02-02 1:1. Discussed appraisal feedback.
+### 2026-02-02 1:1.
+Discussed appraisal feedback.
