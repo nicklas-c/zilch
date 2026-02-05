@@ -9,6 +9,7 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * VP of Engineering.
 * Based in Krakow.
 * My line manager.
+* Involved in memberships incident management (declared P4 #incident-362 for billing race condition).
 
 ### Alex Murphy
 * Front End Engineer (Level 3) on the Merchant Team.
@@ -25,11 +26,13 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Back End Engineer (Level 4) on the Merchant Team.
 * Based in Krakow.
 * Reports to me.
+* Knowledge of fee service and fee calculations.
 
 ### Michal Baran
 * Back End Engineer (Level 3) on the Merchant Team.
 * Based in London.
 * Reports to me.
+* Involved in rewards service work for memberships.
 
 ### Nick Holt
 * Back End Engineer (Level 3) on the Merchant Team.
@@ -40,6 +43,7 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * QA Engineer on the Merchant Team.
 * Based in London.
 * Reports to QA Manager, with dotted reporting line to me.
+* Involved in e2e test updates for memberships/subscriptions.
 
 ### Phil Stephenson
 * DevOps Engineer (Level 4).
@@ -65,7 +69,7 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 ### Zac Barclay
 * Product Manager for the Merchant team.
 * Some responsibility across multi-team projects.
-* Leading product involvement in Memberships project.
+* Leading product involvement in Memberships project, including Zilch Pro.
 * Based in London.
 * Close partner on leading Merchant team.
 
@@ -84,3 +88,16 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 ### Rory Fielding
 * Front End Engineer on the Retain team.
 * Based in London.
+* Involved in memberships/subscriptions front-end work.
+
+### Rob Nelson
+* Coordinated Plus and Physical Cards launches across teams.
+* Active in #subscriptions-tech channel.
+
+### Craig Main
+* Payments team.
+* Key contact for billing, payment schedules, and fee-related queries.
+
+### Ozzie Yuce
+* SVP of Product.
+* Key decision-maker on memberships launch criteria (e.g. partnership requirements for Pro).

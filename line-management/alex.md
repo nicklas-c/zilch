@@ -26,7 +26,7 @@ Front End Engineer (Level 3) on the Merchant Team, based in London. Left the com
 *Critical feedback (pressed for):*
 - Thinks I'm a blocker quite often.
 - Sometimes intentional and appropriate — being the right quality gate.
-- Sometimes it's responsiveness — especially in Slack threads.
+- Sometimes it's lack of responsiveness — especially in Slack threads.
 - I acknowledged finding Slack to be a firehose of information.
 - He couldn't come up with specific examples but will consider and get back to me.
 
