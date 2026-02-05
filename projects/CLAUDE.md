@@ -22,6 +22,7 @@ Your role is to:
     * H2 Personnel: People involved in the project
     * H2 Running Notes: The live list of notes built incrementally
         * H3: Date per header, with notes underneath
+        * Order by ascending date order, with older notes at the top so that the natural reading order is downward.
 * other files in each project folder are reference information.  Typical sources will be:
     * Copies of Confluence pages
     * Transcripts from slack channels

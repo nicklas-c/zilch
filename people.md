@@ -21,6 +21,7 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Front End Engineer (Level 3) on the Merchant Team.
 * Based in London.
 * Reports to me.
+* Currently assigned to ZILCH-47571 (Pro product line taxonomy in Content Stack).
 
 ### Jacek Zanko
 * Back End Engineer (Level 4) on the Merchant Team.
@@ -42,7 +43,7 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 ### Tom McKenzie
 * QA Engineer on the Merchant Team.
 * Based in London.
-* Reports to QA Manager, with dotted reporting line to me.
+* Reports to Nikos Sofianos (QA Manager), with dotted reporting line to me.
 * Involved in e2e test updates for memberships/subscriptions.
 
 ### Phil Stephenson
@@ -77,10 +78,12 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Product Delivery Manager (in practice, provides project management).
 * Based in London.
 * Former scrum master for the DevOps team.
+* Engineering Lead on Visa Flex project.
 
 ### Stefan
 * Front End Engineer joining the Merchant Team.
 * Alex Murphy's backfill.
+* Start date: 23 March 2026.
 
 ### Chris Walker
 * Competency lead for Front End Engineering.
@@ -101,3 +104,26 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 ### Ozzie Yuce
 * SVP of Product.
 * Key decision-maker on memberships launch criteria (e.g. partnership requirements for Pro).
+
+### Nikos Sofianos
+* QA Manager.
+* Tom McKenzie's line manager.
+* Running a defect analysis project.
+
+### Tomasz Więckowski
+* Decisioning team.
+* Key contributor to Pro subscription/product foundation work.
+* Built upgrade/downgrade flows, product definitions, targeting segments.
+
+### Paweł Pęcikiewicz
+* Mobile app developer (Retain team).
+* Working on Pro-related app UI (Compare Plans, My Plans pages).
+
+### Sean Hederman
+* ExCo Sponsor for Visa Flex project.
+
+### Saurabh Raman
+* Project Owner for Visa Flex.
+
+### Andrea Ponte Martins
+* Product GM for Visa Flex.

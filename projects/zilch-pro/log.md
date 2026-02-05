@@ -63,6 +63,34 @@ Zilch Pro is the premium-tier paid membership at **£7.99/month**, positioned ab
 - T&Cs
 - Partner offers in UX
 
+### Jira Status (as of 2026-02-05)
+
+**Summary:** ~50 tickets in ZILCH project related to Pro.
+
+| Status | Count |
+|--------|-------|
+| Done/Completed | ~18 |
+| Ready for Release | ~8 |
+| In PR / Ready for Testing | ~4 |
+| In Dev | ~10 |
+| Ready for Dev / Created | ~15 |
+| Rejected | ~5 |
+
+**Key work streams:**
+- **Product/subscription foundation** — largely complete (Tomasz Więckowski)
+- **Tier migration (upgrade/downgrade)** — mostly complete; [ZILCH-38927](https://payzilch.atlassian.net/browse/ZILCH-38927) (Plus→Pro upgrade) still in PR
+- **Mobile app UI** — actively in progress (Paweł Pęcikiewicz, Rory Fielding)
+- **Pro card design/issuing** — pending, P2 High priority
+- **Comms/marketing** — mostly done
+- **T&Cs** — [ZILCH-46803](https://payzilch.atlassian.net/browse/ZILCH-46803) still Created (not started)
+- **Analytics/Mixpanel** — [ZILCH-47423](https://payzilch.atlassian.net/browse/ZILCH-47423) still Created
+
+**Merchant team involvement:**
+- [ZILCH-47117](https://payzilch.atlassian.net/browse/ZILCH-47117) — Zilch Pro Merchant UI Updates — In Dev (unassigned)
+- [ZILCH-47571](https://payzilch.atlassian.net/browse/ZILCH-47571) — Add product line taxonomy for Pro in Content Stack — In Dev (Ossie Nwokedi)
+
+**Key ticket:** [ZILCH-45705](https://payzilch.atlassian.net/browse/ZILCH-45705) — Zilch Pro (P1 Highest) — owned by Zac Barclay
+
 ### Technical Notes
 - Subscriptions managed by **Product Service**
 - Coordinates with Payments (billing) and Customer (product alignment)
@@ -125,6 +153,10 @@ Key metrics: GP per user, penetration, GMV per user, adoption/retention rates, b
 
 ## Running Notes
 
+### 2026-02-04
+
+Project log created.
+
 ### 2026-02-05
 
 **Launch date now uncertain.** Two factors:
@@ -135,6 +167,29 @@ Key metrics: GP per user, penetration, GMV per user, adoption/retention rates, b
    - **(a) Pause**: Hold work for completion at a later date.
    - **(b) Reduced scope**: Finish current benefits, launch with lower price and lesser value proposition.
 
-### 2026-02-04
+**Open question**: What cohorts do we release to? Rollout strategy needs clarification.
 
-Project log created.
+**Catch up meeting prep — talking points:**
+1. Timeline for pivot decision — when will we know if it's pause vs reduced scope?
+2. If reduced scope, what features get dropped?
+3. Rollout strategy — what cohorts do we release to?
+4. What's technically involved in a release?
+5. Share Jira query — cross-team view of all Pro tickets
+
+**Pro sync meeting notes:**
+
+*X-functional updates:*
+- **Partnerships**: Luke leading. Some opportunities moving forward in the pipeline. Luke will attend future meetings with sales updates. Dates still hard to predict. If things continue as-is, would be an iteration 12 launch.
+- **Customer support**: Talking to business partners about differentiating tiers for enhanced support.
+- **Marketing (Pro card)**: Assets still not complete. Was planned for next sprint but pushed back due to shifting priorities.
+- **Marketing (Pro marketing)**: Assets in progress — should be done by end of next week.
+- **Snooze**: Product discussing what snooze would look like. Possible option to go to market without snooze, but no decision taken.
+- **T&Cs**: Still have lead time. Not started yet.
+- **Upgrade/downgrade**: Dependencies on Payments and Decisioning. *[Status unclear — need to clarify asynchronously.]*
+
+*Other:*
+- Reviewed Jira query showing tickets that need to be completed.
+- Raised topic of technical steps for rollout and cohort plan. Will meet next week with Zac, Ethan, and other EMs to figure that out.
+- Noted smooth release of Memberships × Physical Cards to GA yesterday.
+
+*(Potential pivot still confidential — not discussed.)*
