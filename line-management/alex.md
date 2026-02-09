@@ -1,11 +1,15 @@
 # Alex Murphy
 
 ## Context for AI
-Front End Engineer (Level 3) on the Merchant Team, based in London. Left the company on 6th Feb 2025.
+Front End Engineer (Level 3) on the Merchant Team, based in London. Left the company on 6th Feb 2026.
 
 ## Running Notes
 
-### 2025-02-04 Exit Interview
+### 2026-02-06 Handover Complete
+
+ContentStack usage documented and walked through in meeting with FE engineers.
+
+### 2026-02-04 Exit Interview
 
 **Preamble**
 - Offered him the chance to discuss anything before my questions.

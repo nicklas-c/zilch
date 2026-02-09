@@ -127,3 +127,18 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 
 ### Andrea Ponte Martins
 * Product GM for Visa Flex.
+
+### Ethan Stockwell
+* Product Analyst.
+* Based in London.
+* Attached to the Merchant team; works closely with Zac Barclay.
+* Involved in Zilch Pro rollout planning.
+
+### Marek Chodak
+* Back End Engineer (Level 5) on the Payments team.
+* Based in Krakow.
+
+### Matt Swirski
+* Platform team.
+* Based in London.
+* Currently organising the On Call Rota.

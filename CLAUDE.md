@@ -64,6 +64,11 @@ You should update this file with details you infer from content on projects, etc
     * Make decisions on my behalf.
     * Create content where you're deciding what it should say — help me work through that instead. Recording observations I share with you is fine.
 
+### Proactivity
+* When adding new information to a file, check existing entries and ask for any commonly-held details that are missing.
+* When I mention needing to do something, proactively add it to tasks.md.
+* Ask clarifying questions rather than recording incomplete information.
+
 ### Communication Style
 * Use British English
     * Applies to spellings: e.g. "colour", not "color".

@@ -189,7 +189,7 @@ Project log created.
 
 *Other:*
 - Reviewed Jira query showing tickets that need to be completed.
-- Raised topic of technical steps for rollout and cohort plan. Will meet next week with Zac, Ethan, and other EMs to figure that out.
+- Raised topic of technical steps for rollout and cohort plan. Will meet next week with Zac, Ethan (Product Analyst), and EMs to figure that out.
 - Noted smooth release of Memberships × Physical Cards to GA yesterday.
 
 *(Potential pivot still confidential — not discussed.)*
