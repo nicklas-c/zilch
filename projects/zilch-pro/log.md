@@ -16,44 +16,60 @@ Zilch Pro is the premium-tier paid membership at **£7.99/month**, positioned ab
 |-----------|------|
 | Staff testing enabled | 16 February 2026 |
 | Last FE release (with 2 weeks ramping) | 16 February 2026 |
-| Customer launch | **Uncertain** (was 4 March 2026) |
-| Target: 2.3% MAU adoption | 1 April 2026 |
+| MVP launch | **Q2 2026 (probably May)** |
+| V1 launch | **H2 2026** |
+| Target: 2.3% MAU adoption | 1 April 2026 (likely outdated) |
 
-**Note:** Launch date is uncertain due to partnership dependencies and a likely strategic pivot. See running notes for 2026-02-05.
+**Note (11 Feb):** Original timelines defunct. Resource being moved off Pro. Scope reduced for MVP: auto-snooze and physical card dropped (likely return in V1). Partnerships remain in scope but deals not yet closed.
 
 ### Tier Comparison
 | Feature | Standard (Free) | Plus (£3.99) | Pro (£7.99) |
 |---------|----------------|--------------|-------------|
-| Physical Card | £4.99 | Free | Free Pro card |
+| ~~Physical Card~~ | £4.99 | Free | ~~Free Pro card~~ (dropped from MVP; likely V1) |
 | Customer Service | Standard | Priority | 24/7 Premier Support |
 | Tastecard | ❌ | ✅ | ✅ |
 | Partner Perks | ❌ | ❌ | ✅ |
-| Free Snoozes | ❌ | ❌ | 3/month |
-| Milestone Rewards | ❌ | ❌ | ✅ |
+| ~~Free Snoozes~~ | ❌ | ❌ | ~~3/month~~ (dropped from MVP; likely V1) |
+| ~~Milestone Rewards~~ | ❌ | ❌ | ~~✅~~ Descoped |
 | Rewards (unlock & pay now) | Min 2% | Min 3% | Min 4% |
 
 ### Key Pro Benefits
 - **24/7 Premier Support** — top-tier customer service
 - **Higher Rewards** — minimum 4% on debit purchases
-- **Free Snoozes** — 3 per month (payment deferrals)
+- ~~**Free Snoozes** — 3 per month (payment deferrals)~~ Dropped from MVP; likely V1
 - **Partner Perks** — exclusive perks across supermarkets, travel, food, electronics
-- **Milestone Rewards** — bonus rewards for early repayment
-- **Free Pro Card** — premium physical card
+- ~~**Milestone Rewards**~~ — descoped early due to insufficient value vs effort. May return as a separate initiative in future.
+- ~~**Free Pro Card** — premium physical card~~ Dropped from MVP; likely V1
 
 ### Delivery Status (as of Iteration 11)
+
+#### Team Ownership
+| Feature | Primary Team | Notes |
+|---------|-------------|-------|
+| Higher Rewards | Decisioning | Rate config in DB would normally fall to Merchant — **needs verifying** |
+| Free Auto Snooze | Payments | Blocked on compliance approval and product definition |
+| Partnerships | Merchant | Blocked on business deals closing |
+| Subscription/Tier Management | Product Service / Decisioning | |
+| Mobile App UI | Retain | |
+| Merchant UI Updates | Merchant | |
+| Premier Support | Ops (not engineering) | |
+| Physical Card | Cross-team | Engineering done; remaining work is marketing/design |
+| Tastecard | — | Inherited from Plus; no Pro-specific work |
+| Digital Card to Wallet | — | Inherited from Plus; no Pro-specific work |
+| ~~Milestone Rewards~~ | — | Descoped — dropped early for insufficient value vs effort. May return as a separate initiative. |
+
 **Complete:**
 - Card design and ordering
 - Pro card issuance journeys
-- Digital card to wallet
 - Merchant domain touchpoints identified
 - Retain domain touchpoints identified
-- Higher rewards implementation
+- Higher rewards implementation (pending verification of rate config)
 - Premier support setup
 
 **In Progress:**
 - Design Pro UX
 - Snooze (compliance approval)
-- Physical card
+- Physical card (marketing/design only — engineering done)
 - Commercial value prop (partnerships)
 - Marketing assets
 
@@ -63,31 +79,38 @@ Zilch Pro is the premium-tier paid membership at **£7.99/month**, positioned ab
 - T&Cs
 - Partner offers in UX
 
-### Jira Status (as of 2026-02-05)
+### Jira Status (as of 2026-02-11, from [filter 20356](https://payzilch.atlassian.net/issues/?filter=20356))
 
-**Summary:** ~50 tickets in ZILCH project related to Pro.
+**Summary:** 50 tickets tracked in the Pro filter.
 
 | Status | Count |
 |--------|-------|
-| Done/Completed | ~18 |
-| Ready for Release | ~8 |
-| In PR / Ready for Testing | ~4 |
-| In Dev | ~10 |
-| Ready for Dev / Created | ~15 |
-| Rejected | ~5 |
+| Done | 20 |
+| Ready for Release | 5 |
+| In QA | 1 |
+| In PR | 1 |
+| In Dev | 3 |
+| Ready for Dev | 4 |
+| Created (not started) | 13 |
+| Rejected | 3 |
+
+**By category:** To Do: 17 | In Progress: 5 | Done (incl. Ready for Release, Rejected): 28
 
 **Key work streams:**
-- **Product/subscription foundation** — largely complete (Tomasz Więckowski)
-- **Tier migration (upgrade/downgrade)** — mostly complete; [ZILCH-38927](https://payzilch.atlassian.net/browse/ZILCH-38927) (Plus→Pro upgrade) still in PR
-- **Mobile app UI** — actively in progress (Paweł Pęcikiewicz, Rory Fielding)
-- **Pro card design/issuing** — pending, P2 High priority
-- **Comms/marketing** — mostly done
+- **Product/subscription foundation** — largely complete (Tomasz Więckowski, Tomasz Michalski)
+- **Tier migration (upgrade/downgrade)** — downgrade done; un-downgrade BE ([ZILCH-47599](https://payzilch.atlassian.net/browse/ZILCH-47599)) now In PR (Tomasz Więckowski), FE ([ZILCH-47613](https://payzilch.atlassian.net/browse/ZILCH-47613)) Ready for Dev
+- **Mobile app UI** — Compare Plans in QA (Paweł), My Plans and structure still In Dev (Paweł)
+- **Pro card design/issuing** — [ZILCH-46939](https://payzilch.atlassian.net/browse/ZILCH-46939) deprioritised to P3 Medium, still Created; [ZILCH-48046](https://payzilch.atlassian.net/browse/ZILCH-48046) (card designs UPDATE) also Created
+- **Comms/marketing** — mostly done; cancellation email ([ZILCH-46331](https://payzilch.atlassian.net/browse/ZILCH-46331)) and subscription resumed email ([ZILCH-48086](https://payzilch.atlassian.net/browse/ZILCH-48086)) still not started
 - **T&Cs** — [ZILCH-46803](https://payzilch.atlassian.net/browse/ZILCH-46803) still Created (not started)
 - **Analytics/Mixpanel** — [ZILCH-47423](https://payzilch.atlassian.net/browse/ZILCH-47423) still Created
+- **Subscription endpoint rework** — two new Created tickets: [ZILCH-48269](https://payzilch.atlassian.net/browse/ZILCH-48269) (split start/resume), [ZILCH-48263](https://payzilch.atlassian.net/browse/ZILCH-48263) (rework cancel endpoint)
 
 **Merchant team involvement:**
-- [ZILCH-47117](https://payzilch.atlassian.net/browse/ZILCH-47117) — Zilch Pro Merchant UI Updates — In Dev (unassigned)
-- [ZILCH-47571](https://payzilch.atlassian.net/browse/ZILCH-47571) — Add product line taxonomy for Pro in Content Stack — In Dev (Ossie Nwokedi)
+- [ZILCH-47571](https://payzilch.atlassian.net/browse/ZILCH-47571) — Add product line taxonomy for Pro in ContentStack — **Ready for Release** (Ossie Nwokedi)
+- [ZILCH-47687](https://payzilch.atlassian.net/browse/ZILCH-47687) — Add Zilch Pro to Rewards Earned on Purchases Page — **In Dev** (Ossie Nwokedi)
+
+**Note:** [ZILCH-47117](https://payzilch.atlassian.net/browse/ZILCH-47117) (Zilch Pro Merchant UI Updates) is the Merchant team's epic — doesn't appear in the filter as it tracks PBIs, not epics.
 
 **Key ticket:** [ZILCH-45705](https://payzilch.atlassian.net/browse/ZILCH-45705) — Zilch Pro (P1 Highest) — owned by Zac Barclay
 
@@ -130,6 +153,9 @@ Two parallel cohorts:
 2. **Plus MAU Cohort (10k)** — statistically powered measurement of financial impact
 
 Key metrics: GP per user, penetration, GMV per user, adoption/retention rates, benefit utilisation.
+
+### Jira Filter
+[Zilch Pro — all tickets](https://payzilch.atlassian.net/issues/?filter=20356) — cross-team filter maintained by the project. More reliable than text search; includes infrastructure/plumbing tickets that don't mention "Pro" explicitly.
 
 ### Key Confluence Pages
 - [Zilch Pro Product Overview](https://payzilch.atlassian.net/wiki/spaces/ZP/pages/4566122730/Zilch+Pro+Product+Overview)
@@ -193,3 +219,55 @@ Project log created.
 - Noted smooth release of Memberships × Physical Cards to GA yesterday.
 
 *(Potential pivot still confidential — not discussed.)*
+
+### 2026-02-11
+
+**Pre-meeting Jira review** using [filter 20356](https://payzilch.atlassian.net/issues/?filter=20356).
+
+**Movement since 5th Feb:**
+- ZILCH-46362 (Compare Plans page): In PR → **in QA** (Paweł)
+- ZILCH-47571 (ContentStack taxonomy): In Dev → **Ready for Release** (Ossie)
+- ZILCH-47687 (Pro rewards label): Ready for Dev → **In Dev** (Ossie picked it up)
+- ZILCH-47599 (BE un-downgrade): new, **In PR** today (Tomasz Więckowski)
+- ZILCH-47871 (tier migration tech design): Ready for Testing → **Done**
+- ZILCH-46622 (multiple card designs CREATE): Ready for Release → **Done**
+- ZILCH-46939 (Pro card designs BE): priority dropped from P2 High to **P3 Medium**, still Created
+
+**New tickets since last review:**
+- ZILCH-48269 — Split subscription start endpoint into START and RESUME (Created)
+- ZILCH-48263 — Rework subscription cancel endpoint (Created)
+- ZILCH-48086 — Send email on subscription resume (Ready for Dev)
+- ZILCH-48046 — Support multiple card designs UPDATE (Created)
+- ZILCH-47999 — Clean up membership-specific feature availability logic (Created)
+
+**Observations:**
+- Only 5 tickets genuinely in progress; 17 still in To Do. The "in progress" work is concentrated in Retain (Paweł) and Merchant (Ossie).
+- ZILCH-47117 (Merchant UI Updates) is the epic — doesn't appear as the filter tracks PBIs only.
+- All 13 Created tickets and all 4 Ready for Dev tickets are unassigned.
+- Pro card work has been deprioritised — aligns with potential pivot/reduced scope direction.
+
+**Questions for Pro status meeting:**
+1. What's the latest on the pivot decision?
+2. Upgrade/downgrade status with Payments and Decisioning — still unclear from 5th Feb.
+3. ZILCH-47524 (targeting service segment conflict) — who owns resolving this before rollout?
+4. Release plan — what's the sequence for the 5 Ready for Release items?
+5. ZILCH-46727 (only apply additional rewards for loans in continuous subscription) — Ready for Dev, unassigned, no Merchant backlog items. Chased Marcin and Tommy on 11 Feb.
+
+**Pro status meeting notes:**
+
+*Partnerships:*
+- Still exploring options. Aligns well with the value prop. Customer survey going live soon.
+- Luke Williams (Senior Sales & Partnerships Manager) shared current prospects: **Deliveroo**, **Tesco** (free grocery deliveries), and **Railcard** (reduced fare rail tickets). Also some retailers.
+
+*Strategic / scope update (from Zac):*
+- Original timelines now defunct. Some resource being moved off Pro onto other initiatives.
+- **Scope reductions for MVP:** Free auto-snooze dropped. Physical card dropped.
+- **New timeline:** MVP in Q2 (probably May), V1 in H2. Physical cards and auto-snooze would likely return in V1.
+- Kieren: no huge movement on UK partnership designs yet.
+- Mike Davis noted a couple of engineering dependencies — need to find out what they are.
+- Tamara: her work has been descoped with the MVP scope change.
+
+*My actions:*
+- Coordinate with Zac and Ethan on rollout plan from a product perspective (A/B testing, cohorts, etc.).
+- Once that's clear, coordinate with other EMs to understand the technical steps for rollout.
+- Document the end-to-end release plan when the above is done.

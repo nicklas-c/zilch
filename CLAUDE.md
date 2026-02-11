@@ -5,7 +5,7 @@ This repository is for me to use in the context of my role as an Engineering Man
 
 Some key functions of the system are:
 * Situational Awareness: helping answer "where are we" and "how did we get here" on any of a number of projects.
-* Line Management: helping keep note of observations about staff and identifying patterns I can use in appraisals and one-to-ones.
+* Relationships: helping keep note of observations about people I work with — reports, manager, peers, architects, stakeholders — and identifying patterns I can use in appraisals, one-to-ones, and other interactions.
 * Process Facilitation: helping me keep up-to-date and prepared for planning, review, and other meetings.
 * Continuous Improvement: helping me reflect and introspect on where I can make improvements.
 * Time and Task Management: helping me keep track of tasks I need to do, and to prioritise them.
@@ -25,10 +25,10 @@ Files containing reference information that cuts across domains live in the root
 
 ### Domain Folders
 
-#### line-management/
-Documentation and notes for my role as an Engineering Manager. Contains individual files for each direct report, tracking 1:1 notes, performance observations, and appraisal content. Also supports upwards management with my VP of Engineering.
+#### relationships/
+Notes on individuals I work with — direct reports, my manager, peers, architects, stakeholders, and other cross-functional contacts. Contains individual files per person, tracking 1:1 notes, observations, and appraisal content where relevant.
 
-*If a prompt appears to be a comment, observation, question, or update about one of my reports or my line manager, bias towards working in this folder*
+*If a prompt appears to be a comment, observation, question, or update about someone I work with — whether a report, my manager, a peer, or a stakeholder — bias towards working in this folder*
 
 #### projects/
 Documentation and notes on active and past projects, organised into subfolders by project.

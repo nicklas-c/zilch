@@ -35,19 +35,8 @@ Attendees: QA, EM, PM
 
 - [ ] Rewrite ticket descriptions and ACs into standard format according to guidelines
 - [ ] Bring tickets up to standard to meet Readiness for Refinement (see gate criteria below)
-- [ ] Move passing tickets to "Ready for Refinement" status
+- [ ] Move passing tickets to PREPARED (see gate criteria in [Backlog Management](backlog-management.md) — PREPARED state)
 - [ ] Notify team of candidates for upcoming refinement so they can pre-review if they wish
-
-### Ready for Refinement Gate Criteria
-
-For a ticket to be Ready for Refinement:
-
-- [ ] Has label(s) indicating functions required: `frontend`, `backend`, `qa` (or combination)
-- [ ] Owner field filled: `KTLO`, `Product Initiative`, or `Engineering Initiative`.
-- [ ] Story points field cleared.
-- [ ] Description follows story-authoring guidelines.
-- [ ] Acceptance criteria follow AC guidelines.
-- [ ] Has a parent epic, and the epic choice makes sense.
 
 ### If a Ticket Doesn't Pass the Gate
 

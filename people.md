@@ -34,11 +34,14 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Based in London.
 * Reports to me.
 * Involved in rewards service work for memberships.
+* Moving to the Spend Platform team on 24 Feb 2026.
 
 ### Nick Holt
 * Back End Engineer (Level 3) on the Merchant Team.
 * Based in London.
-* Reports to Me.
+* Reports to me.
+* Lead engineer on the Tastecard/offer-service integration. Built and owns the offer-service.
+* Also working on rewards expiry. Scope grew outside normal process during sprint 11.2.
 
 ### Tom McKenzie
 * QA Engineer on the Merchant Team.
@@ -80,13 +83,15 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Former scrum master for the DevOps team.
 * Engineering Lead on Visa Flex project.
 
-### Stefan
-* Front End Engineer joining the Merchant Team.
-* Alex Murphy's backfill.
+### Stefan Amarie
+* Front End Engineer (Level 5) joining the Merchant Team.
+* Alex Murphy's backfill — but more than a like-for-like replacement: will be the most senior FE engineer on the team and the first L5 FE at Zilch.
+* Previous FinTech experience, though most recent role is not FinTech.
 * Start date: 23 March 2026.
 
 ### Chris Walker
 * Competency lead for Front End Engineering.
+* Reports to Rob Nelson.
 
 ### Rory Fielding
 * Front End Engineer on the Retain team.
@@ -94,6 +99,8 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Involved in memberships/subscriptions front-end work.
 
 ### Rob Nelson
+* VP of Engineering.
+* Directly manages the Onboarding team (no EM beneath him for that team).
 * Coordinated Plus and Physical Cards launches across teams.
 * Active in #subscriptions-tech channel.
 
@@ -109,6 +116,9 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * QA Manager.
 * Tom McKenzie's line manager.
 * Running a defect analysis project.
+
+### Tommy Kwok
+* Product Manager for the Decisioning team.
 
 ### Tomasz Więckowski
 * Decisioning team.
@@ -133,6 +143,7 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Based in London.
 * Attached to the Merchant team; works closely with Zac Barclay.
 * Involved in Zilch Pro rollout planning.
+* Handles Tastecard reporting and billing data requests from Ello.
 
 ### Marek Chodak
 * Back End Engineer (Level 5) on the Payments team.
@@ -142,3 +153,87 @@ This document lists people in my orbit at Zilch.  Use it as a reference when han
 * Platform team.
 * Based in London.
 * Currently organising the On Call Rota.
+
+### Luke Williams
+* Senior Sales & Partnerships Manager.
+* Leading partnership prospects for Zilch Pro (Deliveroo, Tesco, Railcard, retailers).
+
+### Tamara Quinn
+* Senior Product Manager, Purchase team.
+* Based in London.
+* Was involved in Zilch Pro work — descoped as part of MVP scope reduction (11 Feb 2026).
+
+### Kieren Messenger
+* Designer.
+* Designed the Member Exclusive Offers (Tastecard) UX.
+* Involved in Zilch Pro partnership designs.
+
+### Chris Prowse
+* Platform team.
+* Involved in infrastructure tasks for offer-service (SFTP key-pairs, AWS secrets).
+
+### Charlie Hurst
+* Platform team.
+* Set up non-prod SFTP server for Tastecard deallocation report testing.
+
+### Yorkor Baffour
+* Reported ZILCH-48105 (WebSocket/IDV deadlock defect from Incident-452).
+
+### David Rodriguez Vazquez
+* Back End Engineer (Level 3).
+* Based in London.
+* Spotted the initial failing test that led to the Incident-452 investigation.
+
+### Abdul Wahid
+* Platform team.
+* On the on-call rota.
+
+### Paul Batey
+* Platform team.
+* Not currently on the on-call rota (reason unknown).
+* Involved in infrastructure tasks for offer-service (S3 operations, secrets).
+
+### Steve Rayko
+* SVP of Engineering.
+* Based in London.
+
+### Sam Whittaker
+* Back End Engineer (Level 5).
+* Not on the Merchant team.
+
+### Saeed Aghaee
+* Architect.
+
+### Marcin Zolna
+* Engineering Manager, Decisioning team.
+* Driving the Continuous Deployment initiative.
+
+### Ali Aziz
+* Former Engineering Manager of the Platform team.
+* Left the company. Platform team currently has no manager.
+
+### Abhishek Chatterjee
+* Architect.
+
+### Parry Champaneriya
+* Scrum Master.
+* Advises on process and provides data insights.
+
+### Tomasz Surowiec
+* Back End Engineer (Level 5).
+* Interested in making use of the new gateway service (ZILCH-40366).
+
+### Derek McCallum
+* Back End Engineer (Level 5).
+
+### George Sharpe
+* Involved in continuous deployment initiative — extending auto-merge workflows, proposing ticket-status-based PR merging.
+
+### Mike Davis
+* Involved in continuous deployment initiative — PR-to-prod discussions.
+
+### Radek Kachel
+* Involved in continuous deployment initiative — automated regression testing and TestRail integration.
+
+### John Strawhorne
+* QA. Delivered quality gates for product-service and decisioning-service as part of CD initiative.

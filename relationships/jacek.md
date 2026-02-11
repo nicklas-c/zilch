@@ -63,3 +63,46 @@ Jacek could be a little more ambitious if he chooses. He sometimes seems happy t
 ## Running Notes
 
 2026-02-02 In a conversation with Michal, he mentioned that he thought Jacek may be feeling jaded about the projects he's working on - having been tied to the same codebases for a long time.  He thought Jacek might enjoy changing team.
+
+### Stand-up — 2026-02-11
+- ZILCH-40366 (gateway service authoriser Lambda): attempting pre-prod deploy today. Needs review. Raised question about whether to use new gateway vs proxying through customer-service.
+- ZILCH-46901 (Partnerize integration): nearly done, awaiting platform ticket.
+- Agreed to review Nick H's PR for ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query).
+
+### 1:1 — 2026-02-10
+
+Opened with social chat — just back from skiing holiday, enjoyed it, good for the whole family.
+
+**Michal's departure:**
+- Hadn't been aware — missed the news while on leave.
+- Sought confirmation Michal is joining a new team, not leaving the company. Confirmed.
+- Discussed the strategic rationale for the new Spend Platform team and that it will be almost entirely colocated in Poland.
+- Timelines: Michal moves at end of sprint.
+
+**"Jaded" signal (from Michal's feedback):**
+- Jacek recognises the conversation being referenced.
+- Reassures it wasn't a strong preference — would consider a move if offered, but not a flight risk.
+- Actually quite interested in current work: intelligent commerce and gateway service are providing fresh direction.
+- I made the point that he's valued: I'd prefer not to lose him from the team, but I'd prefer that to losing him from the company.
+- Asked if I should actively look for move opportunities. Not actively — agreed I should keep my eyes open rather than hunt one down.
+
+**Stefan's role:**
+- Hadn't been aware Stefan would be joining as Zilch's first L5 FE.
+- Knew the role had previously been considered for someone.
+- I clarified some history of the vacancy and selection process without going into sensitive areas.
+- Asked if Stefan will have roles beyond the Merchant team. Confirmed — scope to operate beyond the team; hired partly to provide FE engineering leadership. May have strong opinions on SSR project or modular FE architecture.
+- Confirmed Stefan is London-based, working normal hybrid pattern.
+
+**New team (follow-up):**
+- Cycled back for more detail. I described the new team as purely back-end, owning platform services for the spend domain. Shared the team composition and that fee-service will move to the new team.
+
+**Appraisal:**
+- Discussed what I can and can't share before the process has run its course.
+- Discussed how I approached writing my parts.
+- Shared what I had written about him.
+- My feedback that he could be more ambitious and look for chances to take a leadership role in cross-team initiatives landed very well.
+- He responded with the idea that he could lead the gateway service as it transitions from a Merchant team initiative into something other teams adopt.
+
+**My observations:**
+- Delighted he spotted the gateway service opportunity — ideal for demonstrating the cross-team leadership I'm encouraging.
+- On the "jaded" topic: I also raised this in a recent engineering leadership meeting, posing the question of whether we should look to regularly rotate engineers to keep them engaged and give them maximum exposure to Zilch systems.

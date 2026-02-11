@@ -42,5 +42,8 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Running Notes
 
+### Stand-up — 2026-02-11
+- ZILCH-47687 (add Zilch Pro label to Rewards on Purchases page): in progress, should be done today.
+
 ### 2026-02-02 1:1.
 Discussed appraisal feedback.
