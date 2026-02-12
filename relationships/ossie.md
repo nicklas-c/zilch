@@ -42,6 +42,9 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Running Notes
 
+### Stand-up — 2026-02-12
+- ZILCH-48105 (WebSocket/IDV deadlock fix): in progress. Might need to be down-prioritised in favour of some React Native new Architecture bugs.
+
 ### Stand-up — 2026-02-11
 - ZILCH-47687 (add Zilch Pro label to Rewards on Purchases page): in progress, should be done today.
 

@@ -64,6 +64,11 @@ Jacek could be a little more ambitious if he chooses. He sometimes seems happy t
 
 2026-02-02 In a conversation with Michal, he mentioned that he thought Jacek may be feeling jaded about the projects he's working on - having been tied to the same codebases for a long time.  He thought Jacek might enjoy changing team.
 
+### Stand-up — 2026-02-12
+- ZILCH-40366 (gateway service authoriser Lambda): in progress.
+- ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): reviewed Nick H's PR. Found a place where the removed code might still be called from the front end — sent back to Nick H to check with Ossie.
+- ZILCH-46901 (Partnerize integration): reacts on an event fired when a Snowflake workspace bucket is updated. Bucket not created in dev environments, blocking work. Discussed with Platform, who don't want Snowflake infra in dev. Between them they decided on a way forward: hosting a bucket available across all environments. Still discussing where it should go — should resolve the question soon.
+
 ### Stand-up — 2026-02-11
 - ZILCH-40366 (gateway service authoriser Lambda): attempting pre-prod deploy today. Needs review. Raised question about whether to use new gateway vs proxying through customer-service.
 - ZILCH-46901 (Partnerize integration): nearly done, awaiting platform ticket.

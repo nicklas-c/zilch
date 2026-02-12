@@ -46,3 +46,4 @@ As Lukasz grows into more senior roles, he should also think about how he frames
 ## Running Notes
 
 2026-02-02 Proposed Lukasz for promotion to L3 in appraisal submission.
+2026-02-12 Off today — attending a funeral.

@@ -1,4 +1,22 @@
-# Activity Log
+# Log
+
+## 2026-02-12
+
+### Stand-up
+- ZILCH-39822: ready for sign-off.
+- ZILCH-40366: in progress with Jacek.
+- ZILCH-42041: still awaiting Platform to pick up a blocking task. Michal chased — situation unclear.
+- ZILCH-43742: Jacek reviewed Nick H's PR. Found a place where removed code might still be called from FE. Back with Nick H to check with Ossie.
+- ZILCH-46368: in progress with Michal — should be moving forward today.
+- ZILCH-46517: awaiting pick-up.
+- ZILCH-46901: in progress with Jacek. Reacts on Snowflake workspace bucket update event. Bucket not created in dev environments, blocking work. Jacek and Platform agreed on hosting a bucket across all environments — still deciding where. Should resolve soon.
+- ZILCH-47687: test working, evidence added to ticket. Available for QA review.
+- ZILCH-48084: in progress with Nick H. Related to Aurora connectivity issue. Way forward: downgrade JDBC driver for now. New ticket created for proper fix.
+- ZILCH-48105: in progress with Ossie. Might need to be down-prioritised in favour of RN new Architecture bugs.
+- ZILCH-48222: in progress with Nick H. Design task, but he's talking about tests — seems to be validating ideas.
+- ZILCH-48248: was with Nick H. Can be moved to QA sign-off.
+- ZILCH-48303: in progress with Michal. Would like to release today.
+- ZILCH-40343: Tom ran complete regression — all passed. Tried to mimic 401 for retry test. Needs to work with Ossie to verify test.
 
 ## 2026-02-11
 

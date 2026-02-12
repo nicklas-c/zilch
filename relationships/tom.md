@@ -45,6 +45,16 @@ Tom McKenzie is a QA Engineer Level 3 in the Merchant Team.
   - Feedback about ContentStack — feels like becoming an SME is being pushed at him
     - I expressed uncertainty about why this would fall to QA — doesn't fit the function
 
+### Stand-up — 2026-02-12
+- ZILCH-40343 (retry on 401): ran complete regression test — all passed. Tried to mimic a 401 to test for a retry. Needs to work with Ossie to make sure his test is working correctly.
+- ZILCH-47687 (Zilch Pro label on Rewards on Purchases): test working, evidence added to ticket. Available for QA review — should move soon.
+
+### Aurora / fee-service connectivity — 2026-02-12
+- Asked a sharp question: how could regression/sanity tests have passed if the JDBC driver update broke DB connectivity? Offered to re-run regression and sanity to verify staging is now fixed.
+- Good QA instinct — questioning the test coverage gap rather than accepting the fix at face value.
+
+### 2026-02-05 — 1:1 notes (cont.)
+
 **Other topics**
 - Gated content release approval process (segued from ContentStack discussion)
 - Mutation testing initiative: wasn't on his radar at all; discussed merits and issues; he hasn't done much with it in the past

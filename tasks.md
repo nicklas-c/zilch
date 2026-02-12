@@ -2,6 +2,12 @@
 
 ## Next
 
+### Sign off ZILCH-39822
+Ready for sign-off as of 12 Feb stand-up.
+
+### Look into ZILCH-42041 blocker
+Still awaiting Platform to pick up a blocking task. Michal chased but the situation is unclear. Need to understand what's going on.
+
 ### Clear down Slack messages
 End of day 10th Feb.
 
@@ -19,6 +25,7 @@ Jacek raised whether to use a new gateway or proxy through customer-service. Nee
 
 ### Set up call with Nick H and Charlie Hurst re Aurora connectivity issue
 Align on root cause and fix for fee-service. Conversation with Charlie was at cross-purposes over Slack — need to get everyone on the same page.
+**Update 12 Feb:** Charlie has resolved the init script issue (v2 script) and opened an AWS support ticket. The JDBC driver regression is also resolved (Nick downgraded). Call may no longer be needed — consider whether remaining open questions (test gap, release-please config) warrant it or can be handled async.
 
 ### Review ZILCH-40366 (gateway service authoriser Lambda)
 Jacek deploying to pre-prod today — needs review today.
@@ -95,10 +102,10 @@ Backfill promised but role not yet approved.
 ### ITOPS-14282 — JSM permissions for Merchant support rota
 Raised 9 Feb. Needed to set up the Merchant team's support rota in JSM.
 
-### ZILCH-48248 — Race condition fix blocked by failing test
-Nick H's fix is in PR but a failing test puts this back on Platform. Their Lambda move for static IP caused the original issue. May need EventBridge migration.
+### ZILCH-48248 — Race condition fix ready for QA sign-off
+~~Previously blocked by failing test.~~ Nick H confirmed at 12 Feb stand-up this can move to QA sign-off.
 
-### ZILCH-46901 — Partnerize integration awaiting platform ticket
-Nearly done. Abdul looking at the platform side.
+### ZILCH-46901 — Partnerize integration: cross-environment bucket location
+Jacek and Platform have agreed the approach (a bucket available across all environments) but still deciding where it should go. Should resolve soon.
 
 ### Data file from Ethan Stockwell for Visa Flex

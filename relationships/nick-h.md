@@ -50,6 +50,19 @@ I'm delighted by Nick's self-appraisal which shows great self-awareness and alig
 - ZILCH-48084 (fix fee-service deployment): in PR. Staging deploy was broken — root cause still unclear to me; need to dig into what happened.
 - ZILCH-48248 (race condition between offer-service and product-service): fix is in PR, but it appears to have caused another issue with a failing test. Puts onus back on Platform — their move of a lambda for a static IP caused the original issue. May need to switch everything over to EventBridge.
 
+### Aurora / fee-service connectivity — 2026-02-12
+- Identified that a Dependabot update to the AWS JDBC driver was the cause of the staging connectivity breakage (confirming Michal's hunch). Downgraded the driver and staging came back up.
+- Excluded the AWS JDBC driver from Dependabot ([PR #336](https://github.com/zilchdev/fee-service/pull/336)).
+- Plans to raise a separate ticket to investigate upgrading the driver safely.
+- Good debugging instinct and follow-through here — identified the issue, fixed it, and took preventive action promptly.
+
+### Stand-up — 2026-02-12
+- ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): Jacek has reviewed it. Found a place where the removed code might be called from the front end. Back with Nick H to check with Ossie.
+- ZILCH-48084 (Aurora connectivity / fee-service): has a way forward by downgrading the JDBC driver for now. Has created a new ticket to implement a proper fix for the updated driver.
+- ZILCH-48222 (design task): in progress. Talking about tests despite this being a design task — appears to be validating his ideas work. Characteristic of his tendency to jump into implementation.
+- ZILCH-48248 (race condition fix): can be moved to QA sign-off.
+- **WIP observation:** Four tickets in flight at stand-up. Pattern of high WIP — consistent with the tendency to pick up the next thing before the current one is fully closed out.
+
 ### 1:1 — 2026-02-11 (planned)
 
 #### Talking Points

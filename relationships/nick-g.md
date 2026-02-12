@@ -16,3 +16,10 @@
 #### Growth Areas
 
 ## Running Notes
+
+### 1:1 — 2026-02-12 (planned)
+
+#### Talking Points
+
+1. **Appraisal** — share and discuss year-end appraisal feedback.
+2. **Piotr's ZOE presentation** — seek Nick G's feedback on Piotr's recent presentation to the DevOps team on his ZOE work.

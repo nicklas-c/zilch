@@ -35,10 +35,10 @@ Documentation and notes on active and past projects, organised into subfolders b
 
 *If a prompt appears to be a comment, observation, question, or update about a project, bias towards working in this folder*
 
-#### time-management/
-Organised lists of tasks, with notes, pending and complete.
+#### logging/
+A daily event log and a curated activity record. The daily log (`log.md`) is the primary intake point for stand-up notes and other events. The activity file (`activity.md`) is a curated record of my own achievements, populated during periodic reflection.
 
-*If a prompt appears to be noting something that needs to be done, something that has been done, deals with task priorities, or queries what to do next, bias towards working in this folder.*
+*If a prompt appears to be reporting events (e.g. stand-up notes), bias towards working in this folder.*
 
 #### playbooks/
 Checklists and step-by-step processes used to help me stay prepared and to stay on top of ongoing processes like running the team's Scrum process.
@@ -46,6 +46,11 @@ Checklists and step-by-step processes used to help me stay prepared and to stay 
 *If a prompt appears to relate to process optimisation or business as usual activities, bias towards working in this folder.  You should also consider referencing playbooks when helping to determine tasks or actions.*
 
 ### Reference Files
+
+#### tasks.md
+The to-do list. Organised into four sections: Next, Soon, Later, and Waiting On.
+
+*If a prompt appears to be noting something that needs to be done, something that has been done, deals with task priorities, or queries what to do next, bias towards working in this file.*
 
 #### people.md
 A list of people in the organisation, recorded alongside simple notes on their roles and involvement in projects I'm working on.
