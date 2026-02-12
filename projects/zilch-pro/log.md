@@ -271,3 +271,19 @@ Project log created.
 - Coordinate with Zac and Ethan on rollout plan from a product perspective (A/B testing, cohorts, etc.).
 - Once that's clear, coordinate with other EMs to understand the technical steps for rollout.
 - Document the end-to-end release plan when the above is done.
+
+### 2026-02-12
+
+**Roll-out planning meeting with Zac and Ethan.**
+
+Discussed the experimentation plan. Key takeaways for engineering planning:
+- 4–6 week window for experimentation after launch, running two parallel cohorts (MAU for lifecycle, Plus MAU for financials).
+- After experimentation, switch to BAU with a curated hold-out group retained for 6 months.
+
+**Catch-up with Nikos (QA perspective on roll-out).**
+
+Nikos wants:
+- Two weeks of internal user testing before release.
+- Initial release to a small cohort (~1%) for one week to catch issues before bringing in the first experimentation cohort.
+
+Personal view: the limited QA rollout may be overkill, but will build the plan around his requirement and discuss.

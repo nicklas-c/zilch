@@ -1,4 +1,4 @@
-# Lukasz
+# Lukasz Kowalczyk
 
 ## Context for AI
 Lukasz is a DevOps engineer on the DevOps team, graded at level 2, equivalent to a junior-to-mid level.  He is based in Krakow.

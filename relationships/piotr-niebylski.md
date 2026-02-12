@@ -1,4 +1,4 @@
-# Piotr
+# Piotr Niebylski
 
 ## Context for AI
 Piotr Niebylski is a DevOps Engineer (Level 4) in the DevOps team.  There are sometimes clashes between Piotr and Phil.  I have wondered whether Piotr sees Phil acting as de facto tech lead and feels he needs to challenge because they are graded at the same level.

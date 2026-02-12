@@ -1,4 +1,4 @@
-# Nick H
+# Nick Holt
 
 ## Context for AI
 Back end engineer on the Merchant team (Level 3), based in London.

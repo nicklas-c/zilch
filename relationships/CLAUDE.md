@@ -13,6 +13,8 @@ As this is a human-to-human domain of work, it is important that you don't try t
 ## Structure
 We will collaborate to maintain a single markdown document for each person.  We'll use these to dump notes and observations in real time in small increments.
 
+When creating a new file here, also add the person to `people.md` (the cross-reference index in the root folder) with the required fields: name, role, location. The "Context for AI" section in the relationships file holds richer detail; `people.md` is just for lookup and routing.
+
 ## General Instructions
 * When adding notes to individual files, use H3 headings with the date and context (e.g., `### 2026-02-05 — 1:1 notes`). Group related content under each heading.
 * 1:1 indicates a one-to-one meeting.

@@ -1,4 +1,4 @@
-# Nick G
+# Nick Gilbert
 
 ## Context for AI
 

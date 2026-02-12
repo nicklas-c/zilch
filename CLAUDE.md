@@ -53,9 +53,9 @@ The to-do list. Organised into four sections: Next, Soon, Later, and Waiting On.
 *If a prompt appears to be noting something that needs to be done, something that has been done, deals with task priorities, or queries what to do next, bias towards working in this file.*
 
 #### people.md
-A list of people in the organisation, recorded alongside simple notes on their roles and involvement in projects I'm working on.
+A cross-reference index of people in my work network. Each entry has a strict field list (name, role, location, and optionally team, reporting line, and associated projects). No other information belongs in this file — detail lives in the relationships/ files and project logs.
 
-You should update this file with details you infer from content on projects, etc.  But don't over-documemnt: I'm not looking for a biography on every individual in the company.
+Add new people to this file when they become relevant. Keep entries to the defined fields only.
 
 ## General Principles
 

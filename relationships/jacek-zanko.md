@@ -1,4 +1,4 @@
-# Jacek
+# Jacek Zanko
 
 ## Context for AI
 Jacek is a back-end engineer in the Merchant team, graded at level 4, equivalent to a senior or tech lead.  He acts as de facto tech lead for the team and is the foremost subject matter expert on the systems the team owns.  He is based in Krakow.

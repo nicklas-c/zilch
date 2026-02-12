@@ -1,4 +1,4 @@
-# Tom
+# Tom McKenzie
 
 ## Context for AI
 Tom McKenzie is a QA Engineer Level 3 in the Merchant Team. 

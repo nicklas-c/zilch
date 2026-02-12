@@ -1,7 +1,7 @@
 # Phil Stephenson
 
 ## Context for AI
-DevOps Engineer in the DevOps team, graded at Level 4, equivalent to senior-to-lead level.  He is based in London.
+DevOps Engineer in the DevOps team, graded at Level 4, equivalent to senior-to-lead level.  He is based in London.  Acts as de facto tech lead in the DevOps team.
 
 ## 2025 year-end appraisal
 

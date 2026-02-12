@@ -1,4 +1,4 @@
-# Michal
+# Michal Baran
 
 ## Context for AI
 Michal Baran is a back-end engineer in the Merchant team, based in Krakow. He is departing the Merchant team on 24th February 2026 to join a newly created team.

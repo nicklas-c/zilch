@@ -2,6 +2,9 @@
 
 ## Next
 
+### Prepare for Sprint Demos
+Happening today (12 Feb). Need to prepare a slide and agree with the team what to demo.
+
 ### Sign off ZILCH-39822
 Ready for sign-off as of 12 Feb stand-up.
 
@@ -14,6 +17,8 @@ End of day 10th Feb.
 ### Write up Abhishek's 1:1 notes from 11th Feb
 
 ### Write up Nick H's 1:1 notes from 11th Feb
+
+### Write up Nick G's 1:1 notes from 12th Feb
 
 ### Set up cross-team refinement with Decisioning and Merchant
 Continuity of membership for Pro.
