@@ -1,11 +1,37 @@
 # Log
 
+## 2026-02-13
+
+### Stand-up
+- ZILCH-43742: Tom will add a QA comment, then I can sign off.
+- ZILCH-46368: Jacek will review.
+- ZILCH-46901 (Partnerize): solution found on blocker. Platform side has a lot of work for the proper solution — Jacek will create a bucket independently for now. Focusing on it today to get it signed off.
+- ZILCH-47687: in QA with Tom. He wants to add proof to the ticket before moving it forward.
+- ZILCH-48222: Nick H has scheduled a meeting to review the design with the team.
+- ZILCH-48084: now fixed. Needs QA sign-off — Tom will look at it today.
+- ZILCH-43416: not yet picked up. May no longer be a problem — may be possible to just close it.
+- ZILCH-48105: in progress with Ossie.
+- ZILCH-48303: engineering done, ready for testing. Tom wanted tests for both toggle-on and toggle-off cases. Discussed — he's satisfied the automated tests cover this and it can move forward.
+
+### PM
+- Reviewed fee-service backlog in Jira — identified 7 Merchant Team tickets in "To Do" state; logged to fee-service project file.
+- Refinement prep — prepared descriptions for ZILCH-48355, ZILCH-48181, ZILCH-48195 (plus others done manually). Notified team of refinement candidates.
+- Published Backlog Management page to Confluence; updated local playbook to point there as single source of truth.
+
+### Completed tasks
+- Set up cross-team refinement with Decisioning and Merchant (continuity of membership, Zilch Pro).
+
+### Observations
+- Testing discussions at stand-up are perennial — what types/levels of testing are appropriate for a given ticket. Suggested Tom work on a test policy document that the team can collectively sign up to.
+- Stand-ups tend to overrun. Problem for me as DevOps stand-up follows immediately. Suggested extending from 15 to 20 minutes but committing to finishing strictly on time.
+
 ## 2026-02-12
 
 * 1:1 with Nick G
 * Meeting with Zac and Ethan re Pro roll-out planning — agreed 4–6 week experimentation window post-launch, then BAU with hold-out group for 6 months.
 * Catch-up with Nikos re QA perspective on Pro roll-out — wants two weeks internal testing then 1% cohort for a week before experiments begin.
 * Time spent refining personal knowledge management system.
+* Wrote up Abhishek Chatterjee's 1:1 notes from 11th Feb.
 * Built and presented Sprint Report #11.2 — published as a Confluence blog post in the Merchant space. Covers sprint plan, scope changes, carried-forward items, burndown, capacity planning, and defect cumulative flow. Nick H demoed the expiring rewards piece; Michal demoed the blocked rewards piece. Observations:
   - Including a sprint report in the demo was experimental. Polarised reaction: a couple of FE devs pushed back on seeing it; Ossie was very positive. Suggests there isn't a shared understanding of what the demo meeting is for.
   - Kieren Messenger announced in meeting chat that the Merchant team would pick up a specific piece of work in an upcoming sprint. This is outside his remit as a product designer — planning and scope commitments are my responsibility. Part of a pattern of stepping outside his lane.

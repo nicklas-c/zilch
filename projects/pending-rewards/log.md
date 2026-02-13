@@ -24,6 +24,10 @@ Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spa
 
 ## Running Notes
 
+### 2026-02-12
+
+- Briefed Abhishek Chatterjee in 1:1. Discussed purpose (incentivising on-time repayment via visible pending rewards) and edge cases. He was relieved scope doesn't include holding rewards in pending state for months on debit purchases. Nick H and Michal Baran partnering on implementation. Committed to producing an ADR — Abhishek questioned whether a detailed ADR is needed for every small change, but this introduces a lifecycle concept to rewards and is an opportunity to reinforce ADR discipline.
+
 ### 2026-02-11
 
 - PRD review meeting held. Discussion got derailed when engineers (Nick H in particular) pulled the conversation into solution design rather than staying focused on clarifying and challenging requirements. Other engineers followed, but Nick initiated it.

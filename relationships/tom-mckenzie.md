@@ -49,6 +49,11 @@ Tom McKenzie is a QA Engineer Level 3 in the Merchant Team.
 - ZILCH-40343 (retry on 401): ran complete regression test — all passed. Tried to mimic a 401 to test for a retry. Needs to work with Ossie to make sure his test is working correctly.
 - ZILCH-47687 (Zilch Pro label on Rewards on Purchases): test working, evidence added to ticket. Available for QA review — should move soon.
 
+### Stand-up — 2026-02-13
+- Active on several tickets in QA: ZILCH-47687 (adding proof before moving forward), ZILCH-48084 (signing off today), ZILCH-48303 (satisfied with automated test coverage after discussion).
+- Had to encourage him to consider himself an authoritative stakeholder for quality — that he can assert what he expects to see from a test perspective. Recurring theme: see also 1:1 on 2026-02-05 where I encouraged him to treat Nikos's guidance as guidance, not absolute, and to own test strategy decisions.
+- Suggested he write a test policy document that the team can sign up to — a way to codify expectations and reduce the recurring stand-up debates about testing levels.
+
 ### Aurora / fee-service connectivity — 2026-02-12
 - Asked a sharp question: how could regression/sanity tests have passed if the JDBC driver update broke DB connectivity? Offered to re-run regression and sanity to verify staging is now fixed.
 - Good QA instinct — questioning the test coverage gap rather than accepting the fix at face value.

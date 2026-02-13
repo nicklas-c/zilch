@@ -47,3 +47,30 @@ As Lukasz grows into more senior roles, he should also think about how he frames
 
 2026-02-02 Proposed Lukasz for promotion to L3 in appraisal submission.
 2026-02-12 Off today — attending a funeral.
+
+### 2026-02-13 — 1:1 notes
+
+**Personal check-in:**
+- Was ill recently — checked he was OK. Seems fine.
+- Funeral was for the father of a friend and an old neighbour from his home village. His friend is OK. Wake was a nice chance to see old friends and family.
+
+**Team updates:**
+- Caught him up after his time off. Shared that frustrations are building in the DevOps team around how they receive work and expectations placed on them — context for why I'm leaning in on process.
+
+**Appraisal:**
+- Walked through what I can and can't share, and the approach I took to writing appraisals.
+- Recapped his self-appraisal, then shared what I wrote.
+- He seemed delighted with the praise — genuinely appeared to be blushing.
+- Grateful for the critical feedback — thought it was reasonable and said he wanted to work on the areas identified.
+
+**Zoe / Piotr's presentations:**
+- Had to watch the recording of part one (was off).
+- Thought it was too complex to absorb in two one-hour sessions.
+- Really wants to work on the project but aware he'll need to ask Piotr a lot of questions.
+- Very impressed that Piotr built it on his own.
+- I offered that Piotr likely used AI heavily for the initial codebase — don't want Lukasz to feel intimidated.
+- I noted that as an engineer I'd expect to understand any line in there, and that much of it is boilerplate (auth, etc.). I think the codebase is less complex than he does, but acknowledged the difference in background — I'm used to large codebases as a former SE; he's used to shorter scripts and IaC.
+- He's really looking forward to getting more involved and flexing his Go skills.
+
+**Observation:**
+Lukasz apologises a lot for things he doesn't need to — taking time off for illness, attending a funeral, etc. Worth keeping an eye on; may link to the confidence pattern noted in his appraisal.

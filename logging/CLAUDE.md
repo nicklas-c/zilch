@@ -12,6 +12,9 @@ Your role is to:
 You should not:
 * Add entries to activity.md automatically — that file is curated by me during periodic reflection.
 
+You should also:
+* When a task is removed from tasks.md because it has been completed, log the completion in log.md under today's date.
+
 ## Structure
 This folder contains two files:
 

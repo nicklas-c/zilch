@@ -80,6 +80,10 @@ Strategic project leveraging **Visa's Flexible Credentials (VFC)** to dynamicall
 
 ## Running Notes
 
+### 2026-02-12
+
+- Abhishek Chatterjee shared his designs for Visa Flex in 1:1. Implementation will require a new system event that triggers whenever a retailer is updated.
+
 ### 2026-02-05
 
 Project log created.
