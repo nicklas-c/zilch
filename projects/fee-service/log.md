@@ -28,6 +28,12 @@ As of 13 Feb 2026, the following fee-service-related tickets are tagged to Merch
 
 ## Running Notes
 
+### 2026-02-16
+
+Stand-up:
+- Michal: getting started with playbooks for fee changes.
+- Michal: coordinating decommissioning of MSSQL fee database with Platform.
+
 ### 2026-02-12
 
 - Confirmed in 1:1 with Abhishek Chatterjee that fee-service is moving to the new team with Michal Baran (effective 24 Feb). Abhishek hadn't been aware of the move.

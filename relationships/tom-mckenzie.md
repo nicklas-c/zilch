@@ -49,6 +49,12 @@ Tom McKenzie is a QA Engineer Level 3 in the Merchant Team.
 - ZILCH-40343 (retry on 401): ran complete regression test — all passed. Tried to mimic a 401 to test for a retry. Needs to work with Ossie to make sure his test is working correctly.
 - ZILCH-47687 (Zilch Pro label on Rewards on Purchases): test working, evidence added to ticket. Available for QA review — should move soon.
 
+### Defect analysis read-out — 2026-02-16
+
+Presented defect analysis findings to the team (with Nikos). The stats and insights were reasonable. However, the follow-up workshop on common root causes was unstructured and unhelpful — Tom kept picking on people randomly with oddly specific questions that weren't necessarily related to their function or domain. Little value gained from the workshop portion. Meeting overran.
+
+This connects to recurring feedback from Nikos (appraisal, 2026-02-05): Tom needs to take leadership duties as seriously as technical/testing duties. Facilitating a productive workshop is a leadership skill — there's a gap here.
+
 ### Stand-up — 2026-02-13
 - Active on several tickets in QA: ZILCH-47687 (adding proof before moving forward), ZILCH-48084 (signing off today), ZILCH-48303 (satisfied with automated test coverage after discussion).
 - Had to encourage him to consider himself an authoritative stakeholder for quality — that he can assert what he expects to see from a test perspective. Recurring theme: see also 1:1 on 2026-02-05 where I encouraged him to treat Nikos's guidance as guidance, not absolute, and to own test strategy decisions.

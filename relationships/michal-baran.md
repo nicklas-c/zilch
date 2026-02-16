@@ -18,6 +18,10 @@ Michal Baran is a back-end engineer in the Merchant team, based in Krakow. He is
 
 ## Running Notes
 
+### 1:1 with Andrzej — 2026-02-16
+
+Andrzej keen to have Michal on the new team for his breadth of vision and entrepreneurial nature. Thinks it will be a good counterpoint to others on the team who are more detail-oriented.
+
 ### Aurora / fee-service connectivity — 2026-02-12
 - His hunch that the Dependabot AWS JDBC driver update caused the staging breakage proved correct.
 - Raised two good process questions in the thread: (1) why didn't the regression/sanity tests catch this — suspects DB config differs between lower envs and staging/prod; (2) why didn't the Dependabot PR trigger a release-please minor version bump.

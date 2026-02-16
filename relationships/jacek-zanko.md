@@ -64,6 +64,12 @@ Jacek could be a little more ambitious if he chooses. He sometimes seems happy t
 
 2026-02-02 In a conversation with Michal, he mentioned that he thought Jacek may be feeling jaded about the projects he's working on - having been tied to the same codebases for a long time.  He thought Jacek might enjoy changing team.
 
+### 1:1 with Andrzej — 2026-02-16
+
+Andrzej and I discussed Jacek: possibility of rotation, and his tech leadership on gateway service. This aligns with the direction from Jacek's own 1:1 on the 10th — gateway service as a vehicle for cross-team leadership.
+
+Note: if Michal's backfill is London-based, Jacek would be the only Polish engineer in the Merchant team.
+
 ### Stand-up — 2026-02-12
 - ZILCH-40366 (gateway service authoriser Lambda): in progress.
 - ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): reviewed Nick H's PR. Found a place where the removed code might still be called from the front end — sent back to Nick H to check with Ossie.

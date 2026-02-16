@@ -1,5 +1,32 @@
 # Log
 
+## 2026-02-16
+
+* Met with DevOps team to refine and task out ZILCH-47773 (prepare environments for customer-web-app deployments). Also added ZILCH-48449 (infrastructure remediation for pen test findings) to the new-web epic. Estimated effort suggests ZILCH-47773 could take the full sprint.
+* Gateway service next-steps meeting. Decided to take the iterative approach: deploy the new authoriser Lambda for authorisation while continuing to use customer-service for other gateway functions, rather than building a full gateway-service before going to production.
+* Met with Decisioning (Tomasz Więckowski, John Strawhorne) and Michal re continuity of membership requirements. Decisioning seemed to assume Merchant would already be cracking on with the work based on previous conversations — similar attitude to Tommy recently. In reality, there are still gaps in the definition that need filling from their side. After discussion, agreed an approach: Decisioning need to provide new APIs for understanding longevity of features per customer. Onus is with them, not Merchant. Michal to write up a Jira ticket for Decisioning to refine and estimate.
+* 1:1 with Andrzej Lorenz
+* Published DevOps operating model announcement to engineering-wide Slack channel: hybrid Scrum/Kanban from Sprint 11.4, with fixed capacity reserved for reactive work.
+* Tom presented defect analysis findings to the Merchant team (with Nikos). Stats and insights were reasonable. Follow-up workshop on common root causes was unstructured and unhelpful — Tom picked on people randomly with oddly specific questions, not necessarily related to their function or domain. Little gained from it.
+* Approved EC-2001 and EC-1999.
+* Slack conversation with Rob Nelson re new-web prioritisation. Rob raised concern that dev/staging setup vs productionised could be significantly more work. Agreed to prioritise for Sprint 11.4, starting next week. Target: ready by end of the iteration, giving 11.5 to finalise. Rob happy with the plan.
+
+### Completed tasks
+- Cleared down Slack messages. Rationalised Slack organisation, recap tool usage, and channel notification settings to reduce missed messages.
+- Set up Jira to support the new DevOps hybrid Scrum/Kanban process.
+- First pass on DevOps backlog — assigned existing tickets to planned/reactive tracks.
+- Created DevOps capacity spreadsheet (adapted from Merchant).
+
+### Stand-up
+- Jacek: affiliate integration service (ZILCH-46901, Partnerize) — found and resolved concurrency problems at higher volumes during testing. Thinks it's ready for production. Will move to sign-off. Platform blockers removed with temporary solution.
+- Jacek: gateway service — authoriser ready for review. Has doubts about how to go to production. Will organise a meeting with stakeholders to take forward.
+- Michal: toggle backfill done and in sign-off.
+- Michal: getting started with playbooks for fee changes.
+- Michal: coordinating decommissioning of MSSQL fee database with Platform.
+- Nick H: on leave.
+- Ossie: fixed ZILCH-48105 (which caused an incident). Yorkor will test.
+- Ossie: will bring ZILCH-48355 (bottom rail hidden on online/storefront tabs) into sprint — everything else now in review or QA.
+
 ## 2026-02-13
 
 ### Stand-up

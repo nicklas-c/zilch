@@ -4,15 +4,14 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Clear down Slack messages | | |
 | Write up Nick H's 1:1 notes from 11th Feb | | |
 | Write up Nick G's 1:1 notes from 12th Feb | | |
+| Review Memberships Strategy presentation from Zac | | |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
-| Understand gateway vs customer-service proxy question ([ZILCH-40366](https://payzilch.atlassian.net/browse/ZILCH-40366)) | gateway-service | Sits with Saeed, not Abhishek. Jacek leading cross-team effort. |
 | Review [ZILCH-40366](https://payzilch.atlassian.net/browse/ZILCH-40366) (gateway service authoriser Lambda) | gateway-service | Jacek deploying to pre-prod |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | | Break epic into refinable tickets |
 | [ZILCH-46727](https://payzilch.atlassian.net/browse/ZILCH-46727) — Rewards on loans during tier change | | Meet with Jacek and Michal to capture as tickets |
@@ -23,8 +22,7 @@
 | Order two Lego unicorns | | One for Stefan, one for Michal's backfill |
 | Get up to speed on FE initiatives for Stefan's onboarding | stefan-onboarding | |
 | Write LinkedIn reference for Alex Murphy | | |
-| Set up Jira to support new DevOps team process | devops-process | |
-| Set up capacity spreadsheet | devops-process | |
+| Review backlog track assignments with the DevOps team | devops-process | First pass done; tomorrow's planning meeting |
 | Set up refinement and backlog prioritisation meetings | devops-process | |
 | Move fee-service Jira tickets to the new team | fee-service | Re-assign Team dropdown once the new team is set up |
 | Write up thoughts on improved data model for rewards | | |
@@ -49,10 +47,11 @@
 | Task | Project | Notes |
 |---|---|---|
 | [PO-1589](https://payzilch.atlassian.net/browse/PO-1589) — Lambda VPC move for Ello SFTP | tastecard | Chased 9 Feb; unassigned |
-| [ZILCH-48105](https://payzilch.atlassian.net/browse/ZILCH-48105) — WebSocket/IDV deadlock fix | | Planned into sprint 11.3 |
-| Michal Baran backfill — role approval | | Promised but not yet approved |
+| [ZILCH-48105](https://payzilch.atlassian.net/browse/ZILCH-48105) — WebSocket/IDV deadlock fix | | Fixed by Ossie; Yorkor to test |
+| Michal Baran backfill — role approval | | Being submitted for approval; no timeline — could be next FY. Backfill may be in London. |
 | [ITOPS-14282](https://payzilch.atlassian.net/browse/ITOPS-14282) — JSM permissions for Merchant support rota | | Raised 9 Feb |
 | [ZILCH-48248](https://payzilch.atlassian.net/browse/ZILCH-48248) — Race condition fix ready for QA sign-off | | Moved to QA sign-off 12 Feb |
-| [ZILCH-46901](https://payzilch.atlassian.net/browse/ZILCH-46901) — Partnerize integration: cross-environment bucket location | | Approach agreed; deciding where to host bucket |
+| [ZILCH-46901](https://payzilch.atlassian.net/browse/ZILCH-46901) — Partnerize integration | intelligent-commerce | Moving to sign-off; platform blockers resolved with temp solution |
 | Data file from Ethan Stockwell | visa-flex | |
 | Tom McKenzie — test policy document | | Suggested 13 Feb; to codify testing expectations for the team |
+| Michal Baran — continuity of membership Jira ticket for Decisioning | zilch-pro | Review once written; Decisioning to refine and estimate |
