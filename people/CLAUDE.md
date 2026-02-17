@@ -1,4 +1,4 @@
-# Relationships
+# People
 
 ## Purpose
 You will be helping me maintain notes and observations on the people I work with — direct reports, my manager, peers, architects, stakeholders, and other cross-functional contacts.  This includes preparing for one-to-one meetings, tracking observations, considering how to challenge and motivate staff, evaluating staff for appraisals, and staying aligned with peers and stakeholders.

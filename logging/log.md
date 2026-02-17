@@ -1,5 +1,20 @@
 # Log
 
+## 2026-02-17
+
+* Backlog authoring session: worked up three stories (ZILCH-48444, ZILCH-48520, ZILCH-48543) with improved descriptions and GWT acceptance criteria. Also authored an epic (ZILCH-48546, "Categories Banner") for the ZILCH-48543 feature. Established and documented backlog authoring standards across three files: CLAUDE.md (workspace instructions, PBI type table, folder structure), epics.md (title conventions, required/optional sections), and acceptance-criteria.md (GWT and checklist formats, general principle on verifiable outcomes).
+* Final 1:1 with Michal Baran before his move to Andrzej's new team on 24 Feb. Discussed his appraisal, shared Andrzej's feedback on why he was selected, and talked through how he's feeling about the transition — excited but anxious.
+* Michal Baran active in dev-payments: reported duplicate loan completion messages for a single loan, and created a Jira task to implement an API endpoint to track membership feature changes history. The latter likely relates to the continuity of membership work for Decisioning.
+* Pre-refinement meeting with Tom McKenzie and Zac Barclay — discussed the three tickets (ZILCH-48444, ZILCH-48520, ZILCH-48543) subsequently worked up in the backlog authoring session.
+* Engineering Leadership Sync meeting:
+  - Marcin Zolna shared his team's KPIs for the last five sprints.
+  - Shared feedback from Alex Murphy's exit interview.
+  - Discussed a strategic pivot: new ask to deliver an EWA tied to a new membership tier by end of March.
+  - Discussion about backfills for staff moved to the new Spend Platform team.
+* Merchant team Ops hand-off — regular rotation handover meeting. Discussed ZILCH-48542 (add DB-level unique constraint to prevent duplicate rewards on LoanCompleted events), which ties to the duplicate loan completion messages Michal flagged in dev-payments.
+* Merchant refinement meeting — refined and estimated ZILCH-48520 (Correct banner copy for Anywhere unlock) and ZILCH-48543 (Add rotating banner to Categories page), plus the defect ZILCH-48542. Left ZILCH-48444 (Exclude boost from rewards calculation) unestimated — Zac wants to sense-check it with Tom Wood first. Good call: the ask seems odd — offering rewards only on the loan portion doesn't make sense given that we normally only offer rewards on debit purchases (effectively 100% boost) and not credit purchases. Attempted to story out epic ZILCH-47121 (Pending Rewards) but didn't get far — the epic went to "In Dev" before being storied out (not great practice but not unusual at Zilch); the first task was to produce a design that would inform the remaining tickets.
+* Continued working on backlog-authoring standards and tooling within this knowledge base system, including authoring the Categories Banner epic (ZILCH-48546).
+
 ## 2026-02-16
 
 * Met with DevOps team to refine and task out ZILCH-47773 (prepare environments for customer-web-app deployments). Also added ZILCH-48449 (infrastructure remediation for pen test findings) to the new-web epic. Estimated effort suggests ZILCH-47773 could take the full sprint.
@@ -12,6 +27,7 @@
 * Slack conversation with Rob Nelson re new-web prioritisation. Rob raised concern that dev/staging setup vs productionised could be significantly more work. Agreed to prioritise for Sprint 11.4, starting next week. Target: ready by end of the iteration, giving 11.5 to finalise. Rob happy with the plan.
 
 ### Completed tasks
+- Wrote up Nick H's 1:1 notes from 11th Feb.
 - Cleared down Slack messages. Rationalised Slack organisation, recap tool usage, and channel notification settings to reduce missed messages.
 - Set up Jira to support the new DevOps hybrid Scrum/Kanban process.
 - First pass on DevOps backlog — assigned existing tickets to planned/reactive tracks.

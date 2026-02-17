@@ -63,11 +63,37 @@ I'm delighted by Nick's self-appraisal which shows great self-awareness and alig
 - ZILCH-48248 (race condition fix): can be moved to QA sign-off.
 - **WIP observation:** Four tickets in flight at stand-up. Pattern of high WIP — consistent with the tendency to pick up the next thing before the current one is fully closed out.
 
-### 1:1 — 2026-02-11 (planned)
+### 1:1 — 2026-02-11
 
-#### Talking Points
-
+#### Planned Talking Points
 1. **Appraisal** — Share and discuss year-end appraisal feedback.
 2. **Michal's departure** — Michal leaves the team on 24th Feb. Impact on team capacity and the dynamic between remaining BE engineers (Nick and Jacek will be the only two until a backfill arrives).
 3. **Fee-service staging breakage** (time permitting) — ZILCH-48084 broke staging; root cause unclear. Want to understand what happened, but prefer to do this as a session with all BE engineers to spread the knowledge.
 
+#### Notes
+Only the appraisal was discussed from the planned items. Michal's departure and fee-service breakage were not covered. Another indicator that Nick tends to pull conversations down rabbit holes of his own making.
+
+**Pending rewards design discussion** (Nick-led)
+- His design is predicated on writing 'pending' records into the ledger. Only read the pendings up to an actual 'earn' — the ledger records don't need to be converted to earns.
+- *My private reflection:* I like this approach because it takes a write-only approach to a ledger, which is good design. But I'm not yet convinced it works logically.
+
+**Appraisal discussion**
+- Discussed what I can and can't share with him.
+- Explained my approach: I bullet-pointed talking points before reading his self-appraisal, then read the self-appraisal before writing my appraisal of him.
+- Reviewed his self-appraisal and reminded him what he wrote.
+- Reviewed my appraisal of him. On the positive side, I placed emphasis on his cloud-native competency and the fact that others in the team admire his technical competence. On the critical side, I emphasised that the 'growth areas' weren't just nice-to-haves but genuine blockers for him.
+- He recognises some of his communication challenges and feels genuinely frustrated that he struggles in that area.
+- I used a recent meeting as an example where he used a refinement meeting to dive deep into technical solutions.
+- His perspective: he gets *drawn into* those conversations. *My private observation:* from the outside, it always feels like he leads them, not that he's drawn in.
+- His response to the appraisal conversation was "That was painless." I get the sense he was expecting a difficult conversation — some conspicuous criticisms over the last few months have obviously taken their toll.
+- Bizarrely, he then started discussing solutions in detail again as an example of *why* he goes into detail on things — "you need to know X, Y, and Z so that you can make a decision on A." Somewhat ironic given the conversation we'd just had.
+
+**Knowledge base frustration**
+- He's frustrated at the lack of a knowledge base at Zilch.
+
+**AI scepticism**
+- Conversation segued into AI. He is sceptical.
+
+### Next 1:1 — Talking Points
+
+1. **Michal's departure** — Carried over from 11th Feb. Michal left on 24th Feb. Discuss Nick's view of the impact — on capacity, on the dynamic with Jacek as the only other BE engineer, and on any work that's landed back on him.

@@ -1,21 +1,24 @@
 # People
 
 ## Guidelines for AI
+This is an index of people in my work network containing basic reference information in tabular format.  It should not be used for storing rich or narrative information.  Instead, each person has a row in the table, with strictly defined columns.
 
-A cross-reference index of people in my work network. Use it to look up who someone is and find their relationships file or associated projects.
+Where relevant, richer information logs are stored in the folder ./people/ on a file-per-person basis.
 
-**Strict field list — do not add any other information to this file:**
+Maintain this index in alphabetical order by full name.
 
-Required:
-- Full name
-- Role
-- Location
+### Fields
+Observe these data integrity rules when updating this file.  Request clarifications if you cannot confidently infer the information.
 
-Optional:
-- Team
-- Reports to
-- Projects (list of project folder names from projects/)
-- Left (yes if no longer at the company; blank means still here)
+| Column | Optionality | Guidance |
+|---|---|---|
+| Name | Required | Person's full name; request clarification if the name appears to be incomplete |
+| Role | Required | |
+| Location | Required | |
+| Team | Optional | |
+| Reports To | Optional | Referential integrity: where this field is filled, ensure the person refered to is in this index |
+| Projects | Optional | A comma-separated list of references to projects the person is associated with. Project names should match a folder name in ./projects/ or ./projects/archive/ |
+| Left | Optional | Acceptable values: "Yes" (to indicated the person has left the company), a date (to indicate that the person has left the company and note the date they left), or blank to indicate that they are still active. |
 
 ## Entries
 
@@ -69,6 +72,7 @@ Optional:
 | Tom McKenzie | QA Engineer | London | Merchant | Nikos Sofianos (dotted line to me) | | |
 | Tomasz Surowiec | Back End Engineer (Level 5) | Krakow | | | gateway-service | |
 | Tomasz Więckowski | Decisioning | Krakow | | | zilch-pro | |
+| Tom Wood | Head of Product - Financial Products & Payments | London | | | | |
 | Tommy Kwok | Product Manager | London | Decisioning | | zilch-pro | |
 | Yorkor Baffour | QA Engineer (Level 3) | London | | | | |
 | Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex | |
