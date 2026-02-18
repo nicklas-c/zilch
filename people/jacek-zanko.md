@@ -70,6 +70,10 @@ Andrzej and I discussed Jacek: possibility of rotation, and his tech leadership 
 
 Note: if Michal's backfill is London-based, Jacek would be the only Polish engineer in the Merchant team.
 
+### Stand-up — 2026-02-18
+- ZILCH-40366 (gateway service authoriser): ready for production. Tom McKenzie's QA concerns satisfied — won't be in active use yet, just available in prod.
+- ZILCH-46517 (fee service playbooks): reviewing Michal's work.
+
 ### Stand-up — 2026-02-12
 - ZILCH-40366 (gateway service authoriser Lambda): in progress.
 - ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): reviewed Nick H's PR. Found a place where the removed code might still be called from the front end — sent back to Nick H to check with Ossie.

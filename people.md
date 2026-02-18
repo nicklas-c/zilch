@@ -44,10 +44,11 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Kieren Messenger | Senior Product Designer | London | Merchant | | tastecard, zilch-pro | |
 | Lukasz Kowalczyk | DevOps Engineer (Level 2) | Krakow | DevOps | Me | | |
 | Luke Williams | Senior Sales & Partnerships Manager | London | | | zilch-pro | |
-| Marcin Zolna | Engineering Manager | Krakow | Decisioning | | continuous-deployment | |
+| Marcin Zolna | Engineering Manager | Krakow | Decisioning | | continuous-deployment, zilch-pro | |
 | Marek Chodak | Back End Engineer (Level 5) | Krakow | Payments | | | |
 | Matt Swirski | Platform | London | | | on-call-rota | |
 | Michal Baran | Back End Engineer (Level 3) | London | Merchant | Me | | |
+| Michael Charash | Product Consultant | London | | | ewa-extra | |
 | Mike Davis | Engineering Manager | London | Retain | | continuous-deployment, zilch-pro | |
 | Nick Gilbert | DevOps Engineer (Level 3) | London | DevOps | Me | aurora-connectivity-issue | |
 | Nick Holt | Back End Engineer (Level 3) | London | Merchant | Me | tastecard, expiring-rewards, aurora-connectivity-issue | |
@@ -59,7 +60,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Paweł Pęcikiewicz | Mobile App Developer | Krakow | Retain | | zilch-pro | |
 | Phil Stephenson | DevOps Engineer (Level 4) | London | DevOps | Me | | |
 | Piotr Niebylski | DevOps Engineer (Level 4) | Krakow | DevOps | Me | | |
-| Radek Kachel | QA Engineer (Level 4) | Krakow | | | continuous-deployment | |
+| Radek Kachel | QA Engineer (Level 4) | Krakow | | | continuous-deployment, ephemeral-environments | |
 | Rob Nelson | VP of Engineering | London | | Steve Rayko | zilch-pro | |
 | Rory Fielding | Front End Engineer | London | Retain | | zilch-pro | |
 | Saeed Aghaee | Solutions Architect (Level 3) | London | | | gateway-service | |

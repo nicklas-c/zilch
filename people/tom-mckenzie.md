@@ -5,6 +5,9 @@ Tom McKenzie is a QA Engineer Level 3 in the Merchant Team.
 
 ## Running Notes
 
+### 2026-02-18
+* Raised concern in support-merchant that velocity limits may prevent users from fully redeeming rewards before a deadline — flagging potential customer experience issue.
+
 ### 2026-02-05 — 1:1 prep
 
 **Talking points:**
@@ -59,6 +62,13 @@ This connects to recurring feedback from Nikos (appraisal, 2026-02-05): Tom need
 - Active on several tickets in QA: ZILCH-47687 (adding proof before moving forward), ZILCH-48084 (signing off today), ZILCH-48303 (satisfied with automated test coverage after discussion).
 - Had to encourage him to consider himself an authoritative stakeholder for quality — that he can assert what he expects to see from a test perspective. Recurring theme: see also 1:1 on 2026-02-05 where I encouraged him to treat Nikos's guidance as guidance, not absolute, and to own test strategy decisions.
 - Suggested he write a test policy document that the team can sign up to — a way to codify expectations and reduce the recurring stand-up debates about testing levels.
+
+### Stand-up — 2026-02-18
+- ZILCH-40366: his QA concerns satisfied — agreed it can go to prod on the basis that it won't be in active use yet, just available.
+
+### 2026-02-18 — Test policy document chase
+
+Chased Tom on the test policy document (originally suggested 13 Feb). Still waiting on delivery.
 
 ### Aurora / fee-service connectivity — 2026-02-12
 - Asked a sharp question: how could regression/sanity tests have passed if the JDBC driver update broke DB connectivity? Offered to re-run regression and sanity to verify staging is now fixed.

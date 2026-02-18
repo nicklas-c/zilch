@@ -72,3 +72,13 @@ On the Ephemerals project, there have been times when Piotr's enthusiasm has led
   * Explained limits on what I could share before process completes
   * Shared my write-up
   * He acknowledged comments were appropriate and reasonable
+
+### Peer feedback from Nick Gilbert — 2026-02-12
+
+Via Nick G's 1:1. Re: ZOE presentation and codebase:
+- Implementation looks good and clearly laid out — big piece of work.
+- Needs more comments; Nick isn't a Go expert and would benefit from better documentation. Discussed Go's idiomatic godoc approach as potential leverage.
+- Concern about submitting a large volume of code in one go without iterative peer review. I confirmed similar feedback has already been given to Piotr directly.
+- Nick sees this as a pattern — cites the Crossplane work for Ephemeral Environments, where Piotr similarly went off piste and stability was adversely affected.
+
+This reinforces the growth area from the appraisal: working to the plan and keeping the team involved through usual sprint processes.

@@ -3,6 +3,12 @@
 ## Context for AI
 Back end engineer on the Merchant team (Level 3), based in London.
 
+## Running Notes
+
+### 2026-02-18
+* Requested review for logging configuration change in prod.
+* Asked payments-be about the event fired for missed loan payments.
+
 ## 2025 year-end appraisal
 
 ### His self-appraisal
@@ -93,6 +99,9 @@ Only the appraisal was discussed from the planned items. Michal's departure and 
 
 **AI scepticism**
 - Conversation segued into AI. He is sceptical.
+
+### Stand-up — 2026-02-18
+- ZILCH-48222 (pending rewards design): basically done. Wants review.
 
 ### Next 1:1 — Talking Points
 

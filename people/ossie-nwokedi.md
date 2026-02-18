@@ -42,6 +42,12 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Running Notes
 
+### 2026-02-18
+- Out of tickets; looking to bring something into the sprint. Suggested ZILCH-35883 (storefront rails right-edge clipping) — already In Dev and previously started, so a good candidate to finish off.
+
+### Stand-up — 2026-02-18
+- ZILCH-48355 (bottom rail hidden on online/storefront tabs): in progress. Looks like it might be Android only. Trying to recreate.
+
 ### Stand-up — 2026-02-12
 - ZILCH-48105 (WebSocket/IDV deadlock fix): in progress. Might need to be down-prioritised in favour of some React Native new Architecture bugs.
 

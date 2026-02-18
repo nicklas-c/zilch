@@ -14,6 +14,12 @@
 
 ## Running Notes
 
+### 2026-02-18
+
+Planning meeting that was supposed to happen on the 17th was cancelled (forgotten when the announcement was sent). All three remaining devops-process tasks promoted to Next — aiming to close off the initiative today: review backlog track assignments with the team, set up refinement and backlog prioritisation meetings, and extend Merchant stand-up from 15 to 20 minutes.
+
+Set up new series of sprint planning meetings for the DevOps team. Rescheduled Merchant and DevOps stand-ups to give more time for the Merchant stand-up and improve the chance of making the DevOps one on time. Scheduled regular refinement meetings for the DevOps team. All ceremony meetings now in place. Only remaining devops-process task: review backlog track assignments with the team.
+
 ### 2026-02-16
 
 Published operating model announcement to engineering-wide Slack channel: hybrid Scrum/Kanban from Sprint 11.4, with fixed capacity reserved for reactive work. Key message: foreseeable work should be raised early for sprint planning; urgent items still handled reactively.

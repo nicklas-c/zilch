@@ -39,6 +39,16 @@ Nicklas is taking ownership as part of managing the DevOps team. The goal is to 
 
 ## Running Notes
 
+### 2026-02-18
+
+Regular rota review meeting scheduled. First session on 2 March.
+
+**Agenda for the first few sessions (information-gathering only):**
+- Set the expectation upfront: no solutionising yet, just data gathering.
+- Walk through every alert from the previous fortnight.
+- For each alert, understand it well enough to reason about root cause.
+- After a month or two of data points, shift to looking for patterns and solutions.
+
 ### 2026-02-09
 
 Project created. Two immediate actions identified:

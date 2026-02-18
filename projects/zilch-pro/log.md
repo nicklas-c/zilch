@@ -17,6 +17,9 @@ Zilch Pro is the premium-tier paid membership at **£7.99/month**, positioned ab
 | Staff testing enabled | 16 February 2026 |
 | Last FE release (with 2 weeks ramping) | 16 February 2026 |
 | MVP launch | **Q2 2026 (probably May)** |
+
+### 2026-02-18
+* Created Zilch Pro Release Plan page (for Confluence). Cross-team collaborative document capturing release steps per feature. Features seeded from the product overview; roll-out plan from Nikos, Zac, and Ethan discussions. Key framing: release features independently as ready, gate customer availability on partnerships. Physical card and free snoozes noted as descoped.
 | V1 launch | **H2 2026** |
 | Target: 2.3% MAU adoption | 1 April 2026 (likely outdated) |
 

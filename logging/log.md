@@ -1,5 +1,81 @@
 # Log
 
+## 2026-02-18
+
+* Promoted three devops-process tasks to Next priority: review backlog track assignments, set up refinement and backlog prioritisation meetings, and extend Merchant stand-up timing. Aim is to close off the devops-process initiative today.
+* Chased Tom McKenzie on test policy document.
+* Wrote up Nick Gilbert's 1:1 notes from 12th Feb.
+* Set up new series of sprint planning meetings for the DevOps team.
+* Rescheduled Merchant and DevOps stand-ups — more time for Merchant stand-up and better chance of making the DevOps one on time.
+* Scheduled regular refinement meetings for the DevOps team.
+
+* Reviewed Memberships Strategy presentation from Zac — feels out of date given EWA/Extra pivot.
+* Reviewed backlog track assignments with the DevOps team in a meeting. Almost everything ended up in the 'planned work' track. This likely means the team isn't creating tickets for reactive work rather than there being less of it than expected — reinforces the need for the Slack-to-ticket automation investigation.
+* Checked in with Nikos on Zephyr Zero testing progress. Two blockers being worked on: a VGS issue and work on the test lambda (which allows test state management via direct DB SQL queries) — both prevent test users from acting as customers signing up on the environments. Radek Kachel is working on the lambda.
+* Rory Fielding's query answered by Kieren Messenger and Tom McKenzie. Rory picking up ZILCH-48181 (storefront tabs/search don't fit on Android with max display size). ZILCH-48355 (bottom rail hidden on online/storefront tabs) is In PR and ready for peer review.
+* Pinged Nikos to confirm who's working on the test lambda for Zephyr Zero.
+* Ossie out of tickets — suggested he pick up ZILCH-35883 (storefront rails right-edge clipping), already In Dev and previously started. Bias towards finishing in-progress work before starting new.
+* Worked through ticket sign-offs. Signed off six tickets: ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query), ZILCH-48248 (race condition fix), ZILCH-40343 (refresh token session renewal), ZILCH-46901 (Partnerize integration), ZILCH-47687 (Pro rewards label on purchases page), ZILCH-48105 (WebSocket/IDV deadlock fix). All moved to Ready for Release.
+* Created `tech-zilch-pro` Slack channel for coordination on the Pro project, especially roll-out planning. Public channel; starting with a focussed list and expecting it to grow organically.
+* Drafted Zilch Pro Release Plan page for Confluence. Collaborative document for cross-team contributors to capture release steps per feature. Seeded with feature list from the product overview, roll-out plan from discussions with Nikos/Zac/Ethan, and the key constraint that customer availability is gated on partnership delivery. Remaining work: add Confluence-specific macros directly in Confluence.
+
+### Slack Digest — 18 Feb
+
+#### Merchant Team
+* Tom McKenzie raised concerns in support-merchant that velocity limits may prevent users from fully redeeming rewards before an upcoming deadline — potential customer experience issue.
+* Paweł Wasielewski plans to release Mixpanel Lambda v1.113.0 (switching purchase_successful event source from customer-service to purchase-service). EC ticket approved.
+* Paweł Pęcikiewicz requested review of PR for My Plan screen rework — extracting logic into custom hooks, modular components, parallax/fade animations.
+
+#### DevOps Team
+* Phil Stephenson and Nick Gilbert worked through deployment issues: IP exhaustion and RBAC permission problems blocking releases for various services.
+* Lukasz Kowalczyk resolved IP pool issue that was causing Argo deployment failures.
+* Nick Holt requested review for a logging configuration change in prod.
+* Piotr Niebylski questioned why credit-risk-service accesses other services' DynamoDB tables and SQS queues directly. Marcin Żołna explained it's temporary — part of graduation logic migration from decisioning-service to credit-risk-service; may refactor direct SQS to private API gateway.
+
+#### EWA / Open Banking
+* Rob Nelson pushing hard on open banking integration for EWA. Wants a BE engineer to start immediately. Martin Thorlby-Witham suggested reusing existing open banking service (already has Plaid US components). Rob agreed. Confirms EWA/Extra reprioritisation pressure.
+
+#### Other
+* Rory Fielding noted in eol-device-restrictions that Expo 56 (expected ~May) will increase minimum iOS version — another comms exercise later this year.
+* Chris Walker confirmed new web app flag active in staging; showed it during scoping call with third party.
+* Marcin Żołna's product-1.49.0 deployment passed 395 tests but failed 32.
+
+### EWA/Extra Meeting
+- Zac Barclay briefed on the feature. Nothing substantially new.
+- No work identified for Merchant at this stage — I flagged this and nobody challenged.
+- Possible work for DevOps on the open banking side. I flagged this and asked to be told of any requests ASAP.
+  - Rob Nelson thinks the work would be minimal: an OpenBanking integration capability already exists in production, built for earlier initiatives that were mothballed. The capability itself was never decommissioned.
+  - I was surprised — I'd assumed the previous OpenBanking work had been fully mothballed, but only the initiatives were, not the underlying integration.
+- Significant product complexity and edge cases still unresolved:
+  - Free trials for membership tiers: want to withhold EWA benefit until first payment taken (not available on free trial).
+  - Given Extra only gives you EWA, a free trial has questionable value.
+  - But then why wouldn't customers just get a free Plus trial? Except they wouldn't have access to EWA until after payment either.
+  - Would customers lose EWA benefit if a membership payment is late? Only regain when caught up?
+  - Lots of product refinement still to go.
+- Pro not being dropped but is lower priority than EWA/Extra.
+- Cross-team lead roles:
+  - Product: Zac on Extra, Michael Charash on EWA.
+  - Tech: not confirmed yet. Rob thinks it will be him and Andrzej.
+- Rob is very concerned about front-end capacity across the department.
+- Target delivery by end of March confirmed — very aggressive.
+
+* 1:1 with Phil Stephenson. Generally OK but frustrated by the pace of pivots and concerned about quality erosion. Busy with FinCrime fraud work. Optimistic about the new DevOps operating model. Three actions: automate Slack-to-ticket flow for reactive work, set up rotation tag and retire OpsGenie, and lean in on Zephyr Zero debugging.
+* EWA sentiment: Phil's discomfort with the EWA pivot is not isolated. Anecdotal evidence that similar concerns are shared by other ICs and at least one manager. Worth monitoring — this is a values-based concern, not just a workload one.
+* Deferred review of Nick H's pending rewards design write-up (ZILCH-48222) — not a blocker (he's seeking peer reviews from other engineers); will pick up tomorrow.
+* Set up firefighter tag in tech-devops channel and retired OpsGenie for the rotation. Explored auto-response via Slack Workflow Builder to nudge people away from the team user group, but Slack doesn't support triggers based on user group mentions. Settled on updating the channel topic as a low-tech alternative for now.
+* Scheduled regular DevOps retro.
+* Scheduled regular rota review meeting — first session on 2 March. Plan for the first few sessions: information-gathering only, walking through each alert from the previous fortnight to understand root causes. No solutionising until there's a month or two of data.
+* Prioritised task list — moved LaunchDarkly playbook and retro rota update from Later to Next. Reframed Aurora JDBC failover plugin task as a binary risk assessment (are any other services exposed?) and elevated to Next given escalation potential.
+* Rory Fielding chasing for sign-off comments on four tickets: ZILCH-47654, ZILCH-48181, ZILCH-48183, ZILCH-48195. All need a comment confirming whether happy for app to go live. Rory has capacity to pick one up today if any are not approved, but needs a response urgently.
+
+### Merchant Stand-up
+- Plenty of tickets at 'ready for review' — need to work through sign-offs.
+- ZILCH-40366 (gateway service authoriser): ready to go to prod. Tom's concerns satisfied on the basis that it won't be in active use yet — just available in production.
+- ZILCH-42041: Platform only just picked up their part. Michal continues to track.
+- ZILCH-46517 (fee service playbooks): Michal done, in review with Jacek. Michal wants to 'test' the playbooks by running through them in dev.
+- ZILCH-48222 (pending rewards design): Nick H basically done. Wants review.
+- ZILCH-48355 (bottom rail hidden on online/storefront tabs): in progress with Ossie. Looks like it might be Android only. Trying to recreate.
+
 ## 2026-02-17
 
 * Sent a message to the DevOps team yesterday (16 Feb) outlining the new Jira board setup — Reactive (Kanban) and Planned (Scrum) boards, filter-based routing, and sprint structure through the end of the next iteration. The message promised to use the next day's planning meeting to sort through tickets and talk through backlog management approach. However, the planning meeting had already been cancelled, and this was forgotten when sending the message. The promised follow-up conversation never happened. Self-assessed as poor form — particularly given the team needs focused attention right now.
@@ -71,7 +147,7 @@
 
 ## 2026-02-12
 
-* 1:1 with Nick G
+* 1:1 with Nick Gilbert. Topics: pressure from Chris Walker on server-side rendering delivery (agreed with Rob Nelson to treat as planned work); timing for starting DevOps Scrum process (Nick suggested next iteration, I pushed for sooner); tech-devops channel noise (action to set up firefighter tag); his appraisal (feels fair and accurate, noted perception of pace — attributes to not communicating blockers); Piotr's ZOE presentation (good implementation, but large code submission without iterative review — pattern of working independently); feedback for me (lean in on on-call rota); uncertainty about Platform team leadership.
 * Meeting with Zac and Ethan re Pro roll-out planning — agreed 4–6 week experimentation window post-launch, then BAU with hold-out group for 6 months.
 * Catch-up with Nikos re QA perspective on Pro roll-out — wants two weeks internal testing then 1% cohort for a week before experiments begin.
 * Time spent refining personal knowledge management system.

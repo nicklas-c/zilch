@@ -3,6 +3,35 @@
 ## Context for AI
 DevOps Engineer in the DevOps team, graded at Level 4, equivalent to senior-to-lead level.  He is based in London.  Acts as de facto tech lead in the DevOps team.
 
+## Running Notes
+
+### 1:1 — 2026-02-18
+
+**How is he?**
+- OK overall.
+- Still frustrated by the pace and pivots at Zilch — everything gets done in a rush.
+- Concerned that quality inevitably suffers, even without knowingly cutting corners. The combination of context switching and time pressure erodes quality.
+- Aware of the latest EWA pivot (new ask to deliver EWA tied to a new membership tier by end of March, discussed at Engineering Leadership Sync on 17 Feb).
+- Doesn't like it — feels it moves Zilch into payday lending territory, which he sees as morally questionable and at odds with the company's 'looking out for the little guy' positioning.
+
+**What's keeping him busy?**
+- Fraud work — reacting to an uptick in fraud cases that the FinCrime team are rushing to deal with. Consistent with pattern noted in his appraisal: FinCrime support is a significant draw on his time.
+
+**New operating model**
+- Optimistic about the operational changes. Thinks the structure will help.
+- In retrospect, it would have helped to keep Piotr on piste with his recent ZOE work. (Aligns with Nick G's feedback on Piotr submitting large code without iterative review.)
+- Will be good to protect people not on the support rota from getting pulled into reactive work.
+- Will give good visibility of what's coming through.
+- Suspects a lot of reactive work the team does never gets ticketed. More rigour should mean more ticketed work and therefore better visibility.
+
+**Actions from the meeting** (not assigned — I'll take them and either action or delegate):
+1. Look at automation so that Slack requests for help can easily be turned into reactive tickets.
+2. Get the rotation tag set up and stop using OpsGenie for the rotation. (Firefighter tag already on my to-do; OpsGenie cessation is new.)
+3. Lean in on where we stand with debugging Zephyr Zero.
+
+### 2026-02-18
+* Worked with Nick Gilbert to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases. Also helped with DLQ replay (250k messages) and various PR approvals/deployments across teams.
+
 ## 2025 year-end appraisal
 
 ### His self-appraisal
@@ -51,8 +80,6 @@ He has provided good high-level thought leadership during conversations on a roa
 Phil has shown a good instinct for thinking about process and how the team operates. I'd encourage him to develop that further by identifying and proposing practical solutions - he's well placed to help shape how we work.
 
 Phil is already seen as the de facto tech lead for the team. As a development opportunity, I'd encourage him to consider ways he can raise his visibility as a direction-setter more broadly across the organisation.
-
-## Running Notes
 
 ### 2025-02-04 1:1
 

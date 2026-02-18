@@ -4,32 +4,28 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Write up Nick G's 1:1 notes from 12th Feb | | |
 | Read and digest Nick H's pending rewards design write-up | | |
-| Review Memberships Strategy presentation from Zac | | |
-| Chase Tom McKenzie on test policy document | | Suggested 13 Feb; no update yet |
+| Investigate Slack-to-ticket automation for DevOps reactive work | devops-process | Action from Phil 1:1, 18 Feb |
+| Create LaunchDarkly flag enablement playbook | | Retro action |
+| Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
+| Determine whether any other services are exposed to the Aurora JDBC failover plugin issue | aurora-connectivity-issue | Binary question: are any other services vulnerable? If yes, escalate immediately. |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | | Break epic into refinable tickets |
-| Set up regular rota review meeting | on-call-rota | |
 | Ask Mike Davis what his engineering dependencies are for Pro | zilch-pro | |
-| Understand scope of Aurora connectivity issue across other services | aurora-connectivity-issue | Which services use AWS JDBC failover plugin? |
 | Order two Lego unicorns | | One for Stefan, one for Michal's backfill |
 | Get up to speed on FE initiatives for Stefan's onboarding | stefan-onboarding | |
 | Write LinkedIn reference for Alex Murphy | | |
 | Check in with Michal Baran after his move | | Circa early March; see how he's settling in under Andrzej |
-| Review backlog track assignments with the DevOps team | devops-process | First pass done; tomorrow's planning meeting |
-| Set up refinement and backlog prioritisation meetings | devops-process | |
 | Move fee-service Jira tickets to the new team | fee-service | Re-assign Team dropdown once the new team is set up |
 | Write up thoughts on improved data model for rewards | | |
-| Extend Merchant stand-up from 15 to 20 minutes | devops-process | Commit to finishing strictly on time. Needed to create headroom before DevOps stand-up. |
 | Add Stefan to regular team meetings | stefan-onboarding | |
 | Set up 1:1s with Stefan | stefan-onboarding | |
 | Draft day-one email for Stefan | stefan-onboarding | Depends on other onboarding prep |
-| Document step-by-step release plan for Pro | zilch-pro | Depends on cross-team review |
+
 
 ## Later
 
@@ -37,8 +33,6 @@
 |---|---|---|
 | Move Merchant team's support rota into JSM | | Blocked on ITOPS-14282. Remove Michal Baran. |
 | Get duplicate Merchant team records removed from JSM | | Need a JSM admin |
-| Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
-| Create LaunchDarkly flag enablement playbook | | Retro action |
 | Design quarterly peer feedback programme | | |
 
 ## Waiting On
@@ -46,10 +40,7 @@
 | Task | Project | Chase date | Notes |
 |---|---|---|---|
 | [PO-1589](https://payzilch.atlassian.net/browse/PO-1589) — Lambda VPC move for Ello SFTP | tastecard | | Chased 9 Feb; unassigned |
-| [ZILCH-48105](https://payzilch.atlassian.net/browse/ZILCH-48105) — WebSocket/IDV deadlock fix | | | Fixed by Ossie; Yorkor to test |
 | [ITOPS-14282](https://payzilch.atlassian.net/browse/ITOPS-14282) — JSM permissions for Merchant support rota | | | Raised 9 Feb |
-| [ZILCH-48248](https://payzilch.atlassian.net/browse/ZILCH-48248) — Race condition fix ready for QA sign-off | | | Moved to QA sign-off 12 Feb |
-| [ZILCH-46901](https://payzilch.atlassian.net/browse/ZILCH-46901) — Partnerize integration | intelligent-commerce | | Moving to sign-off; platform blockers resolved with temp solution |
 | Data file from Ethan Stockwell | visa-flex | | |
 | Tom McKenzie — test policy document | | | Suggested 13 Feb; to codify testing expectations for the team |
 | Michal Baran — continuity of membership Jira ticket for Decisioning | zilch-pro | | Review once written; Decisioning to refine and estimate |
