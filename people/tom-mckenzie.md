@@ -15,6 +15,44 @@ Tom McKenzie is a QA Engineer Level 3 in the Merchant Team.
 2. QA sign-off process — engineers are pushing tickets through the QA stage themselves; how does he think about his role in that from a process perspective?
 3. Feedback on the defect analysis presentation — the findings were interesting, but facilitation of the root cause and mitigations section was unstructured
 
+### 2026-02-19 — 1:1 notes
+
+**QA culture across teams**
+* Tom attended a meeting of QA engineers across the company. A common theme: QAs struggling to get engineers — especially back-end engineers — to do appropriate testing, and facing push-back. Sounds worse on some other teams than on ours.
+* In Merchant this manifests as Nick H sometimes arguing for less testing than Tom expects. Recurring theme — see also 1:1 2026-02-05.
+* Reiterated that I assert in front of the whole team that he has authority to insist on tests. Tom said he wishes Nikos did the same more.
+* Tom wants to use pre-refinement meetings to specify test requirements on tickets before they enter refinement. I have been pushing for this for some time.
+* I raised the Jira stage issue: tickets being moved through the QA stage by the engineer themselves. The preferred pattern is for Tom to move them — creates an audit trail. If the engineer must move it, a comment explaining why QA signed off is the minimum requirement.
+* I made the point that for straightforward tickets the policy document, once written, can be referenced in lieu of a detailed per-ticket justification.
+
+**Test policy document approach**
+* Tom is still at the ideas stage — vague on detail but confident. One firm opinion: whether a change is purely internal to the service (no API changes) should be a key criterion, consistent with Nikos's existing informal guidance.
+* I suggested framing the rules deterministically enough that an AI tool could read the policy alongside a Jira ticket / commit and automatically assert what testing is required.
+* Tom mentioned Nikos is working on something like this already, though from his description it sounds fairly basic at present.
+
+**Testing terminology**
+* We discussed the ambiguity of the term "Integration Test": it can mean a single service tested in an integrated mode (as distinct from unit tests), or it can mean a multi-service / subsystem test. The distinction will need to be clear in any policy document.
+
+**Nick H tension — recurring**
+* Tom raised tension with Nick H last week over testing expectations. Recurring theme — see 1:1 2026-02-05 and stand-up 2026-02-13.
+* Reiterated: the policy document removes the need to relitigate arguments case by case.
+* Reiterated: Tom is the gatekeeper. If he is not satisfied, the ticket does not pass. If poor quality code makes it past QA, it is his reputation at stake — not Nick's. Nick needs to understand that.
+
+**Production incident example**
+* Tom cited a recent case: instalment miscalculation when a boost was included in a loan. A Payments team issue, not Merchant.
+
+**Defect analysis follow-up**
+* Nikos has asked Tom to log follow-up actions in Jira from the defect analysis.
+* Tom's view is that our biggest problem is unknown unknowns — e.g. a recent case where duplicate events from another service caused issues; the team had no expectation multiple events were possible. *[Personal note, not said in the meeting: I'm not fully persuaded — idempotent event handling should be the default and would contain this class of problem.]*
+* Tom described a technique from a previous employer: new service versions deployed alongside existing in production; inputs split across both; outputs compared. Shadow mode / parallel-run testing in production.
+
+**Feedback on defect analysis presentation**
+* I gave Tom feedback:
+  * Insights were good and enjoyed.
+  * Wanted more grouping of defects by common cause or domain area — would have made findings more actionable.
+  * Facilitation of the discussion section was poor — unstructured, didn't land. Advised planning the facilitation properly in future.
+* Connects to recurring feedback from Nikos (appraisal, 2026-02-05): Tom needs to take leadership duties as seriously as technical ones. Facilitation is a leadership skill.
+
 ### 2026-02-05 — 1:1 prep
 
 **Talking points:**

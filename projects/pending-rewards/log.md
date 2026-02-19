@@ -29,7 +29,7 @@ Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spa
 ### 2026-02-19
 
 - Stand-up: Nick Holt chasing what events are available to drive cancellation of pending rewards, and what event signals loss of a feature (e.g. membership downgrade). Connects to the open question raised on 18 Feb about the trigger for reversing a pending reward on late payment.
-- ZILCH-48222 (Pending Rewards Technical Discovery & Design) ready for sign-off.
+- ZILCH-48222 (Pending Rewards Technical Discovery & Design) signed off.
 
 ### 2026-02-18
 

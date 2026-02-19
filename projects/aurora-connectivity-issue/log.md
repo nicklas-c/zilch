@@ -20,6 +20,24 @@ Potentially related to ZILCH-48084 and ZILCH-48248.
 
 ### 2026-02-19
 
+Sent a message to Nick Holt, Charlie Hurst, and Phil Stevenson to chase down the outstanding risk assessment. Framed the issue as a combination of two factors: (1) Aurora infrastructure changes for regional failover, and (2) a Dependabot-instigated JDBC library upgrade — the two together meaning that `globalClusterInstanceHostPatterns` was now required but not set. Asked:
+1. Is that summary accurate?
+2. Do we know that all services currently running in production on Aurora will restart if needed?
+3. Are there any other ways this could bite us in production?
+
+Immediate responses from Charlie and Nick. Thread summary:
+
+- **Summary confirmed accurate** (Charlie).
+- **The issue is specific to v3 of the AWS JDBC driver** — v2 does not exhibit the problem. The `globalClusterInstanceHostPatterns` config is only required by the cluster-aware plugin introduced in v3.
+- **Production is safe.** Cross-region clusters have been in production for 3–6 months, which predates the v3 driver. Any service currently running in production was therefore deployed using v2 and is unaffected. The failure would only occur if a service upgraded to v3 and was then restarted.
+- **EHI was the first service to hit this in production** — it had been upgraded to v3, its deploy failed, the config was fixed, and it is now running correctly.
+- **Staging is the discovery mechanism.** Charlie deployed Aurora nodes in eu-west-2 for all staging clusters on 18 Feb. Any non-compliant services will fail to start there, surfacing issues before they reach production.
+- **Pin to v2 for now.** Charlie is not aware of anything requiring v3. Pinning to the latest v2 release is viable, though v2 will eventually be unsupported.
+
+**Conclusion: no production landmine.** The logical chain is sound — cross-region clusters predate v3, so any service in production must be using v2 by definition. Risk is contained to new deployments that upgrade to v3 without adding the required config, which staging will now surface.
+
+---
+
 A noisy neighbour latency incident on fee-service (see fee-service log for details) prompted Grzegorz Ziemiański (wallet-providers-service) to raise a broader question: the Aurora migration was partly motivated by preventing noisy neighbour problems, but this incident suggests the problem can still occur. Charlie Hurst and Benjamin Ibrulj (Platform) are investigating. This is distinct from the JDBC failover plugin issue but is a related concern about the extent to which Aurora isolation is working as expected.
 
 ## Personnel

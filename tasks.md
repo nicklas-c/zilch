@@ -4,16 +4,15 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Write up Tom McKenzie 1:1 notes | | From 1:1 on 19 Feb |
-| Create LaunchDarkly flag enablement playbook | | Retro action |
 | Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
-| Determine whether any other services are exposed to the Aurora JDBC failover plugin issue | aurora-connectivity-issue | Binary question: are any other services vulnerable? If yes, escalate immediately. |
+| Task out ZILCH-47400 (Merchant O11y Audit & Refresh) | | Break epic into refinable tickets |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
 | Investigate Slack-to-ticket automation for DevOps reactive work | devops-process | Action from Phil 1:1, 18 Feb |
+| Create LaunchDarkly flag enablement playbook | | Retro action |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | | Break epic into refinable tickets |
 | Ask Mike Davis what his engineering dependencies are for Pro | zilch-pro | |
 | Order two Lego unicorns | | One for Stefan, one for Michal's backfill |

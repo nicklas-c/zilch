@@ -2,6 +2,47 @@
 
 ## 2026-02-19
 
+* Signed off ZILCH-48355 (bottom rail hidden), ZILCH-43416 (fee-service sanity test failure), ZILCH-48222 (Pending Rewards Technical Discovery & Design).
+
+### 1:1 — Tom McKenzie
+
+**QA across teams: testing culture**
+* Tom shared insights from a recent meeting of QA engineers across the company.
+* A common pain point: QAs finding it hard to get engineers — particularly back-end engineers — to do the appropriate level of testing, and getting push-back when they ask.
+* This echoes experience in Merchant where Nick H sometimes argues for less testing than Tom expects. Sounds like conditions are worse on some other teams.
+* Noted I am glad I asked Tom to write a test policy document — it will be useful collateral across this broader organisational problem.
+* I noted that I frequently assert in front of the whole team that Tom has the authority to insist on tests. Tom said he wishes Nikos did the same more.
+* Tom wants to use pre-refinement meetings to specify test requirements on tickets before they enter refinement. I didn't say it in the meeting, but this is something I have been asking for for some time.
+* I made the point that ideally Tom should be the person moving Jira tickets out of the QA stage — that creates an audit record that QA were at least aware of the ticket. Tickets being moved by the engineer is fine, but should be accompanied by a comment.
+* I also made the point that for many tickets the appropriate action will be to simply reference the policy document once it exists.
+
+**Test policy document**
+* Tom has one or two ideas; a bit vague on the detail, but confident he'll have plenty to say once he sits down with it.
+* One strong opinion already: a key criterion should be whether the change is purely internal to a service (no API changes) — consistent with Nikos's existing informal guidance.
+* I suggested that if the rules are written deterministically enough, an AI could read the policy alongside the Jira ticket and/or commit and assert what types of testing are required.
+* Tom said Nikos is working on something along those lines. From his description, Nikos's solution sounds fairly rudimentary at this stage.
+
+**Testing terminology**
+* Discussion about the ambiguity of the term "Integration Test": it can refer either to a single service tested in an integrated fashion (as opposed to unit tests), or to a multi-service / subsystem test. The distinction matters when writing a policy.
+
+**Nick H tension — recurring**
+* Tom raised again that there was tension with Nick H last week over testing.
+* Reiterated: the policy document will help — no need to keep relitigating the same arguments case by case.
+* Reiterated: Tom is there as a gatekeeper. If he is not satisfied that quality is sufficient, the ticket does not pass. At the end of the day, if poor quality code makes it through QA, it is Tom's reputation on the line — not Nick's — and Nick needs to understand that.
+
+**Production incident example — instalment miscalculation with boost**
+* Tom cited a recent production issue: instalments were miscalculated when a boost was included in the loan. A Payments team issue, not Merchant.
+
+**Defect analysis follow-up**
+* Nikos has asked Tom for follow-up in the form of Jira actions stemming from the defect analysis.
+* Tom's view: our biggest problem is unknown unknowns — citing a recent example where duplicate events fired from another service caused issues, and the team had no expectation that multiple events were possible. *[Personal note, not said in the meeting: I'm not fully persuaded — idempotent event handling should be the default and would contain this class of problem.]*
+* Tom described a technique from a previous employer: new versions of a service are deployed into production alongside the existing version; inputs (events, API calls, etc.) are split across both; outputs are compared for consistency. Essentially shadow mode / parallel-run testing in production.
+
+**My feedback on Tom's defect analysis presentation**
+* The statistical insights were good and I enjoyed them.
+* Expected more in terms of grouping defects by common cause or domain area — that would have made the analysis more actionable.
+* The facilitated discussion section was unstructured and didn't land well. Advised that he plan and prepare the facilitation more carefully next time.
+
 ### Merchant Stand-up
 
 * **ZILCH-40366** (Lambda authorizer / public retailer gateway, In Dev) — Jacek cleaned up Terraform; asked Phil to review. Michal writing E2E tests ahead of deployment while waiting for DevOps.
@@ -14,6 +55,39 @@
 * **ZILCH-35883** (Storefront rails clip right edge, In Dev) — Ossie. Brought into sprint on spare capacity; cannot recreate. Asked Tom to try on a physical device. May be closeable.
 * **DataDog alert** — Michal spotted a latency spike on fee-service. Root cause: wallet-providers-service was consuming product change events from Underwriting's bulk upgrade job (22k records at 10/s) and was missing a database index — causing slow queries on the Aurora issuer cluster. No SLA breach (p99 ~50ms vs 100ms limit). Grzegorz Ziemiański raised a broader concern: Aurora was partly adopted to prevent noisy neighbour problems, but this suggests that hasn't fully been achieved. Platform (Charlie Hurst / Benjamin Ibrulj) investigating.
 * **Pending Rewards** — Nick Holt chasing what events are available to drive cancellation of pending rewards, and what event signals loss of a feature.
+
+### Aurora Connectivity Issue
+
+Sent a message to Nick Holt, Charlie Hurst, and Phil Stevenson (covering Merchant, Platform, and DevOps) to chase down the outstanding risk assessment on the Aurora connectivity issue. Framed the issue as a combination of two factors: (1) Aurora infrastructure changes for regional failover, and (2) a Dependabot-instigated JDBC library upgrade — the two together meaning that the `globalClusterInstanceHostPatterns` config was now required but not set. Asked three questions:
+1. Is that summary accurate?
+2. Do we know that all services currently running in production on Aurora will restart if needed?
+3. Are there any other ways this could bite us in production?
+
+Received immediate responses from Charlie Hurst and Nick Holt. Conclusion: **production is safe**. The issue is specific to v3 of the AWS JDBC driver — v2 is unaffected. Since cross-region Aurora clusters have been in production for 3–6 months (predating the v3 driver), any service currently running in production was deployed on v2 by definition. EHI was the first service to hit the problem in production (having been upgraded to v3), failed on deploy, config was fixed, now running. Charlie deployed eu-west-2 Aurora nodes to all staging clusters on 18 Feb, which will surface any non-compliant services before they reach production. Full thread logged in the aurora-connectivity-issue project.
+
+### Slack Digest — 19 Feb
+
+#### EWA/Extra
+* Extra tier pricing confirmed at £2.99/month; EWA will only be launched within the Membership structure, not as a standalone product.
+* Plaid products to support EWA: Auth, Assets, and Bank Income Verification.
+* Rob Nelson proposed creating an "ewa-7day" loan product, adding it to all product-lines, and configuring it as a feature inside the Plus and Extra tiers.
+* Radek Kachel's move to the Spend Platform team has been postponed until end of March to help de-risk EWA delivery — specifically the Payouts component.
+* Steve Rayko stated that Pay Monthly is higher priority than EWA, and that this lens needs to be applied. Notable given the urgency around EWA — suggests EWA shouldn't come at the expense of Pay Monthly.
+
+#### DevOps Team
+* Phil Stevenson handled multiple support requests: Terraform plan failure investigation (Tomasz Surowiec), branch deploy failures (Jakub Zrebiec), event processing delays in QA-SIT causing e2e test failures (Jakub Pałka/Nikos Sofianos), Lambda throttling monitoring discussion (Matt Garfitt).
+* LinearB missing releases: Marcin Żołna flagged releases absent from the dashboard. Phil is investigating — suspects disconnected branches may be the cause. May need to engage LinearB support directly.
+* Nick Holt requested Phil to review a small Dependabot config change.
+
+#### Merchant/Rewards
+* Ossie Nwokedi raised a UX question in dev-purchase: the rewards toggle is disabled on Anywhere ECJ for non-subscribers, which could confuse some customers. He floated the idea of using this as an opportunity to educate or direct them to upgrade. Worth keeping in mind as a potential improvement.
+
+#### Aurora (Platform)
+* Rob Nelson and Benjamin Ibrulj are investigating potential Aurora database performance issues, exploring optimisations and possibly running parallel RDS instances.
+* Matt shared details of a planned production change: EC-2049 — new Aurora Indexes.
+
+#### New Web
+* Chris Walker asked Nick Gilbert what pen-testers should focus on for the new web app, following completion of production deployment work.
 
 ## 2026-02-18
 
