@@ -6,15 +6,17 @@ Component: Pending Rewards
 
 ## Context
 
-Pending Rewards introduces a "Pending" state into the Rewards lifecycle. When a customer makes a qualifying action (e.g. a purchase as a member), rewards are issued immediately in a pending state rather than waiting until maturity. They become realised (spendable) only once maturity conditions are met — e.g. the customer completes a loan on time while remaining a member.
+Pending Rewards introduces a "Pending" state into the Rewards lifecycle, applying specifically to credit rewards, which are conditional by nature. When a customer makes a qualifying action (e.g. a purchase as a member), rewards are issued immediately in a pending state rather than waiting until maturity. They become realised (spendable) only once maturity conditions are met — e.g. the customer completes a loan on time while remaining a member. Pending rewards are forfeited if conditions are not met, for example due to late payment.
 
-The rewards rate is locked at the time of purchase, enabling time-limited promotions. Pending rewards values update dynamically on partial refunds, membership downgrades, full refunds, and other adjustments. Pending rewards are retained between subscription instances.
+The technical approach uses an immutable, additive ledger: no reward entries are mutated; instead, reversals are recorded as negative entries and new entries are created when values change. The rewards rate is locked (and stored) at the time of purchase, enabling both time-limited promotions and re-calculation of pending rewards following events such as partial refunds. Pending rewards values update dynamically on partial refunds, membership downgrades, full refunds, and other adjustments. Pending rewards are retained between subscription instances.
+
+Existing reward API endpoints (summary and history, at the customer and purchase levels) are extended to return pending and realised values separately, rather than a single aggregate.
 
 UX touchpoints include: receipt drawer, purchases page, app notifications, Rewards Hub (with pending total), cancellation flow (showing what the customer would lose), CRM, sign-up journey, and referrals. Scope is iOS, iPad, and Android — web is out of scope.
 
 Future considerations (not MVP): delayed debit rewards during the payment failure grace period; delayed rewards for Standard members with early release on upgrade to Plus.
 
-Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spaces/ZP/pages/5099585537
+Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spaces/ZP/pages/5099585537. Design overview: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230
 
 ## Personnel
 
@@ -23,6 +25,20 @@ Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spa
 - Kieren Messenger — Product Designer
 
 ## Running Notes
+
+### 2026-02-19
+
+- Stand-up: Nick Holt chasing what events are available to drive cancellation of pending rewards, and what event signals loss of a feature (e.g. membership downgrade). Connects to the open question raised on 18 Feb about the trigger for reversing a pending reward on late payment.
+- ZILCH-48222 (Pending Rewards Technical Discovery & Design) ready for sign-off.
+
+### 2026-02-18
+
+- Read Nick Holt's design overview (Confluence: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230/Pending+Rewards+Design+Overview+V2). Straightforward — no major concerns.
+- Shared observations in team Slack:
+  - Imminent blocker is designs from Kieren Messenger for how pending rewards will be displayed.
+  - Open question to Zac: should expiry logic be extended to pending rewards? Flagged a plausible edge case — referral rewards issued in a pending state could legitimately sit there for a long time before a referral is made. Current MVP spec doesn't address this.
+  - Asked Tom McKenzie to confirm he's across Nick's proposal enough to define tests.
+  - Asked Nick to define the trigger for reversing a pending reward on a late payment — expectation is immediate removal, likely via a listener on payment events.
 
 ### 2026-02-12
 

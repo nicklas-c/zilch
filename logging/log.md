@@ -1,9 +1,25 @@
 # Log
 
+## 2026-02-19
+
+### Merchant Stand-up
+
+* **ZILCH-40366** (Lambda authorizer / public retailer gateway, In Dev) — Jacek cleaned up Terraform; asked Phil to review. Michal writing E2E tests ahead of deployment while waiting for DevOps.
+* **Partnerize** — Jacek. Tested service sending test data to Partnerize successfully. One URL parameter remaining; should be done.
+* **ZILCH-42041** (Decommission fee-service MSSQL database, In Dev) — Michal. Charlie (Platform) about to drop the MSSQL tables; progress at Platform (PO-1597). Still waiting.
+* **ZILCH-46517** (Fee-change playbooks, In PR) — Michal. Playbooks written and in PR; Jacek reviewed and added comments on 18 Feb. Michal will share Confluence links in Slack. Confluence page already carries a production-use disclaimer (tested in QA-SIT only) — asked Michal to note this in the docs, which he has done.
+* **ZILCH-48222 and ZILCH-43416** — both ready for my sign-off.
+* **ZILCH-48355** (Bottom rail hidden on online/storefront tabs, In PR) — Ossie. Bug vs Defect debate resolved: Ossie downgraded to Bug — introduced during development, not in the current production release (2.44.0).
+* **ZILCH-43416** (Fee-service timeout causes sanity test failure) — Michal. Analysed test failures; concludes the issue is no longer a problem. Moving to Ready for Sign-off.
+* **ZILCH-35883** (Storefront rails clip right edge, In Dev) — Ossie. Brought into sprint on spare capacity; cannot recreate. Asked Tom to try on a physical device. May be closeable.
+* **DataDog alert** — Michal spotted a latency spike on fee-service. Root cause: wallet-providers-service was consuming product change events from Underwriting's bulk upgrade job (22k records at 10/s) and was missing a database index — causing slow queries on the Aurora issuer cluster. No SLA breach (p99 ~50ms vs 100ms limit). Grzegorz Ziemiański raised a broader concern: Aurora was partly adopted to prevent noisy neighbour problems, but this suggests that hasn't fully been achieved. Platform (Charlie Hurst / Benjamin Ibrulj) investigating.
+* **Pending Rewards** — Nick Holt chasing what events are available to drive cancellation of pending rewards, and what event signals loss of a feature.
+
 ## 2026-02-18
 
 * Promoted three devops-process tasks to Next priority: review backlog track assignments, set up refinement and backlog prioritisation meetings, and extend Merchant stand-up timing. Aim is to close off the devops-process initiative today.
 * Chased Tom McKenzie on test policy document.
+* Authored ZILCH-48608 — task for the Merchant team to define a test policy document, to be published to Confluence under Unicorn Operating Processes and reviewed in a team session.
 * Wrote up Nick Gilbert's 1:1 notes from 12th Feb.
 * Set up new series of sprint planning meetings for the DevOps team.
 * Rescheduled Merchant and DevOps stand-ups — more time for Merchant stand-up and better chance of making the DevOps one on time.
@@ -18,6 +34,12 @@
 * Worked through ticket sign-offs. Signed off six tickets: ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query), ZILCH-48248 (race condition fix), ZILCH-40343 (refresh token session renewal), ZILCH-46901 (Partnerize integration), ZILCH-47687 (Pro rewards label on purchases page), ZILCH-48105 (WebSocket/IDV deadlock fix). All moved to Ready for Release.
 * Created `tech-zilch-pro` Slack channel for coordination on the Pro project, especially roll-out planning. Public channel; starting with a focussed list and expecting it to grow organically.
 * Drafted Zilch Pro Release Plan page for Confluence. Collaborative document for cross-team contributors to capture release steps per feature. Seeded with feature list from the product overview, roll-out plan from discussions with Nikos/Zac/Ethan, and the key constraint that customer availability is gated on partnership delivery. Remaining work: add Confluence-specific macros directly in Confluence.
+
+* Read Nick Holt's Pending Rewards design overview (Confluence: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230/Pending+Rewards+Design+Overview+V2). Straightforward read. Shared observations in the team Slack channel.
+* Posted to Slack that the imminent blocker on pending rewards is Kieren producing designs for how pending rewards should be displayed.
+* Raised question in Slack for Zac Barclay: should expiry logic extend to pending rewards? Outlined a scenario where rewards could legitimately stay pending for a long time (e.g. referral rewards that realise only when a referral is made).
+* Raised question for Tom McKenzie: whether he's familiar enough with Nick's proposal to define the tests required.
+* Raised question for Nick Holt: need to define what triggers reversal of a pending reward on late payment. Expectation is immediate removal, requiring a listener on payment events.
 
 ### Slack Digest — 18 Feb
 

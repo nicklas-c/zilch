@@ -8,6 +8,13 @@ Tom McKenzie is a QA Engineer Level 3 in the Merchant Team.
 ### 2026-02-18
 * Raised concern in support-merchant that velocity limits may prevent users from fully redeeming rewards before a deadline — flagging potential customer experience issue.
 
+### 2026-02-19 — 1:1 prep
+
+**Talking points:**
+1. Test policy document — how is he going to approach it?
+2. QA sign-off process — engineers are pushing tickets through the QA stage themselves; how does he think about his role in that from a process perspective?
+3. Feedback on the defect analysis presentation — the findings were interesting, but facilitation of the root cause and mitigations section was unstructured
+
 ### 2026-02-05 — 1:1 prep
 
 **Talking points:**
@@ -65,6 +72,9 @@ This connects to recurring feedback from Nikos (appraisal, 2026-02-05): Tom need
 
 ### Stand-up — 2026-02-18
 - ZILCH-40366: his QA concerns satisfied — agreed it can go to prod on the basis that it won't be in active use yet, just available.
+
+### 2026-02-18 — Pending Rewards
+Asked in Slack whether Tom is familiar enough with Nick Holt's pending rewards design proposal to define the tests required.
 
 ### 2026-02-18 — Test policy document chase
 

@@ -103,6 +103,10 @@ Only the appraisal was discussed from the planned items. Michal's departure and 
 ### Stand-up — 2026-02-18
 - ZILCH-48222 (pending rewards design): basically done. Wants review.
 
+### Pending Rewards design review — 2026-02-18
+- Read the design overview doc (Confluence: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230/Pending+Rewards+Design+Overview+V2). Straightforward.
+- Raised a follow-up question in Slack: need to define what triggers the reversal of a pending reward on a late payment. Expectation is that pending rewards are removed immediately, which would require listening to payment events.
+
 ### Next 1:1 — Talking Points
 
 1. **Michal's departure** — Carried over from 11th Feb. Michal left on 24th Feb. Discuss Nick's view of the impact — on capacity, on the dynamic with Jacek as the only other BE engineer, and on any work that's landed back on him.

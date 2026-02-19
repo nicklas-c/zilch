@@ -16,6 +16,12 @@ The Platform team currently has no manager (Ali Aziz left the company), which ma
 
 Potentially related to ZILCH-48084 and ZILCH-48248.
 
+## Running Notes
+
+### 2026-02-19
+
+A noisy neighbour latency incident on fee-service (see fee-service log for details) prompted Grzegorz Ziemiański (wallet-providers-service) to raise a broader question: the Aurora migration was partly motivated by preventing noisy neighbour problems, but this incident suggests the problem can still occur. Charlie Hurst and Benjamin Ibrulj (Platform) are investigating. This is distinct from the JDBC failover plugin issue but is a related concern about the extent to which Aurora isolation is working as expected.
+
 ## Personnel
 
 - **Nick H** — reported the issue, investigating from the Merchant side. Engaging with Platform in #platform-ops.

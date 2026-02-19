@@ -76,4 +76,4 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Tom Wood | Head of Product - Financial Products & Payments | London | | | | |
 | Tommy Kwok | Product Manager | London | Decisioning | | zilch-pro | |
 | Yorkor Baffour | QA Engineer (Level 3) | London | | | | |
-| Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex | |
+| Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex, pending-rewards | |
