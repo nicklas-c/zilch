@@ -26,10 +26,17 @@ Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spa
 
 ## Running Notes
 
+### 2026-02-20
+
+- Refinement meeting held with the Merchant team. Discussed Nick Holt's pending rewards design in terms of work that can be broken out into refinable tickets.
+- Tamara Quinn (Senior PM, Purchase) attended to raise how pending rewards intersect with the Pay Monthly project — cross-team interest in how the rewards model interacts with that initiative.
+
 ### 2026-02-19
 
 - Stand-up: Nick Holt chasing what events are available to drive cancellation of pending rewards, and what event signals loss of a feature (e.g. membership downgrade). Connects to the open question raised on 18 Feb about the trigger for reversing a pending reward on late payment.
-- ZILCH-48222 (Pending Rewards Technical Discovery & Design) signed off.
+- ZILCH-48222 (Pending Rewards Technical Discovery & Design) signed off. Architecture review still pending — flagged in flash report.
+- Met with Merchant BE engineers to discuss cross-team dependencies. Agreed that feature-level events are the preferred approach for driving reward state transitions (e.g. cancellation, late payment). This would require Decisioning to provide appropriate events — a dependency that needs to be formalised.
+- Design overview (ZARCH) updated to v22 on 19 Feb — likely reflects recent progress from Nick.
 
 ### 2026-02-18
 

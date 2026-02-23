@@ -17,6 +17,23 @@ Merchant team is unlikely to be heavily involved, but tracking for awareness giv
 * Radek Kachel's move to the Spend Platform team has been postponed until end of March specifically to help de-risk EWA delivery (Payouts component). Decision proposed by Grzegorz Ziemiański; Steve Rayko and Andrzej Lorenz asked for approval.
 * Steve Rayko asserted that Pay Monthly is higher priority than EWA. Potentially significant given the EWA urgency — may indicate a limit to how much can be disrupted in service of the EWA deadline.
 
+### 2026-02-20
+
+* Product and planning meeting attended. Project on a tight schedule; tech planning session requested ASAP, before product understanding is fully settled. Tight iteration loop expected.
+* ExCo has requested a project plan by end of today, including an engineering plan.
+* Zac Barclay delivered a product overview with the following confirmed details:
+  * EWA = Earned Wage Access; a monthly salary advance product.
+  * Maximum advance: £100 or 20% of net monthly salary — whichever is lower.
+  * Tied exclusively to the new "Extra" membership tier at £2.99/month.
+  * Not available in the Plus tier. No free trial for Extra.
+  * Customers can borrow up to a week before their salary date.
+  * £3 disbursement fee on each use.
+  * Customer care constraints require demonstrable evidence that the £3 fee is proportionate to handling costs.
+  * Open banking required — used to verify evidence of regular salary income.
+* Whiteboard exercise conducted to divide work across teams. Outcome for Merchant: no confirmed work, with only the possibility of light UI involvement.
+* Confirmed project leadership: Kevin Came (project/delivery), Steve Rayko (engineering), Zac Barclay (product). My role is that of an interested observer — no active ownership.
+* The strategic pivot to EWA/Extra caused disruption to the DevOps team this week.
+
 ### 2026-02-18
 * EWA/Extra meeting. Zac Barclay briefed on the feature — nothing substantially new.
 * No work identified for Merchant. I flagged this explicitly and nobody challenged.

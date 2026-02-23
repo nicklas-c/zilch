@@ -42,6 +42,10 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Running Notes
 
+### 2026-02-23 — RN Architecture dispute
+
+Rory Fielding (Retain) sent Ossie a private message asking him to pick up ZILCH-48665 directly, bypassing me. Ossie was put in an unfair position — being asked by a peer engineer from another team to go behind his EM's back. Worth a brief check-in with Ossie to acknowledge this and make clear he did nothing wrong.
+
 ### 2026-02-18
 - Out of tickets; looking to bring something into the sprint. Suggested ZILCH-35883 (storefront rails right-edge clipping) — already In Dev and previously started, so a good candidate to finish off.
 

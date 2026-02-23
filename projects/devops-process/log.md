@@ -14,6 +14,10 @@
 
 ## Running Notes
 
+### 2026-02-20
+
+* Jira config and hygiene work under way in preparation for adoption of the hybrid Scrum/Kanban model.
+
 ### 2026-02-18
 
 Planning meeting that was supposed to happen on the 17th was cancelled (forgotten when the announcement was sent). All three remaining devops-process tasks promoted to Next — aiming to close off the initiative today: review backlog track assignments with the team, set up refinement and backlog prioritisation meetings, and extend Merchant stand-up from 15 to 20 minutes.

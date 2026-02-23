@@ -40,7 +40,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | George Sharpe | Change Manager | London | | | continuous-deployment, zilch-pro | |
 | Jacek Zanko | Back End Engineer (Level 4) | Krakow | Merchant | Me | tastecard, gateway-service | |
 | John Strawhorne | QA Engineer (Level 4) | Krakow | | | continuous-deployment | |
-| Kevin Came | Product Delivery Manager | London | | | visa-flex | |
+| Kevin Came | Product Delivery Manager | London | | | visa-flex, ewa-extra | |
 | Kieren Messenger | Senior Product Designer | London | Merchant | | tastecard, zilch-pro | |
 | Lukasz Kowalczyk | DevOps Engineer (Level 2) | Krakow | DevOps | Me | | |
 | Luke Williams | Senior Sales & Partnerships Manager | London | | | zilch-pro | |
@@ -76,4 +76,4 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Tom Wood | Head of Product - Financial Products & Payments | London | | | | |
 | Tommy Kwok | Product Manager | London | Decisioning | | zilch-pro | |
 | Yorkor Baffour | QA Engineer (Level 3) | London | | | | |
-| Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex, pending-rewards | |
+| Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex, pending-rewards, ewa-extra | |

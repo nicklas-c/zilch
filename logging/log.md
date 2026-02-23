@@ -1,8 +1,108 @@
 # Log
 
+## 2026-02-23
+
+* Created LaunchDarkly flag for Ossie Nwokedi.
+* Zac Barclay is using the BAU/reactive maintenance Epic as a dumping ground for small feature requests that fall outside the iteration plan. The Epic is intended for reactive toil, not unplanned product work. This obscures genuine product delivery — making value-adding work appear as maintenance. Worth addressing with Zac.
+
+### RN Architecture Release — Dispute with Rory Fielding
+
+Tom McKenzie raised two tickets in a cross-team Slack thread, asking for approval to label them as acceptable-to-production for the RN new architecture release (v2.45):
+
+- [ZILCH-48665](https://payzilch.atlassian.net/browse/ZILCH-48665) — Keyboard stays open after submitting search query. Jira type: Tech Debt. Not in production; only present in the RN upgrade build.
+- [ZILCH-48725](https://payzilch.atlassian.net/browse/ZILCH-48725) — Transition into content pages comes in from the side. Jira type: Bug. Not in production.
+
+Rory Fielding (FE Engineer, Retain) immediately pushed for Ossie to pick up ZILCH-48665 straight away, dropping current sprint work. I pushed back: sprint planning is tomorrow, Ossie is now the sole FE on the team, and I asked first whether this was a bug or RN architecture tech debt — a distinction that matters for how it should be handled. Tom confirmed: not in production, only in the RN upgrade build; cannot confirm root cause without investigation. Ossie offered a pragmatic view: since the RN upgrade branch was merged to main two weeks ago, he would treat it as a bug regardless.
+
+Tom provided additional context: the keyboard issue hides the CTA on interstitial pages (e.g. Amazon — our top retailer), which could cause revenue drop-off. This changed the severity assessment.
+
+I committed to bringing ZILCH-48665 into sprint 11.4 planning tomorrow, treating it as high priority. I cannot formally commit until the planning meeting.
+
+Rory and Nikos both stated they "strongly disagree" that it's acceptable to go to production with this issue. Nikos suggested delaying the release by 1–2 days if needed. I noted in a thread reply that delaying production is an option.
+
+**Behavioural concerns:**
+- Rory attempted to lecture me on how Scrum should work. This is outside his remit — he is an FE engineer on another team. Backlog management and sprint intake are my responsibility.
+- Rory subsequently sent a private message directly to Ossie asking him to pick up the ticket. This is a deliberate attempt to go around me, and puts Ossie in an unfair position.
+
+I sent the team a message asking them to present a united front, not to weigh in publicly, and that I would handle comms.
+
+Escalated Rory's behaviour to Mike Davis (his EM). Will leave it to Mike to decide whether to have the conversation with Rory himself or involve me.
+
+**Note on Nikos:** his position is more understandable — he's expressing a view within his remit as QA Manager and is not trying to tell me how to run my process. Different in kind from Rory's behaviour.
+
+**Background:** Rory has overseen the RN Architecture project from the outset. My overall impression is that he has been chaotic in his management of it throughout.
+
+### Merchant Standup
+
+* [ZILCH-40366](https://payzilch.atlassian.net/browse/ZILCH-40366) — Jacek: reviewed and tested, test evidence attached. Now with Tom McKenzie to sign off; Tom wants to create a deployment plan.
+* [ZILCH-42041](https://payzilch.atlassian.net/browse/ZILCH-42041) — [PO-1957](https://payzilch.atlassian.net/browse/PO-1957) showing as waiting on Merchant for something. Will check in with Charlie Hurst to clarify.
+* Playbooks — team have reviewed, updated, moving to done.
+* [ZILCH-47912](https://payzilch.atlassian.net/browse/ZILCH-47912) — Ossie moving to review.
+* [ZILCH-35883](https://payzilch.atlassian.net/browse/ZILCH-35883) — Asked Tom McKenzie to try to reproduce the issue. To be closed if he cannot.
+* Raised the BAU Epic purpose with the team. Zac was absent — will need a separate conversation with him.
+
+## 2026-02-20
+
+* Piotr Niebylski declined today's 1:1 — something personal to attend to. Asked him to reschedule.
+* Booked leave for funeral.
+* Pre-refinement meeting with Tom McKenzie and Zac Barclay.
+* Refinement meeting with the Merchant team. Tamara Quinn joined for the first 25 minutes to discuss how rewards interact with her Pay Monthly project. Also discussed Nick Holt's pending rewards design in terms of work that can be refined into tickets.
+* Interviewed a candidate for an L4 Back End Engineer role (Krakow-based). Write-up pending.
+
+### DevOps Flash Report
+
+* Zephyr Zero: config for new services, queues, etc. since snapshot.
+* Deployment of Upwind into staging.
+* Data transformation for fraud event — allowing filter by customer.
+* Jira config and hygiene work in preparation for adoption of hybrid Scrum/Kanban model.
+* Issues:
+  * Difficulty working with the VGS API, making automation hard. Nick Gilbert is working with their account manager to resolve.
+  * EWA/Extra pivot caused disruption to the team.
+
+### EWA/Extra — Product & Planning Meeting
+
+* Project on a tight schedule. Tech planning session requested ASAP — even ahead of product understanding being fully formed. Expectation is to iterate on a tight loop.
+* ExCo has requested a project plan by end of day, including an engineering plan.
+* Zac Barclay provided a product overview:
+  * EWA (Earned Wage Access) is essentially a salary advance, available once a month.
+  * Maximum of £100 or 20% of net monthly salary — whichever is lower.
+  * Tied to a new membership tier called "Extra", charged at £2.99/month.
+  * EWA is exclusive to the Extra tier — not available in Plus.
+  * No free trial for Extra.
+  * Customers can borrow up to a week before their salary date.
+  * A disbursement fee of £3 applies on each use.
+  * Customer care constraints require that we can demonstrate the disbursement fee is fair relative to our handling costs.
+  * Requires customers to attach open banking so we can see evidence of a regular salary.
+* Whiteboard exercise to identify where work lands across teams. Outcome: nothing confirmed for Merchant, other than the possibility of some light UI work.
+
+### Merchant Stand-up
+
+* **ZILCH-40366** (Lambda authoriser / public retailer gateway) — Jacek moved to peer review. Now has good tests that mock out the AWS API Gateway component, allowing it to be tested without a live AWS context. Phil reviewing from DevOps perspective.
+* **ZILCH-42041** (Decommission fee-service MSSQL database) — no update. Still waiting on PO-1597 (Platform). Agreed to give them today; will chase on Monday if no movement.
+* **ZILCH-46901** (Partnerize / Intelligent Commerce) — moved to Ready for Release.
+* **ZILCH-46517** (Fee-change playbooks) — Michal working through feedback; agrees it makes sense. Reminded the team he's on leave Monday, then moves to a new team.
+* **ZILCH-35883** (Storefront rails clip right edge) — no change. Still waiting on Tom to attempt recreation. Ossie will look for something else to bring in. Noted: if we can't recreate, we should close it rather than sit on it.
+* Burndown looking healthy approaching end of sprint — on track for an excellent sprint. **Retro item**: what did we do right this time that we can replicate?
+
+### Merchant Flash Report
+
+* Issue with rewards service release from last week resolved — re-released with LD switch in place for blocking rewards on late payments.
+* Race condition between offer service and product service detected and resolved.
+* Pending Rewards: design work done, approved by team, pending architecture review.
+* Incident 452: front end defect (ZILCH-48105) at root cause fixed.
+* Intelligent Commerce: integration with Partnerize tested with third party and approved.
+* Feature Flag Hygiene initiative: back end codebases audited for feature flags.
+* Removed unused endpoint on retailer service.
+* Refresh tokens properly used in web — now compatible with mobile front end.
+* Gateway Service: authoriser lambda done pending review by DevOps. Next steps: build retailer service gateway.
+* Issue: observed unexpected spike in latency on fee-service. Appears to have been caused by noisy neighbours — a concern given the expectation that the move to Aurora would isolate us.
+
 ## 2026-02-19
 
 * Signed off ZILCH-48355 (bottom rail hidden), ZILCH-43416 (fee-service sanity test failure), ZILCH-48222 (Pending Rewards Technical Discovery & Design).
+* Reviewed and commented on Michal's fee-service playbooks (ZILCH-46517).
+* Met with Merchant BE engineers to discuss cross-team dependencies for Pending Rewards. Concluded that feature-level events are the preferred approach — would require support from Decisioning.
+* Backlog hygiene work for DevOps process project, including a session with the team.
 
 ### 1:1 — Tom McKenzie
 

@@ -73,6 +73,15 @@ On the Ephemerals project, there have been times when Piotr's enthusiasm has led
   * Shared my write-up
   * He acknowledged comments were appropriate and reasonable
 
+### 2026-02-20
+
+* Declined 1:1 — something personal to attend to. Asked to reschedule.
+
+#### Prepared talking points for rescheduled 1:1
+
+* **Personal check-in** — ask how his wife is doing (awaiting biopsy as of early Feb).
+* **New operating model** — still early days, but interested in his initial impressions. Use as a hook for the expectation around rota/project discipline: the hybrid model will give visibility to the split, and we'll expect that to be respected going forward.
+
 ### Peer feedback from Nick Gilbert — 2026-02-12
 
 Via Nick G's 1:1. Re: ZOE presentation and codebase:
