@@ -42,9 +42,13 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Running Notes
 
-### 2026-02-23 — RN Architecture dispute
+### 2026-02-23 — 1:1
 
-Rory Fielding (Retain) sent Ossie a private message asking him to pick up ZILCH-48665 directly, bypassing me. Ossie was put in an unfair position — being asked by a peer engineer from another team to go behind his EM's back. Worth a brief check-in with Ossie to acknowledge this and make clear he did nothing wrong.
+**Rory Fielding situation:** It was during this conversation that I discovered Rory had messaged Ossie directly about ZILCH-48665, pressing him to pick it up and bypassing me. Ossie was put in an unfair position by a peer engineer from another team. Handled through the 1:1; escalated to Mike Davis separately.
+
+**Support rota:** Ossie is on the support rota but was unsure of what the role entailed. Guidance given:
+* Ensure messages on #support-merchant are getting answered. Doesn't have to be him who answers — if something is going unattended, flag it to the team, ideally to whoever is best placed to respond.
+* Keep an eye on alerts. There is a lot of noise with many false positives, so the task is to spot alerts that represent a genuine concern. He should also keep track of what alerts he's seeing, so he can report on the noise level and help identify what needs cleaning up.
 
 ### 2026-02-18
 - Out of tickets; looking to bring something into the sprint. Suggested ZILCH-35883 (storefront rails right-edge clipping) — already In Dev and previously started, so a good candidate to finish off.

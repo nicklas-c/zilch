@@ -43,6 +43,8 @@ A set of step-by-step processes for common activities.  Playbooks are directly r
 A folder in which to work when authoring work item tickets in a Scrum or Kanban model.
 ### ./content-authoring/
 A folder in which to work when authoring written content.
+### ./incidents/
+Records of individual production incidents, one file per incident.
 ## MCP Sources
 You are configured with the following MCP sources:
 ### Jira
@@ -109,6 +111,12 @@ The prompt suggests that something has been done.  For example, an assertion tha
 2. Log the activity in the appropriate file in the ./logging/ folder.
 3. Consider whether the information relates to any known project in the ./projects/ folder.  If so, log the project-specific information in the project log.
 4. Consider whether the information relates to an individual person.  If so, log the person-specific information in the appropriate file in ./people/
+### Waiting-On Resolution
+#### Pattern
+The prompt indicates that a waiting-on item in ./tasks.md has been resolved — for example, a response has been received or an action has been taken.
+#### Response
+1. Remove the item from the Waiting On list in ./tasks.md.
+2. Log the resolution in the appropriate file in the ./logging/ folder.
 ### Communication Style
 * Use British English
     * Applies to spellings: e.g. "colour", not "color".

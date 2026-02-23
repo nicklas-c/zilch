@@ -8,11 +8,15 @@
 | Standardise Nick Holt's Jira tickets for Pending Rewards | pending-rewards | |
 | Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | | Break epic into refinable tickets |
+| Fix backlog hygiene on defect candidates ahead of sprint 11.4 planning | | See below for ticket-by-ticket status. ZILCH-47174, ZILCH-46150, ZILCH-45502: all missing story points only (otherwise compliant). ZILCH-44467: missing story points, parent epic, and Owned By. ZILCH-48542: missing story points and parent epic; no priority set. ZILCH-48154: missing story points and parent epic; no priority set. |
+| Work up Zac's Pay Monthly tickets ahead of sprint 11.4 planning | | |
+| Re-work Nick H's Pending Rewards next steps tickets ahead of sprint 11.4 planning | pending-rewards | Finish refinement and estimation in the planning meeting. |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
+| Implement knowledge base restructure | kb-restructure | See project log for design decisions. Expect several hours of collaborative work including compaction calibration. Proceed incrementally. |
 | Investigate Slack-to-ticket automation for DevOps reactive work | devops-process | Action from Phil 1:1, 18 Feb |
 | Create LaunchDarkly flag enablement playbook | | Retro action |
 | Ask Mike Davis what his engineering dependencies are for Pro | zilch-pro | |
@@ -45,6 +49,7 @@
 | Data file from Ethan Stockwell | visa-flex | | |
 | Tom McKenzie — test policy document | | | Suggested 13 Feb; to codify testing expectations for the team |
 | Michal Baran — continuity of membership Jira ticket for Decisioning | zilch-pro | | Review once written; Decisioning to refine and estimate |
+| Andrzej — fee schedule ownership (Merchant vs Spend Platform) re EWA/Extra | ewa-extra | 2026-02-24 | Messaged 23 Feb after CoP Poland |
 ## Recurring
 
 | Task | Recurrence | Playbook | Notes |

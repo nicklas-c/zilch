@@ -30,6 +30,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Ali Aziz | Engineering Manager | London | Platform | | | Yes |
 | Andrea Ponte Martins | Product GM | London | | | visa-flex | |
 | Andrzej Lorenz | VP of Engineering | Krakow | | Steve Rayko | | |
+| Arled Kola | Front End Software Engineer (Level 3) | London | Purchase | Michal Gorny | | |
 | Charlie Hurst | Platform | London | | | tastecard | |
 | Chris Prowse | Platform | London | | | tastecard | |
 | Chris Walker | Competency Lead, Front End Engineering | London | | Rob Nelson | | |
@@ -47,6 +48,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Marcin Zolna | Engineering Manager | Krakow | Decisioning | | continuous-deployment, zilch-pro | |
 | Marek Chodak | Back End Engineer (Level 5) | Krakow | Payments | | | |
 | Matt Swirski | Platform | London | | | on-call-rota | |
+| Michal Gorny | Engineering Manager (Level 2) | Krakow | | Andrzej Lorenz | | |
 | Michal Baran | Back End Engineer (Level 3) | London | Merchant | Me | | |
 | Michael Charash | Product Consultant | London | | | ewa-extra | |
 | Mike Davis | Engineering Manager | London | Retain | | continuous-deployment, zilch-pro | |

@@ -2,8 +2,20 @@
 
 ## 2026-02-23
 
+* Day disrupted — planned to-do list largely untouched. Time consumed by unplanned side conversations and meetings.
+
+* Received Pay Monthly ticket links from Zac Barclay. Ready to work up ahead of sprint 11.4 planning.
+
+* Evening: knowledge base redesign session. Designed a new model based on a single main log with inline tagging and periodic on-demand compaction into per-entity digests. File restructure planned to consolidate all log-related folders under `./logs/`. Under consideration: splitting project folders into discrete files (reference, context, digest) to enable targeted reads. Full design recorded in [projects/kb-restructure/log.md](projects/kb-restructure/log.md). Implementation deferred.
+
 * Created LaunchDarkly flag for Ossie Nwokedi.
+* ZILCH-46517 (fee-change playbooks) closed off in standup — the last of the mitigation tickets for Incident-417. Incident now closed. See [incidents/incident-417.md](incidents/incident-417.md).
 * Zac Barclay is using the BAU/reactive maintenance Epic as a dumping ground for small feature requests that fall outside the iteration plan. The Epic is intended for reactive toil, not unplanned product work. This obscures genuine product delivery — making value-adding work appear as maintenance. Worth addressing with Zac.
+
+### 1:1 — Ossie Nwokedi
+
+* Ossie confirmed that Rory Fielding had messaged him directly asking him to pick up ZILCH-48665, bypassing me. This is how I discovered the behaviour.
+* Support rota: Ossie was unsure of his responsibilities. Advised him to ensure #support-merchant messages are getting answered (flagging to the team if something is going unattended), and to monitor the alerts channel for genuine concerns while tracking noise to help inform future cleanup.
 
 ### RN Architecture Release — Dispute with Rory Fielding
 
@@ -28,9 +40,51 @@ I sent the team a message asking them to present a united front, not to weigh in
 
 Escalated Rory's behaviour to Mike Davis (his EM). Will leave it to Mike to decide whether to have the conversation with Rory himself or involve me.
 
+Later in the day, Rory arranged for an engineer on another team to pick up ZILCH-48665, without informing me. Having committed to bringing it into planning tomorrow, I only found out by chance. This compounds the earlier behaviour — not only did he bypass me again, he did so after I had given a clear commitment on how it would be handled.
+
+Met with Mike Davis. He is handling it: minor behaviours already on his radar via appraisals; the direct contact with Ossie will be raised with Rory specifically. Will mention the latest development informally next time they cross paths, but not escalating further. Situation handed over.
+
 **Note on Nikos:** his position is more understandable — he's expressing a view within his remit as QA Manager and is not trying to tell me how to run my process. Different in kind from Rory's behaviour.
 
 **Background:** Rory has overseen the RN Architecture project from the outset. My overall impression is that he has been chaotic in his management of it throughout.
+
+### Retrospective — Cancelled
+
+Sprint retrospective cancelled. Time used instead for a team discussion on EWA/Extra.
+
+### EWA/Extra — Team Impact Assessment
+
+Worked through the EWA/Extra project with the team to assess whether any features affect the Merchant team. Given the tight timeline, high certainty is needed early to pre-empt dependencies and prioritise any required work. After a thorough review, assessment is that we are broadly in the clear, with two caveats:
+
+1. **Fee schedule ownership ambiguity.** With the fee-service migration to the new team running in parallel, it is unclear whether fee schedule changes fall to Merchant or Spend Platform. Working assumption is Spend Platform, but there is enough ambiguity to warrant derisking.
+2. **Overlap with Pending Rewards / Blocking Rewards for Continuity of Memberships.** These are lower priority than EWA/Extra and could be held back to let EWA proceed. However, the new tier and new loan product may need to be accommodated in Merchant systems, and there will be a dependency on the Decisioning team.
+
+### Sprint 11.4 Planning Prep
+
+Worked through engineering work streams ahead of tomorrow's planning meeting. Capacity: 14 BE points, 7 FE points. No leave. Carryover to be estimated collaboratively in the meeting.
+
+**Work streams reviewed:**
+
+- **Gateway Service** — Jacek to propose next steps in the meeting; may result in ticket refinement.
+- **Pay Monthly** — Zac has promised to send ticket links. Pre-work needed before the meeting.
+- **Pending Rewards** — Nick H has drafted next steps tickets. Needs reworking ahead of the meeting; finish refinement and estimation in the meeting.
+- **Defects** — Candidates: ZILCH-47174, 46150, 45502 (cleanest); 44467, 48542, 48154 (need more hygiene work). All missing story points at minimum. Hygiene fix to-do added to tasks.md.
+- **LaunchDarkly (ZILCH-46366)** — ZILCH-46367 is the only sprint-ready FE candidate; estimate in meeting, pull in if small. BE tickets (46369, 46370, 46371) blocked on FE audit.
+- **Security Remediations** — ZILCH-46296 (Apache Tomcat Path Traversal, data-consistency-service) is the best BE candidate at Ready for development. Use meeting time to refine 1–2 further BE tickets. FE has 3 tickets at Ready for development (ZILCH-47917, 47891, 46769), assigned to me — worth reassigning.
+- **ZILCH-48725** (RN Architecture — content page transition) — reclassified from Defect to Tech Debt; pushed back to Created. Not a planning priority; flag for early refinement next sprint.
+
+**Planning meeting agenda:**
+
+1. Confirm capacity and carryover estimates
+2. Work streams:
+   - Gateway Service — Jacek to propose next steps; refine tickets if needed
+   - Pay Monthly — review and discuss Zac's tickets
+   - Pending Rewards — finish refinement and estimation on Nick H's tickets
+   - Defects — estimate candidates and pull in (ZILCH-47174, 46150, 45502 are cleanest)
+   - LaunchDarkly — estimate ZILCH-46367; pull in if small; backend tickets blocked on FE audit
+   - Security Remediations — ZILCH-46296 ready to plan; refine 1–2 further BE tickets in meeting
+3. Agree priorities
+4. Fill sprint and commit
 
 ### Merchant Standup
 

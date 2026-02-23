@@ -34,6 +34,12 @@ Merchant team is unlikely to be heavily involved, but tracking for awareness giv
 * Confirmed project leadership: Kevin Came (project/delivery), Steve Rayko (engineering), Zac Barclay (product). My role is that of an interested observer — no active ownership.
 * The strategic pivot to EWA/Extra caused disruption to the DevOps team this week.
 
+### 2026-02-23
+
+* Sprint retrospective cancelled; time used to work through EWA/Extra with the Merchant team in detail. Assessment: broadly in the clear, with two caveats.
+* **Caveat 1 — Fee schedule ownership ambiguity.** With the fee-service migration to the new team running in parallel, it is unclear whether fee schedule changes fall to Merchant or Spend Platform. Working assumption is Spend Platform, but ambiguity needs to be derisked. Messaged Andrzej after CoP Poland; reply expected 24 Feb.
+* **Caveat 2 — Overlap with Pending Rewards / Blocking Rewards for Continuity of Memberships.** These are lower priority than EWA/Extra and could be held back to let EWA proceed. However, the new tier and new loan product may need to be accommodated in Merchant systems, with a dependency on the Decisioning team.
+
 ### 2026-02-18
 * EWA/Extra meeting. Zac Barclay briefed on the feature — nothing substantially new.
 * No work identified for Merchant. I flagged this explicitly and nobody challenged.

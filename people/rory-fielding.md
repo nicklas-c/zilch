@@ -13,4 +13,8 @@ Subsequently sent a private message directly to Ossie asking him to pick up the 
 
 Escalated to Mike Davis. Mike to decide whether to have the conversation himself or involve me.
 
+Later the same day, Rory arranged for an engineer on another team to pick up ZILCH-48665, without informing me. I had already committed to bringing it into sprint planning the following day. Only discovered this by chance. A further instance of bypassing the agreed process — and this time after a clear commitment had been made.
+
+Escalation resolved: met with Mike Davis. Minor behaviours already being addressed through appraisals. The direct contact with Ossie will be raised with Rory specifically by Mike. Situation closed from my side.
+
 **General pattern:** Rory has overseen the RN Architecture project from the outset. Overall impression is that he has been chaotic in his management of it throughout.
