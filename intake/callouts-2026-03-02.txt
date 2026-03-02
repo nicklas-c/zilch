@@ -1,0 +1,843 @@
+Datadog  [10:21 AM]
+Warn: Payments Service Multiple errors occurred@slack-Zilch_Technology_Limited-payments-service-alerts-uk @slack-Zilch_Technology_Limited-platform-alerts-incidents
+
+More than 50.0 log events matched in the last 10m against the monitored query: service:payments-service status:(error OR warn) env:eu-ew1-prod ("sale:: Warn - Failed to create instalmentPaymentResult" OR "sale:: Resource access exception to acquirer" OR "502 Bad Gateway:" OR "400 Bad Request: [no body]" OR "failed to send metrics to datadog:" OR "No value present" OR "does not match total amount:")Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-Zilch_Technology_Limited-platform-alerts-incidentsView in Log ExplorerTime | Host | Message
+-----------------------------
+10:20:04 UTC | payments-service-5fd555d89f-8jrvl | failed to send metrics to datadog: Unable to read payload context deadline exceeded
+-----------------------------
+10:20:00 UTC | payments-service-5fd555d89f-d2lx4 | failed to send metrics to datadog: Unable to read payload context deadline exceeded
+ Datadog  [10:28 AM]
+Recovered: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was <= 0.0 in total during the last 1h.Notified@slack-platform-alerts-core, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/20067612?from_ts=1771495932000&to_ts=1771497132000&event_id=8509974825544512388&link_source=monitor_notif1 sub-group was recovered. Sample of sub-group:Env | Functionname | Service | Value
+-----------------------------
+eu-ew1-prod | eu-ew1-prod-overdue-outsystem-handler | overdue-outsystems-lambda | 0.0[10:29 AM]Recovered: Payments Service Multiple errors occurred@slack-Zilch_Technology_Limited-payments-service-alerts-uk @slack-Zilch_Technology_Limited-platform-alerts-incidents
+
+Less than or exactly 50.0 log events matched in the last 10m against the monitored query: service:payments-service status:(error OR warn) env:eu-ew1-prod ("sale:: Warn - Failed to create instalmentPaymentResult" OR "sale:: Resource access exception to acquirer" OR "502 Bad Gateway:" OR "400 Bad Request: [no body]" OR "failed to send metrics to datadog:" OR "No value present" OR "does not match total amount:")Notified@slack-Zilch_Technology_Limited-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukView in Log Explorer[10:32 AM]Triggered: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was > 0.0 in total during the last 1h.Notified@slack-platform-alerts-core, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/20067612?from_ts=1771496172000&to_ts=1771497372000&event_id=8509978851683382507&link_source=monitor_notif1 sub-group is in the triggered state. Sample of sub-group:Service | Functionname | Env | Value
+-----------------------------
+overdue-outsystems-lambda | eu-ew1-prod-overdue-outsystem-handler | eu-ew1-prod | 5.0[10:36 AM]Recovered: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was <= 100.0 in total during the last 1h.Notified@slack-platform-alerts-core, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/20067612?from_ts=1771496412000&to_ts=1771497612000&event_id=8509982875404585738&link_source=monitor_notif1 sub-group was recovered. Sample of sub-group:Env | Functionname | Service | Value
+-----------------------------
+eu-ew1-prod | eu-ew1-prod-overdue-outsystem-handler | overdue-outsystems-lambda | 18.0Github - Notifications  [10:47 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22178627021[10:47 AM]Completed Fargate pod eviction restart job in eu-ew1-prodJira Service Management ChatOps  [11:29 AM]
+Alert #6860: [Datadog] [P3] [Triggered on {host:product-service-698757766b-8snbc}] [TF] product-service Container has restarted in pod  eu-ew1-:white_check_mark: StatusClosed‎:technologist: RespondersSRE_TeamDescription
+on eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+  
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: [DataDog Logs]( https:/… [11:29 AM]Alert #6861: [Datadog] [P3] [Triggered on {host:product-service-698757766b-nwdsl}] [TF] product-service Container has restarted in pod  eu-ew1-:white_check_mark: StatusClosed‎:technologist: RespondersSRE_TeamDescription
+on eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+  
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: [DataDog Logs]( https:/… [11:29 AM]Alert #6862: [Datadog] [P3] [Triggered on {host:product-service-698757766b-s7cn6}] [TF] product-service Container has restarted in pod  eu-ew1-:white_check_mark: StatusClosed‎:technologist: RespondersSRE_TeamDescription
+on eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+  
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: [DataDog Logs]( https:/… Datadog  [11:29 AM]
+Triggered: [TF] product-service Container has restarted in pod  eu-ew1-prod on host:product-service-698757766b-nwdslon eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.con… Tagshost:product-service-698757766b-nwdslNotified@opsgenie-Decisioning_Team_DD, @slack-alert-decisioning, ... and 3 morehttps://app.datadoghq.eu/monitors/95078739?group=host%3Aproduct-service-698757766b-nwdsl&from_ts=1771499619000&to_ts=1771500819000&event_id=8510036680943069559&link_source=monitor_notif[11:29 AM]Triggered: [TF] product-service Container has restarted in pod  eu-ew1-prod on host:product-service-698757766b-8snbcon eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.con… Tagshost:product-service-698757766b-8snbcNotified@slack-alert-decisioning, @slack-platform-alerts-incidents, ... and 3 morehttps://app.datadoghq.eu/monitors/95078739?group=host%3Aproduct-service-698757766b-8snbc&from_ts=1771499619000&to_ts=1771500819000&event_id=8510036681132751827&link_source=monitor_notif[11:29 AM]Triggered: [TF] product-service Container has restarted in pod  eu-ew1-prod on host:product-service-698757766b-s7cn6on eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.con… Tagshost:product-service-698757766b-s7cn6Notified@opsgenie-Decisioning_Team_DD, @opsgenie-SRE_Team_Datadog, ... and 3 morehttps://app.datadoghq.eu/monitors/95078739?group=host%3Aproduct-service-698757766b-s7cn6&from_ts=1771499619000&to_ts=1771500819000&event_id=8510036687049437989&link_source=monitor_notifJira Service Management ChatOps  [11:30 AM]
+Alert #6860: [Datadog] [P3] [Triggered on {host:product-service-698757766b-8snbc}] [TF] product-service Container has restarted in pod  eu-ew1-
+Alert is escalated to next level for escalation SRE_Team_escalation[11:30 AM]Alert #6861: [Datadog] [P3] [Triggered on {host:product-service-698757766b-nwdsl}] [TF] product-service Container has restarted in pod  eu-ew1-
+Alert is escalated to next level for escalation SRE_Team_escalation[11:30 AM]Alert #6862: [Datadog] [P3] [Triggered on {host:product-service-698757766b-s7cn6}] [TF] product-service Container has restarted in pod  eu-ew1-
+Alert is escalated to next level for escalation SRE_Team_escalation[11:34 AM]Alert #6862: [Datadog] [P3] [Triggered on {host:product-service-698757766b-s7cn6}] [TF] product-service Container has restarted in pod  eu-ew1-
+System closed the alert[11:34 AM]Alert #6860: [Datadog] [P3] [Triggered on {host:product-service-698757766b-8snbc}] [TF] product-service Container has restarted in pod  eu-ew1-
+System closed the alert[11:34 AM]Alert #6861: [Datadog] [P3] [Triggered on {host:product-service-698757766b-nwdsl}] [TF] product-service Container has restarted in pod  eu-ew1-
+System closed the alertDatadog  [11:34 AM]
+Recovered: [TF] product-service Container has restarted in pod  eu-ew1-prod on host:product-service-698757766b-s7cn6on eu-ew1-prod has recovered from an unexpected restart.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.container.restarts{env:e… Tagshost:product-service-698757766b-s7cn6Notified@slack-platform-alerts-core, @slack-platform-alerts-incidents, ... and 3 morehttps://app.datadoghq.eu/monitors/95078739?group=host%3Aproduct-service-698757766b-s7cn6&from_ts=1771499919000&to_ts=1771501119000&event_id=8510041717250039736&link_source=monitor_notif[11:34 AM]Recovered: [TF] product-service Container has restarted in pod  eu-ew1-prod on host:product-service-698757766b-8snbcon eu-ew1-prod has recovered from an unexpected restart.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.container.restarts{env:e… Tagshost:product-service-698757766b-8snbcNotified@slack-platform-alerts-incidents, @slack-platform-alerts-core, ... and 3 morehttps://app.datadoghq.eu/monitors/95078739?group=host%3Aproduct-service-698757766b-8snbc&from_ts=1771499919000&to_ts=1771501119000&event_id=8510041717567653459&link_source=monitor_notif[11:34 AM]Recovered: [TF] product-service Container has restarted in pod  eu-ew1-prod on host:product-service-698757766b-nwdslon eu-ew1-prod has recovered from an unexpected restart.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Decisioning_Team_DD
+
+@slack-alert-decisioning @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.container.restarts{env:e… Tagshost:product-service-698757766b-nwdslNotified@opsgenie-SRE_Team_Datadog, @slack-alert-decisioning, ... and 3 morehttps://app.datadoghq.eu/monitors/95078739?group=host%3Aproduct-service-698757766b-nwdsl&from_ts=1771499919000&to_ts=1771501119000&event_id=8510041722736935601&link_source=monitor_notifDatadog  [11:46 PM]
+Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was <= 5500.0 on average during the last 5m.
+
+Metric value: 3722.136Tagsvendor:cashflowNotified@slack-alert-acquirer-warning-production, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1771543757000&to_ts=1771544957000&event_id=8510778200626749275&link_source=monitor_notifDatadog  [10:31 AM]
+Triggered: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was > 100.0 in total during the last 1h.Notified@slack-platform-alerts-incidents, @slack-platform-alerts-corehttps://app.datadoghq.eu/monitors/20067612?from_ts=1771582512000&to_ts=1771583712000&event_id=8511427437933547464&link_source=monitor_notif1 sub-group is in the triggered state. Sample of sub-group:Functionname | Env | Service | Value
+-----------------------------
+eu-ew1-prod-overdue-outsystem-handler | eu-ew1-prod | overdue-outsystems-lambda | 123.0Github - Notifications  [10:46 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22221073656[10:47 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [11:34 AM]
+Warn: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was > 80.0 in total during the last 1h.Notified@slack-platform-alerts-core, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/20067612?from_ts=1771586292000&to_ts=1771587492000&event_id=8511490822700895667&link_source=monitor_notif1 sub-group is in the triggered state. Sample of sub-group:Service | Functionname | Env | Value
+-----------------------------
+overdue-outsystems-lambda | eu-ew1-prod-overdue-outsystem-handler | eu-ew1-prod | 92.0[11:36 AM]Recovered: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was <= 80.0 in total during the last 1h.Notified@slack-platform-alerts-core, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/20067612?from_ts=1771586412000&to_ts=1771587612000&event_id=8511492838804287839&link_source=monitor_notif1 sub-group was recovered. Sample of sub-group:Functionname | Service | Env | Value
+-----------------------------
+eu-ew1-prod-overdue-outsystem-handler | overdue-outsystems-lambda | eu-ew1-prod | 73.0Datadog  [4:09 PM]
+Warn: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was > 80.0 in total during the last 1h.Notified@slack-platform-alerts-incidents, @slack-platform-alerts-corehttps://app.datadoghq.eu/monitors/20067612?from_ts=1771602792000&to_ts=1771603992000&event_id=8511767649814076229&link_source=monitor_notif1 sub-group is in the triggered state. Sample of sub-group:Env | Functionname | Service | Value
+-----------------------------
+eu-ew1-prod | eu-ew1-prod-overdue-outsystem-handler | overdue-outsystems-lambda | 100.0[4:10 PM]Triggered: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was > 100.0 in total during the last 1h.Notified@slack-platform-alerts-incidents, @slack-platform-alerts-corehttps://app.datadoghq.eu/monitors/20067612?from_ts=1771602852000&to_ts=1771604052000&event_id=8511768641503873510&link_source=monitor_notif1 sub-group is in the triggered state. Sample of sub-group:Functionname | Env | Service | Value
+-----------------------------
+eu-ew1-prod-overdue-outsystem-handler | eu-ew1-prod | overdue-outsystems-lambda | 120.0Datadog  [5:19 PM]
+Warn: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was > 80.0 in total during the last 1h.Notified@slack-platform-alerts-core, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/20067612?from_ts=1771606992000&to_ts=1771608192000&event_id=8511838101528980082&link_source=monitor_notif1 sub-group is in the triggered state. Sample of sub-group:Functionname | Service | Env | Value
+-----------------------------
+eu-ew1-prod-overdue-outsystem-handler | overdue-outsystems-lambda | eu-ew1-prod | 86.0[5:20 PM]Recovered: AWS Lambdas are being throttled in production -  overdue-outsystems-lambdaFunction Name: eu-ew1-prod-overdue-outsystem-handler
+Service: overdue-outsystems-lambda
+Env: eu-ew1-prod
+
+Check if we are at the account limit for lambda executions.
+This will cause service degradation.
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+aws.lambda.throttles over nickname:prod was <= 80.0 in total during the last 1h.Notified@slack-platform-alerts-core, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/20067612?from_ts=1771607052000&to_ts=1771608252000&event_id=8511839109542492631&link_source=monitor_notif1 sub-group was recovered. Sample of sub-group:Service | Env | Functionname | Value
+-----------------------------
+overdue-outsystems-lambda | eu-ew1-prod | eu-ew1-prod-overdue-outsystem-handler | 70.0Datadog  [3:13 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukhttps://app.datadoghq.eu/monitors/21063998?from_ts=1771642658000&to_ts=1771643858000&event_id=8512436484124059872&link_source=monitor_notifDatadog  [5:28 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 24.1%Notified@slack-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukhttps://app.datadoghq.eu/monitors/21063998?from_ts=1771650758000&to_ts=1771651958000&event_id=8512572388546209258&link_source=monitor_notifGithub - Notifications  [10:43 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22255406356[10:43 AM]Completed Fargate pod eviction restart job in eu-ew1-prodJira Service Management ChatOps  [1:23 AM]
+Alert #6863: [Datadog] [P2] [Triggered] Credit Decision (UK): Low Percentage of 'REQUIREIDV' final outcome responses:white_check_mark: StatusClosed‎:technologist: RespondersSRE_TeamDescription
+Check the [logs]( https://app.datadoghq.eu/logs?query=service%3Adecisioning-service%20env%3Aeu-ew1-prod%20%22TAKTILE%20SERVICE%20RESPONSE%22%20%22finalOutcome%3DREQUIREIDV%22%20&agg_m=count&agg_m_source=base&agg_t=count&cols=host%2Cservice&fromUser=true&messageDisp… Datadog  [1:23 AM]
+Triggered: Credit Decision (UK): Low Percentage of 'REQUIREIDV' final outcome responsesCheck the logs for details.
+
+-   Dashboard
+-   Run-book
+
+@opsgenie-SRE_Team_Datadog @slack-platform-alerts-incidents 
+
+@slack-alert-decisioning
+
+sum(last_1h):(sum:decisioning.statsd.credit_decision{final-outcome:requireidv, env:eu-ew1-prod}.as_count() / sum:decisioning.statsd.credit_decision{env:eu-ew1-prod}.as_count()) * 100 < 35
+
+Metric value: 34.454Notified@opsgenie-SRE_Team_Datadog, @slack-platform-alerts-incidents, @slack-alert-decisioninghttps://app.datadoghq.eu/monitors/14209669?from_ts=1771722469000&to_ts=1771723669000&event_id=8513775494591369412&link_source=monitor_notifJira Service Management ChatOps  [1:24 AM]
+Alert #6863: [Datadog] [P2] [Triggered] Credit Decision (UK): Low Percentage of 'REQUIREIDV' final outcome responses
+Alert is escalated to next level for escalation SRE_Team_escalationJira Service Management ChatOps  [1:34 AM]
+Alert #6863: [Datadog] [P2] [Triggered] Credit Decision (UK): Low Percentage of 'REQUIREIDV' final outcome responses
+Alert is escalated to next level for escalation SRE_Team_escalation[1:36 AM]Alert #6863: [Datadog] [P2] [Triggered] Credit Decision (UK): Low Percentage of 'REQUIREIDV' final outcome responses
+System closed the alertDatadog  [1:36 AM]
+Recovered: Credit Decision (UK): Low Percentage of 'REQUIREIDV' final outcome responsesCheck the logs for details.
+
+-   Dashboard
+-   Run-book
+
+@opsgenie-SRE_Team_Datadog @slack-platform-alerts-incidents 
+@slack-alert-decisioning
+
+sum(last_1h):(sum:decisioning.statsd.credit_decision{final-outcome:requireidv, env:eu-ew1-prod}.as_count() / sum:decisioning.statsd.credit_decision{env:eu-ew1-prod}.as_count()) * 100 < 35
+
+Metric value: 38.261Notified@slack-platform-alerts-incidents, @slack-alert-decisioning, @opsgenie-SRE_Team_Datadoghttps://app.datadoghq.eu/monitors/14209669?from_ts=1771723249000&to_ts=1771724449000&event_id=8513788580544462126&link_source=monitor_notifDatadog  [1:49 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukhttps://app.datadoghq.eu/monitors/21063998?from_ts=1771724018000&to_ts=1771725218000&event_id=8513801481449900752&link_source=monitor_notifDatadog  [6:49 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 50.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1771742018000&to_ts=1771743218000&event_id=8514103461261973119&link_source=monitor_notifGithub - Notifications  [10:42 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22275577019[10:42 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [2:27 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1771812698000&to_ts=1771813898000&event_id=8515289283980243471&link_source=monitor_notifDatadog  [5:10 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 43.3%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1771822478000&to_ts=1771823678000&event_id=8515453370815034816&link_source=monitor_notifGithub - Notifications  [10:48 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22302869415[10:48 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [1:50 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1771896878000&to_ts=1771898078000&event_id=8516701591232964221&link_source=monitor_notifDatadog  [5:26 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 44.8%Notified@slack-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukhttps://app.datadoghq.eu/monitors/21063998?from_ts=1771909838000&to_ts=1771911038000&event_id=8516919025862323660&link_source=monitor_notifGithub - Notifications  [10:48 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22347516853Github - Notifications  [10:55 AM]
+Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [11:08 AM]
+No data: There is more than 1 bulk operation service pod running in prod on kube_namespace:customer-prodThere should only be 1 bulk operation pod running in prod, multiple pods running may result in unexpected behaviour when running bulk tasks
+
+@slack-platform-alerts-incidents @slack-alert-retain
+
+kube_namespace:customer-prod has been missing data for the last 15m
+
+Metric value: 0.0Tagskube_namespace:customer-prodNotified@slack-platform-alerts-incidents, @slack-alert-retainDatadog  [1:17 PM]
+Recovered: There is more than 1 bulk operation service pod running in prod on kube_namespace:customer-prodThere should only be 1 bulk operation pod running in prod, multiple pods running may result in unexpected behaviour when running bulk tasks
+
+@slack-platform-alerts-incidents @slack-alert-retain
+
+kubernetes.pods.running over env:eu-ew1-prod,kube_namespace:customer-prod,kube_service:bulk-operation-service was <= 1.0 at all times during the last 5m.
+
+Metric value: 1.0Tagskube_namespace:customer-prodNotified@slack-platform-alerts-incidents, @slack-alert-retainhttps://app.datadoghq.eu/monitors/18785026?group=kube_namespace%3Acustomer-prod&from_ts=1771938106000&to_ts=1771939306000&event_id=8517393279541246612&link_source=monitor_notifDatadog  [1:33 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1771982258000&to_ts=1771983458000&event_id=8518134022940215467&link_source=monitor_notifDatadog  [5:27 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 51.7%Notified@slack-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukhttps://app.datadoghq.eu/monitors/21063998?from_ts=1771996298000&to_ts=1771997498000&event_id=8518369587283444699&link_source=monitor_notifDatadog  [6:58 AM]
+Warn: Deadlocks detected in customer-service on eu-west-1@slack-platform-alerts-core 
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+More than 30.0 log events matched in the last 5m against the monitored query: status:error -service:lambda source:java deadlock env:*prod by region,serviceTagsregion:eu-west-1, service:customer-serviceNotified@slack-platform-alerts-core, @slack-platform-alerts-incidentsView in Log ExplorerTime | Region | Service | Message
+-----------------------------
+06:57:08 UTC | eu-west-1 | customer-service | Transaction (Process ID 3708) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
+-----------------------------
+06:57:03 UTC | eu-west-1 | customer-service | Transaction (Process ID 3708) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
+ [7:00 AM]Recovered: Deadlocks detected in customer-service on eu-west-1@slack-platform-alerts-core @opsgenie-SRE_Team_Datadog
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+Less than or exactly 30.0 log events matched in the last 5m against the monitored query: status:error -service:lambda source:java deadlock env:*prod by region,serviceTagsregion:eu-west-1, service:customer-serviceNotified@slack-platform-alerts-core, @opsgenie-SRE_Team_Datadog, @slack-platform-alerts-incidentsView in Log ExplorerGithub - Notifications  [10:48 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22393485597[10:50 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [2:27 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1772071898000&to_ts=1772073098000&event_id=8519637933020039726&link_source=monitor_notifDatadog  [5:35 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 50.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1772083178000&to_ts=1772084378000&event_id=8519827175804016270&link_source=monitor_notifGithub - Notifications  [10:48 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22438741568[10:49 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [12:15 PM]
+Warn: Deadlocks detected in customer-service on eu-west-1@slack-platform-alerts-core 
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+More than 30.0 log events matched in the last 5m against the monitored query: status:error -service:lambda source:java deadlock env:*prod by region,serviceTagsregion:eu-west-1, service:customer-serviceNotified@slack-platform-alerts-incidents, @slack-platform-alerts-coreView in Log ExplorerTime | Region | Service | Message
+-----------------------------
+12:13:50 UTC | eu-west-1 | customer-service | Purchase transaction processing failed error: could not execute statement [Transaction (Process ID 2788) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.] [insert into customer.customer_ledger (acquirer_transaction_reference,amount,balance,blocked_amount,card_id,card_reference,cardholder_presence,cashflow_transaction_orig_id,created_by,created_date,credit,currency,customer_account_id,customer_id,customer_loan_id,device_walle
+-----------------------------
+12:13:50 UTC | eu-west-1 | customer-service | Exception thrown… [12:20 PM]Recovered: Deadlocks detected in customer-service on eu-west-1@slack-platform-alerts-core @opsgenie-SRE_Team_Datadog
+
+@slack-platform-alerts-core 
+@slack-platform-alerts-incidents
+
+Less than or exactly 30.0 log events matched in the last 5m against the monitored query: status:error -service:lambda source:java deadlock env:*prod by region,serviceTagsregion:eu-west-1, service:customer-serviceNotified@opsgenie-SRE_Team_Datadog, @slack-platform-alerts-incidents, @slack-platform-alerts-coreView in Log ExplorerJira Service Management ChatOps  [4:24 PM]
+Alert #6864: [Datadog] [P3] [Triggered on {host:customer-service-6787d95c97-kbcbk}] [TF] customer-service Container has restarted in pod  eu-ew:white_check_mark: StatusClosed‎:technologist: RespondersSRE_TeamDescription
+on eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Engineering_Team_DD
+
+  
+
+@slack-alert-engineering @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: [DataDog Logs]( https:/… Datadog  [4:24 PM]
+Triggered: [TF] customer-service Container has restarted in pod  eu-ew1-prod on host:customer-service-6787d95c97-kbcbkon eu-ew1-prod has been unexpectedly restarted - please investigate urgently.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Engineering_Team_DD
+
+@slack-alert-engineering @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.con… Tagshost:customer-service-6787d95c97-kbcbkNotified@slack-platform-alerts-core, @slack-platform-alerts-incidents, ... and 3 morehttps://app.datadoghq.eu/monitors/95078751?group=host%3Acustomer-service-6787d95c97-kbcbk&from_ts=1772122131000&to_ts=1772123331000&event_id=8520480697256067917&link_source=monitor_notifJira Service Management ChatOps  [4:25 PM]
+Alert #6864: [Datadog] [P3] [Triggered on {host:customer-service-6787d95c97-kbcbk}] [TF] customer-service Container has restarted in pod  eu-ew
+Alert is escalated to next level for escalation SRE_Team_escalation[4:29 PM]Alert #6864: [Datadog] [P3] [Triggered on {host:customer-service-6787d95c97-kbcbk}] [TF] customer-service Container has restarted in pod  eu-ew
+System closed the alertDatadog  [4:29 PM]
+Recovered: [TF] customer-service Container has restarted in pod  eu-ew1-prod on host:customer-service-6787d95c97-kbcbkon eu-ew1-prod has recovered from an unexpected restart.
+
+@slack-platform-alerts-incidents @opsgenie-SRE_Team_Datadog @opsgenie-Engineering_Team_DD
+
+@slack-alert-engineering @slack-platform-alerts-core
+
+Run-book Links
+
+Check logs for the service here: DataDog Logs
+
+Check health, traces and metrics for the service: DataDog APM
+
+Check the on-call specific dashboards: On-call Dashboards
+
+In the event that we believe this is caused by a 3rd party: 3rd Parties contact details
+
+In the event that we need to inform users on the app we can add a banner: Statuspage integration
+
+In the event that this needs to be escalated to a different team: Who is on call
+
+max(last_5m):diff(max:kubernetes_state.container.restarts{env:e… Tagshost:customer-service-6787d95c97-kbcbkNotified@slack-platform-alerts-incidents, @opsgenie-SRE_Team_Datadog, ... and 3 morehttps://app.datadoghq.eu/monitors/95078751?group=host%3Acustomer-service-6787d95c97-kbcbk&from_ts=1772122431000&to_ts=1772123631000&event_id=8520485735876969961&link_source=monitor_notifPhil Stevenson  [4:32 PM]
+@Chris Prowse datadog sidecar died, not sure why
+Datadog  [5:01 PM]
+Triggered: [Kubernetes] Pod datadog-aurora-agent-bdc6459d-pjx2g is CrashloopBackOff on namespace monitoring on kube_cluster_name:eks-eu-ew1-prod-issuer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-bdc6459d-pjx2g## What's happening?
+At least one container in pod datadog-aurora-agent-bdc6459d-pjx2g on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad deployment. Adjust the thresholds of the query to suit your infrastructure.
+
+max(last_10m):default_zero(max:kubernetes_state.container.status_report.count.waiting{reason:crashloopbackoff, kube_cluster_name:eks-eu-ew1-prod*} by {kube_cluster_name,kube_namespace,pod_name}) >= 1
+
+Metric value: 1.0Tagskube_cluster_name:eks-eu-ew1-prod-issuer, kube_namespace:monitoring, pod_name:datadog-aurora-agent-bdc6459d-pjx2gNotified@slack-platform-alerts-incidents, @opsgenie-SRE_Team_Datadoghttps://app.datadoghq.eu/monitors/100705628?group=kube_cluster_name%3Aeks-eu-ew1-prod-issuer%2Ckube_namespace%3Amonitoring%2Cpod_name%3Adatadog-aurora-agent-bdc6459d-pjx2g&from_ts=1772124308000&to_ts=1772125508000&event_id=8520517224810780675&link_source=monitor_notifJira Service Management ChatOps  [5:01 PM]
+Alert #6867: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-affiliate,kube_namespace:monitoring,pod_name:datadog-aurora-agent-578c9:white_check_mark: StatusOpen‎:technologist: RespondersSRE_TeamDescription
+## What's happening?
+At least one container in pod datadog-aurora-agent-578c94f865-6rf54 on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad… [5:01 PM]Alert #6865: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-customer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b55dc:white_check_mark: StatusOpen‎:technologist: RespondersSRE_TeamDescription
+## What's happening?
+At least one container in pod datadog-aurora-agent-5b55dcccff-t8p8b on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad… [5:01 PM]Alert #6866: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-issuer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-bdc6459d:white_check_mark: StatusOpen‎:technologist: RespondersSRE_TeamDescription
+## What's happening?
+At least one container in pod datadog-aurora-agent-bdc6459d-pjx2g on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad d… Datadog  [5:01 PM]
+Triggered: [Kubernetes] Pod datadog-aurora-agent-578c94f865-6rf54 is CrashloopBackOff on namespace monitoring on kube_cluster_name:eks-eu-ew1-prod-affiliate,kube_namespace:monitoring,pod_name:datadog-aurora-agent-578c94f865-6rf54## What's happening?
+At least one container in pod datadog-aurora-agent-578c94f865-6rf54 on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad deployment. Adjust the thresholds of the query to suit your infrastructure.
+
+max(last_10m):default_zero(max:kubernetes_state.container.status_report.count.waiting{reason:crashloopbackoff, kube_cluster_name:eks-eu-ew1-prod*} by {kube_cluster_name,kube_namespace,pod_name}) >= 1
+
+Metric value: 1.0Tagskube_cluster_name:eks-eu-ew1-prod-affiliate, kube_namespace:monitoring, pod_name:datadog-aurora-agent-578c94f865-6rf54Notified@slack-platform-alerts-incidents, @opsgenie-SRE_Team_Datadoghttps://app.datadoghq.eu/monitors/100705628?group=kube_cluster_name%3Aeks-eu-ew1-prod-affiliate%2Ckube_namespace%3Amonitoring%2Cpod_name%3Adatadog-aurora-agent-578c94f865-6rf54&from_ts=1772124308000&to_ts=1772125508000&event_id=8520517224981198000&link_source=monitor_notif[5:01 PM]Triggered: [Kubernetes] Pod datadog-aurora-agent-5b55dcccff-t8p8b is CrashloopBackOff on namespace monitoring on kube_cluster_name:eks-eu-ew1-prod-customer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b55dcccff-t8p8b## What's happening?
+At least one container in pod datadog-aurora-agent-5b55dcccff-t8p8b on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad deployment. Adjust the thresholds of the query to suit your infrastructure.
+
+max(last_10m):default_zero(max:kubernetes_state.container.status_report.count.waiting{reason:crashloopbackoff, kube_cluster_name:eks-eu-ew1-prod*} by {kube_cluster_name,kube_namespace,pod_name}) >= 1
+
+Metric value: 1.0Tagskube_cluster_name:eks-eu-ew1-prod-customer, kube_namespace:monitoring, pod_name:datadog-aurora-agent-5b55dcccff-t8p8bNotified@slack-platform-alerts-incidents, @opsgenie-SRE_Team_Datadoghttps://app.datadoghq.eu/monitors/100705628?group=kube_cluster_name%3Aeks-eu-ew1-prod-customer%2Ckube_namespace%3Amonitoring%2Cpod_name%3Adatadog-aurora-agent-5b55dcccff-t8p8b&from_ts=1772124308000&to_ts=1772125508000&event_id=8520517225501062090&link_source=monitor_notifJira Service Management ChatOps  [5:01 PM]
+Alert #6865: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-customer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b55dc
+Alert is escalated to next level for escalation SRE_Team_escalation[5:01 PM]Alert #6866: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-issuer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-bdc6459d
+Alert is escalated to next level for escalation SRE_Team_escalation[5:01 PM]Alert #6867: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-affiliate,kube_namespace:monitoring,pod_name:datadog-aurora-agent-578c9
+Alert is escalated to next level for escalation SRE_Team_escalationPhil Stevenson  [5:02 PM]
+@Chris Prowse sorry new alerts
+[5:03 PM]They do seem to be valid though
+Chris Prowse  [5:03 PM]
+All good mateJira Service Management ChatOps  [5:34 PM]
+Alert #6868: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-issuer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b5bcbcc:white_check_mark: StatusOpen‎:technologist: RespondersSRE_TeamDescription
+## What's happening?
+At least one container in pod datadog-aurora-agent-5b5bcbccf6-mq4hz on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad… Datadog  [5:34 PM]
+Triggered: [Kubernetes] Pod datadog-aurora-agent-5b5bcbccf6-mq4hz is CrashloopBackOff on namespace monitoring on kube_cluster_name:eks-eu-ew1-prod-issuer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b5bcbccf6-mq4hz## What's happening?
+At least one container in pod datadog-aurora-agent-5b5bcbccf6-mq4hz on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad deployment. Adjust the thresholds of the query to suit your infrastructure.
+
+max(last_10m):default_zero(max:kubernetes_state.container.status_report.count.waiting{reason:crashloopbackoff, kube_cluster_name:eks-eu-ew1-prod*} by {kube_cluster_name,kube_namespace,pod_name}) >= 1
+
+Metric value: 1.0Tagskube_cluster_name:eks-eu-ew1-prod-issuer, kube_namespace:monitoring, pod_name:datadog-aurora-agent-5b5bcbccf6-mq4hzNotified@opsgenie-SRE_Team_Datadog, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/100705628?group=kube_cluster_name%3Aeks-eu-ew1-prod-issuer%2Ckube_namespace%3Amonitoring%2Cpod_name%3Adatadog-aurora-agent-5b5bcbccf6-mq4hz&from_ts=1772126288000&to_ts=1772127488000&event_id=8520550452137690621&link_source=monitor_notifJira Service Management ChatOps  [5:34 PM]
+Alert #6868: [Datadog] [Triggered on {kube_cluster_name:eks-eu-ew1-prod-issuer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b5bcbcc
+Alert is escalated to next level for escalation SRE_Team_escalationDatadog  [2:38 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1772158958000&to_ts=1772160158000&event_id=8521098568450834377&link_source=monitor_notifDatadog  [4:30 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 48.3%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21063998?from_ts=1772165678000&to_ts=1772166878000&event_id=8521211311909449357&link_source=monitor_notifDatadog  [4:49 AM]
+Triggered: Successful Manual Payments anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Successful Manual Payments anomaly
+Please check payments service dashboard for more details
+https://app.datadoghq.eu/dashboard/ymk-bi7-6ge/payments-service?fromUser=true&refresh_mode=sliding&view=spans&from_ts=1723609389572&to_ts=1723623789572&live=true 
+
+At least 100% of sum:payment.service.payment.successful.counter{env:eu-ew1-prod}.as_count() values have been more than 3 deviations from the predicted values during the last 15m.
+
+Percent anomalous: 100.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/18611820?from_ts=1772166780000&to_ts=1772167980000&event_id=8521229802706601882&link_source=monitor_notifDatadog  [7:25 AM]
+Triggered: String or binary data would be truncated on eu-ew1-prodA system is reporting that data will be truncated. This is P1/P2 due to potential data corruption/loss. 
+
+Contact 4th Line Support to Investigate Issue: https://payzilch.atlassian.net/wiki/spaces/PAYZ/pages/2542535049/4th+line+support+rota
+
+String or binary data would be truncated. 
+
+@slack-platform-alerts-incidents
+@opsgenie-SRE_Team_Datadog
+
+More than 5 log events matched in the last 15m against the monitored query: "String or binary data would be truncated" env:(prod OR cde OR na-ue1-prod OR eu-ew1-prod) status:error by envTagsenv:eu-ew1-prodNotified@slack-platform-alerts-incidents, @opsgenie-SRE_Team_DatadogView in Log ExplorerTime | Env | Message
+-----------------------------
+07:24:37 UTC | eu-ew1-prod | String or binary data would be truncated.
+-----------------------------
+07:24:22 UTC | eu-ew1-prod | String or binary data would be truncated.
+ Jira Service Management ChatOps  [7:25 AM]
+Alert #6869: [Datadog] [P2] [Triggered] String or binary data would be truncated on eu-ew1-prod:white_check_mark: StatusClosed‎:technologist: RespondersSRE_TeamDescription
+A system is reporting that data will be truncated. This is P1/P2 due to potential data corruption/loss. 
+
+Contact 4th Line Support to Investigate Issue: https://payzilch.atlassian.net/wiki/spaces/PAYZ/pages/2542535049/4th+line+support+rota
+
+String or binary data would be truncated. 
+
+@slack-pla… [7:26 AM]Alert #6869: [Datadog] [P2] [Triggered] String or binary data would be truncated on eu-ew1-prod
+Alert is escalated to next level for escalation Daytime EscalationDatadog  [7:39 AM]
+Recovered: String or binary data would be truncated on eu-ew1-prodA system is reporting that data will be truncated. This is P1/P2 due to potential data corruption/loss. 
+
+Contact 4th Line Support to Investigate Issue: https://payzilch.atlassian.net/wiki/spaces/PAYZ/pages/2542535049/4th+line+support+rota
+
+String or binary data would be truncated. 
+
+@slack-platform-alerts-incidents
+@opsgenie-SRE_Team_Datadog
+
+Less than or exactly 5 log events matched in the last 15m against the monitored query: "String or binary data would be truncated" env:(prod OR cde OR na-ue1-prod OR eu-ew1-prod) status:error by envTagsenv:eu-ew1-prodNotified@opsgenie-SRE_Team_Datadog, @slack-platform-alerts-incidentsView in Log ExplorerJira Service Management ChatOps  [7:39 AM]
+Alert #6869: [Datadog] [P2] [Triggered] String or binary data would be truncated on eu-ew1-prod
+System closed the alertDatadog  [10:01 AM]
+Triggered: [Kubernetes] Pod datadog-aurora-agent-578c94f865-6rf54 is CrashloopBackOff on namespace monitoring on kube_cluster_name:eks-eu-ew1-prod-affiliate,kube_namespace:monitoring,pod_name:datadog-aurora-agent-578c94f865-6rf54## What's happening?
+At least one container in pod datadog-aurora-agent-578c94f865-6rf54 on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad deployment. Adjust the thresholds of the query to suit your infrastructure.
+
+This notification has been sent because a downtime ended.
+
+Metric value: 1.0Tagskube_cluster_name:eks-eu-ew1-prod-affiliate, kube_namespace:monitoring, pod_name:datadog-aurora-agent-578c94f865-6rf54Notified@slack-platform-alerts-incidents, @opsgenie-SRE_Team_Datadoghttps://app.datadoghq.eu/monitors/100705628?group=kube_cluster_name%3Aeks-eu-ew1-prod-affiliate%2Ckube_namespace%3Amonitoring%2Cpod_name%3Adatadog-aurora-agent-578c94f865-6rf54&from_ts=1772185508000&to_ts=1772186708000&event_id=8521543988594721629&link_source=monitor_notif[10:01 AM]Triggered: [Kubernetes] Pod datadog-aurora-agent-5b55dcccff-t8p8b is CrashloopBackOff on namespace monitoring on kube_cluster_name:eks-eu-ew1-prod-customer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b55dcccff-t8p8b## What's happening?
+At least one container in pod datadog-aurora-agent-5b55dcccff-t8p8b on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad deployment. Adjust the thresholds of the query to suit your infrastructure.
+
+This notification has been sent because a downtime ended.
+
+Metric value: 1.0Tagskube_cluster_name:eks-eu-ew1-prod-customer, kube_namespace:monitoring, pod_name:datadog-aurora-agent-5b55dcccff-t8p8bNotified@opsgenie-SRE_Team_Datadog, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/100705628?group=kube_cluster_name%3Aeks-eu-ew1-prod-customer%2Ckube_namespace%3Amonitoring%2Cpod_name%3Adatadog-aurora-agent-5b55dcccff-t8p8b&from_ts=1772185508000&to_ts=1772186708000&event_id=8521543988754585961&link_source=monitor_notif[10:01 AM]Triggered: [Kubernetes] Pod datadog-aurora-agent-5b5bcbccf6-mq4hz is CrashloopBackOff on namespace monitoring on kube_cluster_name:eks-eu-ew1-prod-issuer,kube_namespace:monitoring,pod_name:datadog-aurora-agent-5b5bcbccf6-mq4hz## What's happening?
+At least one container in pod datadog-aurora-agent-5b5bcbccf6-mq4hz on monitoring is in a waiting state due to reason crashloopbackoff in the last 10 minutes.
+
+@slack-platform-alerts-incidents 
+@opsgenie-SRE_Team_Datadog 
+
+ This alert could generate several alerts for a bad deployment. Adjust the thresholds of the query to suit your infrastructure.
+
+This notification has been sent because a downtime ended.
+
+Metric value: 1.0Tagskube_cluster_name:eks-eu-ew1-prod-issuer, kube_namespace:monitoring, pod_name:datadog-aurora-agent-5b5bcbccf6-mq4hzNotified@opsgenie-SRE_Team_Datadog, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/100705628?group=kube_cluster_name%3Aeks-eu-ew1-prod-issuer%2Ckube_namespace%3Amonitoring%2Cpod_name%3Adatadog-aurora-agent-5b5bcbccf6-mq4hz&from_ts=1772185508000&to_ts=1772186708000&event_id=8521543994140940109&link_source=monitor_notifGithub - Notifications  [10:47 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22483113250[10:48 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [4:36 PM]
+Recovered: Successful Manual Payments anomalySuccessful Manual Payments anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:payment.service.payment.successful.counter{env:eu-ew1-prod}.as_count() values have been more than 3 deviations from the predicted values during the last 15m.
+
+Percent anomalous: 0.0%Notified@slack-Zilch_Technology_Limited-payments-service-alerts-uk, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/18611820?from_ts=1772209200000&to_ts=1772210400000&event_id=8521941490847055317&link_source=monitor_notifDatadog  [1:19 AM]
+Triggered: Snooze Config requests anomaly@slack-platform-alerts-incidents
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk
+Snooze config requests anomaly
+Please check Snooze dashboard for more details
+https://app.datadoghq.eu/dashboard/jbj-kux-fet/snooze?fromUser=false&refresh_mode=sliding&from_ts=1733416175430&to_ts=1734020975430&live=true
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 100.0%Notified@slack-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukhttps://app.datadoghq.eu/monitors/21063998?from_ts=1772240618000&to_ts=1772241818000&event_id=8522468589766179006&link_source=monitor_notifDatadog  [6:17 AM]
+Recovered: Snooze Config requests anomalySnooze config requests anomaly back to normal. 
+
+@slack-Zilch_Technology_Limited-payments-service-alerts-uk 
+@slack-platform-alerts-incidents
+
+At least 100% of sum:trace.servlet.request.hits{env:eu-ew1-prod,resource_name:get_/customer-api/v3/loans/prior-snooze-config,service:customer-service}.as_count() values have been more than 5 deviations from the predicted values during the last 30m.
+
+Percent anomalous: 43.3%Notified@slack-platform-alerts-incidents, @slack-Zilch_Technology_Limited-payments-service-alerts-ukhttps://app.datadoghq.eu/monitors/21063998?from_ts=1772258498000&to_ts=1772259698000&event_id=8522768568634242860&link_source=monitor_notifGithub - Notifications  [10:40 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22519133203[10:42 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [11:12 AM]
+Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was <= 5500.0 on average during the last 5m.
+
+Metric value: 1343.887Tagsvendor:cashflowNotified@slack-alert-acquirer-warning-production, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772276117000&to_ts=1772277317000&event_id=8523065163936957203&link_source=monitor_notifGithub - Notifications  [10:42 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22541708128[10:43 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [12:04 AM]
+Triggered: Metric Anomaly: The latency for failed sales for cashflow is increasing@slack-alert-acquirer-prod 
+@slack-platform-alerts-incidents 
+
+Runbook
+
+Impact: 
+
+This alert is telling us that the latency of failed payments has broken our thresholds based on the anomaly detection. This means that there is a potential slowdown with the payment process when handling failed payments that could have a knock on impact with valid payments.
+
+There are many flows to payments but from Acquirer's point of view, it stems to these:
+
+Purchase flow: 
+1. EHI -> (/sales) Acquirer Service -> (/payment) Checkout.
+2. EHI -> (/sales) Acquirer Service -> (/continuous-payment) Cashflow Service -> (secure.cashflows.com/gateway/remote_auth) Cashflows.
+
+Billing Run:
+1. Customer-Service -> (/sa… Tagsvendor:cashflowNotified@slack-alert-acquirer-prod, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772408837000&to_ts=1772410037000&event_id=8525291834553376216&link_source=monitor_notif[12:07 AM]Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-prod 
+@slack-platform-alerts-incidents 
+
+The latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was  5500.0 on average during the last 5m.
+
+Metric value: 8044.895Tagsvendor:cashflowNotified@slack-alert-acquirer-warning-production, @slack-platform-alerts-incidents, @slack-alert-acquirer-prodhttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772409017000&to_ts=1772410217000&event_id=8525294858497278078&link_source=monitor_notif[12:09 AM]Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was <= 5500.0 on average during the last 5m.
+
+Metric value: 5332.079Tagsvendor:cashflowNotified@slack-alert-acquirer-warning-production, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772409137000&to_ts=1772410337000&event_id=8525296876334608790&link_source=monitor_notifGithub - Notifications  [10:47 AM]
+Starting Fargate pod eviction restart job in eu-ew1-prodJob Link: https://github.com/zilchdev/tools/actions/runs/22572517418[10:48 AM]Completed Fargate pod eviction restart job in eu-ew1-prodDatadog  [11:09 AM]
+Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was <= 5500.0 on average during the last 5m.
+
+Metric value: 4961.754Tagsvendor:cashflowNotified@slack-alert-acquirer-warning-production, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772448737000&to_ts=1772449937000&event_id=8525961258533543477&link_source=monitor_notif[11:11 AM]Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was <= 5500.0 on average during the last 5m.
+
+Metric value: 4881.088Tagsvendor:cashflowNotified@slack-alert-acquirer-warning-production, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772448857000&to_ts=1772450057000&event_id=8525963264499772228&link_source=monitor_notifDatadog  [2:10 PM]
+Triggered: Metric Anomaly: The latency for failed sales for cashflow is increasing@slack-alert-acquirer-prod 
+@slack-platform-alerts-incidents 
+
+Runbook
+
+Impact: 
+
+This alert is telling us that the latency of failed payments has broken our thresholds based on the anomaly detection. This means that there is a potential slowdown with the payment process when handling failed payments that could have a knock on impact with valid payments.
+
+There are many flows to payments but from Acquirer's point of view, it stems to these:
+
+Purchase flow: 
+1. EHI -> (/sales) Acquirer Service -> (/payment) Checkout.
+2. EHI -> (/sales) Acquirer Service -> (/continuous-payment) Cashflow Service -> (secure.cashflows.com/gateway/remote_auth) Cashflows.
+
+Billing Run:
+1. Customer-Service -> (/sa… Tagsvendor:cashflowNotified@slack-alert-acquirer-prod, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772459597000&to_ts=1772460797000&event_id=8526143450500978130&link_source=monitor_notif[2:12 PM]Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-prod 
+@slack-platform-alerts-incidents 
+
+The latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was  5500.0 on average during the last 5m.
+
+Metric value: 8836.88Tagsvendor:cashflowNotified@slack-platform-alerts-incidents, @slack-alert-acquirer-warning-production, @slack-alert-acquirer-prodhttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772459717000&to_ts=1772460917000&event_id=8526145464714604071&link_source=monitor_notif[2:14 PM]Recovered: Metric Anomaly: The latency for failed sales for cashflow is increasingThe latency for failed sales has recovered for cashflow.
+@slack-alert-acquirer-warning-production 
+@slack-platform-alerts-incidents 
+
+acquirer.sale.failed.duration over env:eu-ew1-prod,service:acquirer-service,vendor:cashflow was <= 5500.0 on average during the last 5m.
+
+Metric value: 3381.374Tagsvendor:cashflowNotified@slack-alert-acquirer-warning-production, @slack-platform-alerts-incidentshttps://app.datadoghq.eu/monitors/21626537?group=vendor%3Acashflow&from_ts=1772459837000&to_ts=1772461037000&event_id=8526147474708115641&link_source=monitor_notif
+Message platform-alerts-incidents

@@ -4,13 +4,14 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Write up interview (20 Feb) | | |
-| Standardise Nick Holt's Jira tickets for Pending Rewards | pending-rewards | |
-| Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | | Break epic into refinable tickets |
-| Fix backlog hygiene on defect candidates ahead of sprint 11.4 planning | | See below for ticket-by-ticket status. ZILCH-47174, ZILCH-46150, ZILCH-45502: all missing story points only (otherwise compliant). ZILCH-44467: missing story points, parent epic, and Owned By. ZILCH-48542: missing story points and parent epic; no priority set. ZILCH-48154: missing story points and parent epic; no priority set. |
-| Work up Zac's Pay Monthly tickets ahead of sprint 11.4 planning | | |
-| Re-work Nick H's Pending Rewards next steps tickets ahead of sprint 11.4 planning | pending-rewards | Finish refinement and estimation in the planning meeting. |
+| Follow up with Phil Stephenson: which team should own Snooze Config alert; arrange handover discussion with relevant EM | on-call-rota | |
+| Catch up with Phil Stephenson async: how to handle AWS Lambda throttling (overdue-outsystems) with Retain | on-call-rota | |
+| Chase Grzegorz re: ZILCH-44139 (string/binary data truncation) — ensure planned into a sprint | on-call-rota | |
+| Draft day-one email for Stefan | stefan-onboarding | Depends on other onboarding prep |
+| Write up interview (20 Feb) | | |
+| Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
+| Fix backlog hygiene on defect candidates | | ZILCH-47174, ZILCH-46150, ZILCH-45502: all missing story points only (otherwise compliant). ZILCH-44467: missing story points, parent epic, and Owned By. ZILCH-48542: missing story points and parent epic; no priority set. ZILCH-48154: missing story points and parent epic; no priority set. |
 
 ## Soon
 
@@ -28,7 +29,6 @@
 | Write up thoughts on improved data model for rewards | | |
 | Add Stefan to regular team meetings | stefan-onboarding | |
 | Set up 1:1s with Stefan | stefan-onboarding | |
-| Draft day-one email for Stefan | stefan-onboarding | Depends on other onboarding prep |
 
 
 ## Later
@@ -45,11 +45,8 @@
 |---|---|---|---|
 | [PO-1589](https://payzilch.atlassian.net/browse/PO-1589) — Lambda VPC move for Ello SFTP | tastecard | | Chased 9 Feb; unassigned |
 | [ITOPS-14282](https://payzilch.atlassian.net/browse/ITOPS-14282) — JSM permissions for Merchant support rota | | | Raised 9 Feb |
-| Piotr Niebylski — reschedule 1:1 | | | Cancelled 20 Feb; onus on him to find a new time |
-| Data file from Ethan Stockwell | visa-flex | | |
-| Tom McKenzie — test policy document | | | Suggested 13 Feb; to codify testing expectations for the team |
 | Michal Baran — continuity of membership Jira ticket for Decisioning | zilch-pro | | Review once written; Decisioning to refine and estimate |
-| Andrzej — fee schedule ownership (Merchant vs Spend Platform) re EWA/Extra | ewa-extra | 2026-02-24 | Messaged 23 Feb after CoP Poland |
+| [PO-1676](https://payzilch.atlassian.net/browse/PO-1676) — Datadog Aurora Agent CrashloopBackOff | on-call-rota | | Ensure it gets picked up |
 ## Recurring
 
 | Task | Recurrence | Playbook | Notes |

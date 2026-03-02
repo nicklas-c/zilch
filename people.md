@@ -34,19 +34,22 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Charlie Hurst | Platform | London | | | tastecard | |
 | Chris Prowse | Platform | London | | | tastecard | |
 | Chris Walker | Competency Lead, Front End Engineering | London | | Rob Nelson | | |
-| Craig Main | Payments | South Africa | | | zilch-pro | |
+| Craig Main | Payments | South Africa | | | zilch-pro, pay-monthly | |
 | David Rodriguez Vazquez | Back End Engineer (Level 3) | London | | | | |
 | Derek McCallum | Back End Engineer (Level 5) | London | | | | |
 | Ethan Stockwell | Product Analyst | London | | | zilch-pro, visa-flex | |
 | George Sharpe | Change Manager | London | | | continuous-deployment, zilch-pro | |
-| Jacek Zanko | Back End Engineer (Level 4) | Krakow | Merchant | Me | tastecard, gateway-service | |
+| Gini Gill | Senior Product Designer | London | | | pay-monthly | |
+| Grzegorz Ziemiański | Engineering Manager | Krakow | Acquirer, Issuer | Andrzej Lorenz | pay-monthly | |
+| Jacek Zanko | Back End Engineer (Level 4) | Krakow | Merchant | Me | tastecard, gateway-service, pay-monthly | |
 | John Strawhorne | QA Engineer (Level 4) | Krakow | | | continuous-deployment | |
-| Kevin Came | Product Delivery Manager | London | | | visa-flex, ewa-extra | |
+| Kevin Came | Product Delivery Manager | London | | | visa-flex, ewa-extra, pay-monthly | |
 | Kieren Messenger | Senior Product Designer | London | Merchant | | tastecard, zilch-pro | |
 | Lukasz Kowalczyk | DevOps Engineer (Level 2) | Krakow | DevOps | Me | | |
 | Luke Williams | Senior Sales & Partnerships Manager | London | | | zilch-pro | |
 | Marcin Zolna | Engineering Manager | Krakow | Decisioning | | continuous-deployment, zilch-pro | |
-| Marek Chodak | Back End Engineer (Level 5) | Krakow | Payments | | | |
+| Marek Chodak | Back End Engineer (Level 5) | Krakow | Payments | | pay-monthly | |
+| Mariusz Maciuszek | Back End Engineer (Level 3) | Krakow | | | pay-monthly | |
 | Matt Swirski | Platform | London | | | on-call-rota | |
 | Michal Gorny | Engineering Manager (Level 2) | Krakow | | Andrzej Lorenz | | |
 | Michal Baran | Back End Engineer (Level 3) | London | Merchant | Me | | |
@@ -68,14 +71,15 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Saeed Aghaee | Solutions Architect (Level 3) | London | | | gateway-service | |
 | Sam Whittaker | Back End Engineer (Level 5) | Remote | | | | |
 | Saurabh Raman | Project Owner | London | | | visa-flex | |
-| Sean Hederman | ExCo Sponsor | London | | | visa-flex | |
+| Sean Hederman | CTO | London | | | visa-flex | |
 | Stefan Amarie | Front End Engineer (Level 5) | London | Merchant | Me | stefan-onboarding | |
 | Steve Rayko | SVP of Engineering | London | | | | |
-| Tamara Quinn | Senior Product Manager | London | Purchase | | zilch-pro | |
+| Tamara Quinn | Senior Product Manager | London | Purchase | | zilch-pro, pay-monthly | |
 | Tom McKenzie | QA Engineer | London | Merchant | Nikos Sofianos (dotted line to me) | | |
-| Tomasz Surowiec | Back End Engineer (Level 5) | Krakow | | | gateway-service | |
+| Tomasz Michalski | Back End Engineer (Level 3) | Krakow | | | pay-monthly | |
+| Tomasz Surowiec | Back End Engineer (Level 5) | Krakow | | | gateway-service, pay-monthly | |
 | Tomasz Więckowski | Decisioning | Krakow | | | zilch-pro | |
-| Tom Wood | Head of Product - Financial Products & Payments | London | | | | |
+| Tom Wood | Head of Product - Financial Products & Payments | London | | | pay-monthly | |
 | Tommy Kwok | Product Manager | London | Decisioning | | zilch-pro | |
 | Yorkor Baffour | QA Engineer (Level 3) | London | | | | |
-| Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex, pending-rewards, ewa-extra | |
+| Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex, pending-rewards, ewa-extra, pay-monthly | |

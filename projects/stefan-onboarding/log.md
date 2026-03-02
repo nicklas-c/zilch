@@ -22,6 +22,10 @@ He has previous FinTech experience, though his most recent role is not FinTech. 
 
 ## Running Notes
 
+### 2026-03-02
+
+- Ingested Steve Rayko's informal L5 IC expectations document ("L5 IC Expectations (not official!)"). Key takeaways for Stefan's onboarding and first 1:1: company-wide technical standards, FE training and development, mentorship of less senior engineers, stakeholder influence at senior leadership level. These align closely with Andrzej's framing (competency gaps, FE roadmap, competency lead succession).
+
 ### 2026-02-09
 
 - Created this project to plan Stefan's onboarding.
@@ -46,7 +50,7 @@ He has previous FinTech experience, though his most recent role is not FinTech. 
   - Desire to move to a more modular FE architecture
   - ContentStack (Alex documented and walked through before leaving)
 - Chris Walker dynamic: Chris was on the selection panel and is excited to learn from Stefan. No difficult conversation needed. But the implications for Chris's future as FE competency lead are unclear — need to clarify with Chris's manager before speaking to Chris directly.
-- Messaged Rob Nelson (9 Feb, evening) asking about his thinking on how Stefan's L5 arrival affects Chris's position as FE competency lead. Awaiting reply.
+- Messaged Rob Nelson (9 Feb, evening) asking about his thinking on how Stefan's L5 arrival affects Chris's position as FE competency lead. Rob's response (received by 10 Feb): Chris keeps the role for now; review once Stefan is settled; Stefan taking over is the likely direction of travel but no commitment either way.
 - Open questions to return to:
   - What team-specific tooling access does he need beyond what HR will set up? (Repo access, LaunchDarkly, ContentStack, Slack channels, etc.)
   - What should his first piece of work be?

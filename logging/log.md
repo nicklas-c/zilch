@@ -1,5 +1,126 @@
 # Log
 
+## 2026-03-02
+
+* Returned to work after a few days off. Catching up via Slack.
+
+* Incident-467 — rewards comms/eligibility mismatch. See [incidents/incident-467.md](incidents/incident-467.md). Status: Stable. Root cause: `rewards-service` correctly skipped reward for ineligible customers, but `customer-service` missed the signal and published `Loan_OnLoanComplete_ENRICHED`, which `notification-service` consumed and acted on. Fix deployed 27 Feb by Rory Fielding (Retain) — comms turned off pending proper resolution. Root cause fix owned by Retain (ZILCH-48940). Retrospective to be jointly led by Merchant and Retain. Incident commander: Mark Reddington. Tom McKenzie tagged me in the channel this morning — reason unknown.
+
+* Stefan onboarding — drafted first 1:1 agenda ([content-authoring/output/stefan-first-1-1-agenda.md](content-authoring/output/stefan-first-1-1-agenda.md)). Ingested Steve Rayko's informal L5 IC expectations document; logged Rob Nelson's position on the FE competency lead question (Chris Walker retains for now, review once Stefan is settled). Created Incident-166 record ([incidents/incident-166.md](incidents/incident-166.md)) — background, significance, mitigations, and link to ZILCH-47400.
+
+* On-call rota review meeting. Chris Prowse walked through the toolchain; worked through most alerts from the fortnight to 2 March. Several actions identified — see [projects/on-call-rota/log.md](projects/on-call-rota/log.md).
+
+* Andrzej requested evidence to support the rating of 2 given to Lukasz Kowalczyk in his appraisal. Responded via Slack with a structured justification covering all four dimensions of the staff levels framework, with Jira evidence drawn from ZILCH and DEVOPS projects across the full year, and a summary of his cross-team support activity. Working notes in [content-authoring/output/lukasz-appraisal-justification.md](content-authoring/output/lukasz-appraisal-justification.md).
+
+### Slack catch-up (23 Feb – 2 Mar)
+
+Relevant items extracted from AI channel summaries:
+
+**Incident-467 (engineering-application-support):**
+* Mike Davis requested Nick Holt and Jacek Zanko to raise the incident.
+* Root cause confirmed as `onesignal-integration` lambda incorrectly triggering notifications for loan completion events where rewards were not applied.
+* Mark Reddington: future incidents should be raised directly in Datadog, not via Slack. Incident record updated.
+
+**DevOps / infrastructure (platypus, tech-on-call):**
+* Phil Stevenson removed the Upwind admission webhook from production — it was preventing new pods from starting. Nick Gilbert to follow up with Arnar.
+* EKS prod cluster upgrades to version 1.33 completed (issuer cluster done; customer cluster scheduled).
+* Upwind deployed to production and working (confirmed across team).
+* Lukasz Kowalczyk sharing Terraform plans for staging/prod — reviewed and approved by Matt and Charlie Hurst.
+
+**Infosec vulnerability tickets (infosec-vulnerability-remediation-tracking):**
+* Vulnerable dependency findings in frontend and typescript-shared-library flagged by Nandini Muraleedharan.
+* Originally assigned to Payments team; Nandini asking which team has capacity for the frontend ones.
+* Connects to the DevOps stand-up concern about security vuln tickets landing on the wrong team.
+
+**EWA / Plaid (tech-ewa-plaid-open-banking):**
+* Rob Nelson shared that Plaid will deliver their Income Insights product by 13 March — critical for EWA short- and long-term plans. Alastair Gullan flagged need for a quick decision on trusting that date.
+
+**new-web-project:**
+* Chris Walker sent a planning reminder tagging Nick Gilbert, Phil Stevenson, and me on 23 Feb (before I went on leave).
+
+**dev-payments (today):**
+* Deadlock issue blocking the payments team — Craig Main investigating; query optimised but still deadlocking. Ongoing.
+
+**OTA errors / alert-mobile:**
+* Elevated OTA errors on mobile-ui — caused by Expo free tier quota being exceeded. Rory Fielding and Jan Michalak resolving by re-enabling enterprise subscription.
+
+### DevOps Flash Report — engineer contributions (full report not seen)
+
+Captured from team channel week-notes. No Lukasz contribution visible in this snippet.
+
+**Phil:**
+- GitHub runners: caching base container images (some performance issues to resolve)
+- Ephemeral: database backup and restore improvements
+- Fraud: initial fraud AI agent deployed
+
+**Nick G:**
+- Upwind deployed to production
+- Initial work on certificate management for server-side web app (Crossplane deployed to dev cluster — ACM)
+- VGS manually set up for zephyr-zero
+
+**Piotr:**
+- CI/CD ready deployment for payout-service
+- Aggregation flink-apps Terraform ready
+- GitHub runners: caching base container images (speeds up build time)
+- Ephemeral: database backup/restore from qa-sit into zephyr-zero; new services added; all service versions updated to latest staging; VGS manually set up for zephyr-zero
+- Fraud: initial fraud AI agent deployed
+- Upwind deployed to production
+- Crossplane deployed to dev cluster for server-side web app certificate management
+
+### Merchant Flash Report (sent by Tom McKenzie in my absence)
+
+Tom sent the weekly Merchant flash report to Andrzej while I was away. Andrzej pushed back, characterising it as more of a sprint report than an end-of-week flash report. Report content:
+
+> Morning Andrzej, i've been given the honour of sending over the flash report. As is the case when you have a complete burn down in the previous sprint, this sprint isn't going to necessarily have any early quick wins. Evidenced by the fact that we don't have anything in Done.
+> * We're still very much in the early stages of Pending rewards development.
+> * Pay monthly: Extending the retailer schema to incorporate credit rewards, as well as the respective admin changes are almost ready for testing.
+> * Frontend LD flag audit is in review.
+> * Working with Lambdatest to solve failing maestro tests.
+
+### Merchant Stand-up
+
+* ZILCH-46769 — still pending pickup.
+* ZILCH-42041 — still blocked by PO-1597. Charlie on leave; waiting on him.
+* ZILCH-46367 — Ossie absent from stand-up; no update.
+* ZILCH-48536 — Nick H in progress. Blocked: wants an event on feature changes. Considering doing the work himself and sending to Decisioning for review.
+* ZILCH-48539 — pending pickup.
+* ZILCH-47174 — Ossie not present to comment.
+* ZILCH-48897 — in progress with Jacek. Updated tests to check for updated version; only expects updated DTOs in the appropriate version.
+* ZILCH-48873 — Tom working to resolve with LambdaTest.
+* ZILCH-49027 — added to board while I was away. Fee service to support fees split into monthly instalments (Pay Monthly scope). Accepted as additional scope without dropping equivalent points; Jacek believes he has capacity.
+
+### DevOps Stand-up
+
+Nick G on leave.
+
+**Reactive:**
+* ZILCH-48881 — Lukasz: Done. Moved to Done column. Phil moved past Ready for Release.
+* ZILCH-41286 — George asked Lukasz about a fix. Ticket assigned to George but should be with DevOps. Phil to catch up with George.
+* ZILCH-48513, ZILCH-45505 — Phil to look at soon.
+* Security vuln. tickets — Phil questions whether these should sit with DevOps; thinks they belong with the security team. To resolve.
+
+**Planned:**
+* ZILCH-47186 — Lukasz looking at it.
+* ZILCH-48966, ZILCH-48967 — High priority, EWA project. Lukasz has under way. Brought into sprint; ZILCH-47583 bumped to accommodate. Estimated at 1 point each.
+* ZILCH-44567 — in progress with Piotr.
+* ZILCH-48462 — Phil: nearly ready for review; has a PR.
+* ZILCH-48416 — Done (Phil).
+* ZILCH-48075 — Phil has spoken to Nikos; agreed new approach for caching images. Phil to raise a ticket.
+* ZILCH-48446 — Phil to find out where Nick G got to and whether it needs progressing.
+* ZILCH-47773 — blocked. Need to find out how to create certificates from the security team.
+
+**General:**
+* Handover policy agreed: if less than a day's work remains on an in-progress reactive ticket when rotation changes, the current owner can continue rather than handing over.
+* Observation: unclear who is on duty for reactive work — Lukasz and Phil both across both boards. May need better discipline around the duty rota.
+
+* Removed from Waiting On: Piotr Niebylski 1:1 reschedule — no reschedule materialised; decided not to chase.
+* Removed from Waiting On: Ethan Stockwell data file (visa-flex).
+* Removed from Waiting On: Tom McKenzie test policy document — a Jira task has been created; now a planning matter rather than a chase.
+
+## 2026-02-24
+
+* Andrzej responded on fee schedule ownership (Merchant vs Spend Platform) re EWA/Extra. Ownership is still undecided in general, but for the purposes of the EWA/Extra work, his team (Spend Platform) will handle it. Waiting-on item resolved.
+
 ## 2026-02-23
 
 * Day disrupted — planned to-do list largely untouched. Time consumed by unplanned side conversations and meetings.

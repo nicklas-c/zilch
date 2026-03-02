@@ -5,6 +5,16 @@ VP of Engineering, based in Krakow. My line manager.
 
 ## Notes
 
+### 2026-03-02
+
+- **Flash report feedback:** Tom McKenzie sent the Merchant flash report in my absence. Andrzej pushed back, saying it read more like a sprint report than a weekly flash report. Useful signal on his expectations for the format — he wants week-on-week progress and highlights, not a sprint status summary.
+- **Appraisal challenge:** Andrzej has asked for evidence supporting the rating of 2 given to Lukasz Kowalczyk.
+
+### 2026-02-24
+
+- **Fee schedule ownership (EWA/Extra):** Ownership between Merchant and Spend Platform remains undecided in general. For the purposes of the EWA/Extra work, Andrzej confirmed his team (Spend Platform) will handle it.
+
+
 ### 2026-02-16 — 1:1
 
 - **Michal backfill:** role being submitted for approval — no timeline on when approvals will come through; could be next financial year. Some uncertainty around possibility of new team. Backfill may be in London.
