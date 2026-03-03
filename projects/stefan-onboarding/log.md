@@ -55,3 +55,7 @@ He has previous FinTech experience, though his most recent role is not FinTech. 
   - What team-specific tooling access does he need beyond what HR will set up? (Repo access, LaunchDarkly, ContentStack, Slack channels, etc.)
   - What should his first piece of work be?
   - How structured should the first week be — planned schedule of meetings and walkthroughs, or more organic given his seniority?
+
+### 2026-03-03
+
+- Add Stefan to the Merchant team in DataDog once he has joined.

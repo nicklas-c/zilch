@@ -70,6 +70,10 @@ Andrzej and I discussed Jacek: possibility of rotation, and his tech leadership 
 
 Note: if Michal's backfill is London-based, Jacek would be the only Polish engineer in the Merchant team.
 
+### Merchant Operations Audit — 2026-03-03
+
+During the fee-service observability audit, Jacek confirmed via Slack that debug logging in fee-service is disabled in prod as a cost optimisation — the service was generating a very high log volume, and since fee calculation requests/responses are stored in the DB, the logs were deemed redundant. The situation had come up before so wasn't a total surprise, but the timing of when the change was actually made was not known. Agreed that prod logging needs to be restored.
+
 ### Stand-up — 2026-02-18
 - ZILCH-40366 (gateway service authoriser): ready for production. Tom McKenzie's QA concerns satisfied — won't be in active use yet, just available in prod.
 - ZILCH-46517 (fee service playbooks): reviewing Michal's work.

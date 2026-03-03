@@ -1,5 +1,68 @@
 # Log
 
+## 2026-03-03
+
+### EWA Team — DevOps Engagement
+
+Phil Stephenson flagged via Slack that the EWA project team (including Radek Kachel) are performing DevOps work themselves rather than engaging via the tech-devops channel, and are showing reluctance to take suggestions on PRs. Phil supports them doing the work but wants it done properly through the right channels. He attributes the behaviour to pressure from elsewhere.
+
+Responded to Phil and agreed to discuss further at tomorrow's 1:1 (4 Mar).
+
+Phil also forwarded a Slack exchange (17:37) in which George Sharpe (Change Manager) contacted Phil and Lukasz directly to chase progress on 4 EWA tickets assigned to DevOps. Phil's response: "blocked on number of hours in the day and devops engineers at zilch." Lukasz confirmed ZILCH-48967 is done and ZILCH-48966 will be done today. Phil noted that some of the work had only surfaced that day; Lukasz confirmed ZILCH-49094 and ZILCH-49091 are new additions. Phil shared this with Nicklas as evidence of undue pressure and concern about the impact on quality. To discuss at tomorrow's 1:1.
+
+### Merchant Operations — Observability Documentation Structure
+
+Agreed approach for documenting observability work under ZILCH-47400. Observability documentation will live in DataDog where DataDog supports it (dashboard descriptions, monitor messages, etc.). Exception: functional metrics per service have no natural home in DataDog, so these will be documented in Confluence. Structure: one page per service under a new "Observability" parent page in the Merchant Confluence space, covering functional metrics, normal ranges, and associated context. fee-service to be the first page created.
+
+### Merchant Operations — fee-service Audit
+
+Continued the merchant operations workstream. Completed the DataDog audit of fee-service — a significant time investment, constituting a large portion of the day. Key finding: fee-service has no prod logs — debug logging was disabled as a cost optimisation without the EM's knowledge. Confirmed by Jacek Zanko. This is consistent with the pattern noted in his appraisal of things happening under the radar.
+
+See `projects/merchant-operations/audit-fee-service.md` for full findings.
+
+### Sprint Change — Merchant
+
+* Ossie requested to bring ZILCH-48952 ("Deeplinks to category pages aren't working") into the sprint. Approved on the condition that something was swapped out. ZILCH-45502 ("Large volume of error logs from featured tile query when product line not yet loaded") moved out to make room.
+
+### Merchant Stand-up
+
+* ZILCH-46769 — Ossie picked up; now in PR.
+* ZILCH-42041 — Response received from Platform via PO-1597. Charlie Hurst can ensure backup is in place (see ticket comments). Nick Holt suggests that however backup is implemented, it should be retained indefinitely.
+* ZILCH-46367 — Ossie has completed.
+* ZILCH-48536 — Progressing with Nick Holt. Finance sign-off on the approach still outstanding. Decisioning not providing the events needed for feature changes; Nick has pointed them to the relevant part of the codebase. Decisioning's work is blocked by a refactor branch pending merge, and they are also occupied with EWA work. Decisioning pushing back on the need for the change. Need to lean in to resolve this.
+* ZILCH-47600 — Ossie has in PR. Tests confirm working behaviour and are gated in CI. Issue was never reproduced. Ready to close off.
+* ZILCH-48887 — Jacek reports Tom McKenzie has started building tests. Ready from Jacek's perspective. Tom is on sick leave.
+* ZILCH-49027 — Jacek just picking up.
+* ZILCH-48954 — In progress with Tom McKenzie; no update as Tom is on sick leave.
+
+### DevOps Stand-up
+
+Nick Gilbert still on leave.
+
+**Planned:**
+* ZILCH-44576 — Piotr working through issues.
+* ZILCH-48967 — Lukasz fixed issues with Wm and added to helm chart.
+* ZILCH-48966 — Lukasz created RBAC permissions. Blocked by one missing secret.
+* ZILCH-48715 — Discussion, details hard to follow. Phil making a point about the distinction between what the team owns and how they manage it: SNS/SQS should be managed through Crossplane, not Terraform.
+* ZILCH-48462 — Not progressed; Phil is on rota duty.
+* ZILCH-49042 — Not progressed; Phil is on rota duty.
+* ZILCH-45505 — Phil has the script done; needs team review. Lukasz has reviewed. Phil subsequently shared the script ([tools PR #98](https://github.com/zilchdev/tools/pull/98)) and an example change ([customer-service PR #3759](https://github.com/zilchdev/customer-service/pull/3759)) in Slack, and asked for sign-off from Piotr and Nicklas before running it across all repos. Piotr approved. Nicklas deferred — needs more context before signing off; will discuss at tomorrow's 1:1 with Phil.
+* ZILCH-48446 — Nick G dropped this when he went on leave. Phil to pick up where Nick got to.
+
+**Process observation:** ZILCH-48446 highlights a gap in leave handover practice. Phil should not have to piece together where Nick got to — outgoing team members need to hand over in-progress work clearly before going on leave.
+
+### Refinement Session — Merchant
+
+Ran a refinement session with the Merchant team. One ticket discussed.
+
+### Interviews
+
+Two interviews were scheduled today. The first candidate was a no-show — interview scrapped. Later in the day, stood in for Mike Davis at a second interview. Candidate was not suitable. Write-up pending.
+
+### Merchant Support Rota — Hand-over
+
+Attended the Merchant support rota hand-over meeting. Now on duty for the first week.
+
 ## 2026-03-02
 
 * Returned to work after a few days off. Catching up via Slack.

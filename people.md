@@ -52,7 +52,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Mariusz Maciuszek | Back End Engineer (Level 3) | Krakow | | | pay-monthly | |
 | Matt Swirski | Platform | London | | | on-call-rota | |
 | Michal Gorny | Engineering Manager (Level 2) | Krakow | | Andrzej Lorenz | | |
-| Michal Baran | Back End Engineer (Level 3) | London | Merchant | Me | | |
+| Michal Baran | Back End Engineer (Level 3) | London | Spend Platform | Andrzej Lorenz | | |
 | Michael Charash | Product Consultant | London | | | ewa-extra | |
 | Mike Davis | Engineering Manager | London | Retain | | continuous-deployment, zilch-pro | |
 | Nick Gilbert | DevOps Engineer (Level 3) | London | DevOps | Me | aurora-connectivity-issue | |
@@ -65,7 +65,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Paweł Pęcikiewicz | Mobile App Developer | Krakow | Retain | | zilch-pro | |
 | Phil Stephenson | DevOps Engineer (Level 4) | London | DevOps | Me | | |
 | Piotr Niebylski | DevOps Engineer (Level 4) | Krakow | DevOps | Me | | |
-| Radek Kachel | QA Engineer (Level 4) | Krakow | | | continuous-deployment, ephemeral-environments | |
+| Radek Kachel | QA Engineer (Level 4) | Krakow | Acquirer | Grzegorz Ziemiański | continuous-deployment, ephemeral-environments | |
 | Rob Nelson | VP of Engineering | London | | Steve Rayko | zilch-pro | |
 | Rory Fielding | Front End Engineer | London | Retain | | zilch-pro | |
 | Saeed Aghaee | Solutions Architect (Level 3) | London | | | gateway-service | |

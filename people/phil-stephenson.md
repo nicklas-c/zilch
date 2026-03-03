@@ -29,6 +29,36 @@ DevOps Engineer in the DevOps team, graded at Level 4, equivalent to senior-to-l
 2. Get the rotation tag set up and stop using OpsGenie for the rotation. (Firefighter tag already on my to-do; OpsGenie cessation is new.)
 3. Lean in on where we stand with debugging Zephyr Zero.
 
+### 2026-03-03
+
+Flagged via Slack that engineers working on the EWA project (including Radek Kachel) are handling work that would normally go through DevOps, and are showing reluctance to engage via the tech-devops channel or take suggestions on PRs. Phil is supportive of them doing the work — his concern is that it's not being done properly through the right process. He suspects the cause is external pressure. Consistent with his self-appraisal observation that cross-team engagement can be difficult. Agreed to discuss further at tomorrow's 1:1 (4 Mar).
+
+Also asked for sign-off on ZILCH-45505 (mass update of pr-validate workflow across all GitHub repos via script). Piotr approved; Nicklas deferred pending more context — to discuss at 1:1 before proceeding.
+
+**1:1 agenda items for 4 Mar:**
+- EWA project / DevOps engagement process
+- ZILCH-45505 — mass pr-validate workflow update: get more context before sign-off
+- EWA capacity pressure on DevOps — same-day tickets surfacing (ZILCH-49094, 49091), Phil's concern about quality impact; George Sharpe chasing directly
+
+**Prep notes for EWA capacity discussion:**
+
+The four DevOps-assigned EWA tickets from George's Slack message:
+- ZILCH-48967 (Lukasz, Ready for Testing) — WireMock deployment to SDE dev/staging; supports service mocking for integration testing
+- ZILCH-48966 (Lukasz, In Dev) — RBAC update to grant QA access to SDE dev/staging environments
+- ZILCH-49091 (Phil, Ready for Dev, created today) — Crossplane config for SQS/SNS on SDE; reactive ticket
+- ZILCH-49094 (Unassigned, Ready for Dev, created today) — RDS Proxy deployment to non-prod sensitive environments; reactive ticket
+
+The two Lukasz tickets are progressing fine. The two new ones were created today by Phil, labelled reactive, and were already being chased by George on the same day — which validates Phil's point entirely.
+
+EWA only came into existence around 17 Feb with a 31 Mar deadline. There was no runway for infrastructure planning. The DevOps team is absorbing the cost of that.
+
+**Questions to draw out from Phil:**
+- Why is EWA using the SDE environment? It doesn't appear to be fully stood up yet (WireMock, RBAC all being added now). Other dev environments exist — what drove the choice?
+- Is EWA effectively finishing off the SDE environment setup as a side effect, and if so, is that understood by the EWA team?
+
+**Approach for the meeting:**
+Lead with quality concerns — let Phil vent and get it on the table before forming a view on whether action is needed or reassurance is sufficient. Do not pre-plan the bridge to the communication conversation; that depends on what comes out of the quality discussion.
+
 ### 2026-02-18
 * Worked with Nick Gilbert to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases. Also helped with DLQ replay (250k messages) and various PR approvals/deployments across teams.
 
