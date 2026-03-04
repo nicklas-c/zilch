@@ -8,6 +8,8 @@
 ### Overview
 Strategic project leveraging **Visa's Flexible Credentials (VFC)** to dynamically route transactions between consumer and commercial BINs. Allows Zilch to optimise interchange revenue while simplifying the customer experience to a single consumer credential.
 
+**Deadline:** End of March 2026 — shared with EWA/Extra and Pay Monthly. Likely driven by the need to land these products before the start of the new financial year.
+
 ### Business Case
 **Hypothesis:** If we integrate with Visa's Flexible Credential solution, we will increase in-store interchange revenue, because we can seamlessly route transactions between consumer and commercial BINs, earning commercial interchange rates on eligible in-store transactions from affiliate merchants.
 

@@ -35,6 +35,20 @@ Flagged via Slack that engineers working on the EWA project (including Radek Kac
 
 Also asked for sign-off on ZILCH-45505 (mass update of pr-validate workflow across all GitHub repos via script). Piotr approved; Nicklas deferred pending more context — to discuss at 1:1 before proceeding.
 
+### 1:1 — 2026-03-04
+
+Largely a venting session. Phil needed to express concerns rather than seek specific actions.
+
+**Quality:** Less acute than flagged. Phil successfully pushed back on Radek Kachel's changes as a codeowner and got the outcome he wanted. Quality in hand.
+
+**Radek pattern:** The substantive concern is a recurring pattern of poor communication and cooperation from Radek — bypassing proper channels, reluctance to act on PR feedback. Nicklas will raise with Grzegorz Ziemiański and Nikos Sofianos as a light-touch inquiry about observed friction rather than a formal escalation.
+
+**Unrealistic expectations on DevOps:** Phil perceives a persistent assumption that DevOps delivers on demand. Some historical basis to this. Advised: lean into the formalised process — use sprint records and Jira to evidence reactive pull-in when work slips; use the Kanban board and WIP limits to show requesters they're in a queue; escalate genuine reprioritisation decisions to me.
+
+**ZILCH-45505 — mass pr-validate workflow update:** Discussed and placed on hold. Phil's concern is that a batch update across repos could be perceived as circumventing PR review processes, and he doesn't want to be criticised for it. Confirmed that I will approve it when the time comes and he can use that as cover if the approach is questioned.
+
+**Observation:** Phil finds friction with cross-team engineers stressful, particularly when quality feels at risk. Noted that some friction is natural and productive — engineers are under delivery pressure; DevOps want things done properly. Phil understands this intellectually but still finds it hard in practice. Worth keeping an eye on his stress levels in this area.
+
 **1:1 agenda items for 4 Mar:**
 - EWA project / DevOps engagement process
 - ZILCH-45505 — mass pr-validate workflow update: get more context before sign-off

@@ -1,5 +1,126 @@
 # Log
 
+## 2026-03-04
+
+### March Delivery Pressure
+
+Pay Monthly, EWA/Extra, and Visa Flex all share an end-of-March 2026 deadline — likely driven by the need to land all three before the start of the new financial year. Three concurrent P1 initiatives is significant delivery pressure across the organisation.
+
+### Pay Monthly — Channel Digest Ingested (2026-02-23 to 2026-03-04)
+
+Key new information from #pay-monthly-delivery:
+- **MVP product configuration still undecided** — Acquirer team (Michał Górny) considering two options; open questions around Po3 continuity for existing customers and migration scenarios
+- **Credit limit on Po12m downgrade:** decreases by outstanding loan amount, same as Po3m; downgrades manual, done by risk team
+- **Fee UI presentation:** fee service returns tranches; UI shows effective rate of first unpaid tranche, rounded to 1dp — agreed by Andrea Ponte and Craig Main
+- **Ledger approach (MVP):** monthly fees (except the first) stored in the FEE column; not split between purchase and loan
+
+### EWA/Extra — Channel Digest Ingested
+
+Ingested a summary of the #ewa-extra Slack channel. Key new information (beyond what was previously logged):
+- ITAM to cover manual activities; a Tier 2 customer care team identified as needed for admin portal gaps
+- Plaid API keys for AIS and Payouts to be segregated for security
+- EWA eligibility: Plaid confidence score for name matching; monthly salary-based income sources only; largest source selected; Plaid responses stored in S3
+- Initial rollout: active customers, no hard blocks; excludes Plus members and Pay Monthly test customers
+- £3 disbursement fee confirmed as **not** included in APR; APR assessment still required across all product lines; whether fee should be capped is unresolved
+- App submission to Apple and Google targeted for **31 March 2026**
+
+### EWA/Extra — Fee Schedule Ownership and Merchant Scope
+
+Merchant's involvement in EWA/Extra is confirmed as minimal: UI component testing to verify components work correctly for the new Extra membership tier. No delivery responsibility beyond that.
+
+**Fee schedule ownership (via Slack):**
+Following the ambiguity raised on 2026-02-23, Andrzej responded:
+- Fee-service (and possibly rewards) move to Spend Platform will **not happen yet**
+- New Spend Platform team **could** handle EWA/Pay Monthly fee schedules; Andrzej said to assume they would, pending planning discussion
+- Rewards service ownership: **not decided yet**
+
+Despite this steer, ZILCH-49156 (EWA disbursement fee code) landed with Merchant, raised by Tommy Kwok and Oleksandr Tertyshnyi. Nicklas has asked Andrzej to confirm whether Merchant or Spend Platform should own it. Awaiting response.
+
+### Lukasz Promotion — Slack Discussion with Andrzej
+
+Andrzej reviewed the L3 evidence document sent earlier today. Key outcomes from the discussion:
+
+- **Growth Potential concern:** Andrzej pushed back on "Uses feedback to improve" being evidenced only by the annual appraisal response. He clarified the criterion relates to ongoing, day-to-day feedback responsiveness. Verbal examples provided: (1) reduction in handholding from Piotr and Phil — Lukasz is now operating much more independently; (2) sustained improvement in speaking up during team meetings following feedback on this; (3) active engagement with recent Scrum/Kanban process formalisation following feedback to lean in to process more.
+
+- **Andrzej's conclusion:** Lukasz is performing at L3 level. The remaining unevidenced criteria in Growth Potential are not disqualifying. Andrzej will take the case to Steve Rayko.
+
+- **Action:** Andrzej requested an executive (TL;DR) summary of L3 performance. Summary authored and sent to Andrzej.
+
+- **Rating:** Target outcome is promotion to L3 with a rating of 3.
+
+### Pay Monthly — Fee Calculation Decision Confirmed
+
+A decision was confirmed via Slack (originally raised by Jacek Zanko, resolved through discussion involving Tamara Quinn, Tom Wood, and Nicklas Chapman, with Andrzej Lorenz requesting broadcast):
+
+**Decision: Option B — 1.6% per instalment is the canonical fee rate.**
+
+- The fee for each instalment is calculated as: `purchase amount × 1.6%`
+- The total lifetime fee (20.8%) is an implied/derived figure, not the primary one
+- This aligns with how fees are communicated to customers in-app, in emails, in the ECJ, and in the calculator
+- Tom Wood confirmed; Tamara Quinn documented
+- Andrzej Lorenz requested this be communicated to all teams (including Data and Finance) and acknowledged — Tamara Quinn has confirmed she will own this broadcast
+
+The earlier-implemented Option A (calculate 20.8% total, then split across tranches) is **not** the chosen approach. The fee-service implementation should use 1.6%.
+
+### Pay Monthly — Refinement Complete (previously)
+
+Pay Monthly tickets (from Zac Barclay) were worked up prior to today and are in play for sprint 11.4.
+
+Also noted: the Merchant team's responsibilities for pay monthly span two areas:
+1. Enable rewards for credit purchases with the Pay Monthly loan product
+2. Enable fee-service to calculate fees on a monthly-instalment basis (rather than single-instalment as with other loan products)
+
+### Iteration 12 — Chased Zac on Candidates
+
+Chased Zac Barclay on candidate work streams for Iteration 12. Response suggests he doesn't yet know what the team will be pointed at.
+
+### Tech Leadership Sync
+
+Nothing significant to note.
+
+### Pay Monthly Tech Sync
+
+Attended. Nothing significant to note.
+
+### Phil Stephenson 1:1
+
+Largely a venting session — Phil needed to articulate his concerns more than he needed specific actions taken. The broad theme was pressure, process, and friction with cross-team engineers.
+
+**Quality:** Less of an acute problem than it appeared. Phil was able to push back on Radek Kachel's changes as a codeowner and got the outcome he wanted. Quality is in hand.
+
+**Radek / EWA pattern:** The real concern is a recurring pattern of poor communication and cooperation from Radek — unwillingness to engage through proper channels and reluctance to act on review feedback. Will raise with Grzegorz Ziemiański and Nikos Sofianos framed as a light-touch question about whether they've observed any friction, rather than a direct escalation.
+
+**Unrealistic expectations on DevOps:** Phil perceives a persistent belief — particularly in the EWA project — that DevOps should do things on demand. This has some historical basis. Advised him to counter it by leaning into the newly formalised process: when work slips because higher-priority reactive items were pulled in, point to the sprint record and Jira evidence; when people expect immediate reactive delivery, point to the Kanban board and WIP limits to show them they're in a queue; and if anything genuinely needs reprioritising over in-flight work, requesters should come to me — that's an EM decision.
+
+**Observation:** Phil gets frustrated when he's concerned quality may suffer or when he senses friction with other engineers. Some friction is inevitable: engineers are under pressure to deliver quickly; DevOps want things done properly. That tension is natural and can be productive. Phil is aware of this at an intellectual level but still finds it stressful in practice.
+
+### Merchant Stand-up
+
+Tom McKenzie remains off sick.
+
+* ZILCH-48952 — Brought into sprint yesterday; awaiting build and release. Marked as done.
+* ZILCH-46769 — With Ossie Nwokedi. Nick Holt has reviewed. Needs test evidence before it can move forward.
+* ZILCH-42041 — Jacek Zanko assigned to himself and responded to Charlie Hurst (Platform). Now awaiting action from Platform.
+* ZILCH-46367 — Completed yesterday.
+* ZILCH-49076 — With Nick Holt. Blocked on the Decisioning team's PR. Risk of slipping beyond the sprint. A workaround using a different event exists but could introduce a race condition. Nick will chase Decisioning on the PR's status. E2E testing will also be required. Assessed as at-risk.
+* ZILCH-47174 — With Ossie. Awaiting sign-off from Tom McKenzie, who is on sick leave.
+* ZILCH-48897 — With Jacek. Also awaiting Tom McKenzie.
+* ZILCH-48903 — With Jacek. Also awaiting Tom McKenzie. Ossie offered to test in Tom's absence.
+* ZILCH-49027 — Awaiting clarification from Product.
+* ZILCH-48873 & ZILCH-48954 — With Tom McKenzie; awaiting his return.
+
+### DevOps Stand-up
+
+Nick Gilbert not mentioned; presumably still on leave.
+
+**Planned:**
+* ZILCH-48462 — Phil Stephenson; still in progress.
+* ZILCH-44576 — Still in progress with Piotr Niebylski.
+* ZILCH-48966 & ZILCH-48967 — Lukasz Kowalczyk making good progress; expected to complete today.
+
+**Reactive:**
+* Phil Stephenson occupied with support. Several issues with ZILCH-49113. ZILCH-49091 in progress.
+
 ## 2026-03-03
 
 ### EWA Team — DevOps Engagement

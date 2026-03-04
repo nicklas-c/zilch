@@ -7,9 +7,37 @@ Pay Monthly, Po6, Po12
 ## Slack
 #pay-monthly-delivery
 
+## Jira
+**Initiative:** [ZILCH-48758 — Pay Monthly](https://payzilch.atlassian.net/browse/ZILCH-48758) (P1, reported by Kevin Came)
+
+**Child epics:**
+| Epic | Team | Status |
+|---|---|---|
+| [ZILCH-48609](https://payzilch.atlassian.net/browse/ZILCH-48609) — [Purchase] Pay Monthly – MVP | Purchase | In Dev |
+| [ZILCH-48650](https://payzilch.atlassian.net/browse/ZILCH-48650) — [Payments] Pay Monthly 3m/6m/12m | Payments (Craig Main) | In Dev |
+| [ZILCH-48762](https://payzilch.atlassian.net/browse/ZILCH-48762) — Decisioning - Pay Monthly | Decisioning | In Dev |
+| [ZILCH-48764](https://payzilch.atlassian.net/browse/ZILCH-48764) — Onboarding - Pay Monthly | Onboarding | In Dev |
+| [ZILCH-48859](https://payzilch.atlassian.net/browse/ZILCH-48859) — Merchant - Pay Monthly | Merchant | In Dev |
+| [ZILCH-48896](https://payzilch.atlassian.net/browse/ZILCH-48896) — Issuer - Pay Monthly | Issuer | Proposed |
+| [ZILCH-48898](https://payzilch.atlassian.net/browse/ZILCH-48898) — Acquirer - Pay Monthly | Acquirer | Proposed |
+| [ZILCH-48945](https://payzilch.atlassian.net/browse/ZILCH-48945) — [Retain] Pay Monthly & Visa Flex | Retain | Proposed |
+| [ZILCH-49153](https://payzilch.atlassian.net/browse/ZILCH-49153) — [Purchase] Pay Monthly – post-MVP | Purchase | Proposed |
+
+**Merchant epic stories ([ZILCH-48859](https://payzilch.atlassian.net/browse/ZILCH-48859)):**
+| Ticket | Summary | Status | Assignee |
+|---|---|---|---|
+| [ZILCH-48897](https://payzilch.atlassian.net/browse/ZILCH-48897) | Extend retailer schema to support credit rewards | Ready for Testing | Jacek |
+| [ZILCH-48903](https://payzilch.atlassian.net/browse/ZILCH-48903) | Enhance Admin Portal: credit reward config & simplify debit rewards | In QA | Jacek |
+| [ZILCH-48905](https://payzilch.atlassian.net/browse/ZILCH-48905) | Add static rewards for new Po6/Po12 credit purchases | Ready for Dev | Unassigned |
+| [ZILCH-48906](https://payzilch.atlassian.net/browse/ZILCH-48906) | Add dynamic rewards for new Po6/Po12 credit purchases | Created | Unassigned |
+| [ZILCH-49027](https://payzilch.atlassian.net/browse/ZILCH-49027) | Add distributed fee (tranches) support to fee calculation | In Dev | Jacek |
+| [ZILCH-49087](https://payzilch.atlassian.net/browse/ZILCH-49087) | [Admin Portal] Update 360Profile for Pay Monthly products | Created | Unassigned |
+
 ## Context
 
 Pay Monthly allows customers to spread fees across monthly instalments, extending Zilch's BNPL model with longer-term payment options. The strategic goals are reducing voluntary churn and creating a new loan product to help acquisition.
+
+**Deadline:** End of March 2026 — shared with EWA/Extra and Visa Flex. Likely driven by the need to land these products before the start of the new financial year.
 
 **Launch plan:** Pay over 3–12 months with a rolling fee initially, with a repayment date to be added later. Minimum MVP design, with known room for improvement (e.g. transaction screen).
 
@@ -18,10 +46,11 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 **Fee model:**
 - Jacek Zanko (Merchant) proposed a "tranche" concept: fee-service returns a fee breakdown by instalment. Reviewed and approved across teams. Tomasz Surowiec requested the API be exposed in Stoplight for review first.
 - Fee cap is based on the monthly fee amount and the customer's credit limit. No EHI changes required if fee-service only returns the monthly fee amount.
+- **Fee calculation decision (confirmed 2026-03-04):** The canonical rate is **1.6% per instalment** (Option B). The 20.8% total is an implied/derived figure. This matches how fees are communicated to customers across all surfaces. Tom Wood confirmed; Tamara Quinn documented; Andrzej Lorenz requested cross-team communication and acknowledgement (including Data and Finance).
 
 **Billing service:** Marek Chodak has proposed improvements: configurable multiple billing runs per day, faster and more scalable, decoupled from Customer Service. Andrzej noted A/B testing as a benefit. Impact of rolling fee on billing run is under discussion.
 
-**Events Aggregator:** Tomasz Surowiec has asked Abhishek Chatterjee and Saeed Aghaee to produce an ADR for an Events Aggregator that aggregates three events using `purchaseId` or `correlationId` to generate a summary event. Flink identified as the leading option.
+**Events Aggregator:** Part of the Purchase Message Decomposition work, not a Merchant concern. Tomasz Surowiec asked Abhishek Chatterjee and Saeed Aghaee to produce an ADR for an Events Aggregator that aggregates three events using `purchaseId` or `correlationId` to generate a summary event for customer notifications. Kinesis + Flink agreed as the solution; Tomasz has written the ADR and design doc in Confluence. DEVOPS-42 (migrated to ZILCH-48712) was raised to create a monorepo for Flink apps — marked as Done.
 
 **Apple Checkout / Product Lineup:** Pay Monthly introduces a risk to the existing Po3 product on Apple Checkout. Tamara Quinn proposed temporarily removing Po3, Po6m, and Po12m from Apple Checkout for Pay Monthly customers, with a plan to restore quickly as a follow-up.
 
@@ -30,7 +59,7 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 ### Cross-team responsibilities (per Andrea Ponte)
 - **Decisioning** — eligibility
 - **Payments** — billing, recon API, loan product configuration
-- **Merchant** — fee-service, retailer schema, admin changes
+- **Merchant** — fee-service, retailer schema, rewards enablement, admin portal changes (admin portal is not critical path — could go to market without it in a pinch)
 - **Onboarding** — credit limit changes (Michał Górny, Chris Walker)
 
 ### Cross-team dependencies
@@ -71,7 +100,7 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 - Fee capping approach agreed: based on monthly fee and credit limit; no EHI changes needed.
 - Apple Checkout concern raised by Grzegorz Ziemiański around impact on Po3; Tamara Quinn proposed temporary removal for Pay Monthly customers.
 - Jacek Zanko proposed tranche approach for fee-service API; approved across teams. Tomasz Surowiec requested Stoplight exposure first.
-- Events Aggregator ADR tasked to Abhishek Chatterjee and Saeed Aghaee; Flink identified as leading option.
+- Events Aggregator ADR tasked to Abhishek Chatterjee and Saeed Aghaee (Purchase domain / message decomposition — not a Merchant concern). Kinesis + Flink agreed; ADR written by Tomasz Surowiec. DEVOPS-42 raised for a Flink monorepo.
 - Kevin Came set up Jira board and dashboard.
 - Cross-team technical responsibilities mapped by Andrea Ponte.
 - Credit limit work tracked by Michał Górny and Chris Walker (Onboarding).
@@ -80,8 +109,31 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 
 - Received Pay Monthly ticket links from Zac Barclay. Flagged as ready to work up ahead of sprint 11.4 planning.
 
+### #pay-monthly-delivery Channel Digest (2026-02-23 to 2026-03-04)
+
+**MVP product configuration (Acquirer):** Michał Górny / Acquirer team considering two options for the Pay Monthly MVP — no decision made. Open questions include: whether Po3 stays intact for existing customers while new customers get the new monthly configuration; and what happens to customers already on Po3 if migrated. Grzegorz Ziemiański also asked whether the plan is to add Po6/Po12 or remove Po3 from pay monthly eligible customers. Tamara Quinn updated the requirements document (https://payzilch.atlassian.net/wiki/spaces/ZP/pages/5100863491/Purchase+Pay+Monthly) to include both options.
+
+**Credit limit on downgrade from Po12m:** If a customer loses access to Po12m, the credit limit decreases by the outstanding loan amount — same logic as the current Po3m product. Agreed by Tomasz Surowiec, Tamara Quinn, and Tom Wood. Tommy Kwok clarified that downgrades are only done manually by the risk team, typically when a customer enters a repayment plan.
+
+**Fee presentation in the UI:** Jacek Zanko proposed that the fee service returns the total fee broken down into tranches, and the UI displays the effective rate of the first unpaid tranche rounded to 1 decimal place. Andrea Ponte and Craig Main agreed — the rounding difference should still result in a monthly fee of ≥ 1.6% when rounded to 1dp. Michał Ptaszek raised whether the first instalment percentage should be displayed even once it's been paid. (Note: this discussion preceded and informed the Option A/B decision confirmed later the same period — see below.)
+
+**Ledger / accounting approach (MVP):** Tomasz Surowiec raised whether Pay Monthly fees should be stored as part of the purchase or as a separate loan fee. Decision: keep current approach for MVP — monthly fees (except the first) stored in the FEE column in the ledger, not split between purchase and loan. Rationale: minimise changes and risk.
+
+### 2026-03-04
+
+**Merchant team responsibilities clarified:**
+1. Enable rewards for credit purchases with the Pay Monthly loan product
+2. Enable fee-service to calculate fees on a monthly-instalment basis (as opposed to the single-instalment model used by other loan products)
+
+**Fee calculation method confirmed (via Slack):**
+Jacek Zanko asked for final confirmation on which fee calculation approach to implement. Two options were considered:
+- **Option A:** Calculate total fee as `amount × 20.8%`, then split across tranches (already implemented)
+- **Option B:** Calculate each instalment fee as `amount × 1.6%`, multiply by 13 tranches to derive total
+
+Following discussion between Tamara Quinn, Nicklas Chapman, and Tom Wood, **Option B was confirmed as correct**. The reasoning: 1.6% is the rate communicated to customers in comms, the app, the calculator, and the ECJ — it is the de facto contractual commitment. 20.8% is an emergent total, not the stated figure. Tom Wood confirmed; Tamara Quinn documented. Andrzej Lorenz requested the decision be communicated to and acknowledged by all teams, including Data and Finance. Tamara Quinn has confirmed she will handle this broadcast.
+
 ### 2026-03-02
 
 - ZILCH-49027 (fee service support for monthly instalment fees) added to the Merchant board while I was away. Accepted as additional scope in sprint 11.4 without dropping equivalent points — Jacek believes he has capacity.
-- "Work up Zac's Pay Monthly tickets ahead of sprint 11.4 planning" remains an open task.
+- Pay Monthly tickets worked up and in play for sprint 11.4.
 - Jacek updating tests to check for updated version; only expects updated DTOs in the appropriate version (ZILCH-48897 — in progress).

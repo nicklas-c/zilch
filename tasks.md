@@ -4,15 +4,13 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Respond to Andrzej's challenge on Lukasz's proposed promotion — revisit justification | lukasz-promotion | Content in content-authoring system |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | merchant-operations | Break epic into refinable tickets |
 | Find out the status of retailer-admin-ui — active or dormant? | merchant-operations | Useful context ahead of Stefan's arrival |
 | Follow up with Phil Stephenson: which team should own Snooze Config alert; arrange handover discussion with relevant EM | on-call-rota | |
 | Catch up with Phil Stephenson async: how to handle AWS Lambda throttling (overdue-outsystems) with Retain | on-call-rota | |
 | Chase Grzegorz re: ZILCH-44139 (string/binary data truncation) — ensure planned into a sprint | on-call-rota | |
 | Draft day-one email for Stefan | stefan-onboarding | Depends on other onboarding prep |
-| Write up interview (20 Feb) | | |
-| Write up interview (3 Mar 2026) — stood in for Mike Davis; candidate not suitable | | |
+| Speak to Grzegorz Ziemiański and Nikos Sofianos re: friction with Radek Kachel on EWA | | Frame as a light-touch question about observed friction, not a formal escalation |
 | Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
 | Fix backlog hygiene on defect candidates | | ZILCH-47174, ZILCH-46150, ZILCH-45502: all missing story points only (otherwise compliant). ZILCH-44467: missing story points, parent epic, and Owned By. ZILCH-48542: missing story points and parent epic; no priority set. ZILCH-48154: missing story points and parent epic; no priority set. |
 
@@ -47,6 +45,7 @@
 
 | Task | Project | Chase date | Notes |
 |---|---|---|---|
+| [ZILCH-49156](https://payzilch.atlassian.net/browse/ZILCH-49156) — EWA disbursement fee code ownership | ewa-extra | | Awaiting Andrzej's confirmation: Merchant or Spend Platform? |
 | [PO-1589](https://payzilch.atlassian.net/browse/PO-1589) — Lambda VPC move for Ello SFTP | tastecard | | Chased 9 Feb; unassigned |
 | [ITOPS-14282](https://payzilch.atlassian.net/browse/ITOPS-14282) — JSM permissions for Merchant support rota | | | Raised 9 Feb |
 | Michal Baran — continuity of membership Jira ticket for Decisioning | zilch-pro | | Review once written; Decisioning to refine and estimate |

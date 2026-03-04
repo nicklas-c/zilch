@@ -35,7 +35,7 @@ Issues observed during the audit that apply across the estate rather than to a s
 | Service | Audit file | Status |
 |---|---|---|
 | fee-service | [audit-fee-service.md](audit-fee-service.md) | Audit complete — tasking pending |
-| rewards-service | — | Not started |
+| rewards-service | [audit-rewards-service.md](audit-rewards-service.md) | Terraform pre-populated; DataDog verification pending |
 | retailer-service | — | Not started |
 | offer-service | — | Not started |
 

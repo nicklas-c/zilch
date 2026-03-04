@@ -48,6 +48,7 @@ As Lukasz grows into more senior roles, he should also think about how he frames
 2026-02-02 Proposed Lukasz for promotion to L3 in appraisal submission.
 2026-03-02 Andrzej requested evidence to support the Exceeds Expectations rating. Prepared a structured justification document with Jira evidence (ZILCH and DEVOPS projects, full year) and Slack channel summary. See [content-authoring/lukasz-appraisal-justification.md](content-authoring/lukasz-appraisal-justification.md).
 2026-03-03 Andrzej has challenged the proposed promotion. Need to revisit the justification and respond. Task added to top of to-do list.
+2026-03-04 Produced revised evidence document (`projects/lukasz-promotion/lukasz-l3-evidence.md`) mapping each L3 criterion to concise evidence. Sent to Andrzej. Andrzej reviewed and accepted the case; queried Growth Potential detail (resolved in dialogue). Outcome: Andrzej to take to Steve Rayko for promotion to L3, rating 3. Exec summary authored and sent.
 2026-02-12 Off today — attending a funeral.
 
 ### 2026-02-13 — 1:1 notes

@@ -45,12 +45,14 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | John Strawhorne | QA Engineer (Level 4) | Krakow | | | continuous-deployment | |
 | Kevin Came | Product Delivery Manager | London | | | visa-flex, ewa-extra, pay-monthly | |
 | Kieren Messenger | Senior Product Designer | London | Merchant | | tastecard, zilch-pro | |
+| Krzysztof Uroda | Back End Engineer (Level 3) | Krakow | | | pay-monthly | |
 | Lukasz Kowalczyk | DevOps Engineer (Level 2) | Krakow | DevOps | Me | | |
 | Luke Williams | Senior Sales & Partnerships Manager | London | | | zilch-pro | |
 | Marcin Zolna | Engineering Manager | Krakow | Decisioning | | continuous-deployment, zilch-pro | |
 | Marek Chodak | Back End Engineer (Level 5) | Krakow | Payments | | pay-monthly | |
 | Mariusz Maciuszek | Back End Engineer (Level 3) | Krakow | | | pay-monthly | |
 | Matt Swirski | Platform | London | | | on-call-rota | |
+| Michał Ptaszek | Full-Stack Engineer (Level 2) | Krakow | | | pay-monthly | |
 | Michal Gorny | Engineering Manager (Level 2) | Krakow | | Andrzej Lorenz | | |
 | Michal Baran | Back End Engineer (Level 3) | London | Spend Platform | Andrzej Lorenz | | |
 | Michael Charash | Product Consultant | London | | | ewa-extra | |
@@ -58,6 +60,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Nick Gilbert | DevOps Engineer (Level 3) | London | DevOps | Me | aurora-connectivity-issue | |
 | Nick Holt | Back End Engineer (Level 3) | London | Merchant | Me | tastecard, expiring-rewards, aurora-connectivity-issue | |
 | Nikos Sofianos | QA Manager | London | | | zilch-pro | |
+| Oleksandr Tertyshnyi | Back End Engineer (Level 2) | London | Decisioning | | ewa-extra | |
 | Ossie Nwokedi | Front End Engineer (Level 3) | London | Merchant | Me | zilch-pro | |
 | Ozzie Yuce | SVP of Product | London | | | zilch-pro | |
 | Parry Champaneriya | Scrum Master | London | | | | |
@@ -80,6 +83,6 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Tomasz Surowiec | Back End Engineer (Level 5) | Krakow | | | gateway-service, pay-monthly | |
 | Tomasz Więckowski | Decisioning | Krakow | | | zilch-pro | |
 | Tom Wood | Head of Product - Financial Products & Payments | London | | | pay-monthly | |
-| Tommy Kwok | Product Manager | London | Decisioning | | zilch-pro | |
+| Tommy Kwok | Product Manager | London | Decisioning | | zilch-pro, ewa-extra | |
 | Yorkor Baffour | QA Engineer (Level 3) | London | | | | |
 | Zac Barclay | Product Manager | London | | | zilch-pro, visa-flex, pending-rewards, ewa-extra, pay-monthly | |
