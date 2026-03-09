@@ -14,6 +14,22 @@
 
 ## Running Notes
 
+### 2026-03-09
+
+- First DevOps retro held under new hybrid Scrum/Kanban model. Meeting was largely taken over by the build pipeline failures topic, which had been escalated to Andrzej.
+- Leave handover gap (ZILCH-48446 / Nick Gilbert) identified as a retro topic but deliberately deferred to the next retro. To be raised then.
+- **Pipeline failures**: increased absolute failure count is a consequence of CD adoption driving higher deploy frequency — failure rate not necessarily higher. Team frequently asked to diagnose failures as first step. Some structural problems (e.g. IP exhaustion) are solvable but time is rarely available to fix them. Team feel expected to work at Platform level; DevOps/Platform boundary remains unclear.
+- **Delivery pressure and work intake**: multiple high-pressure projects all treating DevOps as top priority. Requests arrive via desk walk-ups and DMs. Team reluctant to over-formalise but recognise informal intake doesn't scale as the organisation grows.
+- Mitigations for pipeline pressure: use open questions to push diagnosis responsibility back to engineers ("What error were you seeing?", "What have you tried?").
+- Mitigations for work intake: require Jira tickets for walk-up requests (immediate action at engineer's discretion for very small tasks, but still appropriate to ask); move DM conversations to #tech-devops for visibility and handover; large/project-scale requests to come via EM; over-communicate during high-pressure periods to manage expectations.
+- Phil Stephenson pushed back on work intake formalisation. His concern was emotional rather than analytical: he values informal responsiveness and perceives formalisation as creating barriers. Notable parallel with Alex Murphy's early attitude — same framing, same hero-developer instinct. Alex eventually adapted and reflected positively on the change. This may be useful framing for a future 1:1 with Phil.
+- Retro notes written up and shared with the team.
+- EM personal actions: monitor #tech-devops more closely for trends and tone; respond to Andrzej's pipeline concerns with framing context.
+
+### 2026-03-05
+
+At stand-up, ambiguity surfaced about the purpose of the **Sign Off** stage on the DevOps reactive Kanban board. Also noted that ZILCH-49094 was sitting in To-Do despite the deployment already having been done — moved to the correct column. Both are signals that the board's column definitions and workflow need to be clarified with the team.
+
 ### 2026-02-20
 
 * Jira config and hygiene work under way in preparation for adoption of the hybrid Scrum/Kanban model.

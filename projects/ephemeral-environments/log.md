@@ -21,6 +21,15 @@ A strategic DevOps project to build a platform for creating, managing, and destr
 
 ## Running Notes
 
+### 2026-03-06
+
+- Zephyr Zero is up and running, except for the VGS issue (still outstanding since 6 Feb). QAs are continuing to find issues.
+- **Sprint planning reminder:** Get properly up to speed on Zephyr Zero's current state before or during DevOps sprint planning — use planning as the vehicle to understand where things stand and what's next.
+
+### 2026-03-05
+
+At DevOps stand-up, ZILCH-44576 (a spike assigned to Piotr) was reported as dragging — "finding lots of issues." My read is that Piotr is using the spike as cover to do Ephemeral Environments work he wants to do, rather than time-boxing the investigation and raising proper tickets for follow-on work. Consistent with the pattern of going off-piste noted in his appraisal and Nick Gilbert's feedback. Pushed back on this in stand-up.
+
 ### 2026-02-18
 
 Checked in with Nikos on Zephyr Zero testing progress. Two blockers being worked on:

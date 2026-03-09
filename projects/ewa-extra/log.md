@@ -84,9 +84,14 @@ Following the ambiguity flagged on 2026-02-23, Andrzej replied via Slack. Key po
 - Andrzej indicated the new Spend Platform team **could** handle new fee schedules for EWA/Extra and Pay Monthly, and said he'd discuss in planning. Initial steer was to assume Spend Platform would do it.
 - Separately, Nicklas raised whether rewards service might also move — Andrzej confirmed **nothing has been decided yet** on that front.
 
-Despite Andrzej's steer, **ZILCH-49156** (Define a fee code for EWA Disbursement Fee) was subsequently raised by Tommy Kwok and Oleksandr Tertyshnyi and landed with Merchant. Nicklas has asked Andrzej to confirm whether Merchant or Spend Platform should own it — **awaiting response**.
+Despite Andrzej's steer, **ZILCH-49156** (Define a fee code for EWA Disbursement Fee) was subsequently raised by Tommy Kwok and Oleksandr Tertyshnyi and landed with Merchant. Nicklas has asked Andrzej to confirm whether Merchant or Spend Platform should own it — **confirmed 2026-03-06: Merchant will own all fee changes**.
 
 The playbook-based ITAM handoff (with Michal Baran supervising initial uses) was also floated as an option by Nicklas.
+
+### 2026-03-06
+
+* Tomasz Więckowski (Decisioning) created [ZILCH-49269](https://payzilch.atlassian.net/browse/ZILCH-49269) — "Setup fee code fc-extra-monthly" — via the #merchant-firefighter channel, with a request to prioritise for the coming sprint. Committed to pushing to the top of Merchant's backlog.
+* Fee code ownership confirmed: Merchant will own all fee changes, including ZILCH-49156 and ZILCH-49269.
 
 ### 2026-02-18
 * EWA/Extra meeting. Zac Barclay briefed on the feature — nothing substantially new.

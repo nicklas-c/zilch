@@ -1,5 +1,228 @@
 # Log
 
+## 2026-03-09
+
+### DevOps Retro
+
+- Two main themes: broken build/deploy pipelines, and delivery pressure and work intake.
+- Pipeline failures: volume of failures has increased because CD adoption has driven a large increase in deploy frequency; failure *rate* is not necessarily higher. Team are often first port of call for diagnosis. Some structural problems (e.g. IP exhaustion) are solvable but the team rarely get time to make fixes. Team feel they are required to work at Platform level — boundary with Platform team remains unclear.
+- Delivery pressure: multiple work streams all treating DevOps as top priority. Requests arrive via desk walk-ups and DMs, bypassing proper intake. Team cautious about over-formalising but recognise informal intake doesn't scale.
+- Mitigations agreed for pipeline failures: use open questions to gently push diagnosis responsibility back to engineers; redirect DMs to #tech-devops; channel larger project requests through EM.
+- Mitigations agreed for work intake: require Jira tickets for walk-up requests (immediate small tasks at discretion); move DM conversations to #tech-devops for visibility; large project requests to come through EM; be sensitive to delivery context and over-communicate during high-pressure periods.
+- Personal actions: monitor #tech-devops more closely; respond to Andrzej's pipeline concerns with appropriate context.
+- Phil Stephenson pushed back on the work intake formalisation proposal — expressed an emotional preference for informal, responsive working.
+- Retro notes written up and shared with the DevOps team.
+- Write-up reviewed and analysed with AI: insights generated on pipeline failure framing, CD project context, planned capacity model, work intake mitigations, and Phil Stephenson's pushback. Observations logged to devops-process project and people files.
+
+### Merchant Retro
+
+Merchant team retro held. Notes to be added.
+
+### April Pricing Changes — Cross-Team Refinement
+
+Cross-team refinement session held for FE tickets under [ZILCH-49226](https://payzilch.atlassian.net/browse/ZILCH-49226) (April Pricing Changes epic). This work is not normally Merchant's responsibility but is being picked up to allow other teams to remain focused on EWA/Extra and Pay Monthly.
+
+### EC-2083 — customer-web-legacy Production Deployment
+
+George Sharpe confirmed release is proceeding, having obtained approval from Rob Nelson and Andrzej.
+
+### Stand-ups — Merchant and DevOps
+
+Both stand-ups held. No notes taken.
+
+### 1:1 — Ossie Nwokedi
+
+- EC-2083: updated Ossie. George Sharpe has been chased and is on it.
+- Stefan Slezak joining: Ossie is interested to see how Stefan works and is aware of the learning opportunity, but hasn't given it much thought yet.
+- Rory Fielding situation: touched on briefly. Considered resolved and in the past.
+- AI usage: Ossie is getting significant value from AI tooling. Shared an example where he picked up a defect ticket, asked AI to analyse possible causes, and was told the defect had already been fixed a few hours earlier — highlighting a communication gap between engineers rather than an unresolved defect.
+
+## 2026-03-06
+
+### 1:1 — Piotr Niebylski
+
+- Personal: his wife's operation was postponed. She is well in the meantime. Piotr will need to work from home ahead of the operation to minimise pathogen exposure. Hans Zimmer concert still something they're looking forward to.
+- ZOE spike (ZILCH-44576): last remaining blocker is that the customer verification service won't start. Cause unknown — configuration appears correct. Has asked the rest of the team for assistance.
+- Zephyr Zero: up and running, except for a VGS issue. QAs continue to find issues for the team to work through.
+- Off-piste pattern: gave feedback. Piotr took it well. Acknowledged there may be adjustment needed to the new process and that he should get into the habit of raising Jira tickets for work.
+
+### Flash Report — Merchant Team
+
+- First Tastecard membership cancellation files sent to Ello via automated system.
+- First set of transaction data sent to Partnerize for Intelligent Commerce via automated system.
+- Defects fixed: broken deeplinks to category pages; status banner not showing consistently; upstream vulnerability on mixpanel integration lambda.
+- Audited front-end codebase for merchant-owned feature flags to tidy up.
+
+### Flash Report — DevOps Team
+
+- EWA (payout-service): Crossplane configured on Sensitive Data Environment for SNS/SQS deployment; RDS proxy deployed to SDE staging and dev; WireMock deployed and configured on SDE staging and dev; SDE cluster RBAC updated to grant QA access to dev and staging; payout-service deployed.
+- Flink Apps repository and infrastructure configuration (event aggregation).
+- Resolved question with AWS regarding shortcode for SMS.
+- Ephemeral Environments: E2E test config added.
+
+### DevOps Stand-Up
+
+- Skipped. Three hours of back-to-back meetings made attendance impractical.
+
+### Slack — #april-pricing-changes / Purchase Refinement
+
+- Fee-service rollout stats shared by Grzegorz Ziemiański: 23% EHI / 77% fee-service, 80 timeouts over 4 weeks, 99.997% success rate. Andrzej greenlit moving 100% to fee-service.
+- Invited to Purchase refinement by Tamara Quinn; joined ~10 minutes late.
+- Michał Górny confirmed Purchase scope: hardcoded fee values (FE web + mobile), ECJ pricing (FE web + mobile), PO3 calculator fee cap (£40 → £80), test updates.
+- Dependency flagged: Storefront adaptive header is sourced from fee-service on the Merchant side.
+- Purchase scope achievable by end of next sprint but will delay PayMonthly work by approximately one sprint.
+- Andrzej asked whether Ossie could help Purchase with ECJ to protect PayMonthly timeline; Michał Górny: workable if ECJ experience is there, but adds complexity.
+- Michał Górny proposed FE-only alternative (no BE dependency on pricing changes): preserves PayMonthly timeline but introduces tech debt — no single source of truth for fee calculation. Andrzej acknowledged we are already in this situation; directed Tamara to document it as a known system limitation and potential blocker for future pricing changes.
+- Responded to Andrzej re: Ossie: Ossie is currently on Pay Monthly Admin Portal work; Jacek could cover that, potentially freeing Ossie for Purchase. Feasible given the fee-service simplification. Committed to a definitive answer by end of day.
+- Michał Górny to post an options summary to #april-pricing-changes.
+- Confirmed: Merchant team will own the fee changes for April pricing.
+
+### Slack — #merchant-firefighter
+
+- Tomasz Więckowski (Decisioning) created [ZILCH-49269](https://payzilch.atlassian.net/browse/ZILCH-49269) — "Setup fee code fc-extra-monthly" — for the Merchant team, flagging it as needed for EWA (Zilch Advance) and requesting prioritisation for the coming sprint.
+- Responded confirming it would be pushed to the top of the backlog.
+
+### Merchant Stand-Up
+
+- **ZILCH-42041** (Jacek) — Unblocked. Confirmation received that existing backups are sufficient.
+- **ZILCH-48536** (Nick H) — Listener set up for product change events. Deploying to pre-prod. Looking good.
+- **ZILCH-45502** (Ossie) — Brought back into sprint, having been dropped earlier to make way for another ticket. Ready for review.
+- **ZILCH-49027** (Jacek) — Rejected after considerable work. Decision based on new plan for fees. Asked Jacek to create a Jira ticket for adding a new fee schedule.
+- **ZILCH-48897** (Jacek) — In review.
+- **ZILCH-48873 & ZILCH-48954** (Tom) — In progress.
+
+## 2026-03-05
+
+### DevOps Stand-Up
+
+**Reactive board:**
+- Security vulnerability tickets in To-Do — Phil does not think they should sit with DevOps. Nick Gilbert has said he would handle them on his return (Nick G is currently away).
+- ZILCH-49091 — in progress with Phil.
+- ZILCH-41286 — unclear what it's for or whether George is handling it; need to catch up with George. [Jira: "Create a fix version and apply it to tickets in release scope on merge of a release-please PR" — assigned to George Sharpe, In Dev. Part of the CD automation work. Phil to confirm whether George is actively progressing it.]
+- ZILCH-45505 — on hold, low priority (consistent with decision at Phil's 1:1 on 2026-03-04).
+- Noted: ambiguity about what the Sign Off stage on the reactive Kanban board is for. Process needs clarifying.
+- ZILCH-49094 — deployment already done but sitting in To-Do; moved to the correct column.
+
+**Planned board:**
+- ZILCH-48462 (Phil) — in progress but blocked by his duty rota rotation. Will return if reactive load allows.
+- ZILCH-48446 — awaiting Nick Gilbert's return.
+- ZILCH-47186 (Lukasz) — moved to Done.
+- ZILCH-48966 (Lukasz) — needs final verification before closing. Blocked on staging; waiting on a role to be set up.
+- ZILCH-48967 (Lukasz) — moved to Done.
+- ZILCH-48715 (Lukasz) — DevOps work done; Terraform merge still outstanding. Closed.
+- ZILCH-44576 (Piotr) — spike dragging; finding lots of issues. Expected to complete by end of day.
+
+**Piotr (ZILCH-44576):** Sense that Piotr is using the spike as cover to do Ephemeral Environments work he wants to do. Will push for better adherence to the new process — work he considers necessary should be raised as proper tickets and planned in. Aligns with existing appraisal observation that he goes off piste.
+
+### EC-2083 — customer-web-legacy Production Deployment Blocked
+
+Raised with George Sharpe that EC-2083 (Production Deployment — customer-web-legacy-1.176.0) has been sitting in Planning since 24 February — 9 days — despite containing merged work from six teams including Merchant (ZILCH-40343).
+
+Pulled from Jira:
+- **Ticket:** EC-2083 — auto-created by Jira automation on 24 Feb 2026
+- **Status:** Planning (still open)
+- **Assignee:** Ossie Nwokedi
+- **Teams affected:** Payments (ZILCH-48454), Purchase (ZILCH-47884, ZILCH-37894), Retain (ZILCH-46362), Onboarding (ZILCH-45932), Merchant (ZILCH-40343)
+
+Reason for the stall is not yet established. Raised with George to investigate.
+
+### Merchant Stand-Up
+
+Ticket updates:
+- **ZILCH-42041** — Jacek hasn't chased the platform ticket; still pending.
+- **ZILCH-48536** (Nick H) — Making do with a sub-optimal event requiring a callback to product-service rather than a fully enriched event. Putting tests around it. Wants to catch up with Tom on test strategy, especially to cover both LD flag settings.
+- **ZILCH-47174** — Should be unblocked now that Tom is back at work. Tom will review.
+- **ZILCH-48897 & ZILCH-48903** (Jacek) — Ossie tested yesterday as planned. Found issues; Jacek fixed; back for more testing.
+- **ZILCH-49027** (Jacek) — Requires further design conversations following yesterday's decision on source of truth for Pay Monthly fees.
+- **ZILCH-48954** — Requires another PR to be merged before it can be re-tested.
+- **ZILCH-48873** — Tom will look at it today.
+
+Actions:
+- Asked Tom to ensure ZILCH-48954 and ZILCH-48873 both have parent epics (currently missing).
+- Announced Iteration 12 planning will be a lightweight process, to avoid distracting from the March 31 deadline.
+- Announced introduction of `@merchant-firefighter` for the Merchant duty rota.
+
+Other notes:
+- Zac briefly hinted at new requirements. Nick H went straight into solutionising mode, well ahead of any clear requirements being established.
+- Jacek announced that affiliate-integration-service has made its **first production call to Partnerize** — a significant milestone; the service was still not operational as of 3 March.
+
+### Merchant Firefighter Rota — Slack App Set Up
+
+Set up a duty rota for the Merchant team in a Slack app. The person on duty can be tagged via `@merchant-firefighter`.
+
+### 1:1 — Tom McKenzie
+
+Meeting cut short — not much to discuss and I had not prepared.
+
+**Defect backlog:**
+The team's defect backlog is growing when it should be shrinking. The root issue identified: defects are not being properly triaged when they come in. Without triage, there is no mechanism to determine whether a defect requires urgent attention in a near sprint or can safely wait.
+
+**Decision:** Tom to own defect triage. He will be responsible for assessing incoming defects and advocating for their priority in pre-refinement meetings.
+
+I have a Jira cumulative flow report for defects. Will monitor it and expect to see defect numbers begin to decline as a result of this change.
+
+### DevOps Refinement Meeting
+
+Attended but arrived late — pulled into other conversations beforehand. Struggled to maintain focus on the specific tickets being refined, but provided adequate facilitation of the process. Facilitation is still needed while the team beds in the new hybrid Scrum/Kanban approach.
+
+### fee-service Design — Pay Monthly — Slack Discussion (Design Debate)
+
+A design debate across two parallel Slack threads (cross-team, including Andrzej Lorenz, Grzegorz Ziemiański, Tomasz Surowiec, Tom Wood, Mariusz Maciuszek, Abhishek Chatterjee, Marek Chodak, Craig Main, Sam, Jacek Zanko, Nick Holt) around whether to change the fee-service API design for Pay Monthly.
+
+**Thread 1 — tranche vs. scalar**
+
+**Proposal (Nicklas):** Replace the tranche array with a single per-instalment fee value (1.6%), with retailer-level overrides where suppression is needed. Rationale:
+- With 1.6% as the source of truth, all values in the tranche array are identical by definition — the array is redundant.
+- The tranche model builds in poor separation of concerns: it requires fee-service to know the number of instalments, which is domain knowledge it shouldn't need.
+- Retailer suppression is much cleaner to configure with a single value per retailer vs. 13 tranches per retailer.
+- Callers would be responsible for applying the fee across each instalment rather than relying on fee-service to return a pre-expanded array.
+
+**Pushback (Andrzej):** Keep the original tranche model. Future requirements (specifically from the Revolving Line project, currently on hold) may need different fee values for different instalments. Pivoting now would close that door and require new cross-team development later.
+
+**Tom Wood:** Reluctantly comfortable descoping per-instalment variation for now, but wants it noted that he is reluctant. Confirmed that the incoming requirement is specifically about being able to reduce the 1.6% for specific retailers and loan types — not about varying by instalment. Zac Barclay has confirmed retailer suppression can already be handled in the current setup (manually for now).
+
+**Grzegorz Ziemiański:** Challenged the premise — argued the tranche model can fulfil all the stated requirements. Asked what the input to fee-service should be: purchase amount or instalment amount?
+
+**Tomasz Surowiec:** Supportive of the single-value approach; removing per-instalment complexity also removes work on his side, and the simpler response is supported out of the box for ECJ.
+
+**Input clarification:** Grzegorz confirmed that fee-service currently receives `credit extended` (the purchase amount after deducting rewards, accounting for 0 down payment) — not the instalment amount. This was confirmed as correct by Nicklas (the whole loan principal, not just one instalment's share).
+
+**Thread 2 — Craig Main joins; refund scope surfaces**
+
+Craig Main joined the discussion expressing concern about the timing of a potential API change, requesting the new contract and risk mitigations as quickly as possible. He shared the existing agreed tranche JSON contract and noted that Andrzej had previously said to leave it unchanged.
+
+Nick Holt clarified that the tranche contract was still a proposal and had not yet been merged; Craig Main accepted this and reiterated his request for the final contract once agreed.
+
+A new and material scope item emerged: **partial refunds**. Tom Wood confirmed that if a partial refund is made, the fee for the remaining instalments must be recalculated against the reduced principal (i.e. `principal - refund amount`). Andrzej flagged this as new scope — not previously considered.
+
+**Debate on refund handling approach:**
+- **Nicklas** proposed two options: (1) calculate the fee once at loan creation and recalculate if a refund event occurs; (2) calculate per instalment on each billing run, so each instalment naturally reflects the current principal. Nicklas noted that option 1 introduces a recalculation event, whereas option 2 avoids one — but option 2 may require storing a fee calculation reference per instalment on the ledger.
+- **Andrzej** raised a concern about the audit trail: the `fee_calculation_reference` field on the customer ledger is intended to record which fee calculation produced a given fee. If fees are recalculated mid-loan, there would be multiple references — this creates ledger complexity.
+- **Jacek** proposed calling fee-service once per instalment, so each instalment gets its own `fee_calculation_id`. This keeps the audit trail clean and is consistent with how the billing service already operates.
+- **Nicklas** proposed a further clarification: store the fee calculation ID per instalment in the ledger, and leave it to Payments to decide whether to calculate once at loan creation and reuse that ID per instalment, or calculate fresh on each instalment. This separates fee-service API concerns from billing run decisions.
+
+The thread ended without resolution, with Nicklas putting a direct question to Craig Main about whether individual instalments are currently recorded as separate entries in the ledger. The question was unanswered in the transcript.
+
+**Late update (4:39–4:49 PM):** Andrzej confirmed that there will be a FEE ledger entry for these fees, meaning the fee calculation reference can be stored there. Nicklas responded suggesting this points towards convergence: a scalar value applied on a per-instalment basis, recalculated as needed to accommodate partial refunds. No explicit confirmation yet — Craig Main's input still awaited.
+
+**Overall outcome:** Trending towards agreement on a scalar per-instalment model with recalculation on partial refund, with the ledger providing the audit trail. Pending Craig Main's input (he is based in South Africa and has finished for the day — thread will resume tomorrow).
+
+### fee-service Design — Pay Monthly (x2 meetings)
+
+Two meetings today on fee-service design in support of the Pay Monthly project. Notes to follow.
+
+### Pricing Structure Changes — Steve Rayko Conversations
+
+Pulled into conversations by Steve Rayko (SVP Engineering) regarding planned pricing structure changes. Steve wanted to understand what would be involved in implementing them.
+
+Key points established:
+- **Deadline:** End of March 2026 — adding to the existing cluster of end-of-month P1 deliveries (Pay Monthly, EWA/Extra, Visa Flex).
+- **Back-end:** Changes can be accommodated through configuration — no code changes required on the back end.
+- **UX:** Some UX work may be required, but this would sit outside the Merchant team.
+- **Team ownership — open question:** It is not yet decided whether Merchant would pick this work up or whether it would be handled by Michal Baran and the new Spend Platform team.
+
+The team ownership question has material implications for Merchant sprint capacity, which is already under significant pressure. The configuration-only back-end scope may appear lightweight, but landing anything at end of March — when three concurrent P1 initiatives are converging — adds risk. Worth monitoring closely.
+
 ## 2026-03-04
 
 ### March Delivery Pressure
@@ -120,6 +343,20 @@ Nick Gilbert not mentioned; presumably still on leave.
 
 **Reactive:**
 * Phil Stephenson occupied with support. Several issues with ZILCH-49113. ZILCH-49091 in progress.
+
+### New Web — Pen Testing Requirements Discussion (Slack)
+
+Slack exchange with Chris Walker and Phil Stephenson regarding the New Web sprint work and pen testing readiness.
+
+**Background:** New Web sprint work (likely ZILCH-47773 or related) is at risk due to high-priority EWA tasks being pulled in. Chris Walker was informed proactively.
+
+**Chris Walker's request:** That DevOps and the Security team (secteam) agree and document what needs to be done before pen testing can begin. Chris referenced that Julien (sec team) had said the environment should be "as close to prod as possible". Chris is concerned about ending up unable to get security sign-off because something wasn't tested.
+
+**Phil Stephenson's view:** Testing in staging should be sufficient; DevOps are not planning major changes and any issues found would likely require changes anyway.
+
+**Outcome:** Chris Walker is comfortable with Phil's position but wants it confirmed in writing by the Security team.
+
+**Action required:** Arrange agreement — ideally written — between DevOps and the Security team on the pen testing environment requirements for New Web (staging acceptable vs. prod-like required).
 
 ## 2026-03-03
 

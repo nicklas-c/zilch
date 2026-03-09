@@ -95,3 +95,29 @@ Via Nick G's 1:1. Re: ZOE presentation and codebase:
 - Nick sees this as a pattern — cites the Crossplane work for Ephemeral Environments, where Piotr similarly went off piste and stability was adversely affected.
 
 This reinforces the growth area from the appraisal: working to the plan and keeping the team involved through usual sprint processes.
+
+### 2026-03-06 — 1:1
+
+**Personal:**
+- Wife's operation was postponed. She is well in the meantime.
+- Piotr will need to work from home ahead of the operation to minimise pathogen exposure.
+- He clarified it is not just a biopsy — they will learn whether the tumour is benign or malignant after the operation. (May be a translation nuance.)
+- Still looking forward to the Hans Zimmer concert.
+
+**ZOE spike (ZILCH-44576):**
+- Last remaining blocker: customer verification service won't start. Configuration appears correct but cause is unknown. Has asked the rest of the team for assistance.
+
+**Zephyr Zero:**
+- Up and running, except for a VGS issue.
+- QAs are continuing to find issues for the team.
+- Note: I was not fully across this situation — need to make sure I'm up to speed.
+
+**Off-piste feedback:**
+- Gave feedback on the recurring pattern of working outside the planned sprint process.
+- He took it well. Acknowledged there may be some adjustment needed and that he should get into the habit of raising Jira tickets for work rather than absorbing it into existing items or working informally.
+
+### Stand-up — 2026-03-05
+
+**Reminder for next 1:1 prep:** Raise the ZILCH-44576 spike behaviour — the pattern of using a spike as cover to do work he wants to do rather than raising proper tickets. Use this as a concrete example when discussing process adherence.
+
+ZILCH-44576, a spike assigned to Piotr, has been dragging. In stand-up, Piotr reported finding lots of issues and is targeting completion by end of day. My sense is he is using the spike as cover to do Ephemeral Environments work he wants to do — the "finding lots of issues" framing is consistent with him scoping the work up rather than time-boxing the investigation. Flagged to him that the new process requires work like this to be raised as proper tickets and planned in rather than absorbed into a spike. Another instance of the recurring off-piste pattern.

@@ -144,6 +144,10 @@ Also discovered that the DataDog monitors list does not support OR logic in the 
 1. Continue writing up tickets for ZILCH-47400.
 2. Continue the audit with rewards-service.
 
+### 2026-03-05
+
+Jacek announced in stand-up that affiliate-integration-service has made its **first production call to Partnerize**. This is a meaningful milestone: the service was explicitly excluded from the observability audit scope on 3 March on the grounds that it was not yet operational. That exclusion should now be revisited — affiliate-integration-service needs to be added back into the audit backlog.
+
 ### 2026-03-04
 
 - Checked Jira: eight child tickets confirmed under ZILCH-47400, all in Ready for Refinement except ZILCH-49130 (Created). ZILCH-49130 ("Migrate DCS tests to DataDog where possible") was not created in a previous session — origin unknown; to review.

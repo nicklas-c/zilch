@@ -114,6 +114,15 @@ This connects to recurring feedback from Nikos (appraisal, 2026-02-05): Tom need
 ### 2026-02-18 — Pending Rewards
 Asked in Slack whether Tom is familiar enough with Nick Holt's pending rewards design proposal to define the tests required.
 
+### 2026-03-05 — 1:1 notes
+
+Meeting cut short — not much to discuss; I had not prepared.
+
+**Defect backlog:**
+The defect backlog is growing when it should be shrinking. Agreed root cause: defects are not being triaged when they come in, so there is no mechanism to decide urgency. Decision: Tom to own defect triage going forward, and to be responsible for advocating defect priority at pre-refinement meetings.
+
+I have a Jira cumulative flow report for defects and will monitor for a downward trend. This builds on Tom's earlier defect analysis work (Feb 2026) and his suggestion of an SLA for defect resolution (1:1, 2026-02-05). Taking on triage ownership is a meaningful step towards the leadership role his function demands. Connects to Nikos's appraisal feedback (2026-02-05): Tom needs to take leadership duties as seriously as technical ones.
+
 ### 2026-02-18 — Test policy document chase
 
 Chased Tom on the test policy document (originally suggested 13 Feb). Still waiting on delivery.

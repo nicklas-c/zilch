@@ -43,6 +43,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Grzegorz Ziemiański | Engineering Manager | Krakow | Acquirer, Issuer | Andrzej Lorenz | pay-monthly | |
 | Jacek Zanko | Back End Engineer (Level 4) | Krakow | Merchant | Me | tastecard, gateway-service, pay-monthly | |
 | John Strawhorne | QA Engineer (Level 4) | Krakow | | | continuous-deployment | |
+| Julien Morvan | Security Engineer (Level 3) | London | | Oliver Hamilton | new-web | |
 | Kevin Came | Product Delivery Manager | London | | | visa-flex, ewa-extra, pay-monthly | |
 | Kieren Messenger | Senior Product Designer | London | Merchant | | tastecard, zilch-pro | |
 | Krzysztof Uroda | Back End Engineer (Level 3) | Krakow | | | pay-monthly | |
@@ -61,6 +62,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Nick Holt | Back End Engineer (Level 3) | London | Merchant | Me | tastecard, expiring-rewards, aurora-connectivity-issue | |
 | Nikos Sofianos | QA Manager | London | | | zilch-pro | |
 | Oleksandr Tertyshnyi | Back End Engineer (Level 2) | London | Decisioning | | ewa-extra | |
+| Oliver Hamilton | vCISO | London | | | | |
 | Ossie Nwokedi | Front End Engineer (Level 3) | London | Merchant | Me | zilch-pro | |
 | Ozzie Yuce | SVP of Product | London | | | zilch-pro | |
 | Parry Champaneriya | Scrum Master | London | | | | |

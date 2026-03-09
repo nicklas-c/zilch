@@ -42,6 +42,13 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Running Notes
 
+### 2026-03-09 — 1:1
+
+- EC-2083 (stalled customer-web-legacy production deployment): updated Ossie. George Sharpe chased and is on it.
+- Stefan Slezak joining: Ossie is interested to see how Stefan works and is aware of the learning opportunity, but hasn't thought deeply about it yet.
+- Rory Fielding situation: briefly acknowledged. Considered resolved.
+- AI usage: Ossie is getting significant value from AI tooling. Shared an example where he picked up a defect ticket, used AI to analyse possible causes, and was told the defect had already been fixed — a communication failure between engineers that the AI surfaced before a human did.
+
 ### 2026-02-23 — 1:1
 
 **Rory Fielding situation:** It was during this conversation that I discovered Rory had messaged Ossie directly about ZILCH-48665, pressing him to pick it up and bypassing me. Ossie was put in an unfair position by a peer engineer from another team. Handled through the 1:1; escalated to Mike Davis separately.

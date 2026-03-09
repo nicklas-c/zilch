@@ -116,6 +116,14 @@ The channel shows active work across several areas:
 
 ## Running Notes
 
+### 2026-03-05
+
+EC-2083 (Production Deployment — customer-web-legacy-1.176.0) surfaced as an example of the deployment pipeline not completing end-to-end. The EC change ticket was auto-created on 24 Feb 2026 but has sat in "Planning" status for 9 days. It contains merged work from six teams — Payments, Purchase, Retain, Onboarding, Merchant, and Purchase again — none of which have reached production.
+
+Root cause: customer-web-legacy has the EC ticket auto-creation working (ZILCH-42199 done), but ZILCH-44143 ("Merge deploy-zilch PR when change request is approved") is still only In QA. Without it, someone must manually progress the deploy-zilch PR after the EC ticket is approved — and this is not happening reliably.
+
+Raised with George Sharpe, who owns the change management process.
+
 ### 2026-02-11
 
 Project log populated from Confluence research. Key pages: Streamline Release and Deployment brief, ArgoCD proposal, Deploying via ArgoCD guide, Developing ArgoCD DevOps guide.

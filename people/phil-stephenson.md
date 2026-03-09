@@ -35,6 +35,16 @@ Flagged via Slack that engineers working on the EWA project (including Radek Kac
 
 Also asked for sign-off on ZILCH-45505 (mass update of pr-validate workflow across all GitHub repos via script). Piotr approved; Nicklas deferred pending more context — to discuss at 1:1 before proceeding.
 
+### 2026-03-09 — DevOps Retro
+
+During discussion of more managed work intake, Phil pushed back on formalising the process. His concern was not analytical but emotional: he described informal, responsive working as 'nice', and felt that a more constrained process would put up barriers and undermine his ability to be helpful. He did not offer a structural counter-argument.
+
+This is a recognisable pattern — closely parallels Alex Murphy's attitude early in my tenure managing the Merchant team. Alex had been at the company for years by that point but held the same view (felt it was nicer to respond to requests directly and have autonomy to do what felt right), and eventually adapted to working within a more structured process and visibly matured as a result. In his exit interview, Alex reflected positively on the change, drawing explicit contrast with Rory Fielding who continues to work in an uncontrolled fashion.
+
+The Alex parallel may be worth drawing on in a future 1:1 with Phil — not as a lecture, but as a concrete example of growth that Phil would recognise.
+
+*AI observation:* The question of whether Phil is a people-pleaser is worth holding as an open hypothesis. His attachment to informal responsiveness appears values-level — he describes it as 'nice', suggesting it's tied to his sense of identity and what makes work meaningful, rather than anxiety about standing. This is distinct from Lukasz's people-pleasing, which appears confidence-driven (linked to his awareness of being the most junior team member). However, Phil also finds conflict with cross-team engineers stressful and needed a venting session in his 1:1 on 4 Mar — the combination of "I want to be seen as helpful" with "I find friction hard" does carry a people-pleasing quality worth monitoring. An open question: is Lukasz modelling on Phil? If Lukasz sees Phil being warmly received for informal responsiveness, he may emulate the surface behaviour for his own reasons, even if the underlying drivers differ. Watch for whether Lukasz defers to Phil explicitly or mirrors his attitudes in team discussions — if Phil is functioning as Lukasz's template for "what good looks like", then shaping Phil's process discipline matters more than it otherwise would.
+
 ### 1:1 — 2026-03-04
 
 Largely a venting session. Phil needed to express concerns rather than seek specific actions.

@@ -132,8 +132,45 @@ Jacek Zanko asked for final confirmation on which fee calculation approach to im
 
 Following discussion between Tamara Quinn, Nicklas Chapman, and Tom Wood, **Option B was confirmed as correct**. The reasoning: 1.6% is the rate communicated to customers in comms, the app, the calculator, and the ECJ — it is the de facto contractual commitment. 20.8% is an emergent total, not the stated figure. Tom Wood confirmed; Tamara Quinn documented. Andrzej Lorenz requested the decision be communicated to and acknowledged by all teams, including Data and Finance. Tamara Quinn has confirmed she will handle this broadcast.
 
+### 2026-03-05
+
+- **ZILCH-49027** (Jacek) — Requires further design conversations following yesterday's confirmation of Option B (1.6% per instalment) as the source of truth for fee calculation. The implementation approach needs to be validated against this decision before progressing.
+- **ZILCH-48897 & ZILCH-48903** — Ossie tested on 4 March as planned. Found issues; Jacek fixed; returned to QA.
+
+**fee-service API design debate (Slack, two parallel threads):**
+Nicklas proposed replacing the tranche array with a single per-instalment fee value (1.6%), arguing: (1) all tranche values are identical given the source-of-truth decision, making the array redundant; (2) the tranche model encodes instalment-count domain knowledge into fee-service, creating poor separation of concerns; (3) retailer-level suppression is far simpler to configure with a scalar than with 13 tranches per retailer.
+
+Andrzej pushed back: the Revolving Line project (on hold) has requirements for varying fee values per instalment. Pivoting now would close that door and require future cross-team rework. His position: retain tranches.
+
+Tom Wood: reluctantly comfortable descoping per-instalment variation for now. Confirmed the immediate new requirement is retailer-level fee suppression (not per-instalment variation), and that Zac has confirmed this can be handled manually in the current setup.
+
+Grzegorz Ziemiański: challenged whether the new requirements actually necessitate a payload change, arguing tranches can fulfil them. Raised the input question: fee-service currently receives `credit extended` (purchase amount after rewards deducted, accounting for 0 down) — not the instalment amount. Confirmed as correct by Nicklas.
+
+Tomasz Surowiec: supportive of the simpler single-value approach; also removes work on his side and is supported out of the box for ECJ.
+
+In a parallel thread, Craig Main joined and raised concern about the timing of any API change. He shared the existing agreed tranche JSON contract and flagged that Andrzej had previously instructed it be left unchanged. Nick Holt clarified the contract was still a proposal and not yet merged; Craig accepted this and asked for the final contract once agreed.
+
+**Partial refund — new scope identified:** Tom Wood confirmed that if a partial refund is made, the fee for the remaining instalments must be recalculated based on the reduced principal (`principal - refund amount`). Andrzej noted this is new scope, not previously considered. A debate followed on how fee-service should handle this:
+- Nicklas proposed either (1) calculate once at loan creation and recalculate on refund event, or (2) calculate per instalment on each billing run. Option 2 avoids a dedicated recalculation event but may require storing a fee calculation reference per instalment on the ledger.
+- Andrzej raised audit concerns: the `fee_calculation_reference` field on the customer ledger is intended to tie a fee to its calculation. Multiple calculations mid-loan would produce multiple references, complicating the audit trail.
+- Jacek proposed calling fee-service once per instalment so each gets its own clean `fee_calculation_id`.
+- Nicklas proposed a further refinement: store the fee calc ID per instalment on the ledger, and leave it to Payments to decide whether to calculate once at loan creation and reuse the ID, or calculate afresh each time. This decouples fee-service API design from billing run implementation choices.
+
+Thread ended with Nicklas asking Craig Main whether individual instalments are recorded as separate ledger entries — unanswered in the transcript.
+
+**Late update (4:39–4:49 PM):** Andrzej confirmed there will be a FEE ledger entry for these fees, meaning the fee calculation reference can be stored there. Nicklas responded suggesting this indicates convergence towards a scalar value applied on a per-instalment basis, recalculated as needed to accommodate partial refunds. No explicit confirmation yet.
+
+**Status:** Trending towards agreement. Scalar per-instalment model with recalculation on partial refund appears to be the emerging direction, with ledger storage of the fee calculation reference resolving the audit concern. Craig Main's input still outstanding — he works in South Africa and is done for the day. Thread resumes tomorrow.
+
 ### 2026-03-02
 
 - ZILCH-49027 (fee service support for monthly instalment fees) added to the Merchant board while I was away. Accepted as additional scope in sprint 11.4 without dropping equivalent points — Jacek believes he has capacity.
+
+### 2026-03-06
+
+- **ZILCH-49027** rejected after considerable work. Rejection based on the new plan for fees (the evolving API design settled after the tranche/scalar debate of 2026-03-05). Asked Jacek to create a new Jira ticket for adding a new fee schedule, reflecting the agreed approach.
+- **ZILCH-48897** (Jacek) — in review.
+- **ZILCH-48873 & ZILCH-48954** (Tom) — in progress.
 - Pay Monthly tickets worked up and in play for sprint 11.4.
 - Jacek updating tests to check for updated version; only expects updated DTOs in the appropriate version (ZILCH-48897 — in progress).
+- **April pricing changes impact:** Michał Górny confirmed that the Purchase team can complete the April pricing scope by end of next sprint, but this will delay PayMonthly work by approximately one sprint. Items deferred: Credit Multiplier, ECJ, Purchase Comms.

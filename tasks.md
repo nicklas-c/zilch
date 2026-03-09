@@ -4,15 +4,17 @@
 
 | Task | Project | Notes |
 |---|---|---|
+| Add notes from Merchant retro (2026-03-09) to log | | If time allows |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | merchant-operations | Break epic into refinable tickets |
 | Find out the status of retailer-admin-ui — active or dormant? | merchant-operations | Useful context ahead of Stefan's arrival |
 | Follow up with Phil Stephenson: which team should own Snooze Config alert; arrange handover discussion with relevant EM | on-call-rota | |
 | Catch up with Phil Stephenson async: how to handle AWS Lambda throttling (overdue-outsystems) with Retain | on-call-rota | |
 | Chase Grzegorz re: ZILCH-44139 (string/binary data truncation) — ensure planned into a sprint | on-call-rota | |
-| Draft day-one email for Stefan | stefan-onboarding | Depends on other onboarding prep |
 | Speak to Grzegorz Ziemiański and Nikos Sofianos re: friction with Radek Kachel on EWA | | Frame as a light-touch question about observed friction, not a formal escalation |
 | Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
 | Fix backlog hygiene on defect candidates | | ZILCH-47174, ZILCH-46150, ZILCH-45502: all missing story points only (otherwise compliant). ZILCH-44467: missing story points, parent epic, and Owned By. ZILCH-48542: missing story points and parent epic; no priority set. ZILCH-48154: missing story points and parent epic; no priority set. |
+| Clarify Sign Off stage definition on DevOps reactive Kanban board with the team | devops-process | |
+| Chase Security team (Julien) to get written agreement on pen testing environment for New Web — staging sufficient per Phil Stephenson, needs sec team confirmation in writing | new-web | Chris Walker's ask from 2026-03-04 |
 
 ## Soon
 
@@ -31,6 +33,7 @@
 | Add Stefan to regular team meetings | stefan-onboarding | |
 | Set up 1:1s with Stefan | stefan-onboarding | |
 | Add Stefan to the Merchant team in DataDog | stefan-onboarding | Do on or after his start date (23 Mar 2026) |
+| Dig into the crossover between pending rewards and pay monthly rewards | | |
 
 
 ## Later
@@ -45,7 +48,7 @@
 
 | Task | Project | Chase date | Notes |
 |---|---|---|---|
-| [ZILCH-49156](https://payzilch.atlassian.net/browse/ZILCH-49156) — EWA disbursement fee code ownership | ewa-extra | | Awaiting Andrzej's confirmation: Merchant or Spend Platform? |
+| Phil Stephenson to check with George re: ZILCH-41286 | | 2026-03-06 | Jira: auto-create fix versions on release-please PR merge (In Dev, assigned to George). Questions: why is it on the DevOps board? Does George think he's assigned it to the team by putting it there, or is he actioning it himself? |
 | [PO-1589](https://payzilch.atlassian.net/browse/PO-1589) — Lambda VPC move for Ello SFTP | tastecard | | Chased 9 Feb; unassigned |
 | [ITOPS-14282](https://payzilch.atlassian.net/browse/ITOPS-14282) — JSM permissions for Merchant support rota | | | Raised 9 Feb |
 | Michal Baran — continuity of membership Jira ticket for Decisioning | zilch-pro | | Review once written; Decisioning to refine and estimate |

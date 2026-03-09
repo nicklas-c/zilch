@@ -13,6 +13,12 @@
 
 ## Running Notes
 
+### 2026-03-04
+
+Slack exchange between Nicklas, Chris Walker, and Phil Stephenson on pen testing environment requirements. The New Web sprint work is at risk this sprint due to EWA priorities. Chris Walker asked that DevOps and Security agree (in writing) on what environment configuration is needed before pen testing begins. Phil Stephenson's position: staging is sufficient. Chris accepted this but wants Security to confirm it in writing. Julien (sec team) had previously indicated a preference for prod-like environments.
+
+**Action outstanding:** Chase Security to get written agreement on staging-vs-prod-like for pen testing.
+
 ### 2026-02-19
 
 Chris Walker asked Nick Gilbert what the pen-testers should particularly focus on for the new web app, following completion of production deployment work. No output from that conversation visible in the digest.
