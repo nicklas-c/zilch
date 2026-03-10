@@ -275,6 +275,10 @@ Project log created.
 - Once that's clear, coordinate with other EMs to understand the technical steps for rollout.
 - Document the end-to-end release plan when the above is done.
 
+Confirmed with Zac: milestone rewards descoped — insufficient value vs effort. May return as a separate initiative.
+
+Clarified upgrade/downgrade status with Payments and Decisioning. Checked higher rewards rate config — confirmed done.
+
 ### 2026-02-12
 
 **Roll-out planning meeting with Zac and Ethan.**
@@ -290,3 +294,17 @@ Nikos wants:
 - Initial release to a small cohort (~1%) for one week to catch issues before bringing in the first experimentation cohort.
 
 Personal view: the limited QA rollout may be overkill, but will build the plan around his requirement and discuss.
+
+### 2026-02-13
+
+Set up cross-team refinement with Decisioning and Merchant for continuity of membership / Pro requirements.
+
+### 2026-02-18
+
+Created `tech-zilch-pro` Slack channel for cross-team coordination, especially roll-out planning.
+
+Drafted Zilch Pro Release Plan page for Confluence — collaborative document capturing release steps per feature. Seeded from product overview and rollout discussions. Key framing: release features independently as ready; gate customer availability on partnerships.
+
+Signed off ZILCH-47687 (Pro rewards label on purchases page) — moved to Ready for Release.
+
+Pro confirmed as not dropped but lower priority than EWA/Extra.

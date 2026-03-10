@@ -62,31 +62,9 @@ Jacek could be a little more ambitious if he chooses. He sometimes seems happy t
 
 ## Digest
 
-2026-02-02 In a conversation with Michal, he mentioned that he thought Jacek may be feeling jaded about the projects he's working on - having been tied to the same codebases for a long time.  He thought Jacek might enjoy changing team.
+### 2026-02-02
 
-### 1:1 with Andrzej — 2026-02-16
-
-Andrzej and I discussed Jacek: possibility of rotation, and his tech leadership on gateway service. This aligns with the direction from Jacek's own 1:1 on the 10th — gateway service as a vehicle for cross-team leadership.
-
-Note: if Michal's backfill is London-based, Jacek would be the only Polish engineer in the Merchant team.
-
-### Merchant Operations Audit — 2026-03-03
-
-During the fee-service observability audit, Jacek confirmed via Slack that debug logging in fee-service is disabled in prod as a cost optimisation — the service was generating a very high log volume, and since fee calculation requests/responses are stored in the DB, the logs were deemed redundant. The situation had come up before so wasn't a total surprise, but the timing of when the change was actually made was not known. Agreed that prod logging needs to be restored.
-
-### Stand-up — 2026-02-18
-- ZILCH-40366 (gateway service authoriser): ready for production. Tom McKenzie's QA concerns satisfied — won't be in active use yet, just available in prod.
-- ZILCH-46517 (fee service playbooks): reviewing Michal's work.
-
-### Stand-up — 2026-02-12
-- ZILCH-40366 (gateway service authoriser Lambda): in progress.
-- ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): reviewed Nick H's PR. Found a place where the removed code might still be called from the front end — sent back to Nick H to check with Ossie.
-- ZILCH-46901 (Partnerize integration): reacts on an event fired when a Snowflake workspace bucket is updated. Bucket not created in dev environments, blocking work. Discussed with Platform, who don't want Snowflake infra in dev. Between them they decided on a way forward: hosting a bucket available across all environments. Still discussing where it should go — should resolve the question soon.
-
-### Stand-up — 2026-02-11
-- ZILCH-40366 (gateway service authoriser Lambda): attempting pre-prod deploy today. Needs review. Raised question about whether to use new gateway vs proxying through customer-service.
-- ZILCH-46901 (Partnerize integration): nearly done, awaiting platform ticket.
-- Agreed to review Nick H's PR for ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query).
+In a conversation with Michal, he mentioned that he thought Jacek may be feeling jaded about the projects he's working on — having been tied to the same codebases for a long time. He thought Jacek might enjoy changing team.
 
 ### 1:1 — 2026-02-10
 
@@ -125,3 +103,31 @@ Opened with social chat — just back from skiing holiday, enjoyed it, good for 
 **My observations:**
 - Delighted he spotted the gateway service opportunity — ideal for demonstrating the cross-team leadership I'm encouraging.
 - On the "jaded" topic: I also raised this in a recent engineering leadership meeting, posing the question of whether we should look to regularly rotate engineers to keep them engaged and give them maximum exposure to Zilch systems.
+
+### Stand-up — 2026-02-11
+- ZILCH-40366 (gateway service authoriser Lambda): attempting pre-prod deploy today. Needs review. Raised question about whether to use new gateway vs proxying through customer-service.
+- ZILCH-46901 (Partnerize integration): nearly done, awaiting platform ticket.
+- Agreed to review Nick H's PR for ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query).
+
+### Stand-up — 2026-02-12
+- ZILCH-40366 (gateway service authoriser Lambda): in progress.
+- ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): reviewed Nick H's PR. Found a place where the removed code might still be called from the front end — sent back to Nick H to check with Ossie.
+- ZILCH-46901 (Partnerize integration): reacts on an event fired when a Snowflake workspace bucket is updated. Bucket not created in dev environments, blocking work. Discussed with Platform, who don't want Snowflake infra in dev. Between them they decided on a way forward: hosting a bucket available across all environments. Still discussing where it should go — should resolve the question soon.
+
+### 1:1 with Andrzej — 2026-02-16
+
+Andrzej and I discussed Jacek: possibility of rotation, and his tech leadership on gateway service. This aligns with the direction from Jacek's own 1:1 on the 10th — gateway service as a vehicle for cross-team leadership.
+
+Note: if Michal's backfill is London-based, Jacek would be the only Polish engineer in the Merchant team.
+
+### Stand-up — 2026-02-16
+- Partnerize integration (ZILCH-46901): found and resolved concurrency problems at higher volumes during testing. Ready for production — moving to sign-off.
+- Gateway service authoriser: ready for review. Has doubts about how to go to production — will organise a meeting with stakeholders.
+
+### Stand-up — 2026-02-18
+- ZILCH-40366 (gateway service authoriser): ready for production. Tom McKenzie's QA concerns satisfied — won't be in active use yet, just available in prod.
+- ZILCH-46517 (fee service playbooks): reviewing Michal's work.
+
+### Merchant Operations Audit — 2026-03-03
+
+During the fee-service observability audit, Jacek confirmed via Slack that debug logging in fee-service is disabled in prod as a cost optimisation — the service was generating a very high log volume, and since fee calculation requests/responses are stored in the DB, the logs were deemed redundant. The situation had come up before so wasn't a total surprise, but the timing of when the change was actually made was not known. Agreed that prod logging needs to be restored.

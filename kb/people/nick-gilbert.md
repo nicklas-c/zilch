@@ -17,10 +17,6 @@
 
 ## Digest
 
-### Stand-up — 2026-03-05
-
-Nick is currently away. A batch of security vulnerability tickets in the reactive backlog is being held pending his return; he had indicated he would handle them.
-
 ### 1:1 — 2026-02-12
 
 #### Talking Points (pre-meeting)
@@ -69,3 +65,7 @@ Nick is currently away. A batch of security vulnerability tickets in the reactiv
 
 ### 2026-02-18
 * Worked with [Phil Stevenson](./phil-stevenson.md) to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases.
+
+### Stand-up — 2026-03-05
+
+Nick is currently away. A batch of security vulnerability tickets in the reactive backlog is being held pending his return; he had indicated he would handle them.

@@ -73,6 +73,16 @@ On the Ephemerals project, there have been times when Piotr's enthusiasm has led
   * Shared my write-up
   * He acknowledged comments were appropriate and reasonable
 
+### Peer feedback from Nick Gilbert — 2026-02-12
+
+Via Nick G's 1:1. Re: ZOE presentation and codebase:
+- Implementation looks good and clearly laid out — big piece of work.
+- Needs more comments; Nick isn't a Go expert and would benefit from better documentation. Discussed Go's idiomatic godoc approach as potential leverage.
+- Concern about submitting a large volume of code in one go without iterative peer review. I confirmed similar feedback has already been given to Piotr directly.
+- Nick sees this as a pattern — cites the Crossplane work for Ephemeral Environments, where Piotr similarly went off piste and stability was adversely affected.
+
+This reinforces the growth area from the appraisal: working to the plan and keeping the team involved through usual sprint processes.
+
 ### 2026-02-20
 
 * Declined 1:1 — something personal to attend to. Asked to reschedule.
@@ -86,15 +96,11 @@ On the Ephemerals project, there have been times when Piotr's enthusiasm has led
 
 * No reschedule materialised after the 20 Feb cancellation. Decided not to chase — if Piotr doesn't want the 1:1, won't push it. Let it slide for now.
 
-### Peer feedback from Nick Gilbert — 2026-02-12
+### Stand-up — 2026-03-05
 
-Via Nick G's 1:1. Re: ZOE presentation and codebase:
-- Implementation looks good and clearly laid out — big piece of work.
-- Needs more comments; Nick isn't a Go expert and would benefit from better documentation. Discussed Go's idiomatic godoc approach as potential leverage.
-- Concern about submitting a large volume of code in one go without iterative peer review. I confirmed similar feedback has already been given to Piotr directly.
-- Nick sees this as a pattern — cites the Crossplane work for Ephemeral Environments, where Piotr similarly went off piste and stability was adversely affected.
+**Reminder for next 1:1 prep:** Raise the ZILCH-44576 spike behaviour — the pattern of using a spike as cover to do work he wants to do rather than raising proper tickets. Use this as a concrete example when discussing process adherence.
 
-This reinforces the growth area from the appraisal: working to the plan and keeping the team involved through usual sprint processes.
+ZILCH-44576, a spike assigned to Piotr, has been dragging. In stand-up, Piotr reported finding lots of issues and is targeting completion by end of day. My sense is he is using the spike as cover to do Ephemeral Environments work he wants to do — the "finding lots of issues" framing is consistent with him scoping the work up rather than time-boxing the investigation. Flagged to him that the new process requires work like this to be raised as proper tickets and planned in rather than absorbed into a spike. Another instance of the recurring off-piste pattern.
 
 ### 2026-03-06 — 1:1
 
@@ -115,9 +121,3 @@ This reinforces the growth area from the appraisal: working to the plan and keep
 **Off-piste feedback:**
 - Gave feedback on the recurring pattern of working outside the planned sprint process.
 - He took it well. Acknowledged there may be some adjustment needed and that he should get into the habit of raising Jira tickets for work rather than absorbing it into existing items or working informally.
-
-### Stand-up — 2026-03-05
-
-**Reminder for next 1:1 prep:** Raise the ZILCH-44576 spike behaviour — the pattern of using a spike as cover to do work he wants to do rather than raising proper tickets. Use this as a concrete example when discussing process adherence.
-
-ZILCH-44576, a spike assigned to Piotr, has been dragging. In stand-up, Piotr reported finding lots of issues and is targeting completion by end of day. My sense is he is using the spike as cover to do Ephemeral Environments work he wants to do — the "finding lots of issues" framing is consistent with him scoping the work up rather than time-boxing the investigation. Flagged to him that the new process requires work like this to be raised as proper tickets and planned in rather than absorbed into a spike. Another instance of the recurring off-piste pattern.

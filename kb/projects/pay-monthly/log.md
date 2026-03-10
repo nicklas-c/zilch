@@ -109,6 +109,14 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 - Cross-team technical responsibilities mapped by Andrea Ponte.
 - Credit limit work tracked by Michał Górny and Chris Walker (Onboarding).
 
+### 2026-02-19
+
+- Steve Rayko asserted that Pay Monthly is higher priority than EWA. Potentially significant given the EWA urgency — may indicate a limit to how much can be disrupted in service of the EWA deadline.
+
+### 2026-02-20
+
+- Refinement meeting with Merchant team. Tamara Quinn joined for the first 25 minutes to discuss how rewards interact with Pay Monthly. Cross-team dependency flagged.
+
 ### 2026-02-23
 
 - Received Pay Monthly ticket links from Zac Barclay. Flagged as ready to work up ahead of sprint 11.4 planning.
@@ -122,6 +130,10 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 **Fee presentation in the UI:** Jacek Zanko proposed that the fee service returns the total fee broken down into tranches, and the UI displays the effective rate of the first unpaid tranche rounded to 1 decimal place. Andrea Ponte and Craig Main agreed — the rounding difference should still result in a monthly fee of ≥ 1.6% when rounded to 1dp. Michał Ptaszek raised whether the first instalment percentage should be displayed even once it's been paid. (Note: this discussion preceded and informed the Option A/B decision confirmed later the same period — see below.)
 
 **Ledger / accounting approach (MVP):** Tomasz Surowiec raised whether Pay Monthly fees should be stored as part of the purchase or as a separate loan fee. Decision: keep current approach for MVP — monthly fees (except the first) stored in the FEE column in the ledger, not split between purchase and loan. Rationale: minimise changes and risk.
+
+### 2026-03-02
+
+- ZILCH-49027 (fee service support for monthly instalment fees) added to the Merchant board while I was away. Accepted as additional scope in sprint 11.4 without dropping equivalent points — Jacek believes he has capacity.
 
 ### 2026-03-04
 
@@ -165,10 +177,6 @@ Thread ended with Nicklas asking Craig Main whether individual instalments are r
 **Late update (4:39–4:49 PM):** Andrzej confirmed there will be a FEE ledger entry for these fees, meaning the fee calculation reference can be stored there. Nicklas responded suggesting this indicates convergence towards a scalar value applied on a per-instalment basis, recalculated as needed to accommodate partial refunds. No explicit confirmation yet.
 
 **Status:** Trending towards agreement. Scalar per-instalment model with recalculation on partial refund appears to be the emerging direction, with ledger storage of the fee calculation reference resolving the audit concern. Craig Main's input still outstanding — he works in South Africa and is done for the day. Thread resumes tomorrow.
-
-### 2026-03-02
-
-- ZILCH-49027 (fee service support for monthly instalment fees) added to the Merchant board while I was away. Accepted as additional scope in sprint 11.4 without dropping equivalent points — Jacek believes he has capacity.
 
 ### 2026-03-06
 

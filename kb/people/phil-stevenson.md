@@ -54,6 +54,28 @@ Phil is already seen as the de facto tech lead for the team. As a development op
 
 ## Digest
 
+### 1:1 — 2025-02-04
+
+**Appraisal feedback discussion**
+- Discussed the feedback I had written for him — he agreed it aligned well with his own take.
+
+**On the tone of his self-appraisal**
+- I made the point that I'm open to constructive feedback, but using the appraisal as a channel to escalate wasn't appropriate — it looks undiplomatic.
+- He asserted he was trying to be constructive, not damaging, but acknowledged my view that the channel wasn't the right one.
+- He didn't say whether he agreed, but acknowledged and respected my perspective.
+
+**Discussing the perceived gaps**
+- We discussed at length where he thinks the gaps are and what has changed since I took line management.
+- He struggled to put his finger on anything specific.
+- Couldn't identify much that has changed since I took over, except that the team also lost Kevin Came's involvement as scrum master.
+
+**Path forward**
+- I shared my view that if I'm going to lean in to the gaps, I'll need the team to work in a more structured fashion.
+- Proposed adopting a hybrid kanban/scrum model: scrum for planned work, kanban for reactive work.
+- Also: more discipline around scrum, and aligning sprints with other engineering teams.
+- Phil seemed very open to trying this.
+- Agreed we would discuss with the rest of the team, but I already have a strong view on what needs to happen.
+
 ### 1:1 — 2026-02-18
 
 **How is he?**
@@ -78,21 +100,14 @@ Phil is already seen as the de facto tech lead for the team. As a development op
 2. Get the rotation tag set up and stop using OpsGenie for the rotation. (Firefighter tag already on my to-do; OpsGenie cessation is new.)
 3. Lean in on where we stand with debugging Zephyr Zero.
 
+### 2026-02-18
+* Worked with Nick Gilbert to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases. Also helped with DLQ replay (250k messages) and various PR approvals/deployments across teams.
+
 ### 2026-03-03
 
 Flagged via Slack that engineers working on the EWA project (including Radek Kachel) are handling work that would normally go through DevOps, and are showing reluctance to engage via the tech-devops channel or take suggestions on PRs. Phil is supportive of them doing the work — his concern is that it's not being done properly through the right process. He suspects the cause is external pressure. Consistent with his self-appraisal observation that cross-team engagement can be difficult. Agreed to discuss further at tomorrow's 1:1 (4 Mar).
 
 Also asked for sign-off on ZILCH-45505 (mass update of pr-validate workflow across all GitHub repos via script). Piotr approved; Nicklas deferred pending more context — to discuss at 1:1 before proceeding.
-
-### 2026-03-09 — DevOps Retro
-
-During discussion of more managed work intake, Phil pushed back on formalising the process. His concern was not analytical but emotional: he described informal, responsive working as 'nice', and felt that a more constrained process would put up barriers and undermine his ability to be helpful. He did not offer a structural counter-argument.
-
-This is a recognisable pattern — closely parallels Alex Murphy's attitude early in my tenure managing the Merchant team. Alex had been at the company for years by that point but held the same view (felt it was nicer to respond to requests directly and have autonomy to do what felt right), and eventually adapted to working within a more structured process and visibly matured as a result. In his exit interview, Alex reflected positively on the change, drawing explicit contrast with Rory Fielding who continues to work in an uncontrolled fashion.
-
-The Alex parallel may be worth drawing on in a future 1:1 with Phil — not as a lecture, but as a concrete example of growth that Phil would recognise.
-
-*AI observation:* The question of whether Phil is a people-pleaser is worth holding as an open hypothesis. His attachment to informal responsiveness appears values-level — he describes it as 'nice', suggesting it's tied to his sense of identity and what makes work meaningful, rather than anxiety about standing. This is distinct from Lukasz's people-pleasing, which appears confidence-driven (linked to his awareness of being the most junior team member). However, Phil also finds conflict with cross-team engineers stressful and needed a venting session in his 1:1 on 4 Mar — the combination of "I want to be seen as helpful" with "I find friction hard" does carry a people-pleasing quality worth monitoring. An open question: is Lukasz modelling on Phil? If Lukasz sees Phil being warmly received for informal responsiveness, he may emulate the surface behaviour for his own reasons, even if the underlying drivers differ. Watch for whether Lukasz defers to Phil explicitly or mirrors his attitudes in team discussions — if Phil is functioning as Lukasz's template for "what good looks like", then shaping Phil's process discipline matters more than it otherwise would.
 
 ### 1:1 — 2026-03-04
 
@@ -100,7 +115,7 @@ Largely a venting session. Phil needed to express concerns rather than seek spec
 
 **Quality:** Less acute than flagged. Phil successfully pushed back on Radek Kachel's changes as a codeowner and got the outcome he wanted. Quality in hand.
 
-**Radek pattern:** The substantive concern is a recurring pattern of poor communication and cooperation from Radek — bypassing proper channels, reluctance to act on PR feedback. Nicklas will raise with Grzegorz Ziemiański and Nikos Sofianos as a light-touch inquiry about observed friction rather than a formal escalation.
+**Radek pattern:** The substantive concern is a recurring pattern of poor communication and cooperation from Radek — bypassing proper channels, reluctance to act on PR feedback. Nicklas will raise with Grzegorz Ziemianski and Nikos Sofianos as a light-touch inquiry about observed friction rather than a formal escalation.
 
 **Unrealistic expectations on DevOps:** Phil perceives a persistent assumption that DevOps delivers on demand. Some historical basis to this. Advised: lean into the formalised process — use sprint records and Jira to evidence reactive pull-in when work slips; use the Kanban board and WIP limits to show requesters they're in a queue; escalate genuine reprioritisation decisions to me.
 
@@ -132,27 +147,12 @@ EWA only came into existence around 17 Feb with a 31 Mar deadline. There was no 
 **Approach for the meeting:**
 Lead with quality concerns — let Phil vent and get it on the table before forming a view on whether action is needed or reassurance is sufficient. Do not pre-plan the bridge to the communication conversation; that depends on what comes out of the quality discussion.
 
-### 2026-02-18
-* Worked with Nick Gilbert to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases. Also helped with DLQ replay (250k messages) and various PR approvals/deployments across teams.
+### 2026-03-09 — DevOps Retro
 
-### 2025-02-04 — 1:1
+During discussion of more managed work intake, Phil pushed back on formalising the process. His concern was not analytical but emotional: he described informal, responsive working as 'nice', and felt that a more constrained process would put up barriers and undermine his ability to be helpful. He did not offer a structural counter-argument.
 
-**Appraisal feedback discussion**
-- Discussed the feedback I had written for him — he agreed it aligned well with his own take.
+This is a recognisable pattern — closely parallels Alex Murphy's attitude early in my tenure managing the Merchant team. Alex had been at the company for years by that point but held the same view (felt it was nicer to respond to requests directly and have autonomy to do what felt right), and eventually adapted to working within a more structured process and visibly matured as a result. In his exit interview, Alex reflected positively on the change, drawing explicit contrast with Rory Fielding who continues to work in an uncontrolled fashion.
 
-**On the tone of his self-appraisal**
-- I made the point that I'm open to constructive feedback, but using the appraisal as a channel to escalate wasn't appropriate — it looks undiplomatic.
-- He asserted he was trying to be constructive, not damaging, but acknowledged my view that the channel wasn't the right one.
-- He didn't say whether he agreed, but acknowledged and respected my perspective.
+The Alex parallel may be worth drawing on in a future 1:1 with Phil — not as a lecture, but as a concrete example of growth that Phil would recognise.
 
-**Discussing the perceived gaps**
-- We discussed at length where he thinks the gaps are and what has changed since I took line management.
-- He struggled to put his finger on anything specific.
-- Couldn't identify much that has changed since I took over, except that the team also lost Kevin Came's involvement as scrum master.
-
-**Path forward**
-- I shared my view that if I'm going to lean in to the gaps, I'll need the team to work in a more structured fashion.
-- Proposed adopting a hybrid kanban/scrum model: scrum for planned work, kanban for reactive work.
-- Also: more discipline around scrum, and aligning sprints with other engineering teams.
-- Phil seemed very open to trying this.
-- Agreed we would discuss with the rest of the team, but I already have a strong view on what needs to happen.
+*AI observation:* The question of whether Phil is a people-pleaser is worth holding as an open hypothesis. His attachment to informal responsiveness appears values-level — he describes it as 'nice', suggesting it's tied to his sense of identity and what makes work meaningful, rather than anxiety about standing. This is distinct from Lukasz's people-pleasing, which appears confidence-driven (linked to his awareness of being the most junior team member). However, Phil also finds conflict with cross-team engineers stressful and needed a venting session in his 1:1 on 4 Mar — the combination of "I want to be seen as helpful" with "I find friction hard" does carry a people-pleasing quality worth monitoring. An open question: is Lukasz modelling on Phil? If Lukasz sees Phil being warmly received for informal responsiveness, he may emulate the surface behaviour for his own reasons, even if the underlying drivers differ. Watch for whether Lukasz defers to Phil explicitly or mirrors his attitudes in team discussions — if Phil is functioning as Lukasz's template for "what good looks like", then shaping Phil's process discipline matters more than it otherwise would.

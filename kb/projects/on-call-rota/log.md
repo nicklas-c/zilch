@@ -39,64 +39,58 @@ Nicklas is taking ownership as part of managing the DevOps team. The goal is to 
 
 ## Digest
 
+### 2026-02-09
+
+Project created. Two immediate actions: (1) find out from DevOps how the rota is captured, how shifts are decided, and how self-organised it is; (2) set up a regular meeting with on-call staff to review upcoming tickets. Started async conversation with DevOps team.
+
+### 2026-02-10
+
+Received information from DevOps team on how the on-call rota is set up.
+
+### 2026-02-12
+
+Nick Gilbert (1:1 feedback) suggested leaning in more on the on-call rota.
+
+### 2026-02-18
+
+Regular rota review meeting scheduled — first session on 2 March.
+
+**Agenda for the first few sessions (information-gathering only):**
+- No solutionising yet — just data gathering.
+- Walk through every alert from the previous fortnight.
+- For each alert, understand root cause.
+- After a month or two of data, shift to patterns and solutions.
+
 ### 2026-03-02
 
 First rota review meeting. Chris Prowse walked through the toolchain. Worked through most alerts from the fortnight to 2 March (three skipped due to time).
 
 **Toolchain overview (Chris Prowse):**
-- Rota is set up as `SRE_Team` in Jira Service Management.
-- Integrations tab lists alert sources. Email supported, but only Datadog is realistically used.
-- On-call tab shows routing, with separate configurations for in-hours and out-of-hours.
-- Alert priorities are set at source (i.e. in Datadog).
-- Datadog alerts flow into #platform-alerts-incidents on Slack. Not every message in that channel results in a call-out — look for Jira messages to identify actual incidents.
-- Personal notification preferences (SMS, phone call, etc.) are set by each team member individually.
+- Rota set up as `SRE_Team` in Jira Service Management.
+- Integrations tab lists alert sources; only Datadog is realistically used.
+- On-call tab shows routing with separate in-hours and out-of-hours configs.
+- Alert priorities set at source (Datadog).
+- Datadog alerts flow into #platform-alerts-incidents on Slack; look for Jira messages to identify actual incidents.
+- Personal notification preferences set individually by each team member.
 
 **Alerts reviewed:**
 
 *Snooze Config requests anomaly*
-- Has been silenced. Should alert the owning team directly, not the on-call channel.
-- Action: Follow up with Phil Stevenson to identify which team should own this, then discuss handover with the relevant EM.
+- Silenced. Should alert owning team directly. Action: follow up with Phil Stevenson to identify owner, then discuss handover with relevant EM.
 
 *Datadog Aurora Agent CrashloopBackOff*
-- Datadog's DB monitoring agent is crashing and needs diagnosis.
-- Sits with DevOps/Platform.
-- Jira ticket raised: [PO-1676](https://payzilch.atlassian.net/browse/PO-1676).
-- Action: Track PO-1676 to ensure it gets picked up.
+- DB monitoring agent crashing. Sits with DevOps/Platform. Ticket PO-1676 raised. Action: track to ensure pickup.
 
 *AWS Lambda throttling (overdue-outsystems)*
-- Throttling is normally treated as an error (valid messages go to DLQ, risking data loss), so a generic alert fires.
-- However, throttling has been intentionally enabled for this specific lambda. It is owned by the Retain team.
-- Action: Catch up with Phil Stevenson async on how to handle this with Retain.
+- Throttling intentionally enabled for this lambda (Retain team). Generic alert fires because throttling normally means DLQ risk. Action: discuss handling with Phil Stevenson and Retain.
 
 *product-service container restarts*
-- Container crashed because the Datadog sidecar crashed. Not believed to be recurrent.
-- Action: Monitor for recurrences in future rotations; no further action if one-off, as the service recovered.
+- Crashed due to Datadog sidecar crash. Not believed recurrent. Action: monitor.
 
 *Cashflow latency anomaly*
-- Seen a few times. Owned by the Acquirer team.
-- Question raised: should this alert on an Acquirer team channel rather than on-call?
-- Action: Monitor for recurrences. If it becomes recurring noise, discuss appropriate alert sensitivity and channel routing with the Acquirer team EM (Grzegorz Ziemiański).
+- Owned by Acquirer team. Action: monitor; if recurring, discuss routing with Acquirer EM (Grzegorz Ziemiański).
 
 *String/binary data truncation (P1/P2)*
-- Generic monitor. Data is too large for a DB column.
-- Primary culprit is `acquirer-service`. Significant due to risk of actual data loss or corruption.
-- Acquirer team ticket [ZILCH-44139](https://payzilch.atlassian.net/browse/ZILCH-44139) exists to fix this.
-- Action: Chase Grzegorz Ziemiański to ensure ZILCH-44139 is planned into a sprint.
+- Generic monitor. Data too large for a DB column; primary culprit is acquirer-service. Risk of data loss. Ticket ZILCH-44139 exists. Action: chase Grzegorz to ensure it's sprint-planned.
 
-**Skipped (ran out of time):** Three less frequent alerts not reviewed this session.
-
-### 2026-02-18
-
-Regular rota review meeting scheduled. First session on 2 March.
-
-**Agenda for the first few sessions (information-gathering only):**
-- Set the expectation upfront: no solutionising yet, just data gathering.
-- Walk through every alert from the previous fortnight.
-- For each alert, understand it well enough to reason about root cause.
-- After a month or two of data points, shift to looking for patterns and solutions.
-
-### 2026-02-09
-
-Project created. Two immediate actions identified:
-1. Find out from the DevOps team how the rota is captured in tools, how shifts are decided, and how self-organised it is.
-2. Set up a regular meeting with on-call staff to review upcoming tickets.
+**Skipped:** Three less frequent alerts not reviewed this session.

@@ -5,15 +5,13 @@ VP of Engineering, based in Krakow. My line manager.
 
 ## Digest
 
-### 2026-03-02
+### 2026-02-13 — 1:1 agenda (prepared)
 
-- **Flash report feedback:** Tom McKenzie sent the Merchant flash report in my absence. Andrzej pushed back, saying it read more like a sprint report than a weekly flash report. Useful signal on his expectations for the format — he wants week-on-week progress and highlights, not a sprint status summary.
-- **Appraisal challenge:** Andrzej has asked for evidence supporting the rating of 2 given to Lukasz Kowalczyk.
-
-### 2026-02-24
-
-- **Fee schedule ownership (EWA/Extra):** Ownership between Merchant and Spend Platform remains undecided in general. For the purposes of the EWA/Extra work, Andrzej confirmed his team (Spend Platform) will handle it.
-
+- Confirm my understanding that he will be managing the new Spend Platform team. If so, let him know I'll move fee-service related tickets to his backlog once it's set up.
+- Michal Baran backfill — chase status of role approval (promised but not yet approved).
+- L5 FE role (Stefan) — ask his thoughts on the role. Let him know I've also broached the topic with Steve Rayko.
+- Appraisals — update that I'm actively discussing my feedback for reports in 1:1s.
+- DevOps team process — let him know I'm going to lean in heavily on formalising a hybrid scrum/kanban process.
 
 ### 2026-02-16 — 1:1
 
@@ -29,10 +27,11 @@ VP of Engineering, based in Krakow. My line manager.
   - Defining an engineering roadmap for the front end.
   - Replacing Chris Walker as competency lead (with a possible move for Chris into the DevOps team as an expert on the platform for delivering FE code to prod).
 
-### 2026-02-13 — 1:1 agenda (prepared)
+### 2026-02-24
 
-- Confirm my understanding that he will be managing the new Spend Platform team. If so, let him know I'll move fee-service related tickets to his backlog once it's set up.
-- Michal Baran backfill — chase status of role approval (promised but not yet approved).
-- L5 FE role (Stefan) — ask his thoughts on the role. Let him know I've also broached the topic with Steve Rayko.
-- Appraisals — update that I'm actively discussing my feedback for reports in 1:1s.
-- DevOps team process — let him know I'm going to lean in heavily on formalising a hybrid scrum/kanban process.
+- **Fee schedule ownership (EWA/Extra):** Ownership between Merchant and Spend Platform remains undecided in general. For the purposes of the EWA/Extra work, Andrzej confirmed his team (Spend Platform) will handle it.
+
+### 2026-03-02
+
+- **Flash report feedback:** Tom McKenzie sent the Merchant flash report in my absence. Andrzej pushed back, saying it read more like a sprint report than a weekly flash report. Useful signal on his expectations for the format — he wants week-on-week progress and highlights, not a sprint status summary.
+- **Appraisal challenge:** Andrzej has asked for evidence supporting the rating of 2 given to Lukasz Kowalczyk.

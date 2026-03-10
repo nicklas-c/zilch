@@ -23,14 +23,12 @@ An Iteration 12 initiative review meeting with Zac was first referenced on 11 Fe
 
 ### 2026-02-11
 
-- Scheduled Iteration 12 initiative review meeting with Zac for 12th February.
-
-### 2026-03-05
-
-- Announced at Merchant stand-up that Iteration 12 planning will be handled as a very lightweight process this time, in order not to distract from the March 31 deadline work.
+Scheduled Iteration 12 initiative review meeting with Zac for 12th February.
 
 ### 2026-03-04
 
-- Project created to track Iteration 12 planning activity.
-- Already behind on planning with roughly three weeks to go. The intent is to recover ground incrementally rather than scramble at the last moment.
-- Chased Zac on candidate work streams. Response suggests he doesn't yet know what the team will be pointed at.
+Project created to track Iteration 12 planning activity. Already behind with roughly three weeks to go — intent is to recover ground incrementally. Chased Zac on candidate work streams; he doesn't yet know what the team will be pointed at.
+
+### 2026-03-05
+
+Announced at Merchant stand-up that Iteration 12 planning will be lightweight this time, to avoid distracting from the March 31 deadline.

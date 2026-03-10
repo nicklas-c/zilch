@@ -55,6 +55,19 @@ No Merchant epic — Merchant's involvement is limited to UI component testing f
 ### 2026-02-17
 * Initiative surfaced at Engineering Leadership Sync meeting. End-of-March deadline. Details on scope and ownership TBC.
 
+### 2026-02-18
+* EWA/Extra meeting. Zac Barclay briefed on the feature — nothing substantially new.
+* No work identified for Merchant. I flagged this explicitly and nobody challenged.
+* Possible work for DevOps on the open banking side. I asked to be told of any requests ASAP.
+  - Rob Nelson thinks the work would be minimal: an OpenBanking integration capability already exists in production, built for earlier initiatives that were mothballed. The capability was never decommissioned.
+* Rob Nelson pushing hard on OB integration — wants a BE engineer to start immediately. Martin Thorlby-Witham suggested reusing the existing open banking service (already has Plaid US components). Rob agreed.
+* Significant product complexity and edge cases still unresolved — particularly around free trials, EWA withholding until first payment, and membership payment lateness.
+* Pro not being dropped but is lower priority than EWA/Extra.
+* Cross-team lead roles: Product — Zac on Extra, Michael Charash on EWA. Tech — not confirmed; Rob thinks it will be him and Andrzej.
+* Rob very concerned about front-end capacity across the department.
+* End-of-March delivery target confirmed. Very aggressive.
+* Phil Stevenson's discomfort with the EWA pivot is not isolated — anecdotal evidence of similar concerns from other ICs and at least one manager. Values-based concern, not just workload.
+
 ### 2026-02-19
 * Extra tier confirmed at £2.99/month. EWA will only be available within the Membership structure — not as a standalone product.
 * Plaid products to be used: Auth, Assets, and Bank Income Verification.
@@ -85,6 +98,10 @@ No Merchant epic — Merchant's involvement is limited to UI component testing f
 * **Caveat 1 — Fee schedule ownership ambiguity.** With the fee-service migration to the new team running in parallel, it is unclear whether fee schedule changes fall to Merchant or Spend Platform. Working assumption is Spend Platform, but ambiguity needs to be derisked. Messaged Andrzej after CoP Poland; reply expected 24 Feb.
 * **Caveat 2 — Overlap with Pending Rewards / Blocking Rewards for Continuity of Memberships.** These are lower priority than EWA/Extra and could be held back to let EWA proceed. However, the new tier and new loan product may need to be accommodated in Merchant systems, with a dependency on the Decisioning team.
 
+### 2026-02-24
+
+* Andrzej responded on fee schedule ownership: still undecided in general, but for EWA/Extra his team (Spend Platform) will handle it.
+
 ### 2026-03-04
 
 **Merchant's scope confirmed:** UI component testing for the new Extra membership tier only. No delivery responsibility beyond that.
@@ -103,14 +120,3 @@ The playbook-based ITAM handoff (with Michal Baran supervising initial uses) was
 
 * Tomasz Więckowski (Decisioning) created [ZILCH-49269](https://payzilch.atlassian.net/browse/ZILCH-49269) — "Setup fee code fc-extra-monthly" — via the #merchant-firefighter channel, with a request to prioritise for the coming sprint. Committed to pushing to the top of Merchant's backlog.
 * Fee code ownership confirmed: Merchant will own all fee changes, including ZILCH-49156 and ZILCH-49269.
-
-### 2026-02-18
-* EWA/Extra meeting. Zac Barclay briefed on the feature — nothing substantially new.
-* No work identified for Merchant. I flagged this explicitly and nobody challenged.
-* Possible work for DevOps on the open banking side. I asked to be told of any requests ASAP.
-  - Rob Nelson thinks the work would be minimal: an OpenBanking integration capability already exists in production, built for earlier initiatives that were mothballed. The capability was never decommissioned.
-* Significant product complexity and edge cases still unresolved — particularly around free trials, EWA withholding until first payment, and membership payment lateness. Lots of product refinement still to go.
-* Pro not being dropped but is lower priority than EWA/Extra.
-* Cross-team lead roles: Product — Zac on Extra, Michael Charash on EWA. Tech — not confirmed; Rob thinks it will be him and Andrzej.
-* Rob very concerned about front-end capacity across the department.
-* End-of-March delivery target confirmed. Very aggressive.

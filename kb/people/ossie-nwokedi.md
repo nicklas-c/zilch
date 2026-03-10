@@ -42,12 +42,20 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 
 ## Digest
 
-### 2026-03-09 — 1:1
+### 2026-02-02 — 1:1
+Discussed appraisal feedback.
 
-- EC-2083 (stalled customer-web-legacy production deployment): updated Ossie. George Sharpe chased and is on it.
-- Stefan Slezak joining: Ossie is interested to see how Stefan works and is aware of the learning opportunity, but hasn't thought deeply about it yet.
-- Rory Fielding situation: briefly acknowledged. Considered resolved.
-- AI usage: Ossie is getting significant value from AI tooling. Shared an example where he picked up a defect ticket, used AI to analyse possible causes, and was told the defect had already been fixed — a communication failure between engineers that the AI surfaced before a human did.
+### Stand-up — 2026-02-11
+- ZILCH-47687 (add Zilch Pro label to Rewards on Purchases page): in progress, should be done today.
+
+### Stand-up — 2026-02-12
+- ZILCH-48105 (WebSocket/IDV deadlock fix): in progress. Might need to be down-prioritised in favour of some React Native new Architecture bugs.
+
+### 2026-02-18
+- Out of tickets; looking to bring something into the sprint. Suggested ZILCH-35883 (storefront rails right-edge clipping) — already In Dev and previously started, so a good candidate to finish off.
+
+### Stand-up — 2026-02-18
+- ZILCH-48355 (bottom rail hidden on online/storefront tabs): in progress. Looks like it might be Android only. Trying to recreate.
 
 ### 2026-02-23 — 1:1
 
@@ -57,17 +65,9 @@ A fear of missing out, or a sense that he should be aware of the many discussion
 * Ensure messages on #support-merchant are getting answered. Doesn't have to be him who answers — if something is going unattended, flag it to the team, ideally to whoever is best placed to respond.
 * Keep an eye on alerts. There is a lot of noise with many false positives, so the task is to spot alerts that represent a genuine concern. He should also keep track of what alerts he's seeing, so he can report on the noise level and help identify what needs cleaning up.
 
-### 2026-02-18
-- Out of tickets; looking to bring something into the sprint. Suggested ZILCH-35883 (storefront rails right-edge clipping) — already In Dev and previously started, so a good candidate to finish off.
+### 2026-03-09 — 1:1
 
-### Stand-up — 2026-02-18
-- ZILCH-48355 (bottom rail hidden on online/storefront tabs): in progress. Looks like it might be Android only. Trying to recreate.
-
-### Stand-up — 2026-02-12
-- ZILCH-48105 (WebSocket/IDV deadlock fix): in progress. Might need to be down-prioritised in favour of some React Native new Architecture bugs.
-
-### Stand-up — 2026-02-11
-- ZILCH-47687 (add Zilch Pro label to Rewards on Purchases page): in progress, should be done today.
-
-### 2026-02-02 1:1.
-Discussed appraisal feedback.
+- EC-2083 (stalled customer-web-legacy production deployment): updated Ossie. George Sharpe chased and is on it.
+- Stefan Slezak joining: Ossie is interested to see how Stefan works and is aware of the learning opportunity, but hasn't thought deeply about it yet.
+- Rory Fielding situation: briefly acknowledged. Considered resolved.
+- AI usage: Ossie is getting significant value from AI tooling. Shared an example where he picked up a defect ticket, used AI to analyse possible causes, and was told the defect had already been fixed — a communication failure between engineers that the AI surfaced before a human did.

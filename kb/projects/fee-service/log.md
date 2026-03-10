@@ -14,18 +14,34 @@
 
 ## Digest
 
-### 2026-02-19
-
-Stand-up:
-- **DataDog alert — noisy neighbour latency spike.** Gavin Dunn (Underwriting) ran a bulk upgrade of 22k customer product levels via Bulkify at 10/s, starting ~15:32. Michal noticed a significant latency increase on fee-service starting at 15:32 — p99 rose to ~50ms (vs usual baseline), well below the 100ms SLA, but ~3x above normal. Jacek identified a slow query and traced it to wallet-providers-service, which subscribes to product change events and was querying a table of 2 million rows without a required index. Jakub Zrebiec (wallet-providers-service) confirmed the missing index and will raise a ticket for Platform to create it. Latency returned to normal once the bulk job completed. Grzegorz Ziemiański (wallet-providers-service) raised a broader concern: the Aurora migration was partly motivated by preventing noisy neighbour problems, but this incident suggests the problem can still occur. Platform (Charlie Hurst / Benjamin Ibrulj) investigating. No timeouts on ehi-service; all loans processed with correct fees.
-- **ZILCH-43416** (fee-service timeout causes sanity test failure): Michal analysed test failures and concludes the issue is no longer a problem. Signed off.
-
-### 2026-02-16
-
-Stand-up:
-- Michal: getting started with playbooks for fee changes.
-- Michal: coordinating decommissioning of MSSQL fee database with Platform.
-
 ### 2026-02-12
 
 - Confirmed in 1:1 with Abhishek Chatterjee that fee-service is moving to the new team with Michal Baran (effective 24 Feb). Abhishek hadn't been aware of the move.
+
+### 2026-02-13
+
+- Reviewed fee-service backlog in Jira — identified 7 Merchant Team tickets in "To Do" state.
+
+### 2026-02-16
+
+- Michal Baran getting started with playbooks for fee changes.
+- Michal Baran coordinating decommissioning of MSSQL fee database with Platform.
+
+### 2026-02-18
+
+- ZILCH-42041 (decommission MSSQL database): Platform only just picked up their part. Michal Baran continues to track.
+- ZILCH-46517 (fee-change playbooks): Michal Baran done, in review with Jacek Zanko.
+
+### 2026-02-19
+
+- Signed off ZILCH-43416 (fee-service timeout causes sanity test failure) — Michal analysed and concludes it's no longer a problem.
+- Reviewed and commented on Michal Baran's fee-change playbooks (ZILCH-46517).
+- **Noisy neighbour latency spike.** Underwriting bulk upgrade (22k customers at 10/s) caused fee-service p99 to rise to ~50ms (~3x normal), still below 100ms SLA. Root cause: wallet-providers-service querying a 2M-row table without a required index. Grzegorz Ziemiański raised a broader concern — Aurora was partly adopted to prevent noisy neighbour problems. Platform investigating.
+
+### 2026-02-20
+
+- Flash report: latency spike noted. ZILCH-42041 still waiting on Platform (PO-1597).
+
+### 2026-02-23
+
+- ZILCH-46517 (fee-change playbooks) closed off — the last mitigation ticket for Incident-417. Incident now closed.

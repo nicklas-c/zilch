@@ -21,3 +21,7 @@ Closed — all actions complete as of 23 Feb 2026.
 | [ZILCH-46519](https://payzilch.atlassian.net/browse/ZILCH-46519) | Refund 1% fee difference to affected customers | Complete |
 
 ## Digest
+
+### 2026-02-23
+
+- ZILCH-46517 (fee-change playbooks) closed off — the last mitigation ticket. Incident now closed.

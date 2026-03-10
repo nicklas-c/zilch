@@ -31,6 +31,10 @@ Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spa
 - Refinement meeting held with the Merchant team. Discussed Nick Holt's pending rewards design in terms of work that can be broken out into refinable tickets.
 - Tamara Quinn (Senior PM, Purchase) attended to raise how pending rewards intersect with the Pay Monthly project — cross-team interest in how the rewards model interacts with that initiative.
 
+### 2026-02-23
+
+- Overlap with EWA/Extra identified: Pending Rewards and Blocking Rewards for Continuity of Memberships are lower priority than EWA/Extra and could be held back. However, the new Extra tier and new loan product may need to be accommodated in Merchant systems, with a dependency on Decisioning.
+
 ### 2026-02-19
 
 - Stand-up: Nick Holt chasing what events are available to drive cancellation of pending rewards, and what event signals loss of a feature (e.g. membership downgrade). Connects to the open question raised on 18 Feb about the trigger for reversing a pending reward on late payment.
@@ -46,6 +50,11 @@ Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spa
   - Open question to Zac: should expiry logic be extended to pending rewards? Flagged a plausible edge case — referral rewards issued in a pending state could legitimately sit there for a long time before a referral is made. Current MVP spec doesn't address this.
   - Asked Tom McKenzie to confirm he's across Nick's proposal enough to define tests.
   - Asked Nick to define the trigger for reversing a pending reward on a late payment — expectation is immediate removal, likely via a listener on payment events.
+- ZILCH-48222 (design) nearly complete — Nick seeking peer reviews. Review deferred to the next day (not a blocker).
+
+### 2026-02-16
+
+Attempted to story out epic ZILCH-47121 in Merchant refinement but didn't get far — epic had moved to "In Dev" before being storied out. First task was a design to inform remaining tickets.
 
 ### 2026-02-12
 

@@ -86,6 +86,10 @@ Open questions raised by the team:
 **Stand-up — 2026-02-12:**
 - ZILCH-48084 confirmed related to this issue. Nick H has a way forward: downgrading the JDBC driver for now and has created a new ticket to implement a proper fix for the updated driver.
 
+### 2026-02-13
+
+Stand-up: ZILCH-48084 fix complete, moved to QA sign-off.
+
 ### 2026-02-19
 
 Sent a message to Nick Holt, Charlie Hurst, and [Phil Stevenson](./people/phil-stevenson.md) to chase down the outstanding risk assessment. Framed the issue as a combination of two factors: (1) Aurora infrastructure changes for regional failover, and (2) a Dependabot-instigated JDBC library upgrade — the two together meaning that `globalClusterInstanceHostPatterns` was now required but not set. Asked:

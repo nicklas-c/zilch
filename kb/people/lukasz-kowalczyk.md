@@ -45,11 +45,13 @@ As Lukasz grows into more senior roles, he should also think about how he frames
 
 ## Digest
 
-2026-02-02 Proposed Lukasz for promotion to L3 in appraisal submission.
-2026-03-02 Andrzej requested evidence to support the Exceeds Expectations rating. Prepared a structured justification document with Jira evidence (ZILCH and DEVOPS projects, full year) and Slack channel summary. See [content-authoring/lukasz-appraisal-justification.md](content-authoring/lukasz-appraisal-justification.md).
-2026-03-03 Andrzej has challenged the proposed promotion. Need to revisit the justification and respond. Task added to top of to-do list.
-2026-03-04 Produced revised evidence document (`projects/lukasz-promotion/lukasz-l3-evidence.md`) mapping each L3 criterion to concise evidence. Sent to Andrzej. Andrzej reviewed and accepted the case; queried Growth Potential detail (resolved in dialogue). Outcome: Andrzej to take to Steve Rayko for promotion to L3, rating 3. Exec summary authored and sent.
-2026-02-12 Off today — attending a funeral.
+### 2026-02-02
+
+Proposed Lukasz for promotion to L3 in appraisal submission.
+
+### 2026-02-12
+
+Off today — attending a funeral.
 
 ### 2026-02-13 — 1:1 notes
 
@@ -77,5 +79,21 @@ As Lukasz grows into more senior roles, he should also think about how he frames
 
 **Observation:**
 Lukasz apologises a lot for things he doesn't need to — taking time off for illness, attending a funeral, etc. Worth keeping an eye on; may link to the confidence pattern noted in his appraisal.
+
+### 2026-02-18
+
+Resolved IP pool issue that was causing Argo deployment failures.
+
+### 2026-03-02
+
+Andrzej requested evidence to support the Exceeds Expectations rating. Prepared a structured justification document with Jira evidence (ZILCH and DEVOPS projects, full year) and Slack channel summary. See [content-authoring/lukasz-appraisal-justification.md](content-authoring/lukasz-appraisal-justification.md).
+
+### 2026-03-03
+
+Andrzej has challenged the proposed promotion. Need to revisit the justification and respond. Task added to top of to-do list.
+
+### 2026-03-04
+
+Produced revised evidence document (`projects/lukasz-promotion/lukasz-l3-evidence.md`) mapping each L3 criterion to concise evidence. Sent to Andrzej. Andrzej reviewed and accepted the case; queried Growth Potential detail (resolved in dialogue). Outcome: Andrzej to take to Steve Rayko for promotion to L3, rating 3. Exec summary authored and sent.
 
 *AI observation (2026-03-09):* Lukasz has been characterised as a people-pleaser. His driver appears to be confidence- and seniority-related — the "most junior member" awareness — rather than a values-level attachment to being liked. This distinguishes him from Phil Stevenson, who expressed a similar instinct for informal responsiveness in the DevOps retro but from a different root (identity and what makes work feel meaningful). An open hypothesis worth watching: is Lukasz modelling on Phil? If he observes Phil being positively received for warm, responsive behaviour, he may emulate the surface pattern for his own reasons, without sharing Phil's underlying driver. Observable in whether Lukasz defers to Phil in team discussions or mirrors his attitudes on process.
