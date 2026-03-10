@@ -16,7 +16,7 @@ A strategic DevOps project to build a platform for creating, managing, and destr
 
 ## Personnel
 
-- Phil Stephenson (DevOps)
+- Phil Stevenson (DevOps)
 - Piotr Niebylski (DevOps)
 
 ## Running Notes

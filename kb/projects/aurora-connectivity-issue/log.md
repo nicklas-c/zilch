@@ -20,7 +20,7 @@ Potentially related to ZILCH-48084 and ZILCH-48248.
 
 ### 2026-02-19
 
-Sent a message to Nick Holt, Charlie Hurst, and Phil Stevenson to chase down the outstanding risk assessment. Framed the issue as a combination of two factors: (1) Aurora infrastructure changes for regional failover, and (2) a Dependabot-instigated JDBC library upgrade — the two together meaning that `globalClusterInstanceHostPatterns` was now required but not set. Asked:
+Sent a message to Nick Holt, Charlie Hurst, and [Phil Stevenson](./people/phil-stevenson.md) to chase down the outstanding risk assessment. Framed the issue as a combination of two factors: (1) Aurora infrastructure changes for regional failover, and (2) a Dependabot-instigated JDBC library upgrade — the two together meaning that `globalClusterInstanceHostPatterns` was now required but not set. Asked:
 1. Is that summary accurate?
 2. Do we know that all services currently running in production on Aurora will restart if needed?
 3. Are there any other ways this could bite us in production?
@@ -44,7 +44,7 @@ A noisy neighbour latency incident on fee-service (see fee-service log for detai
 
 - **Nick H** — reported the issue, investigating from the Merchant side. Engaging with Platform in #platform-ops.
 - **Michal Baran** — reported the issue alongside Nick H.
-- **Phil Stephenson** — identified the specific config change needed and confirmed the change was deployed prod-first.
+- **Phil Stevenson** — identified the specific config change needed and confirmed the change was deployed prod-first.
 - **Nick Gilbert** — confirmed Platform made the change for regional failover; DevOps were not informed.
 - **Charlie Hurst** (Platform) — investigating a related DB init script failure (`create_user.sql` erroring in Argo). Partially engaged but distracted by other priorities.
 - **Abdul Wahid** (Platform) — flagged the `create_user.sql` error.
@@ -82,7 +82,7 @@ Project log created. Issue reported by Nick H and Michal Baran.
 
 - **Me → Charlie Hurst (DM):** Tried to understand what changed. Charlie pointed to the failover plugin config doc and a DB init script issue. Conversation was at cross-purposes — Charlie seemed focused on the init script; I was asking about the root cause of the connectivity breakage. Agreed to set up a call with Nick H and Charlie to align.
 
-- **Me → Nick Gilbert & Phil Stephenson (DevOps):** Nick G confirmed Platform made a change for regional failover without informing anyone. ehi-service had the same issue. Phil identified the specific config (`global-cluster-instance-host-patterns`) and confirmed it was deployed to prod first. Phil's view: the config requirement is unfortunate but the lack of staging-first testing is the real problem.
+- **Me → Nick Gilbert & Phil Stevenson (DevOps):** Nick G confirmed Platform made a change for regional failover without informing anyone. ehi-service had the same issue. Phil identified the specific config (`global-cluster-instance-host-patterns`) and confirmed it was deployed to prod first. Phil's view: the config requirement is unfortunate but the lack of staging-first testing is the real problem.
 
 ### 2026-02-12
 

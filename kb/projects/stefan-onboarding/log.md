@@ -39,7 +39,7 @@ He has previous FinTech experience, though his most recent role is not FinTech. 
   - **Abhishek Chatterjee** — Architect
   - **Andrzej Lorenz** — VP of Engineering (our line manager)
   - **Chris Walker** — FE competency lead
-  - **Phil Stephenson** — DevOps tech lead
+  - **Phil Stevenson** — DevOps tech lead
   - **Matt Swirski** — Platform team
   - **Kevin Came** — Product Delivery Manager
   - **Parry Champaneriya** — Scrum Master

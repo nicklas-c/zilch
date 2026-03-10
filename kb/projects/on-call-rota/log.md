@@ -28,7 +28,7 @@ Nicklas is taking ownership as part of managing the DevOps team. The goal is to 
 - **Matt Swirski** — Platform team, currently organising the rota
 - **Charlie Hurst** — Platform team
 - **Chris Prowse** — Platform team
-- **Phil Stephenson** — DevOps Engineer (Level 4), de facto tech lead
+- **Phil Stevenson** — DevOps Engineer (Level 4), de facto tech lead
 - **Nick Gilbert** — DevOps Engineer (Level 3)
 - **Piotr Niebylski** — DevOps Engineer (Level 4)
 - **Lukasz Kowalczyk** — DevOps Engineer (Level 2)
@@ -55,7 +55,7 @@ First rota review meeting. Chris Prowse walked through the toolchain. Worked thr
 
 *Snooze Config requests anomaly*
 - Has been silenced. Should alert the owning team directly, not the on-call channel.
-- Action: Follow up with Phil Stephenson to identify which team should own this, then discuss handover with the relevant EM.
+- Action: Follow up with Phil Stevenson to identify which team should own this, then discuss handover with the relevant EM.
 
 *Datadog Aurora Agent CrashloopBackOff*
 - Datadog's DB monitoring agent is crashing and needs diagnosis.
@@ -66,7 +66,7 @@ First rota review meeting. Chris Prowse walked through the toolchain. Worked thr
 *AWS Lambda throttling (overdue-outsystems)*
 - Throttling is normally treated as an error (valid messages go to DLQ, risking data loss), so a generic alert fires.
 - However, throttling has been intentionally enabled for this specific lambda. It is owned by the Retain team.
-- Action: Catch up with Phil Stephenson async on how to handle this with Retain.
+- Action: Catch up with Phil Stevenson async on how to handle this with Retain.
 
 *product-service container restarts*
 - Container crashed because the Datadog sidecar crashed. Not believed to be recurrent.

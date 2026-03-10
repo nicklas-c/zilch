@@ -54,9 +54,9 @@ The epic describes the target CI/CD flow:
 - ZILCH-42079: Switch to release-per-user-story process (Marcin)
 - ZILCH-42080: Adjust Jira workflow to allow testing before merge (Marcin)
 - ZILCH-42199: Create EC ticket after feature branch merge (George Sharpe)
-- ZILCH-42200: Auto-merge release-please PRs (Phil Stevenson)
-- ZILCH-42201: Auto deploy to staging after release-please PR merge (Phil Stevenson)
-- ZILCH-42204: Trigger regression/sanity suite after staging deploy (Phil Stevenson)
+- ZILCH-42200: Auto-merge release-please PRs ([Phil Stevenson](./people/phil-stevenson.md))
+- ZILCH-42201: Auto deploy to staging after release-please PR merge ([Phil Stevenson](./people/phil-stevenson.md))
+- ZILCH-42204: Trigger regression/sanity suite after staging deploy ([Phil Stevenson](./people/phil-stevenson.md))
 - ZILCH-42205: GitHub check for QA phase
 - ZILCH-42207: GitHub check for sign-off (Lukasz Kowalczyk)
 - ZILCH-42241: Bypass EC ticket approvals on certain conditions (George Sharpe)
@@ -80,8 +80,8 @@ The channel shows active work across several areas:
 
 1. **End-to-end PR-to-Production pipeline**: Sean H is driving the goal of fully automated PR-to-prod deployments, framing it as "what needs to be true" (pre-deployment gates) and "what needs to stay true" (post-deployment validation).
 2. **Identifying deployment readiness blockers**: Sam led a discussion identifying why changes aren't ready for deployment after PR merge — bugs, incomplete E2E tests, lack of approval, late redesigns, lightweight PR reviews. Nikos Sofianos suggested automating these checks earlier in the process.
-3. **Automated merge workflows**: Phil Stephenson created a workflow to auto-merge release-please PRs for product-service. George Sharpe extended this to decisioning-service. George also proposed auto-merging PRs when tickets reach "Ready for Release" status.
-4. **Automated regression testing**: Phil Stephenson and Radek Kachel are working on automatically triggering regression tests after staging deployments and integrating with TestRail for tracking results.
+3. **Automated merge workflows**: Phil Stevenson created a workflow to auto-merge release-please PRs for product-service. George Sharpe extended this to decisioning-service. George also proposed auto-merging PRs when tickets reach "Ready for Release" status.
+4. **Automated regression testing**: Phil Stevenson and Radek Kachel are working on automatically triggering regression tests after staging deployments and integrating with TestRail for tracking results.
 5. **Flaky test mitigation**: Sam and the team are tackling flaky tests — exploring automated retries, caching test results, and prioritising critical tests.
 6. **Tracking**: Sam created a "Use CI/CD to accelerate delivery" tracking document.
 
@@ -107,7 +107,7 @@ The channel shows active work across several areas:
 - **Marcin Zolna** — EM, Onboarding team. Driving the initiative and tracking via Jira dashboard.
 - **Sean H** — Framing the end-to-end PR-to-prod goal.
 - **Sam** — Leading discussions on deployment readiness blockers, flaky tests, and tracking delivery progress.
-- **Phil Stephenson** — Creating auto-merge workflows and automated regression testing pipelines.
+- **Phil Stevenson** — Creating auto-merge workflows and automated regression testing pipelines.
 - **George Sharpe** — Extending auto-merge workflows, proposing ticket-status-based PR merging.
 - **Radek Kachel** — Working on automated regression testing and TestRail integration.
 - **Nikos Sofianos** — QA Manager. Suggesting earlier automation of quality checks.

@@ -5,7 +5,7 @@
 ## Running Notes
 
 ### 2026-02-18
-* Worked with Phil Stephenson to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases.
+* Worked with Phil Stevenson to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases.
 
 ## 2025 year-end appraisal
 

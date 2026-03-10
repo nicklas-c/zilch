@@ -10,21 +10,21 @@
 - Mitigations agreed for pipeline failures: use open questions to gently push diagnosis responsibility back to engineers; redirect DMs to #tech-devops; channel larger project requests through EM.
 - Mitigations agreed for work intake: require Jira tickets for walk-up requests (immediate small tasks at discretion); move DM conversations to #tech-devops for visibility; large project requests to come through EM; be sensitive to delivery context and over-communicate during high-pressure periods.
 - Personal actions: monitor #tech-devops more closely; respond to [Andrzej Lorenz](./people/andrzej-lorenz.md)'s pipeline concerns with appropriate context.
-- [Phil Stevenson](./people/phil-stevenson.md) pushed back on the work intake formalisation proposal — expressed an emotional preference for informal, responsive working.
+- [Phil Stephenson](./people/phil-stephenson.md) pushed back on the work intake formalisation proposal — expressed an emotional preference for informal, responsive working.
 - Retro notes written up and shared with the DevOps team.
-- Write-up reviewed and analysed with AI: insights generated on pipeline failure framing, CD project context, planned capacity model, work intake mitigations, and [Phil Stevenson](./people/phil-stevenson.md)'s pushback. Observations logged to devops-process project and people files.
+- Write-up reviewed and analysed with AI: insights generated on pipeline failure framing, CD project context, planned capacity model, work intake mitigations, and [Phil Stephenson](./people/phil-stephenson.md)'s pushback. Observations logged to devops-process project and people files.
 
 ### Merchant Retro
 
 Merchant team retro held. Notes to be added.
 
-### [April Pricing Changes](./projects/april-price-changes) — Cross-Team Refinement
+### April Pricing Changes — Cross-Team Refinement
 
-Cross-team refinement session held for FE tickets under [ZILCH-49226](https://payzilch.atlassian.net/browse/ZILCH-49226) ([April Pricing Changes](./projects/april-price-changes) epic). This work is not normally Merchant's responsibility but is being picked up to allow other teams to remain focused on [EWA/Extra](./projects/ewa-extra) and [Pay Monthly](./projects/pay-monthly).
+Cross-team refinement session held for FE tickets under [ZILCH-49226](https://payzilch.atlassian.net/browse/ZILCH-49226) (April Pricing Changes epic). This work is not normally Merchant's responsibility but is being picked up to allow other teams to remain focused on EWA/Extra and Pay Monthly.
 
 ### EC-2083 — customer-web-legacy Production Deployment
 
-[George Sharpe](./people/george-sharpe.md) confirmed release is proceeding, having obtained approval from [Rob Nelson](./people/rob-nelson.md) and [Andrzej Lorenz](./people/andrzej-lorenz.md).
+George Sharpe confirmed release is proceeding, having obtained approval from [Rob Nelson](./people/rob-nelson.md) and [Andrzej Lorenz](./people/andrzej-lorenz.md).
 
 ### Stand-ups — Merchant and DevOps
 
@@ -32,7 +32,7 @@ Both stand-ups held. No notes taken.
 
 ### 1:1 — [Ossie Nwokedi](./people/ossie-nwokedi.md)
 
-- EC-2083: updated [Ossie Nwokedi](./people/ossie-nwokedi.md). [George Sharpe](./people/george-sharpe.md) has been chased and is on it.
+- EC-2083: updated [Ossie Nwokedi](./people/ossie-nwokedi.md). George Sharpe has been chased and is on it.
 - [Stefan Amarie](./people/stefan-amarie.md) joining: [Ossie Nwokedi](./people/ossie-nwokedi.md) is interested to see how [Stefan Amarie](./people/stefan-amarie.md) works and is aware of the learning opportunity, but hasn't given it much thought yet.
 - [Rory Fielding](./people/rory-fielding.md) situation: touched on briefly. Considered resolved and in the past.
 - AI usage: [Ossie Nwokedi](./people/ossie-nwokedi.md) is getting significant value from AI tooling. Shared an example where he picked up a defect ticket, asked AI to analyse possible causes, and was told the defect had already been fixed a few hours earlier — highlighting a communication gap between engineers rather than an unresolved defect.
@@ -48,17 +48,17 @@ Both stand-ups held. No notes taken.
 
 ### Flash Report — Merchant Team
 
-- First [Tastecard](./projects/tastecard) membership cancellation files sent to Ello via automated system.
-- First set of transaction data sent to Partnerize for [Intelligent Commerce](./projects/intelligent-commerce) via automated system.
+- First Tastecard membership cancellation files sent to Ello via automated system.
+- First set of transaction data sent to Partnerize for Intelligent Commerce via automated system.
 - Defects fixed: broken deeplinks to category pages; status banner not showing consistently; upstream vulnerability on mixpanel integration lambda.
 - Audited front-end codebase for merchant-owned feature flags to tidy up.
 
 ### Flash Report — DevOps Team
 
-- [EWA](./projects/ewa-extra) (payout-service): Crossplane configured on Sensitive Data Environment for SNS/SQS deployment; RDS proxy deployed to SDE staging and dev; WireMock deployed and configured on SDE staging and dev; SDE cluster RBAC updated to grant QA access to dev and staging; payout-service deployed.
+- EWA (payout-service): Crossplane configured on Sensitive Data Environment for SNS/SQS deployment; RDS proxy deployed to SDE staging and dev; WireMock deployed and configured on SDE staging and dev; SDE cluster RBAC updated to grant QA access to dev and staging; payout-service deployed.
 - Flink Apps repository and infrastructure configuration (event aggregation).
 - Resolved question with AWS regarding shortcode for SMS.
-- [Ephemeral Environments](./projects/ephemeral-environments): E2E test config added.
+- Ephemeral Environments: E2E test config added.
 
 ### DevOps Stand-Up
 
@@ -66,20 +66,20 @@ Both stand-ups held. No notes taken.
 
 ### Slack — #april-pricing-changes / Purchase Refinement
 
-- Fee-service rollout stats shared by [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md): 23% EHI / 77% [fee-service](./projects/fee-service), 80 timeouts over 4 weeks, 99.997% success rate. [Andrzej Lorenz](./people/andrzej-lorenz.md) greenlit moving 100% to [fee-service](./projects/fee-service).
+- Fee-service rollout stats shared by Grzegorz Ziemiański: 23% EHI / 77% fee-service, 80 timeouts over 4 weeks, 99.997% success rate. [Andrzej Lorenz](./people/andrzej-lorenz.md) greenlit moving 100% to fee-service.
 - Invited to Purchase refinement by [Tamara Quinn](./people/tamara-quinn.md); joined ~10 minutes late.
-- [Michał Górny](./people/michal-gorny.md) confirmed Purchase scope: hardcoded fee values (FE web + mobile), ECJ pricing (FE web + mobile), PO3 calculator fee cap (£40 → £80), test updates.
-- Dependency flagged: Storefront adaptive header is sourced from [fee-service](./projects/fee-service) on the Merchant side.
+- Michał Górny confirmed Purchase scope: hardcoded fee values (FE web + mobile), ECJ pricing (FE web + mobile), PO3 calculator fee cap (£40 → £80), test updates.
+- Dependency flagged: Storefront adaptive header is sourced from fee-service on the Merchant side.
 - Purchase scope achievable by end of next sprint but will delay PayMonthly work by approximately one sprint.
-- [Andrzej Lorenz](./people/andrzej-lorenz.md) asked whether [Ossie Nwokedi](./people/ossie-nwokedi.md) could help Purchase with ECJ to protect PayMonthly timeline; [Michał Górny](./people/michal-gorny.md): workable if ECJ experience is there, but adds complexity.
-- [Michał Górny](./people/michal-gorny.md) proposed FE-only alternative (no BE dependency on pricing changes): preserves PayMonthly timeline but introduces tech debt — no single source of truth for fee calculation. [Andrzej Lorenz](./people/andrzej-lorenz.md) acknowledged we are already in this situation; directed [Tamara Quinn](./people/tamara-quinn.md) to document it as a known system limitation and potential blocker for future pricing changes.
-- Responded to [Andrzej Lorenz](./people/andrzej-lorenz.md) re: [Ossie Nwokedi](./people/ossie-nwokedi.md): [Ossie Nwokedi](./people/ossie-nwokedi.md) is currently on [Pay Monthly](./projects/pay-monthly) Admin Portal work; [Jacek Zanko](./people/jacek-zanko.md) could cover that, potentially freeing [Ossie Nwokedi](./people/ossie-nwokedi.md) for Purchase. Feasible given the [fee-service](./projects/fee-service) simplification. Committed to a definitive answer by end of day.
-- [Michał Górny](./people/michal-gorny.md) to post an options summary to #april-pricing-changes.
+- [Andrzej Lorenz](./people/andrzej-lorenz.md) asked whether [Ossie Nwokedi](./people/ossie-nwokedi.md) could help Purchase with ECJ to protect PayMonthly timeline; Michał Górny: workable if ECJ experience is there, but adds complexity.
+- Michał Górny proposed FE-only alternative (no BE dependency on pricing changes): preserves PayMonthly timeline but introduces tech debt — no single source of truth for fee calculation. [Andrzej Lorenz](./people/andrzej-lorenz.md) acknowledged we are already in this situation; directed [Tamara Quinn](./people/tamara-quinn.md) to document it as a known system limitation and potential blocker for future pricing changes.
+- Responded to [Andrzej Lorenz](./people/andrzej-lorenz.md) re: [Ossie Nwokedi](./people/ossie-nwokedi.md): [Ossie Nwokedi](./people/ossie-nwokedi.md) is currently on Pay Monthly Admin Portal work; [Jacek Zanko](./people/jacek-zanko.md) could cover that, potentially freeing [Ossie Nwokedi](./people/ossie-nwokedi.md) for Purchase. Feasible given the fee-service simplification. Committed to a definitive answer by end of day.
+- Michał Górny to post an options summary to #april-pricing-changes.
 - Confirmed: Merchant team will own the fee changes for April pricing.
 
 ### Slack — #merchant-firefighter
 
-- [Tomasz Więckowski](./people/tomasz-wieckowski.md) (Decisioning) created [ZILCH-49269](https://payzilch.atlassian.net/browse/ZILCH-49269) — "Setup fee code fc-extra-monthly" — for the Merchant team, flagging it as needed for [EWA](./projects/ewa-extra) (Zilch Advance) and requesting prioritisation for the coming sprint.
+- Tomasz Więckowski (Decisioning) created [ZILCH-49269](https://payzilch.atlassian.net/browse/ZILCH-49269) — "Setup fee code fc-extra-monthly" — for the Merchant team, flagging it as needed for EWA (Zilch Advance) and requesting prioritisation for the coming sprint.
 - Responded confirming it would be pushed to the top of the backlog.
 
 ### Merchant Stand-Up
@@ -96,15 +96,15 @@ Both stand-ups held. No notes taken.
 ### DevOps Stand-Up
 
 **Reactive board:**
-- Security vulnerability tickets in To-Do — [Phil Stevenson](./people/phil-stevenson.md) does not think they should sit with DevOps. [Nick Gilbert](./people/nick-gilbert.md) has said he would handle them on his return ([Nick Gilbert](./people/nick-gilbert.md) is currently away).
-- ZILCH-49091 — in progress with [Phil Stevenson](./people/phil-stevenson.md).
-- ZILCH-41286 — unclear what it's for or whether [George Sharpe](./people/george-sharpe.md) is handling it; need to catch up with [George Sharpe](./people/george-sharpe.md). [Jira: "Create a fix version and apply it to tickets in release scope on merge of a release-please PR" — assigned to [George Sharpe](./people/george-sharpe.md), In Dev. Part of the CD automation work. [Phil Stevenson](./people/phil-stevenson.md) to confirm whether [George Sharpe](./people/george-sharpe.md) is actively progressing it.]
-- ZILCH-45505 — on hold, low priority (consistent with decision at [Phil Stevenson](./people/phil-stevenson.md)'s 1:1 on 2026-03-04).
+- Security vulnerability tickets in To-Do — [Phil Stephenson](./people/phil-stephenson.md) does not think they should sit with DevOps. [Nick Gilbert](./people/nick-gilbert.md) has said he would handle them on his return ([Nick Gilbert](./people/nick-gilbert.md) is currently away).
+- ZILCH-49091 — in progress with [Phil Stephenson](./people/phil-stephenson.md).
+- ZILCH-41286 — unclear what it's for or whether George is handling it; need to catch up with George. [Jira: "Create a fix version and apply it to tickets in release scope on merge of a release-please PR" — assigned to George Sharpe, In Dev. Part of the CD automation work. [Phil Stephenson](./people/phil-stephenson.md) to confirm whether George is actively progressing it.]
+- ZILCH-45505 — on hold, low priority (consistent with decision at [Phil Stephenson](./people/phil-stephenson.md)'s 1:1 on 2026-03-04).
 - Noted: ambiguity about what the Sign Off stage on the reactive Kanban board is for. Process needs clarifying.
 - ZILCH-49094 — deployment already done but sitting in To-Do; moved to the correct column.
 
 **Planned board:**
-- ZILCH-48462 ([Phil Stevenson](./people/phil-stevenson.md)) — in progress but blocked by his duty rota rotation. Will return if reactive load allows.
+- ZILCH-48462 ([Phil Stephenson](./people/phil-stephenson.md)) — in progress but blocked by his duty rota rotation. Will return if reactive load allows.
 - ZILCH-48446 — awaiting [Nick Gilbert](./people/nick-gilbert.md)'s return.
 - ZILCH-47186 ([Lukasz Kowalczyk](./people/lukasz-kowalczyk.md)) — moved to Done.
 - ZILCH-48966 ([Lukasz Kowalczyk](./people/lukasz-kowalczyk.md)) — needs final verification before closing. Blocked on staging; waiting on a role to be set up.
@@ -112,11 +112,11 @@ Both stand-ups held. No notes taken.
 - ZILCH-48715 ([Lukasz Kowalczyk](./people/lukasz-kowalczyk.md)) — DevOps work done; Terraform merge still outstanding. Closed.
 - ZILCH-44576 ([Piotr Niebylski](./people/piotr-niebylski.md)) — spike dragging; finding lots of issues. Expected to complete by end of day.
 
-**[Piotr Niebylski](./people/piotr-niebylski.md) (ZILCH-44576):** Sense that [Piotr Niebylski](./people/piotr-niebylski.md) is using the spike as cover to do [Ephemeral Environments](./projects/ephemeral-environments) work he wants to do. Will push for better adherence to the new process — work he considers necessary should be raised as proper tickets and planned in. Aligns with existing appraisal observation that he goes off piste.
+**[Piotr Niebylski](./people/piotr-niebylski.md) (ZILCH-44576):** Sense that [Piotr Niebylski](./people/piotr-niebylski.md) is using the spike as cover to do Ephemeral Environments work he wants to do. Will push for better adherence to the new process — work he considers necessary should be raised as proper tickets and planned in. Aligns with existing appraisal observation that he goes off piste.
 
 ### EC-2083 — customer-web-legacy Production Deployment Blocked
 
-Raised with [George Sharpe](./people/george-sharpe.md) that EC-2083 (Production Deployment — customer-web-legacy-1.176.0) has been sitting in Planning since 24 February — 9 days — despite containing merged work from six teams including Merchant (ZILCH-40343).
+Raised with George Sharpe that EC-2083 (Production Deployment — customer-web-legacy-1.176.0) has been sitting in Planning since 24 February — 9 days — despite containing merged work from six teams including Merchant (ZILCH-40343).
 
 Pulled from Jira:
 - **Ticket:** EC-2083 — auto-created by Jira automation on 24 Feb 2026
@@ -124,7 +124,7 @@ Pulled from Jira:
 - **Assignee:** [Ossie Nwokedi](./people/ossie-nwokedi.md)
 - **Teams affected:** Payments (ZILCH-48454), Purchase (ZILCH-47884, ZILCH-37894), Retain (ZILCH-46362), Onboarding (ZILCH-45932), Merchant (ZILCH-40343)
 
-Reason for the stall is not yet established. Raised with [George Sharpe](./people/george-sharpe.md) to investigate.
+Reason for the stall is not yet established. Raised with George to investigate.
 
 ### Merchant Stand-Up
 
@@ -133,13 +133,13 @@ Ticket updates:
 - **ZILCH-48536** ([Nick Holt](./people/nick-holt.md)) — Making do with a sub-optimal event requiring a callback to product-service rather than a fully enriched event. Putting tests around it. Wants to catch up with [Tom McKenzie](./people/tom-mckenzie.md) on test strategy, especially to cover both LD flag settings.
 - **ZILCH-47174** — Should be unblocked now that [Tom McKenzie](./people/tom-mckenzie.md) is back at work. [Tom McKenzie](./people/tom-mckenzie.md) will review.
 - **ZILCH-48897 & ZILCH-48903** ([Jacek Zanko](./people/jacek-zanko.md)) — [Ossie Nwokedi](./people/ossie-nwokedi.md) tested yesterday as planned. Found issues; [Jacek Zanko](./people/jacek-zanko.md) fixed; back for more testing.
-- **ZILCH-49027** ([Jacek Zanko](./people/jacek-zanko.md)) — Requires further design conversations following yesterday's decision on source of truth for [Pay Monthly](./projects/pay-monthly) fees.
+- **ZILCH-49027** ([Jacek Zanko](./people/jacek-zanko.md)) — Requires further design conversations following yesterday's decision on source of truth for Pay Monthly fees.
 - **ZILCH-48954** — Requires another PR to be merged before it can be re-tested.
 - **ZILCH-48873** — [Tom McKenzie](./people/tom-mckenzie.md) will look at it today.
 
 Actions:
 - Asked [Tom McKenzie](./people/tom-mckenzie.md) to ensure ZILCH-48954 and ZILCH-48873 both have parent epics (currently missing).
-- Announced [Iteration 12](./projects/iteration-12-planning) planning will be a lightweight process, to avoid distracting from the March 31 deadline.
+- Announced Iteration 12 planning will be a lightweight process, to avoid distracting from the March 31 deadline.
 - Announced introduction of `@merchant-firefighter` for the Merchant duty rota.
 
 Other notes:
@@ -165,27 +165,27 @@ I have a Jira cumulative flow report for defects. Will monitor it and expect to 
 
 Attended but arrived late — pulled into other conversations beforehand. Struggled to maintain focus on the specific tickets being refined, but provided adequate facilitation of the process. Facilitation is still needed while the team beds in the new hybrid Scrum/Kanban approach.
 
-### [fee-service](./projects/fee-service) Design — [Pay Monthly](./projects/pay-monthly) — Slack Discussion (Design Debate)
+### fee-service Design — Pay Monthly — Slack Discussion (Design Debate)
 
-A design debate across two parallel Slack threads (cross-team, including [Andrzej Lorenz](./people/andrzej-lorenz.md), [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md), [Tomasz Surowiec](./people/tomasz-surowiec.md), Tom Wood, [Mariusz Maciuszek](./people/mariusz-maciuszek.md), [Abhishek Chatterjee](./people/abhishek-chatterjee.md), [Marek Chodak](./people/marek-chodak.md), [Craig Main](./people/craig-main.md), [Sam Whittaker](./people/sam-whittaker.md), [Jacek Zanko](./people/jacek-zanko.md), [Nick Holt](./people/nick-holt.md)) around whether to change the [fee-service](./projects/fee-service) API design for [Pay Monthly](./projects/pay-monthly).
+A design debate across two parallel Slack threads (cross-team, including [Andrzej Lorenz](./people/andrzej-lorenz.md), Grzegorz Ziemiański, Tomasz Surowiec, Tom Wood, Mariusz Maciuszek, [Abhishek Chatterjee](./people/abhishek-chatterjee.md), Marek Chodak, [Craig Main](./people/craig-main.md), Sam, [Jacek Zanko](./people/jacek-zanko.md), [Nick Holt](./people/nick-holt.md)) around whether to change the fee-service API design for Pay Monthly.
 
 **Thread 1 — tranche vs. scalar**
 
 **Proposal (Nicklas):** Replace the tranche array with a single per-instalment fee value (1.6%), with retailer-level overrides where suppression is needed. Rationale:
 - With 1.6% as the source of truth, all values in the tranche array are identical by definition — the array is redundant.
-- The tranche model builds in poor separation of concerns: it requires [fee-service](./projects/fee-service) to know the number of instalments, which is domain knowledge it shouldn't need.
+- The tranche model builds in poor separation of concerns: it requires fee-service to know the number of instalments, which is domain knowledge it shouldn't need.
 - Retailer suppression is much cleaner to configure with a single value per retailer vs. 13 tranches per retailer.
-- Callers would be responsible for applying the fee across each instalment rather than relying on [fee-service](./projects/fee-service) to return a pre-expanded array.
+- Callers would be responsible for applying the fee across each instalment rather than relying on fee-service to return a pre-expanded array.
 
 **Pushback ([Andrzej Lorenz](./people/andrzej-lorenz.md)):** Keep the original tranche model. Future requirements (specifically from the Revolving Line project, currently on hold) may need different fee values for different instalments. Pivoting now would close that door and require new cross-team development later.
 
 **Tom Wood:** Reluctantly comfortable descoping per-instalment variation for now, but wants it noted that he is reluctant. Confirmed that the incoming requirement is specifically about being able to reduce the 1.6% for specific retailers and loan types — not about varying by instalment. [Zac Barclay](./people/zac-barclay.md) has confirmed retailer suppression can already be handled in the current setup (manually for now).
 
-**[Grzegorz Ziemiański](./people/grzegorz-ziemianski.md):** Challenged the premise — argued the tranche model can fulfil all the stated requirements. Asked what the input to [fee-service](./projects/fee-service) should be: purchase amount or instalment amount?
+**Grzegorz Ziemiański:** Challenged the premise — argued the tranche model can fulfil all the stated requirements. Asked what the input to fee-service should be: purchase amount or instalment amount?
 
-**[Tomasz Surowiec](./people/tomasz-surowiec.md):** Supportive of the single-value approach; removing per-instalment complexity also removes work on his side, and the simpler response is supported out of the box for ECJ.
+**Tomasz Surowiec:** Supportive of the single-value approach; removing per-instalment complexity also removes work on his side, and the simpler response is supported out of the box for ECJ.
 
-**Input clarification:** [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) confirmed that [fee-service](./projects/fee-service) currently receives `credit extended` (the purchase amount after deducting rewards, accounting for 0 down payment) — not the instalment amount. This was confirmed as correct by Nicklas (the whole loan principal, not just one instalment's share).
+**Input clarification:** Grzegorz confirmed that fee-service currently receives `credit extended` (the purchase amount after deducting rewards, accounting for 0 down payment) — not the instalment amount. This was confirmed as correct by Nicklas (the whole loan principal, not just one instalment's share).
 
 **Thread 2 — [Craig Main](./people/craig-main.md) joins; refund scope surfaces**
 
@@ -198,8 +198,8 @@ A new and material scope item emerged: **partial refunds**. Tom Wood confirmed t
 **Debate on refund handling approach:**
 - **Nicklas** proposed two options: (1) calculate the fee once at loan creation and recalculate if a refund event occurs; (2) calculate per instalment on each billing run, so each instalment naturally reflects the current principal. Nicklas noted that option 1 introduces a recalculation event, whereas option 2 avoids one — but option 2 may require storing a fee calculation reference per instalment on the ledger.
 - **[Andrzej Lorenz](./people/andrzej-lorenz.md)** raised a concern about the audit trail: the `fee_calculation_reference` field on the customer ledger is intended to record which fee calculation produced a given fee. If fees are recalculated mid-loan, there would be multiple references — this creates ledger complexity.
-- **[Jacek Zanko](./people/jacek-zanko.md)** proposed calling [fee-service](./projects/fee-service) once per instalment, so each instalment gets its own `fee_calculation_id`. This keeps the audit trail clean and is consistent with how the billing service already operates.
-- **Nicklas** proposed a further clarification: store the fee calculation ID per instalment in the ledger, and leave it to Payments to decide whether to calculate once at loan creation and reuse that ID per instalment, or calculate fresh on each instalment. This separates [fee-service](./projects/fee-service) API concerns from billing run decisions.
+- **[Jacek Zanko](./people/jacek-zanko.md)** proposed calling fee-service once per instalment, so each instalment gets its own `fee_calculation_id`. This keeps the audit trail clean and is consistent with how the billing service already operates.
+- **Nicklas** proposed a further clarification: store the fee calculation ID per instalment in the ledger, and leave it to Payments to decide whether to calculate once at loan creation and reuse that ID per instalment, or calculate fresh on each instalment. This separates fee-service API concerns from billing run decisions.
 
 The thread ended without resolution, with Nicklas putting a direct question to [Craig Main](./people/craig-main.md) about whether individual instalments are currently recorded as separate entries in the ledger. The question was unanswered in the transcript.
 
@@ -207,16 +207,16 @@ The thread ended without resolution, with Nicklas putting a direct question to [
 
 **Overall outcome:** Trending towards agreement on a scalar per-instalment model with recalculation on partial refund, with the ledger providing the audit trail. Pending [Craig Main](./people/craig-main.md)'s input (he is based in South Africa and has finished for the day — thread will resume tomorrow).
 
-### [fee-service](./projects/fee-service) Design — [Pay Monthly](./projects/pay-monthly) (x2 meetings)
+### fee-service Design — Pay Monthly (x2 meetings)
 
-Two meetings today on [fee-service](./projects/fee-service) design in support of the [Pay Monthly](./projects/pay-monthly) project. Notes to follow.
+Two meetings today on fee-service design in support of the Pay Monthly project. Notes to follow.
 
-### Pricing Structure Changes — [Steve Rayko](./people/steve-rayko.md) Conversations
+### Pricing Structure Changes — Steve Rayko Conversations
 
-Pulled into conversations by [Steve Rayko](./people/steve-rayko.md) (SVP Engineering) regarding planned pricing structure changes. [Steve Rayko](./people/steve-rayko.md) wanted to understand what would be involved in implementing them.
+Pulled into conversations by Steve Rayko (SVP Engineering) regarding planned pricing structure changes. Steve wanted to understand what would be involved in implementing them.
 
 Key points established:
-- **Deadline:** End of March 2026 — adding to the existing cluster of end-of-month P1 deliveries ([Pay Monthly](./projects/pay-monthly), [EWA/Extra](./projects/ewa-extra), [Visa Flex](./projects/visa-flex)).
+- **Deadline:** End of March 2026 — adding to the existing cluster of end-of-month P1 deliveries (Pay Monthly, EWA/Extra, Visa Flex).
 - **Back-end:** Changes can be accommodated through configuration — no code changes required on the back end.
 - **UX:** Some UX work may be required, but this would sit outside the Merchant team.
 - **Team ownership — open question:** It is not yet decided whether Merchant would pick this work up or whether it would be handled by [Michal Baran](./people/michal-baran.md) and the new Spend Platform team.
@@ -227,9 +227,9 @@ The team ownership question has material implications for Merchant sprint capaci
 
 ### March Delivery Pressure
 
-[Pay Monthly](./projects/pay-monthly), [EWA/Extra](./projects/ewa-extra), and [Visa Flex](./projects/visa-flex) all share an end-of-March 2026 deadline — likely driven by the need to land all three before the start of the new financial year. Three concurrent P1 initiatives is significant delivery pressure across the organisation.
+Pay Monthly, EWA/Extra, and Visa Flex all share an end-of-March 2026 deadline — likely driven by the need to land all three before the start of the new financial year. Three concurrent P1 initiatives is significant delivery pressure across the organisation.
 
-### [Pay Monthly](./projects/pay-monthly) — Channel Digest Ingested (2026-02-23 to 2026-03-04)
+### Pay Monthly — Channel Digest Ingested (2026-02-23 to 2026-03-04)
 
 Key new information from #pay-monthly-delivery:
 - **MVP product configuration still undecided** — Acquirer team (Michał Górny) considering two options; open questions around Po3 continuity for existing customers and migration scenarios
@@ -237,41 +237,41 @@ Key new information from #pay-monthly-delivery:
 - **Fee UI presentation:** fee service returns tranches; UI shows effective rate of first unpaid tranche, rounded to 1dp — agreed by Andrea Ponte and [Craig Main](./people/craig-main.md)
 - **Ledger approach (MVP):** monthly fees (except the first) stored in the FEE column; not split between purchase and loan
 
-### [EWA/Extra](./projects/ewa-extra) — Channel Digest Ingested
+### EWA/Extra — Channel Digest Ingested
 
 Ingested a summary of the #ewa-extra Slack channel. Key new information (beyond what was previously logged):
 - ITAM to cover manual activities; a Tier 2 customer care team identified as needed for admin portal gaps
 - Plaid API keys for AIS and Payouts to be segregated for security
-- [EWA](./projects/ewa-extra) eligibility: Plaid confidence score for name matching; monthly salary-based income sources only; largest source selected; Plaid responses stored in S3
-- Initial rollout: active customers, no hard blocks; excludes Plus members and [Pay Monthly](./projects/pay-monthly) test customers
+- EWA eligibility: Plaid confidence score for name matching; monthly salary-based income sources only; largest source selected; Plaid responses stored in S3
+- Initial rollout: active customers, no hard blocks; excludes Plus members and Pay Monthly test customers
 - £3 disbursement fee confirmed as **not** included in APR; APR assessment still required across all product lines; whether fee should be capped is unresolved
 - App submission to Apple and Google targeted for **31 March 2026**
 
-### [EWA/Extra](./projects/ewa-extra) — Fee Schedule Ownership and Merchant Scope
+### EWA/Extra — Fee Schedule Ownership and Merchant Scope
 
-Merchant's involvement in [EWA/Extra](./projects/ewa-extra) is confirmed as minimal: UI component testing to verify components work correctly for the new Extra membership tier. No delivery responsibility beyond that.
+Merchant's involvement in EWA/Extra is confirmed as minimal: UI component testing to verify components work correctly for the new Extra membership tier. No delivery responsibility beyond that.
 
 **Fee schedule ownership (via Slack):**
 Following the ambiguity raised on 2026-02-23, [Andrzej Lorenz](./people/andrzej-lorenz.md) responded:
 - Fee-service (and possibly rewards) move to Spend Platform will **not happen yet**
-- New Spend Platform team **could** handle [EWA](./projects/ewa-extra)/[Pay Monthly](./projects/pay-monthly) fee schedules; [Andrzej Lorenz](./people/andrzej-lorenz.md) said to assume they would, pending planning discussion
+- New Spend Platform team **could** handle EWA/Pay Monthly fee schedules; [Andrzej Lorenz](./people/andrzej-lorenz.md) said to assume they would, pending planning discussion
 - Rewards service ownership: **not decided yet**
 
-Despite this steer, ZILCH-49156 ([EWA](./projects/ewa-extra) disbursement fee code) landed with Merchant, raised by [Tommy Kwok](./people/tommy-kwok.md) and [Oleksandr Tertyshnyi](./people/oleksandr-tertyshnyi.md). Nicklas has asked [Andrzej Lorenz](./people/andrzej-lorenz.md) to confirm whether Merchant or Spend Platform should own it. Awaiting response.
+Despite this steer, ZILCH-49156 (EWA disbursement fee code) landed with Merchant, raised by Tommy Kwok and Oleksandr Tertyshnyi. Nicklas has asked [Andrzej Lorenz](./people/andrzej-lorenz.md) to confirm whether Merchant or Spend Platform should own it. Awaiting response.
 
 ### [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) Promotion — Slack Discussion with [Andrzej Lorenz](./people/andrzej-lorenz.md)
 
 [Andrzej Lorenz](./people/andrzej-lorenz.md) reviewed the L3 evidence document sent earlier today. Key outcomes from the discussion:
 
-- **Growth Potential concern:** [Andrzej Lorenz](./people/andrzej-lorenz.md) pushed back on "Uses feedback to improve" being evidenced only by the annual appraisal response. He clarified the criterion relates to ongoing, day-to-day feedback responsiveness. Verbal examples provided: (1) reduction in handholding from [Piotr Niebylski](./people/piotr-niebylski.md) and [Phil Stevenson](./people/phil-stevenson.md) — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) is now operating much more independently; (2) sustained improvement in speaking up during team meetings following feedback on this; (3) active engagement with recent Scrum/Kanban process formalisation following feedback to lean in to process more.
+- **Growth Potential concern:** [Andrzej Lorenz](./people/andrzej-lorenz.md) pushed back on "Uses feedback to improve" being evidenced only by the annual appraisal response. He clarified the criterion relates to ongoing, day-to-day feedback responsiveness. Verbal examples provided: (1) reduction in handholding from [Piotr Niebylski](./people/piotr-niebylski.md) and [Phil Stephenson](./people/phil-stephenson.md) — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) is now operating much more independently; (2) sustained improvement in speaking up during team meetings following feedback on this; (3) active engagement with recent Scrum/Kanban process formalisation following feedback to lean in to process more.
 
-- **[Andrzej Lorenz](./people/andrzej-lorenz.md)'s conclusion:** [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) is performing at L3 level. The remaining unevidenced criteria in Growth Potential are not disqualifying. [Andrzej Lorenz](./people/andrzej-lorenz.md) will take the case to [Steve Rayko](./people/steve-rayko.md).
+- **[Andrzej Lorenz](./people/andrzej-lorenz.md)'s conclusion:** [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) is performing at L3 level. The remaining unevidenced criteria in Growth Potential are not disqualifying. [Andrzej Lorenz](./people/andrzej-lorenz.md) will take the case to Steve Rayko.
 
 - **Action:** [Andrzej Lorenz](./people/andrzej-lorenz.md) requested an executive (TL;DR) summary of L3 performance. Summary authored and sent to [Andrzej Lorenz](./people/andrzej-lorenz.md).
 
 - **Rating:** Target outcome is promotion to L3 with a rating of 3.
 
-### [Pay Monthly](./projects/pay-monthly) — Fee Calculation Decision Confirmed
+### Pay Monthly — Fee Calculation Decision Confirmed
 
 A decision was confirmed via Slack (originally raised by [Jacek Zanko](./people/jacek-zanko.md), resolved through discussion involving [Tamara Quinn](./people/tamara-quinn.md), Tom Wood, and Nicklas Chapman, with [Andrzej Lorenz](./people/andrzej-lorenz.md) requesting broadcast):
 
@@ -283,39 +283,39 @@ A decision was confirmed via Slack (originally raised by [Jacek Zanko](./people/
 - Tom Wood confirmed; [Tamara Quinn](./people/tamara-quinn.md) documented
 - [Andrzej Lorenz](./people/andrzej-lorenz.md) requested this be communicated to all teams (including Data and Finance) and acknowledged — [Tamara Quinn](./people/tamara-quinn.md) has confirmed she will own this broadcast
 
-The earlier-implemented Option A (calculate 20.8% total, then split across tranches) is **not** the chosen approach. The [fee-service](./projects/fee-service) implementation should use 1.6%.
+The earlier-implemented Option A (calculate 20.8% total, then split across tranches) is **not** the chosen approach. The fee-service implementation should use 1.6%.
 
-### [Pay Monthly](./projects/pay-monthly) — Refinement Complete (previously)
+### Pay Monthly — Refinement Complete (previously)
 
-[Pay Monthly](./projects/pay-monthly) tickets (from [Zac Barclay](./people/zac-barclay.md)) were worked up prior to today and are in play for sprint 11.4.
+Pay Monthly tickets (from [Zac Barclay](./people/zac-barclay.md)) were worked up prior to today and are in play for sprint 11.4.
 
-Also noted: the Merchant team's responsibilities for [Pay Monthly](./projects/pay-monthly) span two areas:
-1. Enable rewards for credit purchases with the [Pay Monthly](./projects/pay-monthly) loan product
-2. Enable [fee-service](./projects/fee-service) to calculate fees on a monthly-instalment basis (rather than single-instalment as with other loan products)
+Also noted: the Merchant team's responsibilities for pay monthly span two areas:
+1. Enable rewards for credit purchases with the Pay Monthly loan product
+2. Enable fee-service to calculate fees on a monthly-instalment basis (rather than single-instalment as with other loan products)
 
-### [Iteration 12](./projects/iteration-12-planning) — Chased [Zac Barclay](./people/zac-barclay.md) on Candidates
+### Iteration 12 — Chased [Zac Barclay](./people/zac-barclay.md) on Candidates
 
-Chased [Zac Barclay](./people/zac-barclay.md) on candidate work streams for [Iteration 12](./projects/iteration-12-planning). Response suggests he doesn't yet know what the team will be pointed at.
+Chased [Zac Barclay](./people/zac-barclay.md) on candidate work streams for Iteration 12. Response suggests he doesn't yet know what the team will be pointed at.
 
 ### Tech Leadership Sync
 
 Nothing significant to note.
 
-### [Pay Monthly](./projects/pay-monthly) Tech Sync
+### Pay Monthly Tech Sync
 
 Attended. Nothing significant to note.
 
-### [Phil Stevenson](./people/phil-stevenson.md) 1:1
+### [Phil Stephenson](./people/phil-stephenson.md) 1:1
 
-Largely a venting session — [Phil Stevenson](./people/phil-stevenson.md) needed to articulate his concerns more than he needed specific actions taken. The broad theme was pressure, process, and friction with cross-team engineers.
+Largely a venting session — [Phil Stephenson](./people/phil-stephenson.md) needed to articulate his concerns more than he needed specific actions taken. The broad theme was pressure, process, and friction with cross-team engineers.
 
-**Quality:** Less of an acute problem than it appeared. [Phil Stevenson](./people/phil-stevenson.md) was able to push back on [Radek Kachel](./people/radek-kachel.md)'s changes as a codeowner and got the outcome he wanted. Quality is in hand.
+**Quality:** Less of an acute problem than it appeared. [Phil Stephenson](./people/phil-stephenson.md) was able to push back on Radek Kachel's changes as a codeowner and got the outcome he wanted. Quality is in hand.
 
-**[Radek Kachel](./people/radek-kachel.md) / [EWA](./projects/ewa-extra) pattern:** The real concern is a recurring pattern of poor communication and cooperation from [Radek Kachel](./people/radek-kachel.md) — unwillingness to engage through proper channels and reluctance to act on review feedback. Will raise with [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) and [Nikos Sofianos](./people/nikos-sofianos.md) framed as a light-touch question about whether they've observed any friction, rather than a direct escalation.
+**Radek / EWA pattern:** The real concern is a recurring pattern of poor communication and cooperation from Radek — unwillingness to engage through proper channels and reluctance to act on review feedback. Will raise with Grzegorz Ziemiański and [Nikos Sofianos](./people/nikos-sofianos.md) framed as a light-touch question about whether they've observed any friction, rather than a direct escalation.
 
-**Unrealistic expectations on DevOps:** [Phil Stevenson](./people/phil-stevenson.md) perceives a persistent belief — particularly in the [EWA](./projects/ewa-extra) project — that DevOps should do things on demand. This has some historical basis. Advised him to counter it by leaning into the newly formalised process: when work slips because higher-priority reactive items were pulled in, point to the sprint record and Jira evidence; when people expect immediate reactive delivery, point to the Kanban board and WIP limits to show them they're in a queue; and if anything genuinely needs reprioritising over in-flight work, requesters should come to me — that's an EM decision.
+**Unrealistic expectations on DevOps:** [Phil Stephenson](./people/phil-stephenson.md) perceives a persistent belief — particularly in the EWA project — that DevOps should do things on demand. This has some historical basis. Advised him to counter it by leaning into the newly formalised process: when work slips because higher-priority reactive items were pulled in, point to the sprint record and Jira evidence; when people expect immediate reactive delivery, point to the Kanban board and WIP limits to show them they're in a queue; and if anything genuinely needs reprioritising over in-flight work, requesters should come to me — that's an EM decision.
 
-**Observation:** [Phil Stevenson](./people/phil-stevenson.md) gets frustrated when he's concerned quality may suffer or when he senses friction with other engineers. Some friction is inevitable: engineers are under pressure to deliver quickly; DevOps want things done properly. That tension is natural and can be productive. [Phil Stevenson](./people/phil-stevenson.md) is aware of this at an intellectual level but still finds it stressful in practice.
+**Observation:** [Phil Stephenson](./people/phil-stephenson.md) gets frustrated when he's concerned quality may suffer or when he senses friction with other engineers. Some friction is inevitable: engineers are under pressure to deliver quickly; DevOps want things done properly. That tension is natural and can be productive. [Phil Stephenson](./people/phil-stephenson.md) is aware of this at an intellectual level but still finds it stressful in practice.
 
 ### Merchant Stand-up
 
@@ -323,7 +323,7 @@ Largely a venting session — [Phil Stevenson](./people/phil-stevenson.md) neede
 
 * ZILCH-48952 — Brought into sprint yesterday; awaiting build and release. Marked as done.
 * ZILCH-46769 — With [Ossie Nwokedi](./people/ossie-nwokedi.md). [Nick Holt](./people/nick-holt.md) has reviewed. Needs test evidence before it can move forward.
-* ZILCH-42041 — [Jacek Zanko](./people/jacek-zanko.md) assigned to himself and responded to [Charlie Hurst](./people/charlie-hurst.md) (Platform). Now awaiting action from Platform.
+* ZILCH-42041 — [Jacek Zanko](./people/jacek-zanko.md) assigned to himself and responded to Charlie Hurst (Platform). Now awaiting action from Platform.
 * ZILCH-46367 — Completed yesterday.
 * ZILCH-49076 — With [Nick Holt](./people/nick-holt.md). Blocked on the Decisioning team's PR. Risk of slipping beyond the sprint. A workaround using a different event exists but could introduce a race condition. [Nick Holt](./people/nick-holt.md) will chase Decisioning on the PR's status. E2E testing will also be required. Assessed as at-risk.
 * ZILCH-47174 — With [Ossie Nwokedi](./people/ossie-nwokedi.md). Awaiting sign-off from [Tom McKenzie](./people/tom-mckenzie.md), who is on sick leave.
@@ -337,44 +337,44 @@ Largely a venting session — [Phil Stevenson](./people/phil-stevenson.md) neede
 [Nick Gilbert](./people/nick-gilbert.md) not mentioned; presumably still on leave.
 
 **Planned:**
-* ZILCH-48462 — [Phil Stevenson](./people/phil-stevenson.md); still in progress.
+* ZILCH-48462 — [Phil Stephenson](./people/phil-stephenson.md); still in progress.
 * ZILCH-44576 — Still in progress with [Piotr Niebylski](./people/piotr-niebylski.md).
 * ZILCH-48966 & ZILCH-48967 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) making good progress; expected to complete today.
 
 **Reactive:**
-* [Phil Stevenson](./people/phil-stevenson.md) occupied with support. Several issues with ZILCH-49113. ZILCH-49091 in progress.
+* [Phil Stephenson](./people/phil-stephenson.md) occupied with support. Several issues with ZILCH-49113. ZILCH-49091 in progress.
 
-### [New Web](./projects/new-web) — Pen Testing Requirements Discussion (Slack)
+### New Web — Pen Testing Requirements Discussion (Slack)
 
-Slack exchange with [Chris Walker](./people/chris-walker.md) and [Phil Stevenson](./people/phil-stevenson.md) regarding the [New Web](./projects/new-web) sprint work and pen testing readiness.
+Slack exchange with [Chris Walker](./people/chris-walker.md) and [Phil Stephenson](./people/phil-stephenson.md) regarding the New Web sprint work and pen testing readiness.
 
-**Background:** [New Web](./projects/new-web) sprint work (likely ZILCH-47773 or related) is at risk due to high-priority [EWA](./projects/ewa-extra) tasks being pulled in. [Chris Walker](./people/chris-walker.md) was informed proactively.
+**Background:** New Web sprint work (likely ZILCH-47773 or related) is at risk due to high-priority EWA tasks being pulled in. [Chris Walker](./people/chris-walker.md) was informed proactively.
 
 **[Chris Walker](./people/chris-walker.md)'s request:** That DevOps and the Security team (secteam) agree and document what needs to be done before pen testing can begin. [Chris Walker](./people/chris-walker.md) referenced that Julien (sec team) had said the environment should be "as close to prod as possible". [Chris Walker](./people/chris-walker.md) is concerned about ending up unable to get security sign-off because something wasn't tested.
 
-**[Phil Stevenson](./people/phil-stevenson.md)'s view:** Testing in staging should be sufficient; DevOps are not planning major changes and any issues found would likely require changes anyway.
+**[Phil Stephenson](./people/phil-stephenson.md)'s view:** Testing in staging should be sufficient; DevOps are not planning major changes and any issues found would likely require changes anyway.
 
-**Outcome:** [Chris Walker](./people/chris-walker.md) is comfortable with [Phil Stevenson](./people/phil-stevenson.md)'s position but wants it confirmed in writing by the Security team.
+**Outcome:** [Chris Walker](./people/chris-walker.md) is comfortable with [Phil Stephenson](./people/phil-stephenson.md)'s position but wants it confirmed in writing by the Security team.
 
-**Action required:** Arrange agreement — ideally written — between DevOps and the Security team on the pen testing environment requirements for [New Web](./projects/new-web) (staging acceptable vs. prod-like required).
+**Action required:** Arrange agreement — ideally written — between DevOps and the Security team on the pen testing environment requirements for New Web (staging acceptable vs. prod-like required).
 
 ## 2026-03-03
 
-### [EWA](./projects/ewa-extra) Team — DevOps Engagement
+### EWA Team — DevOps Engagement
 
-[Phil Stevenson](./people/phil-stevenson.md) flagged via Slack that the [EWA](./projects/ewa-extra) project team (including [Radek Kachel](./people/radek-kachel.md)) are performing DevOps work themselves rather than engaging via the tech-devops channel, and are showing reluctance to take suggestions on PRs. [Phil Stevenson](./people/phil-stevenson.md) supports them doing the work but wants it done properly through the right channels. He attributes the behaviour to pressure from elsewhere.
+[Phil Stephenson](./people/phil-stephenson.md) flagged via Slack that the EWA project team (including Radek Kachel) are performing DevOps work themselves rather than engaging via the tech-devops channel, and are showing reluctance to take suggestions on PRs. [Phil Stephenson](./people/phil-stephenson.md) supports them doing the work but wants it done properly through the right channels. He attributes the behaviour to pressure from elsewhere.
 
-Responded to [Phil Stevenson](./people/phil-stevenson.md) and agreed to discuss further at tomorrow's 1:1 (4 Mar).
+Responded to [Phil Stephenson](./people/phil-stephenson.md) and agreed to discuss further at tomorrow's 1:1 (4 Mar).
 
-[Phil Stevenson](./people/phil-stevenson.md) also forwarded a Slack exchange (17:37) in which [George Sharpe](./people/george-sharpe.md) (Change Manager) contacted [Phil Stevenson](./people/phil-stevenson.md) and [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) directly to chase progress on 4 [EWA](./projects/ewa-extra) tickets assigned to DevOps. [Phil Stevenson](./people/phil-stevenson.md)'s response: "blocked on number of hours in the day and devops engineers at zilch." [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) confirmed ZILCH-48967 is done and ZILCH-48966 will be done today. [Phil Stevenson](./people/phil-stevenson.md) noted that some of the work had only surfaced that day; [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) confirmed ZILCH-49094 and ZILCH-49091 are new additions. [Phil Stevenson](./people/phil-stevenson.md) shared this with Nicklas as evidence of undue pressure and concern about the impact on quality. To discuss at tomorrow's 1:1.
+[Phil Stephenson](./people/phil-stephenson.md) also forwarded a Slack exchange (17:37) in which George Sharpe (Change Manager) contacted [Phil Stephenson](./people/phil-stephenson.md) and [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) directly to chase progress on 4 EWA tickets assigned to DevOps. [Phil Stephenson](./people/phil-stephenson.md)'s response: "blocked on number of hours in the day and devops engineers at zilch." [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) confirmed ZILCH-48967 is done and ZILCH-48966 will be done today. [Phil Stephenson](./people/phil-stephenson.md) noted that some of the work had only surfaced that day; [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) confirmed ZILCH-49094 and ZILCH-49091 are new additions. [Phil Stephenson](./people/phil-stephenson.md) shared this with Nicklas as evidence of undue pressure and concern about the impact on quality. To discuss at tomorrow's 1:1.
 
-### [Merchant Operations](./projects/merchant-operations) — Observability Documentation Structure
+### Merchant Operations — Observability Documentation Structure
 
-Agreed approach for documenting observability work under ZILCH-47400. Observability documentation will live in DataDog where DataDog supports it (dashboard descriptions, monitor messages, etc.). Exception: functional metrics per service have no natural home in DataDog, so these will be documented in Confluence. Structure: one page per service under a new "Observability" parent page in the Merchant Confluence space, covering functional metrics, normal ranges, and associated context. [fee-service](./projects/fee-service) to be the first page created.
+Agreed approach for documenting observability work under ZILCH-47400. Observability documentation will live in DataDog where DataDog supports it (dashboard descriptions, monitor messages, etc.). Exception: functional metrics per service have no natural home in DataDog, so these will be documented in Confluence. Structure: one page per service under a new "Observability" parent page in the Merchant Confluence space, covering functional metrics, normal ranges, and associated context. fee-service to be the first page created.
 
-### [Merchant Operations](./projects/merchant-operations) — [fee-service](./projects/fee-service) Audit
+### Merchant Operations — fee-service Audit
 
-Continued the [Merchant Operations](./projects/merchant-operations) workstream. Completed the DataDog audit of [fee-service](./projects/fee-service) — a significant time investment, constituting a large portion of the day. Key finding: [fee-service](./projects/fee-service) has no prod logs — debug logging was disabled as a cost optimisation without the EM's knowledge. Confirmed by [Jacek Zanko](./people/jacek-zanko.md). This is consistent with the pattern noted in his appraisal of things happening under the radar.
+Continued the merchant operations workstream. Completed the DataDog audit of fee-service — a significant time investment, constituting a large portion of the day. Key finding: fee-service has no prod logs — debug logging was disabled as a cost optimisation without the EM's knowledge. Confirmed by [Jacek Zanko](./people/jacek-zanko.md). This is consistent with the pattern noted in his appraisal of things happening under the radar.
 
 See `projects/merchant-operations/audit-fee-service.md` for full findings.
 
@@ -385,9 +385,9 @@ See `projects/merchant-operations/audit-fee-service.md` for full findings.
 ### Merchant Stand-up
 
 * ZILCH-46769 — [Ossie Nwokedi](./people/ossie-nwokedi.md) picked up; now in PR.
-* ZILCH-42041 — Response received from Platform via PO-1597. [Charlie Hurst](./people/charlie-hurst.md) can ensure backup is in place (see ticket comments). [Nick Holt](./people/nick-holt.md) suggests that however backup is implemented, it should be retained indefinitely.
+* ZILCH-42041 — Response received from Platform via PO-1597. Charlie Hurst can ensure backup is in place (see ticket comments). [Nick Holt](./people/nick-holt.md) suggests that however backup is implemented, it should be retained indefinitely.
 * ZILCH-46367 — [Ossie Nwokedi](./people/ossie-nwokedi.md) has completed.
-* ZILCH-48536 — Progressing with [Nick Holt](./people/nick-holt.md). Finance sign-off on the approach still outstanding. Decisioning not providing the events needed for feature changes; [Nick Holt](./people/nick-holt.md) has pointed them to the relevant part of the codebase. Decisioning's work is blocked by a refactor branch pending merge, and they are also occupied with [EWA](./projects/ewa-extra) work. Decisioning pushing back on the need for the change. Need to lean in to resolve this.
+* ZILCH-48536 — Progressing with [Nick Holt](./people/nick-holt.md). Finance sign-off on the approach still outstanding. Decisioning not providing the events needed for feature changes; [Nick Holt](./people/nick-holt.md) has pointed them to the relevant part of the codebase. Decisioning's work is blocked by a refactor branch pending merge, and they are also occupied with EWA work. Decisioning pushing back on the need for the change. Need to lean in to resolve this.
 * ZILCH-47600 — [Ossie Nwokedi](./people/ossie-nwokedi.md) has in PR. Tests confirm working behaviour and are gated in CI. Issue was never reproduced. Ready to close off.
 * ZILCH-48887 — [Jacek Zanko](./people/jacek-zanko.md) reports [Tom McKenzie](./people/tom-mckenzie.md) has started building tests. Ready from [Jacek Zanko](./people/jacek-zanko.md)'s perspective. [Tom McKenzie](./people/tom-mckenzie.md) is on sick leave.
 * ZILCH-49027 — [Jacek Zanko](./people/jacek-zanko.md) just picking up.
@@ -401,13 +401,13 @@ See `projects/merchant-operations/audit-fee-service.md` for full findings.
 * ZILCH-44576 — [Piotr Niebylski](./people/piotr-niebylski.md) working through issues.
 * ZILCH-48967 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) fixed issues with Wm and added to helm chart.
 * ZILCH-48966 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) created RBAC permissions. Blocked by one missing secret.
-* ZILCH-48715 — Discussion, details hard to follow. [Phil Stevenson](./people/phil-stevenson.md) making a point about the distinction between what the team owns and how they manage it: SNS/SQS should be managed through Crossplane, not Terraform.
-* ZILCH-48462 — Not progressed; [Phil Stevenson](./people/phil-stevenson.md) is on rota duty.
-* ZILCH-49042 — Not progressed; [Phil Stevenson](./people/phil-stevenson.md) is on rota duty.
-* ZILCH-45505 — [Phil Stevenson](./people/phil-stevenson.md) has the script done; needs team review. [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) has reviewed. [Phil Stevenson](./people/phil-stevenson.md) subsequently shared the script ([tools PR #98](https://github.com/zilchdev/tools/pull/98)) and an example change ([customer-service PR #3759](https://github.com/zilchdev/customer-service/pull/3759)) in Slack, and asked for sign-off from [Piotr Niebylski](./people/piotr-niebylski.md) and Nicklas before running it across all repos. [Piotr Niebylski](./people/piotr-niebylski.md) approved. Nicklas deferred — needs more context before signing off; will discuss at tomorrow's 1:1 with [Phil Stevenson](./people/phil-stevenson.md).
-* ZILCH-48446 — [Nick Gilbert](./people/nick-gilbert.md) dropped this when he went on leave. [Phil Stevenson](./people/phil-stevenson.md) to pick up where [Nick Gilbert](./people/nick-gilbert.md) got to.
+* ZILCH-48715 — Discussion, details hard to follow. [Phil Stephenson](./people/phil-stephenson.md) making a point about the distinction between what the team owns and how they manage it: SNS/SQS should be managed through Crossplane, not Terraform.
+* ZILCH-48462 — Not progressed; [Phil Stephenson](./people/phil-stephenson.md) is on rota duty.
+* ZILCH-49042 — Not progressed; [Phil Stephenson](./people/phil-stephenson.md) is on rota duty.
+* ZILCH-45505 — [Phil Stephenson](./people/phil-stephenson.md) has the script done; needs team review. [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) has reviewed. [Phil Stephenson](./people/phil-stephenson.md) subsequently shared the script ([tools PR #98](https://github.com/zilchdev/tools/pull/98)) and an example change ([customer-service PR #3759](https://github.com/zilchdev/customer-service/pull/3759)) in Slack, and asked for sign-off from [Piotr Niebylski](./people/piotr-niebylski.md) and Nicklas before running it across all repos. [Piotr Niebylski](./people/piotr-niebylski.md) approved. Nicklas deferred — needs more context before signing off; will discuss at tomorrow's 1:1 with [Phil Stephenson](./people/phil-stephenson.md).
+* ZILCH-48446 — [Nick Gilbert](./people/nick-gilbert.md) dropped this when he went on leave. [Phil Stephenson](./people/phil-stephenson.md) to pick up where [Nick Gilbert](./people/nick-gilbert.md) got to.
 
-**Process observation:** ZILCH-48446 highlights a gap in leave handover practice. [Phil Stevenson](./people/phil-stevenson.md) should not have to piece together where [Nick Gilbert](./people/nick-gilbert.md) got to — outgoing team members need to hand over in-progress work clearly before going on leave.
+**Process observation:** ZILCH-48446 highlights a gap in leave handover practice. [Phil Stephenson](./people/phil-stephenson.md) should not have to piece together where [Nick Gilbert](./people/nick-gilbert.md) got to — outgoing team members need to hand over in-progress work clearly before going on leave.
 
 ### Refinement Session — Merchant
 
@@ -425,11 +425,11 @@ Attended the Merchant support rota hand-over meeting. Now on duty for the first 
 
 * Returned to work after a few days off. Catching up via Slack.
 
-* [Incident-467](./incidents/incident-467.md) — rewards comms/eligibility mismatch. See [Incident-467](./incidents/incident-467.md). Status: Stable. Root cause: `rewards-service` correctly skipped reward for ineligible customers, but `customer-service` missed the signal and published `Loan_OnLoanComplete_ENRICHED`, which `notification-service` consumed and acted on. Fix deployed 27 Feb by [Rory Fielding](./people/rory-fielding.md) (Retain) — comms turned off pending proper resolution. Root cause fix owned by Retain (ZILCH-48940). Retrospective to be jointly led by Merchant and Retain. Incident commander: Mark Reddington. [Tom McKenzie](./people/tom-mckenzie.md) tagged me in the channel this morning — reason unknown.
+* Incident-467 — rewards comms/eligibility mismatch. See [Incident-467](./incidents/incident-467.md). Status: Stable. Root cause: `rewards-service` correctly skipped reward for ineligible customers, but `customer-service` missed the signal and published `Loan_OnLoanComplete_ENRICHED`, which `notification-service` consumed and acted on. Fix deployed 27 Feb by [Rory Fielding](./people/rory-fielding.md) (Retain) — comms turned off pending proper resolution. Root cause fix owned by Retain (ZILCH-48940). Retrospective to be jointly led by Merchant and Retain. Incident commander: Mark Reddington. [Tom McKenzie](./people/tom-mckenzie.md) tagged me in the channel this morning — reason unknown.
 
-* [Stefan Amarie](./people/stefan-amarie.md) onboarding — drafted first 1:1 agenda ([content-authoring/output/stefan-first-1-1-agenda.md](content-authoring/output/stefan-first-1-1-agenda.md)). Ingested [Steve Rayko](./people/steve-rayko.md)'s informal L5 IC expectations document; logged [Rob Nelson](./people/rob-nelson.md)'s position on the FE competency lead question ([Chris Walker](./people/chris-walker.md) retains for now, review once [Stefan Amarie](./people/stefan-amarie.md) is settled). Created Incident-166 record ([Incident-166](./incidents/incident-166.md)) — background, significance, mitigations, and link to ZILCH-47400.
+* [Stefan Amarie](./people/stefan-amarie.md) onboarding — drafted first 1:1 agenda ([content-authoring/output/stefan-first-1-1-agenda.md](content-authoring/output/stefan-first-1-1-agenda.md)). Ingested Steve Rayko's informal L5 IC expectations document; logged [Rob Nelson](./people/rob-nelson.md)'s position on the FE competency lead question ([Chris Walker](./people/chris-walker.md) retains for now, review once [Stefan Amarie](./people/stefan-amarie.md) is settled). Created Incident-166 record ([Incident-166](./incidents/incident-166.md)) — background, significance, mitigations, and link to ZILCH-47400.
 
-* [On-Call Rota](./projects/on-call-rota) review meeting. [Chris Prowse](./people/chris-prowse.md) walked through the toolchain; worked through most alerts from the fortnight to 2 March. Several actions identified — see [On-Call Rota](./projects/on-call-rota).
+* On-call rota review meeting. Chris Prowse walked through the toolchain; worked through most alerts from the fortnight to 2 March. Several actions identified — see [On-Call Rota](./projects/on-call-rota).
 
 * [Andrzej Lorenz](./people/andrzej-lorenz.md) requested evidence to support the rating of 2 given to [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) in his appraisal. Responded via Slack with a structured justification covering all four dimensions of the staff levels framework, with Jira evidence drawn from ZILCH and DEVOPS projects across the full year, and a summary of his cross-team support activity. Working notes in [content-authoring/output/lukasz-appraisal-justification.md](content-authoring/output/lukasz-appraisal-justification.md).
 
@@ -437,27 +437,27 @@ Attended the Merchant support rota hand-over meeting. Now on duty for the first 
 
 Relevant items extracted from AI channel summaries:
 
-**[Incident-467](./incidents/incident-467.md) (engineering-application-support):**
+**Incident-467 (engineering-application-support):**
 * [Mike Davis](./people/mike-davis.md) requested [Nick Holt](./people/nick-holt.md) and [Jacek Zanko](./people/jacek-zanko.md) to raise the incident.
 * Root cause confirmed as `onesignal-integration` lambda incorrectly triggering notifications for loan completion events where rewards were not applied.
 * Mark Reddington: future incidents should be raised directly in Datadog, not via Slack. Incident record updated.
 
 **DevOps / infrastructure (platypus, tech-on-call):**
-* [Phil Stevenson](./people/phil-stevenson.md) removed the Upwind admission webhook from production — it was preventing new pods from starting. [Nick Gilbert](./people/nick-gilbert.md) to follow up with Arnar.
+* [Phil Stephenson](./people/phil-stephenson.md) Stevenson removed the Upwind admission webhook from production — it was preventing new pods from starting. [Nick Gilbert](./people/nick-gilbert.md) to follow up with Arnar.
 * EKS prod cluster upgrades to version 1.33 completed (issuer cluster done; customer cluster scheduled).
 * Upwind deployed to production and working (confirmed across team).
-* [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) sharing Terraform plans for staging/prod — reviewed and approved by [Matt Swirski](./people/matt-swirski.md) and [Charlie Hurst](./people/charlie-hurst.md).
+* [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) sharing Terraform plans for staging/prod — reviewed and approved by Matt and Charlie Hurst.
 
 **Infosec vulnerability tickets (infosec-vulnerability-remediation-tracking):**
-* Vulnerable dependency findings in frontend and typescript-shared-library flagged by [Nandini Muraleedharan](./people/nandini-muraleedharan.md).
-* Originally assigned to Payments team; [Nandini Muraleedharan](./people/nandini-muraleedharan.md) asking which team has capacity for the frontend ones.
+* Vulnerable dependency findings in frontend and typescript-shared-library flagged by Nandini Muraleedharan.
+* Originally assigned to Payments team; Nandini asking which team has capacity for the frontend ones.
 * Connects to the DevOps stand-up concern about security vuln tickets landing on the wrong team.
 
-**[EWA](./projects/ewa-extra) / Plaid (tech-ewa-plaid-open-banking):**
-* [Rob Nelson](./people/rob-nelson.md) shared that Plaid will deliver their Income Insights product by 13 March — critical for [EWA](./projects/ewa-extra) short- and long-term plans. [Alastair Gullan](./people/alastair-gullan.md) flagged need for a quick decision on trusting that date.
+**EWA / Plaid (tech-ewa-plaid-open-banking):**
+* [Rob Nelson](./people/rob-nelson.md) shared that Plaid will deliver their Income Insights product by 13 March — critical for EWA short- and long-term plans. Alastair Gullan flagged need for a quick decision on trusting that date.
 
-**[New Web](./projects/new-web):**
-* [Chris Walker](./people/chris-walker.md) sent a planning reminder tagging [Nick Gilbert](./people/nick-gilbert.md), [Phil Stevenson](./people/phil-stevenson.md), and me on 23 Feb (before I went on leave).
+**new-web-project:**
+* [Chris Walker](./people/chris-walker.md) sent a planning reminder tagging [Nick Gilbert](./people/nick-gilbert.md), [Phil Stephenson](./people/phil-stephenson.md) Stevenson, and me on 23 Feb (before I went on leave).
 
 **dev-payments (today):**
 * Deadlock issue blocking the payments team — [Craig Main](./people/craig-main.md) investigating; query optimised but still deadlocking. Ongoing.
@@ -469,7 +469,7 @@ Relevant items extracted from AI channel summaries:
 
 Captured from team channel week-notes. No [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) contribution visible in this snippet.
 
-**[Phil Stevenson](./people/phil-stevenson.md):**
+**[Phil Stephenson](./people/phil-stephenson.md):**
 - GitHub runners: caching base container images (some performance issues to resolve)
 - Ephemeral: database backup and restore improvements
 - Fraud: initial fraud AI agent deployed
@@ -493,60 +493,60 @@ Captured from team channel week-notes. No [Lukasz Kowalczyk](./people/lukasz-kow
 [Tom McKenzie](./people/tom-mckenzie.md) sent the weekly Merchant flash report to [Andrzej Lorenz](./people/andrzej-lorenz.md) while I was away. [Andrzej Lorenz](./people/andrzej-lorenz.md) pushed back, characterising it as more of a sprint report than an end-of-week flash report. Report content:
 
 > Morning [Andrzej Lorenz](./people/andrzej-lorenz.md), i've been given the honour of sending over the flash report. As is the case when you have a complete burn down in the previous sprint, this sprint isn't going to necessarily have any early quick wins. Evidenced by the fact that we don't have anything in Done.
-> * We're still very much in the early stages of [Pending Rewards](./projects/pending-rewards) development.
-> * [Pay Monthly](./projects/pay-monthly): Extending the retailer schema to incorporate credit rewards, as well as the respective admin changes are almost ready for testing.
+> * We're still very much in the early stages of Pending rewards development.
+> * Pay monthly: Extending the retailer schema to incorporate credit rewards, as well as the respective admin changes are almost ready for testing.
 > * Frontend LD flag audit is in review.
 > * Working with Lambdatest to solve failing maestro tests.
 
 ### Merchant Stand-up
 
 * ZILCH-46769 — still pending pickup.
-* ZILCH-42041 — still blocked by PO-1597. [Charlie Hurst](./people/charlie-hurst.md) on leave; waiting on him.
+* ZILCH-42041 — still blocked by PO-1597. Charlie on leave; waiting on him.
 * ZILCH-46367 — [Ossie Nwokedi](./people/ossie-nwokedi.md) absent from stand-up; no update.
 * ZILCH-48536 — [Nick Holt](./people/nick-holt.md) in progress. Blocked: wants an event on feature changes. Considering doing the work himself and sending to Decisioning for review.
 * ZILCH-48539 — pending pickup.
 * ZILCH-47174 — [Ossie Nwokedi](./people/ossie-nwokedi.md) not present to comment.
 * ZILCH-48897 — in progress with [Jacek Zanko](./people/jacek-zanko.md). Updated tests to check for updated version; only expects updated DTOs in the appropriate version.
 * ZILCH-48873 — [Tom McKenzie](./people/tom-mckenzie.md) working to resolve with LambdaTest.
-* ZILCH-49027 — added to board while I was away. Fee service to support fees split into monthly instalments ([Pay Monthly](./projects/pay-monthly) scope). Accepted as additional scope without dropping equivalent points; [Jacek Zanko](./people/jacek-zanko.md) believes he has capacity.
+* ZILCH-49027 — added to board while I was away. Fee service to support fees split into monthly instalments (Pay Monthly scope). Accepted as additional scope without dropping equivalent points; [Jacek Zanko](./people/jacek-zanko.md) believes he has capacity.
 
 ### DevOps Stand-up
 
 [Nick Gilbert](./people/nick-gilbert.md) on leave.
 
 **Reactive:**
-* ZILCH-48881 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md): Done. Moved to Done column. [Phil Stevenson](./people/phil-stevenson.md) moved past Ready for Release.
-* ZILCH-41286 — [George Sharpe](./people/george-sharpe.md) asked [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) about a fix. Ticket assigned to [George Sharpe](./people/george-sharpe.md) but should be with DevOps. [Phil Stevenson](./people/phil-stevenson.md) to catch up with [George Sharpe](./people/george-sharpe.md).
-* ZILCH-48513, ZILCH-45505 — [Phil Stevenson](./people/phil-stevenson.md) to look at soon.
-* Security vuln. tickets — [Phil Stevenson](./people/phil-stevenson.md) questions whether these should sit with DevOps; thinks they belong with the security team. To resolve.
+* ZILCH-48881 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md): Done. Moved to Done column. [Phil Stephenson](./people/phil-stephenson.md) moved past Ready for Release.
+* ZILCH-41286 — George asked [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) about a fix. Ticket assigned to George but should be with DevOps. [Phil Stephenson](./people/phil-stephenson.md) to catch up with George.
+* ZILCH-48513, ZILCH-45505 — [Phil Stephenson](./people/phil-stephenson.md) to look at soon.
+* Security vuln. tickets — [Phil Stephenson](./people/phil-stephenson.md) questions whether these should sit with DevOps; thinks they belong with the security team. To resolve.
 
 **Planned:**
 * ZILCH-47186 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) looking at it.
-* ZILCH-48966, ZILCH-48967 — High priority, [EWA](./projects/ewa-extra) project. [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) has under way. Brought into sprint; ZILCH-47583 bumped to accommodate. Estimated at 1 point each.
+* ZILCH-48966, ZILCH-48967 — High priority, EWA project. [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) has under way. Brought into sprint; ZILCH-47583 bumped to accommodate. Estimated at 1 point each.
 * ZILCH-44567 — in progress with [Piotr Niebylski](./people/piotr-niebylski.md).
-* ZILCH-48462 — [Phil Stevenson](./people/phil-stevenson.md): nearly ready for review; has a PR.
-* ZILCH-48416 — Done ([Phil Stevenson](./people/phil-stevenson.md)).
-* ZILCH-48075 — [Phil Stevenson](./people/phil-stevenson.md) has spoken to [Nikos Sofianos](./people/nikos-sofianos.md); agreed new approach for caching images. [Phil Stevenson](./people/phil-stevenson.md) to raise a ticket.
-* ZILCH-48446 — [Phil Stevenson](./people/phil-stevenson.md) to find out where [Nick Gilbert](./people/nick-gilbert.md) got to and whether it needs progressing.
+* ZILCH-48462 — [Phil Stephenson](./people/phil-stephenson.md): nearly ready for review; has a PR.
+* ZILCH-48416 — Done ([Phil Stephenson](./people/phil-stephenson.md)).
+* ZILCH-48075 — [Phil Stephenson](./people/phil-stephenson.md) has spoken to [Nikos Sofianos](./people/nikos-sofianos.md); agreed new approach for caching images. [Phil Stephenson](./people/phil-stephenson.md) to raise a ticket.
+* ZILCH-48446 — [Phil Stephenson](./people/phil-stephenson.md) to find out where [Nick Gilbert](./people/nick-gilbert.md) got to and whether it needs progressing.
 * ZILCH-47773 — blocked. Need to find out how to create certificates from the security team.
 
 **General:**
 * Handover policy agreed: if less than a day's work remains on an in-progress reactive ticket when rotation changes, the current owner can continue rather than handing over.
-* Observation: unclear who is on duty for reactive work — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) and [Phil Stevenson](./people/phil-stevenson.md) both across both boards. May need better discipline around the duty rota.
+* Observation: unclear who is on duty for reactive work — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) and [Phil Stephenson](./people/phil-stephenson.md) both across both boards. May need better discipline around the duty rota.
 
 * Removed from Waiting On: [Piotr Niebylski](./people/piotr-niebylski.md) 1:1 reschedule — no reschedule materialised; decided not to chase.
-* Removed from Waiting On: [Ethan Stockwell](./people/ethan-stockwell.md) data file (visa-flex).
+* Removed from Waiting On: Ethan Stockwell data file (visa-flex).
 * Removed from Waiting On: [Tom McKenzie](./people/tom-mckenzie.md) test policy document — a Jira task has been created; now a planning matter rather than a chase.
 
 ## 2026-02-24
 
-* [Andrzej Lorenz](./people/andrzej-lorenz.md) responded on fee schedule ownership (Merchant vs Spend Platform) re [EWA/Extra](./projects/ewa-extra). Ownership is still undecided in general, but for the purposes of the [EWA/Extra](./projects/ewa-extra) work, his team (Spend Platform) will handle it. Waiting-on item resolved.
+* [Andrzej Lorenz](./people/andrzej-lorenz.md) responded on fee schedule ownership (Merchant vs Spend Platform) re EWA/Extra. Ownership is still undecided in general, but for the purposes of the EWA/Extra work, his team (Spend Platform) will handle it. Waiting-on item resolved.
 
 ## 2026-02-23
 
 * Day disrupted — planned to-do list largely untouched. Time consumed by unplanned side conversations and meetings.
 
-* Received [Pay Monthly](./projects/pay-monthly) ticket links from [Zac Barclay](./people/zac-barclay.md). Ready to work up ahead of sprint 11.4 planning.
+* Received Pay Monthly ticket links from [Zac Barclay](./people/zac-barclay.md). Ready to work up ahead of sprint 11.4 planning.
 
 * Evening: knowledge base redesign session. Designed a new model based on a single main log with inline tagging and periodic on-demand compaction into per-entity digests. File restructure planned to consolidate all log-related folders under `./logs/`. Under consideration: splitting project folders into discrete files (reference, context, digest) to enable targeted reads. Full design recorded in [KB Restructure](./projects/kb-restructure). Implementation deferred.
 
@@ -592,14 +592,14 @@ Met with [Mike Davis](./people/mike-davis.md). He is handling it: minor behaviou
 
 ### Retrospective — Cancelled
 
-Sprint retrospective cancelled. Time used instead for a team discussion on [EWA/Extra](./projects/ewa-extra).
+Sprint retrospective cancelled. Time used instead for a team discussion on EWA/Extra.
 
-### [EWA/Extra](./projects/ewa-extra) — Team Impact Assessment
+### EWA/Extra — Team Impact Assessment
 
-Worked through the [EWA/Extra](./projects/ewa-extra) project with the team to assess whether any features affect the Merchant team. Given the tight timeline, high certainty is needed early to pre-empt dependencies and prioritise any required work. After a thorough review, assessment is that we are broadly in the clear, with two caveats:
+Worked through the EWA/Extra project with the team to assess whether any features affect the Merchant team. Given the tight timeline, high certainty is needed early to pre-empt dependencies and prioritise any required work. After a thorough review, assessment is that we are broadly in the clear, with two caveats:
 
-1. **Fee schedule ownership ambiguity.** With the [fee-service](./projects/fee-service) migration to the new team running in parallel, it is unclear whether fee schedule changes fall to Merchant or Spend Platform. Working assumption is Spend Platform, but there is enough ambiguity to warrant derisking.
-2. **Overlap with [Pending Rewards](./projects/pending-rewards) / Blocking Rewards for Continuity of Memberships.** These are lower priority than [EWA/Extra](./projects/ewa-extra) and could be held back to let [EWA](./projects/ewa-extra) proceed. However, the new tier and new loan product may need to be accommodated in Merchant systems, and there will be a dependency on the Decisioning team.
+1. **Fee schedule ownership ambiguity.** With the fee-service migration to the new team running in parallel, it is unclear whether fee schedule changes fall to Merchant or Spend Platform. Working assumption is Spend Platform, but there is enough ambiguity to warrant derisking.
+2. **Overlap with Pending Rewards / Blocking Rewards for Continuity of Memberships.** These are lower priority than EWA/Extra and could be held back to let EWA proceed. However, the new tier and new loan product may need to be accommodated in Merchant systems, and there will be a dependency on the Decisioning team.
 
 ### Sprint 11.4 Planning Prep
 
@@ -607,9 +607,9 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 
 **Work streams reviewed:**
 
-- **[Gateway Service](./projects/gateway-service)** — [Jacek Zanko](./people/jacek-zanko.md) to propose next steps in the meeting; may result in ticket refinement.
-- **[Pay Monthly](./projects/pay-monthly)** — [Zac Barclay](./people/zac-barclay.md) has promised to send ticket links. Pre-work needed before the meeting.
-- **[Pending Rewards](./projects/pending-rewards)** — [Nick Holt](./people/nick-holt.md) has drafted next steps tickets. Needs reworking ahead of the meeting; finish refinement and estimation in the meeting.
+- **Gateway Service** — [Jacek Zanko](./people/jacek-zanko.md) to propose next steps in the meeting; may result in ticket refinement.
+- **Pay Monthly** — [Zac Barclay](./people/zac-barclay.md) has promised to send ticket links. Pre-work needed before the meeting.
+- **Pending Rewards** — [Nick Holt](./people/nick-holt.md) has drafted next steps tickets. Needs reworking ahead of the meeting; finish refinement and estimation in the meeting.
 - **Defects** — Candidates: ZILCH-47174, 46150, 45502 (cleanest); 44467, 48542, 48154 (need more hygiene work). All missing story points at minimum. Hygiene fix to-do added to tasks.md.
 - **LaunchDarkly (ZILCH-46366)** — ZILCH-46367 is the only sprint-ready FE candidate; estimate in meeting, pull in if small. BE tickets (46369, 46370, 46371) blocked on FE audit.
 - **Security Remediations** — ZILCH-46296 (Apache Tomcat Path Traversal, data-consistency-service) is the best BE candidate at Ready for development. Use meeting time to refine 1–2 further BE tickets. FE has 3 tickets at Ready for development (ZILCH-47917, 47891, 46769), assigned to me — worth reassigning.
@@ -619,9 +619,9 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 
 1. Confirm capacity and carryover estimates
 2. Work streams:
-   - [Gateway Service](./projects/gateway-service) — [Jacek Zanko](./people/jacek-zanko.md) to propose next steps; refine tickets if needed
-   - [Pay Monthly](./projects/pay-monthly) — review and discuss [Zac Barclay](./people/zac-barclay.md)'s tickets
-   - [Pending Rewards](./projects/pending-rewards) — finish refinement and estimation on [Nick Holt](./people/nick-holt.md)'s tickets
+   - Gateway Service — [Jacek Zanko](./people/jacek-zanko.md) to propose next steps; refine tickets if needed
+   - Pay Monthly — review and discuss [Zac Barclay](./people/zac-barclay.md)'s tickets
+   - Pending Rewards — finish refinement and estimation on [Nick Holt](./people/nick-holt.md)'s tickets
    - Defects — estimate candidates and pull in (ZILCH-47174, 46150, 45502 are cleanest)
    - LaunchDarkly — estimate ZILCH-46367; pull in if small; backend tickets blocked on FE audit
    - Security Remediations — ZILCH-46296 ready to plan; refine 1–2 further BE tickets in meeting
@@ -631,7 +631,7 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 ### Merchant Standup
 
 * [ZILCH-40366](https://payzilch.atlassian.net/browse/ZILCH-40366) — [Jacek Zanko](./people/jacek-zanko.md): reviewed and tested, test evidence attached. Now with [Tom McKenzie](./people/tom-mckenzie.md) to sign off; [Tom McKenzie](./people/tom-mckenzie.md) wants to create a deployment plan.
-* [ZILCH-42041](https://payzilch.atlassian.net/browse/ZILCH-42041) — [PO-1957](https://payzilch.atlassian.net/browse/PO-1957) showing as waiting on Merchant for something. Will check in with [Charlie Hurst](./people/charlie-hurst.md) to clarify.
+* [ZILCH-42041](https://payzilch.atlassian.net/browse/ZILCH-42041) — [PO-1957](https://payzilch.atlassian.net/browse/PO-1957) showing as waiting on Merchant for something. Will check in with Charlie Hurst to clarify.
 * Playbooks — team have reviewed, updated, moving to done.
 * [ZILCH-47912](https://payzilch.atlassian.net/browse/ZILCH-47912) — [Ossie Nwokedi](./people/ossie-nwokedi.md) moving to review.
 * [ZILCH-35883](https://payzilch.atlassian.net/browse/ZILCH-35883) — Asked [Tom McKenzie](./people/tom-mckenzie.md) to try to reproduce the issue. To be closed if he cannot.
@@ -642,7 +642,7 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 * [Piotr Niebylski](./people/piotr-niebylski.md) declined today's 1:1 — something personal to attend to. Asked him to reschedule.
 * Booked leave for funeral.
 * Pre-refinement meeting with [Tom McKenzie](./people/tom-mckenzie.md) and [Zac Barclay](./people/zac-barclay.md).
-* Refinement meeting with the Merchant team. [Tamara Quinn](./people/tamara-quinn.md) joined for the first 25 minutes to discuss how rewards interact with her [Pay Monthly](./projects/pay-monthly) project. Also discussed [Nick Holt](./people/nick-holt.md)'s [Pending Rewards](./projects/pending-rewards) design in terms of work that can be refined into tickets.
+* Refinement meeting with the Merchant team. [Tamara Quinn](./people/tamara-quinn.md) joined for the first 25 minutes to discuss how rewards interact with her Pay Monthly project. Also discussed [Nick Holt](./people/nick-holt.md)'s pending rewards design in terms of work that can be refined into tickets.
 * Interviewed a candidate for an L4 Back End Engineer role (Krakow-based). Write-up pending.
 
 ### DevOps Flash Report
@@ -653,17 +653,17 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 * Jira config and hygiene work in preparation for adoption of hybrid Scrum/Kanban model.
 * Issues:
   * Difficulty working with the VGS API, making automation hard. [Nick Gilbert](./people/nick-gilbert.md) is working with their account manager to resolve.
-  * [EWA/Extra](./projects/ewa-extra) pivot caused disruption to the team.
+  * EWA/Extra pivot caused disruption to the team.
 
-### [EWA/Extra](./projects/ewa-extra) — Product & Planning Meeting
+### EWA/Extra — Product & Planning Meeting
 
 * Project on a tight schedule. Tech planning session requested ASAP — even ahead of product understanding being fully formed. Expectation is to iterate on a tight loop.
 * ExCo has requested a project plan by end of day, including an engineering plan.
 * [Zac Barclay](./people/zac-barclay.md) provided a product overview:
-  * [EWA](./projects/ewa-extra) (Earned Wage Access) is essentially a salary advance, available once a month.
+  * EWA (Earned Wage Access) is essentially a salary advance, available once a month.
   * Maximum of £100 or 20% of net monthly salary — whichever is lower.
   * Tied to a new membership tier called "Extra", charged at £2.99/month.
-  * [EWA](./projects/ewa-extra) is exclusive to the Extra tier — not available in Plus.
+  * EWA is exclusive to the Extra tier — not available in Plus.
   * No free trial for Extra.
   * Customers can borrow up to a week before their salary date.
   * A disbursement fee of £3 applies on each use.
@@ -673,9 +673,9 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 
 ### Merchant Stand-up
 
-* **ZILCH-40366** (Lambda authoriser / public retailer gateway) — [Jacek Zanko](./people/jacek-zanko.md) moved to peer review. Now has good tests that mock out the AWS API Gateway component, allowing it to be tested without a live AWS context. [Phil Stevenson](./people/phil-stevenson.md) reviewing from DevOps perspective.
-* **ZILCH-42041** (Decommission [fee-service](./projects/fee-service) MSSQL database) — no update. Still waiting on PO-1597 (Platform). Agreed to give them today; will chase on Monday if no movement.
-* **ZILCH-46901** (Partnerize / [Intelligent Commerce](./projects/intelligent-commerce)) — moved to Ready for Release.
+* **ZILCH-40366** (Lambda authoriser / public retailer gateway) — [Jacek Zanko](./people/jacek-zanko.md) moved to peer review. Now has good tests that mock out the AWS API Gateway component, allowing it to be tested without a live AWS context. [Phil Stephenson](./people/phil-stephenson.md) reviewing from DevOps perspective.
+* **ZILCH-42041** (Decommission fee-service MSSQL database) — no update. Still waiting on PO-1597 (Platform). Agreed to give them today; will chase on Monday if no movement.
+* **ZILCH-46901** (Partnerize / Intelligent Commerce) — moved to Ready for Release.
 * **ZILCH-46517** (Fee-change playbooks) — [Michal Baran](./people/michal-baran.md) working through feedback; agrees it makes sense. Reminded the team he's on leave Monday, then moves to a new team.
 * **ZILCH-35883** (Storefront rails clip right edge) — no change. Still waiting on [Tom McKenzie](./people/tom-mckenzie.md) to attempt recreation. [Ossie Nwokedi](./people/ossie-nwokedi.md) will look for something else to bring in. Noted: if we can't recreate, we should close it rather than sit on it.
 * Burndown looking healthy approaching end of sprint — on track for an excellent sprint. **Retro item**: what did we do right this time that we can replicate?
@@ -684,21 +684,21 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 
 * Issue with rewards service release from last week resolved — re-released with LD switch in place for blocking rewards on late payments.
 * Race condition between offer service and product service detected and resolved.
-* [Pending Rewards](./projects/pending-rewards): design work done, approved by team, pending architecture review.
-* [Incident-452](./incidents/incident-452.md): front end defect (ZILCH-48105) at root cause fixed.
-* [Intelligent Commerce](./projects/intelligent-commerce): integration with Partnerize tested with third party and approved.
+* Pending Rewards: design work done, approved by team, pending architecture review.
+* Incident 452: front end defect (ZILCH-48105) at root cause fixed.
+* Intelligent Commerce: integration with Partnerize tested with third party and approved.
 * Feature Flag Hygiene initiative: back end codebases audited for feature flags.
 * Removed unused endpoint on retailer service.
 * Refresh tokens properly used in web — now compatible with mobile front end.
-* [Gateway Service](./projects/gateway-service): authoriser lambda done pending review by DevOps. Next steps: build retailer service gateway.
-* Issue: observed unexpected spike in latency on [fee-service](./projects/fee-service). Appears to have been caused by noisy neighbours — a concern given the expectation that the move to Aurora would isolate us.
+* Gateway Service: authoriser lambda done pending review by DevOps. Next steps: build retailer service gateway.
+* Issue: observed unexpected spike in latency on fee-service. Appears to have been caused by noisy neighbours — a concern given the expectation that the move to Aurora would isolate us.
 
 ## 2026-02-19
 
-* Signed off ZILCH-48355 (bottom rail hidden), ZILCH-43416 ([fee-service](./projects/fee-service) sanity test failure), ZILCH-48222 ([Pending Rewards](./projects/pending-rewards) Technical Discovery & Design).
-* Reviewed and commented on [Michal Baran](./people/michal-baran.md)'s [fee-service](./projects/fee-service) playbooks (ZILCH-46517).
-* Met with Merchant BE engineers to discuss cross-team dependencies for [Pending Rewards](./projects/pending-rewards). Concluded that feature-level events are the preferred approach — would require support from Decisioning.
-* Backlog hygiene work for [DevOps Process](./projects/devops-process) project, including a session with the team.
+* Signed off ZILCH-48355 (bottom rail hidden), ZILCH-43416 (fee-service sanity test failure), ZILCH-48222 (Pending Rewards Technical Discovery & Design).
+* Reviewed and commented on [Michal Baran](./people/michal-baran.md)'s fee-service playbooks (ZILCH-46517).
+* Met with Merchant BE engineers to discuss cross-team dependencies for Pending Rewards. Concluded that feature-level events are the preferred approach — would require support from Decisioning.
+* Backlog hygiene work for DevOps process project, including a session with the team.
 
 ### 1:1 — [Tom McKenzie](./people/tom-mckenzie.md)
 
@@ -741,48 +741,48 @@ Worked through engineering work streams ahead of tomorrow's planning meeting. Ca
 
 ### Merchant Stand-up
 
-* **ZILCH-40366** (Lambda authorizer / public retailer gateway, In Dev) — [Jacek Zanko](./people/jacek-zanko.md) cleaned up Terraform; asked [Phil Stevenson](./people/phil-stevenson.md) to review. [Michal Baran](./people/michal-baran.md) writing E2E tests ahead of deployment while waiting for DevOps.
+* **ZILCH-40366** (Lambda authorizer / public retailer gateway, In Dev) — [Jacek Zanko](./people/jacek-zanko.md) cleaned up Terraform; asked [Phil Stephenson](./people/phil-stephenson.md) to review. [Michal Baran](./people/michal-baran.md) writing E2E tests ahead of deployment while waiting for DevOps.
 * **Partnerize** — [Jacek Zanko](./people/jacek-zanko.md). Tested service sending test data to Partnerize successfully. One URL parameter remaining; should be done.
-* **ZILCH-42041** (Decommission [fee-service](./projects/fee-service) MSSQL database, In Dev) — [Michal Baran](./people/michal-baran.md). [Charlie Hurst](./people/charlie-hurst.md) (Platform) about to drop the MSSQL tables; progress at Platform (PO-1597). Still waiting.
+* **ZILCH-42041** (Decommission fee-service MSSQL database, In Dev) — [Michal Baran](./people/michal-baran.md). Charlie (Platform) about to drop the MSSQL tables; progress at Platform (PO-1597). Still waiting.
 * **ZILCH-46517** (Fee-change playbooks, In PR) — [Michal Baran](./people/michal-baran.md). Playbooks written and in PR; [Jacek Zanko](./people/jacek-zanko.md) reviewed and added comments on 18 Feb. [Michal Baran](./people/michal-baran.md) will share Confluence links in Slack. Confluence page already carries a production-use disclaimer (tested in QA-SIT only) — asked [Michal Baran](./people/michal-baran.md) to note this in the docs, which he has done.
 * **ZILCH-48222 and ZILCH-43416** — both ready for my sign-off.
 * **ZILCH-48355** (Bottom rail hidden on online/storefront tabs, In PR) — [Ossie Nwokedi](./people/ossie-nwokedi.md). Bug vs Defect debate resolved: [Ossie Nwokedi](./people/ossie-nwokedi.md) downgraded to Bug — introduced during development, not in the current production release (2.44.0).
 * **ZILCH-43416** (Fee-service timeout causes sanity test failure) — [Michal Baran](./people/michal-baran.md). Analysed test failures; concludes the issue is no longer a problem. Moving to Ready for Sign-off.
 * **ZILCH-35883** (Storefront rails clip right edge, In Dev) — [Ossie Nwokedi](./people/ossie-nwokedi.md). Brought into sprint on spare capacity; cannot recreate. Asked [Tom McKenzie](./people/tom-mckenzie.md) to try on a physical device. May be closeable.
-* **DataDog alert** — [Michal Baran](./people/michal-baran.md) spotted a latency spike on [fee-service](./projects/fee-service). Root cause: wallet-providers-service was consuming product change events from Underwriting's bulk upgrade job (22k records at 10/s) and was missing a database index — causing slow queries on the Aurora issuer cluster. No SLA breach (p99 ~50ms vs 100ms limit). [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) raised a broader concern: Aurora was partly adopted to prevent noisy neighbour problems, but this suggests that hasn't fully been achieved. Platform (Charlie Hurst / Benjamin Ibrulj) investigating.
-* **[Pending Rewards](./projects/pending-rewards)** — [Nick Holt](./people/nick-holt.md) chasing what events are available to drive cancellation of [Pending Rewards](./projects/pending-rewards), and what event signals loss of a feature.
+* **DataDog alert** — [Michal Baran](./people/michal-baran.md) spotted a latency spike on fee-service. Root cause: wallet-providers-service was consuming product change events from Underwriting's bulk upgrade job (22k records at 10/s) and was missing a database index — causing slow queries on the Aurora issuer cluster. No SLA breach (p99 ~50ms vs 100ms limit). Grzegorz Ziemiański raised a broader concern: Aurora was partly adopted to prevent noisy neighbour problems, but this suggests that hasn't fully been achieved. Platform (Charlie Hurst / Benjamin Ibrulj) investigating.
+* **Pending Rewards** — [Nick Holt](./people/nick-holt.md) chasing what events are available to drive cancellation of pending rewards, and what event signals loss of a feature.
 
-### [Aurora Connectivity](./projects/aurora-connectivity-issue) Issue
+### Aurora Connectivity Issue
 
-Sent a message to [Nick Holt](./people/nick-holt.md), [Charlie Hurst](./people/charlie-hurst.md), and [Phil Stevenson](./people/phil-stevenson.md) (covering Merchant, Platform, and DevOps) to chase down the outstanding risk assessment on the [Aurora Connectivity](./projects/aurora-connectivity-issue) issue. Framed the issue as a combination of two factors: (1) Aurora infrastructure changes for regional failover, and (2) a Dependabot-instigated JDBC library upgrade — the two together meaning that the `globalClusterInstanceHostPatterns` config was now required but not set. Asked three questions:
+Sent a message to [Nick Holt](./people/nick-holt.md), Charlie Hurst, and [Phil Stephenson](./people/phil-stephenson.md) Stevenson (covering Merchant, Platform, and DevOps) to chase down the outstanding risk assessment on the Aurora connectivity issue. Framed the issue as a combination of two factors: (1) Aurora infrastructure changes for regional failover, and (2) a Dependabot-instigated JDBC library upgrade — the two together meaning that the `globalClusterInstanceHostPatterns` config was now required but not set. Asked three questions:
 1. Is that summary accurate?
 2. Do we know that all services currently running in production on Aurora will restart if needed?
 3. Are there any other ways this could bite us in production?
 
-Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and [Nick Holt](./people/nick-holt.md). Conclusion: **production is safe**. The issue is specific to v3 of the AWS JDBC driver — v2 is unaffected. Since cross-region Aurora clusters have been in production for 3–6 months (predating the v3 driver), any service currently running in production was deployed on v2 by definition. EHI was the first service to hit the problem in production (having been upgraded to v3), failed on deploy, config was fixed, now running. [Charlie Hurst](./people/charlie-hurst.md) deployed eu-west-2 Aurora nodes to all staging clusters on 18 Feb, which will surface any non-compliant services before they reach production. Full thread logged in the aurora-connectivity-issue project.
+Received immediate responses from Charlie Hurst and [Nick Holt](./people/nick-holt.md). Conclusion: **production is safe**. The issue is specific to v3 of the AWS JDBC driver — v2 is unaffected. Since cross-region Aurora clusters have been in production for 3–6 months (predating the v3 driver), any service currently running in production was deployed on v2 by definition. EHI was the first service to hit the problem in production (having been upgraded to v3), failed on deploy, config was fixed, now running. Charlie deployed eu-west-2 Aurora nodes to all staging clusters on 18 Feb, which will surface any non-compliant services before they reach production. Full thread logged in the aurora-connectivity-issue project.
 
 ### Slack Digest — 19 Feb
 
-#### [EWA/Extra](./projects/ewa-extra)
-* Extra tier pricing confirmed at £2.99/month; [EWA](./projects/ewa-extra) will only be launched within the Membership structure, not as a standalone product.
-* Plaid products to support [EWA](./projects/ewa-extra): Auth, Assets, and Bank Income Verification.
+#### EWA/Extra
+* Extra tier pricing confirmed at £2.99/month; EWA will only be launched within the Membership structure, not as a standalone product.
+* Plaid products to support EWA: Auth, Assets, and Bank Income Verification.
 * [Rob Nelson](./people/rob-nelson.md) proposed creating an "ewa-7day" loan product, adding it to all product-lines, and configuring it as a feature inside the Plus and Extra tiers.
-* [Radek Kachel](./people/radek-kachel.md)'s move to the Spend Platform team has been postponed until end of March to help de-risk [EWA](./projects/ewa-extra) delivery — specifically the Payouts component.
-* [Steve Rayko](./people/steve-rayko.md) stated that [Pay Monthly](./projects/pay-monthly) is higher priority than [EWA](./projects/ewa-extra), and that this lens needs to be applied. Notable given the urgency around [EWA](./projects/ewa-extra) — suggests [EWA](./projects/ewa-extra) shouldn't come at the expense of [Pay Monthly](./projects/pay-monthly).
+* Radek Kachel's move to the Spend Platform team has been postponed until end of March to help de-risk EWA delivery — specifically the Payouts component.
+* Steve Rayko stated that Pay Monthly is higher priority than EWA, and that this lens needs to be applied. Notable given the urgency around EWA — suggests EWA shouldn't come at the expense of Pay Monthly.
 
 #### DevOps Team
-* [Phil Stevenson](./people/phil-stevenson.md) handled multiple support requests: Terraform plan failure investigation ([Tomasz Surowiec](./people/tomasz-surowiec.md)), branch deploy failures ([Jakub Zrebiec](./people/jakub-zrebiec.md)), event processing delays in QA-SIT causing e2e test failures ([Jakub Pałka](./people/jakub-palka.md)/[Nikos Sofianos](./people/nikos-sofianos.md)), Lambda throttling monitoring discussion ([Matt Garfitt](./people/matt-garfitt.md)).
-* LinearB missing releases: [Marcin Żołna](./people/marcin-zolna.md) flagged releases absent from the dashboard. [Phil Stevenson](./people/phil-stevenson.md) is investigating — suspects disconnected branches may be the cause. May need to engage LinearB support directly.
-* [Nick Holt](./people/nick-holt.md) requested [Phil Stevenson](./people/phil-stevenson.md) to review a small Dependabot config change.
+* [Phil Stephenson](./people/phil-stephenson.md) Stevenson handled multiple support requests: Terraform plan failure investigation (Tomasz Surowiec), branch deploy failures (Jakub Zrebiec), event processing delays in QA-SIT causing e2e test failures (Jakub Pałka/[Nikos Sofianos](./people/nikos-sofianos.md)), Lambda throttling monitoring discussion (Matt Garfitt).
+* LinearB missing releases: Marcin Żołna flagged releases absent from the dashboard. [Phil Stephenson](./people/phil-stephenson.md) is investigating — suspects disconnected branches may be the cause. May need to engage LinearB support directly.
+* [Nick Holt](./people/nick-holt.md) requested [Phil Stephenson](./people/phil-stephenson.md) to review a small Dependabot config change.
 
 #### Merchant/Rewards
 * [Ossie Nwokedi](./people/ossie-nwokedi.md) raised a UX question in dev-purchase: the rewards toggle is disabled on Anywhere ECJ for non-subscribers, which could confuse some customers. He floated the idea of using this as an opportunity to educate or direct them to upgrade. Worth keeping in mind as a potential improvement.
 
 #### Aurora (Platform)
 * [Rob Nelson](./people/rob-nelson.md) and Benjamin Ibrulj are investigating potential Aurora database performance issues, exploring optimisations and possibly running parallel RDS instances.
-* [Matt Swirski](./people/matt-swirski.md) shared details of a planned production change: EC-2049 — new Aurora Indexes.
+* Matt shared details of a planned production change: EC-2049 — new Aurora Indexes.
 
-#### [New Web](./projects/new-web)
+#### New Web
 * [Chris Walker](./people/chris-walker.md) asked [Nick Gilbert](./people/nick-gilbert.md) what pen-testers should focus on for the new web app, following completion of production deployment work.
 
 ## 2026-02-18
@@ -795,19 +795,19 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 * Rescheduled Merchant and DevOps stand-ups — more time for Merchant stand-up and better chance of making the DevOps one on time.
 * Scheduled regular refinement meetings for the DevOps team.
 
-* Reviewed Memberships Strategy presentation from [Zac Barclay](./people/zac-barclay.md) — feels out of date given [EWA/Extra](./projects/ewa-extra) pivot.
+* Reviewed Memberships Strategy presentation from [Zac Barclay](./people/zac-barclay.md) — feels out of date given EWA/Extra pivot.
 * Reviewed backlog track assignments with the DevOps team in a meeting. Almost everything ended up in the 'planned work' track. This likely means the team isn't creating tickets for reactive work rather than there being less of it than expected — reinforces the need for the Slack-to-ticket automation investigation.
-* Checked in with [Nikos Sofianos](./people/nikos-sofianos.md) on Zephyr Zero testing progress. Two blockers being worked on: a VGS issue and work on the test lambda (which allows test state management via direct DB SQL queries) — both prevent test users from acting as customers signing up on the environments. [Radek Kachel](./people/radek-kachel.md) is working on the lambda.
+* Checked in with [Nikos Sofianos](./people/nikos-sofianos.md) on Zephyr Zero testing progress. Two blockers being worked on: a VGS issue and work on the test lambda (which allows test state management via direct DB SQL queries) — both prevent test users from acting as customers signing up on the environments. Radek Kachel is working on the lambda.
 * [Rory Fielding](./people/rory-fielding.md)'s query answered by [Kieren Messenger](./people/kieren-messenger.md) and [Tom McKenzie](./people/tom-mckenzie.md). [Rory Fielding](./people/rory-fielding.md) picking up ZILCH-48181 (storefront tabs/search don't fit on Android with max display size). ZILCH-48355 (bottom rail hidden on online/storefront tabs) is In PR and ready for peer review.
 * Pinged [Nikos Sofianos](./people/nikos-sofianos.md) to confirm who's working on the test lambda for Zephyr Zero.
 * [Ossie Nwokedi](./people/ossie-nwokedi.md) out of tickets — suggested he pick up ZILCH-35883 (storefront rails right-edge clipping), already In Dev and previously started. Bias towards finishing in-progress work before starting new.
 * Worked through ticket sign-offs. Signed off six tickets: ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query), ZILCH-48248 (race condition fix), ZILCH-40343 (refresh token session renewal), ZILCH-46901 (Partnerize integration), ZILCH-47687 (Pro rewards label on purchases page), ZILCH-48105 (WebSocket/IDV deadlock fix). All moved to Ready for Release.
 * Created `tech-zilch-pro` Slack channel for coordination on the Pro project, especially roll-out planning. Public channel; starting with a focussed list and expecting it to grow organically.
-* Drafted [Zilch Pro](./projects/zilch-pro) Release Plan page for Confluence. Collaborative document for cross-team contributors to capture release steps per feature. Seeded with feature list from the product overview, roll-out plan from discussions with [Nikos Sofianos](./people/nikos-sofianos.md)/[Zac Barclay](./people/zac-barclay.md)/Ethan, and the key constraint that customer availability is gated on partnership delivery. Remaining work: add Confluence-specific macros directly in Confluence.
+* Drafted Zilch Pro Release Plan page for Confluence. Collaborative document for cross-team contributors to capture release steps per feature. Seeded with feature list from the product overview, roll-out plan from discussions with [Nikos Sofianos](./people/nikos-sofianos.md)/[Zac Barclay](./people/zac-barclay.md)/Ethan, and the key constraint that customer availability is gated on partnership delivery. Remaining work: add Confluence-specific macros directly in Confluence.
 
-* Read [Nick Holt](./people/nick-holt.md)'s [Pending Rewards](./projects/pending-rewards) design overview (Confluence: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230/Pending+Rewards+Design+Overview+V2). Straightforward read. Shared observations in the team Slack channel.
-* Posted to Slack that the imminent blocker on [Pending Rewards](./projects/pending-rewards) is [Kieren Messenger](./people/kieren-messenger.md) producing designs for how [Pending Rewards](./projects/pending-rewards) should be displayed.
-* Raised question in Slack for [Zac Barclay](./people/zac-barclay.md): should expiry logic extend to [Pending Rewards](./projects/pending-rewards)? Outlined a scenario where rewards could legitimately stay pending for a long time (e.g. referral rewards that realise only when a referral is made).
+* Read [Nick Holt](./people/nick-holt.md)'s Pending Rewards design overview (Confluence: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230/Pending+Rewards+Design+Overview+V2). Straightforward read. Shared observations in the team Slack channel.
+* Posted to Slack that the imminent blocker on pending rewards is [Kieren Messenger](./people/kieren-messenger.md) producing designs for how pending rewards should be displayed.
+* Raised question in Slack for [Zac Barclay](./people/zac-barclay.md): should expiry logic extend to pending rewards? Outlined a scenario where rewards could legitimately stay pending for a long time (e.g. referral rewards that realise only when a referral is made).
 * Raised question for [Tom McKenzie](./people/tom-mckenzie.md): whether he's familiar enough with [Nick Holt](./people/nick-holt.md)'s proposal to define the tests required.
 * Raised question for [Nick Holt](./people/nick-holt.md): need to define what triggers reversal of a pending reward on late payment. Expectation is immediate removal, requiring a listener on payment events.
 
@@ -815,45 +815,45 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 
 #### Merchant Team
 * [Tom McKenzie](./people/tom-mckenzie.md) raised concerns in support-merchant that velocity limits may prevent users from fully redeeming rewards before an upcoming deadline — potential customer experience issue.
-* [Paweł Wasielewski](./people/pawel-wasielewski.md) plans to release Mixpanel Lambda v1.113.0 (switching purchase_successful event source from customer-service to purchase-service). EC ticket approved.
-* [Paweł Pęcikiewicz](./people/pawel-pecikiewicz.md) requested review of PR for My Plan screen rework — extracting logic into custom hooks, modular components, parallax/fade animations.
+* Paweł Wasielewski plans to release Mixpanel Lambda v1.113.0 (switching purchase_successful event source from customer-service to purchase-service). EC ticket approved.
+* Paweł Pęcikiewicz requested review of PR for My Plan screen rework — extracting logic into custom hooks, modular components, parallax/fade animations.
 
 #### DevOps Team
-* [Phil Stevenson](./people/phil-stevenson.md) and [Nick Gilbert](./people/nick-gilbert.md) worked through deployment issues: IP exhaustion and RBAC permission problems blocking releases for various services.
+* [Phil Stephenson](./people/phil-stephenson.md) and [Nick Gilbert](./people/nick-gilbert.md) worked through deployment issues: IP exhaustion and RBAC permission problems blocking releases for various services.
 * [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md) resolved IP pool issue that was causing Argo deployment failures.
 * [Nick Holt](./people/nick-holt.md) requested review for a logging configuration change in prod.
-* [Piotr Niebylski](./people/piotr-niebylski.md) questioned why credit-risk-service accesses other services' DynamoDB tables and SQS queues directly. [Marcin Żołna](./people/marcin-zolna.md) explained it's temporary — part of graduation logic migration from decisioning-service to credit-risk-service; may refactor direct SQS to private API gateway.
+* [Piotr Niebylski](./people/piotr-niebylski.md) questioned why credit-risk-service accesses other services' DynamoDB tables and SQS queues directly. Marcin Żołna explained it's temporary — part of graduation logic migration from decisioning-service to credit-risk-service; may refactor direct SQS to private API gateway.
 
-#### [EWA](./projects/ewa-extra) / Open Banking
-* [Rob Nelson](./people/rob-nelson.md) pushing hard on open banking integration for [EWA](./projects/ewa-extra). Wants a BE engineer to start immediately. Martin Thorlby-Witham suggested reusing existing open banking service (already has Plaid US components). [Rob Nelson](./people/rob-nelson.md) agreed. Confirms [EWA/Extra](./projects/ewa-extra) reprioritisation pressure.
+#### EWA / Open Banking
+* [Rob Nelson](./people/rob-nelson.md) pushing hard on open banking integration for EWA. Wants a BE engineer to start immediately. Martin Thorlby-Witham suggested reusing existing open banking service (already has Plaid US components). [Rob Nelson](./people/rob-nelson.md) agreed. Confirms EWA/Extra reprioritisation pressure.
 
 #### Other
 * [Rory Fielding](./people/rory-fielding.md) noted in eol-device-restrictions that Expo 56 (expected ~May) will increase minimum iOS version — another comms exercise later this year.
 * [Chris Walker](./people/chris-walker.md) confirmed new web app flag active in staging; showed it during scoping call with third party.
-* [Marcin Żołna](./people/marcin-zolna.md)'s product-1.49.0 deployment passed 395 tests but failed 32.
+* Marcin Żołna's product-1.49.0 deployment passed 395 tests but failed 32.
 
-### [EWA/Extra](./projects/ewa-extra) Meeting
+### EWA/Extra Meeting
 - [Zac Barclay](./people/zac-barclay.md) briefed on the feature. Nothing substantially new.
 - No work identified for Merchant at this stage — I flagged this and nobody challenged.
 - Possible work for DevOps on the open banking side. I flagged this and asked to be told of any requests ASAP.
   - [Rob Nelson](./people/rob-nelson.md) thinks the work would be minimal: an OpenBanking integration capability already exists in production, built for earlier initiatives that were mothballed. The capability itself was never decommissioned.
   - I was surprised — I'd assumed the previous OpenBanking work had been fully mothballed, but only the initiatives were, not the underlying integration.
 - Significant product complexity and edge cases still unresolved:
-  - Free trials for membership tiers: want to withhold [EWA](./projects/ewa-extra) benefit until first payment taken (not available on free trial).
-  - Given Extra only gives you [EWA](./projects/ewa-extra), a free trial has questionable value.
-  - But then why wouldn't customers just get a free Plus trial? Except they wouldn't have access to [EWA](./projects/ewa-extra) until after payment either.
-  - Would customers lose [EWA](./projects/ewa-extra) benefit if a membership payment is late? Only regain when caught up?
+  - Free trials for membership tiers: want to withhold EWA benefit until first payment taken (not available on free trial).
+  - Given Extra only gives you EWA, a free trial has questionable value.
+  - But then why wouldn't customers just get a free Plus trial? Except they wouldn't have access to EWA until after payment either.
+  - Would customers lose EWA benefit if a membership payment is late? Only regain when caught up?
   - Lots of product refinement still to go.
-- Pro not being dropped but is lower priority than [EWA/Extra](./projects/ewa-extra).
+- Pro not being dropped but is lower priority than EWA/Extra.
 - Cross-team lead roles:
-  - Product: [Zac Barclay](./people/zac-barclay.md) on Extra, [Michael Charash](./people/michael-charash.md) on [EWA](./projects/ewa-extra).
+  - Product: [Zac Barclay](./people/zac-barclay.md) on Extra, Michael Charash on EWA.
   - Tech: not confirmed yet. [Rob Nelson](./people/rob-nelson.md) thinks it will be him and [Andrzej Lorenz](./people/andrzej-lorenz.md).
 - [Rob Nelson](./people/rob-nelson.md) is very concerned about front-end capacity across the department.
 - Target delivery by end of March confirmed — very aggressive.
 
-* 1:1 with [Phil Stevenson](./people/phil-stevenson.md). Generally OK but frustrated by the pace of pivots and concerned about quality erosion. Busy with FinCrime fraud work. Optimistic about the new DevOps operating model. Three actions: automate Slack-to-ticket flow for reactive work, set up rotation tag and retire OpsGenie, and lean in on Zephyr Zero debugging.
-* [EWA](./projects/ewa-extra) sentiment: [Phil Stevenson](./people/phil-stevenson.md)'s discomfort with the [EWA](./projects/ewa-extra) pivot is not isolated. Anecdotal evidence that similar concerns are shared by other ICs and at least one manager. Worth monitoring — this is a values-based concern, not just a workload one.
-* Deferred review of [Nick Holt](./people/nick-holt.md)'s [Pending Rewards](./projects/pending-rewards) design write-up (ZILCH-48222) — not a blocker (he's seeking peer reviews from other engineers); will pick up tomorrow.
+* 1:1 with [Phil Stephenson](./people/phil-stephenson.md). Generally OK but frustrated by the pace of pivots and concerned about quality erosion. Busy with FinCrime fraud work. Optimistic about the new DevOps operating model. Three actions: automate Slack-to-ticket flow for reactive work, set up rotation tag and retire OpsGenie, and lean in on Zephyr Zero debugging.
+* EWA sentiment: [Phil Stephenson](./people/phil-stephenson.md)'s discomfort with the EWA pivot is not isolated. Anecdotal evidence that similar concerns are shared by other ICs and at least one manager. Worth monitoring — this is a values-based concern, not just a workload one.
+* Deferred review of [Nick Holt](./people/nick-holt.md)'s pending rewards design write-up (ZILCH-48222) — not a blocker (he's seeking peer reviews from other engineers); will pick up tomorrow.
 * Set up firefighter tag in tech-devops channel and retired OpsGenie for the rotation. Explored auto-response via Slack Workflow Builder to nudge people away from the team user group, but Slack doesn't support triggers based on user group mentions. Settled on updating the channel topic as a low-tech alternative for now.
 * Scheduled regular DevOps retro.
 * Scheduled regular rota review meeting — first session on 2 March. Plan for the first few sessions: information-gathering only, walking through each alert from the previous fortnight to understand root causes. No solutionising until there's a month or two of data.
@@ -862,10 +862,10 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 
 ### Merchant Stand-up
 - Plenty of tickets at 'ready for review' — need to work through sign-offs.
-- ZILCH-40366 ([Gateway Service](./projects/gateway-service) authoriser): ready to go to prod. [Tom McKenzie](./people/tom-mckenzie.md)'s concerns satisfied on the basis that it won't be in active use yet — just available in production.
+- ZILCH-40366 (gateway service authoriser): ready to go to prod. [Tom McKenzie](./people/tom-mckenzie.md)'s concerns satisfied on the basis that it won't be in active use yet — just available in production.
 - ZILCH-42041: Platform only just picked up their part. [Michal Baran](./people/michal-baran.md) continues to track.
 - ZILCH-46517 (fee service playbooks): [Michal Baran](./people/michal-baran.md) done, in review with [Jacek Zanko](./people/jacek-zanko.md). [Michal Baran](./people/michal-baran.md) wants to 'test' the playbooks by running through them in dev.
-- ZILCH-48222 ([Pending Rewards](./projects/pending-rewards) design): [Nick Holt](./people/nick-holt.md) basically done. Wants review.
+- ZILCH-48222 (pending rewards design): [Nick Holt](./people/nick-holt.md) basically done. Wants review.
 - ZILCH-48355 (bottom rail hidden on online/storefront tabs): in progress with [Ossie Nwokedi](./people/ossie-nwokedi.md). Looks like it might be Android only. Trying to recreate.
 
 ## 2026-02-17
@@ -876,24 +876,24 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 * [Michal Baran](./people/michal-baran.md) active in dev-payments: reported duplicate loan completion messages for a single loan, and created a Jira task to implement an API endpoint to track membership feature changes history. The latter likely relates to the continuity of membership work for Decisioning.
 * Pre-refinement meeting with [Tom McKenzie](./people/tom-mckenzie.md) and [Zac Barclay](./people/zac-barclay.md) — discussed the three tickets (ZILCH-48444, ZILCH-48520, ZILCH-48543) subsequently worked up in the backlog authoring session.
 * Engineering Leadership Sync meeting:
-  - [Marcin Zolna](./people/marcin-zolna.md) shared his team's KPIs for the last five sprints.
+  - Marcin Zolna shared his team's KPIs for the last five sprints.
   - Shared feedback from [Alex Murphy](./people/alex-murphy.md)'s exit interview.
-  - Discussed a strategic pivot: new ask to deliver an [EWA](./projects/ewa-extra) tied to a new membership tier by end of March.
+  - Discussed a strategic pivot: new ask to deliver an EWA tied to a new membership tier by end of March.
   - Discussion about backfills for staff moved to the new Spend Platform team.
 * Merchant team Ops hand-off — regular rotation handover meeting. Discussed ZILCH-48542 (add DB-level unique constraint to prevent duplicate rewards on LoanCompleted events), which ties to the duplicate loan completion messages [Michal Baran](./people/michal-baran.md) flagged in dev-payments.
-* Merchant refinement meeting — refined and estimated ZILCH-48520 (Correct banner copy for Anywhere unlock) and ZILCH-48543 (Add rotating banner to Categories page), plus the defect ZILCH-48542. Left ZILCH-48444 (Exclude boost from rewards calculation) unestimated — [Zac Barclay](./people/zac-barclay.md) wants to sense-check it with Tom Wood first. Good call: the ask seems odd — offering rewards only on the loan portion doesn't make sense given that we normally only offer rewards on debit purchases (effectively 100% boost) and not credit purchases. Attempted to story out epic ZILCH-47121 ([Pending Rewards](./projects/pending-rewards)) but didn't get far — the epic went to "In Dev" before being storied out (not great practice but not unusual at Zilch); the first task was to produce a design that would inform the remaining tickets.
+* Merchant refinement meeting — refined and estimated ZILCH-48520 (Correct banner copy for Anywhere unlock) and ZILCH-48543 (Add rotating banner to Categories page), plus the defect ZILCH-48542. Left ZILCH-48444 (Exclude boost from rewards calculation) unestimated — [Zac Barclay](./people/zac-barclay.md) wants to sense-check it with Tom Wood first. Good call: the ask seems odd — offering rewards only on the loan portion doesn't make sense given that we normally only offer rewards on debit purchases (effectively 100% boost) and not credit purchases. Attempted to story out epic ZILCH-47121 (Pending Rewards) but didn't get far — the epic went to "In Dev" before being storied out (not great practice but not unusual at Zilch); the first task was to produce a design that would inform the remaining tickets.
 * Continued working on backlog-authoring standards and tooling within this knowledge base system, including authoring the Categories Banner epic (ZILCH-48546).
 
 ## 2026-02-16
 
-* Met with DevOps team to refine and task out ZILCH-47773 (prepare environments for customer-web-app deployments). Also added ZILCH-48449 (infrastructure remediation for pen test findings) to the [New Web](./projects/new-web) epic. Estimated effort suggests ZILCH-47773 could take the full sprint.
-* [Gateway Service](./projects/gateway-service) next-steps meeting. Decided to take the iterative approach: deploy the new authoriser Lambda for authorisation while continuing to use customer-service for other gateway functions, rather than building a full gateway-service before going to production.
-* Met with Decisioning (Tomasz Więckowski, [John Strawhorne](./people/john-strawhorne.md)) and [Michal Baran](./people/michal-baran.md) re continuity of membership requirements. Decisioning seemed to assume Merchant would already be cracking on with the work based on previous conversations — similar attitude to [Tommy Kwok](./people/tommy-kwok.md) recently. In reality, there are still gaps in the definition that need filling from their side. After discussion, agreed an approach: Decisioning need to provide new APIs for understanding longevity of features per customer. Onus is with them, not Merchant. [Michal Baran](./people/michal-baran.md) to write up a Jira ticket for Decisioning to refine and estimate.
+* Met with DevOps team to refine and task out ZILCH-47773 (prepare environments for customer-web-app deployments). Also added ZILCH-48449 (infrastructure remediation for pen test findings) to the new-web epic. Estimated effort suggests ZILCH-47773 could take the full sprint.
+* Gateway service next-steps meeting. Decided to take the iterative approach: deploy the new authoriser Lambda for authorisation while continuing to use customer-service for other gateway functions, rather than building a full gateway-service before going to production.
+* Met with Decisioning (Tomasz Więckowski, John Strawhorne) and [Michal Baran](./people/michal-baran.md) re continuity of membership requirements. Decisioning seemed to assume Merchant would already be cracking on with the work based on previous conversations — similar attitude to Tommy recently. In reality, there are still gaps in the definition that need filling from their side. After discussion, agreed an approach: Decisioning need to provide new APIs for understanding longevity of features per customer. Onus is with them, not Merchant. [Michal Baran](./people/michal-baran.md) to write up a Jira ticket for Decisioning to refine and estimate.
 * 1:1 with [Andrzej Lorenz](./people/andrzej-lorenz.md)
 * Published DevOps operating model announcement to engineering-wide Slack channel: hybrid Scrum/Kanban from Sprint 11.4, with fixed capacity reserved for reactive work.
 * [Tom McKenzie](./people/tom-mckenzie.md) presented defect analysis findings to the Merchant team (with [Nikos Sofianos](./people/nikos-sofianos.md)). Stats and insights were reasonable. Follow-up workshop on common root causes was unstructured and unhelpful — [Tom McKenzie](./people/tom-mckenzie.md) picked on people randomly with oddly specific questions, not necessarily related to their function or domain. Little gained from it.
 * Approved EC-2001 and EC-1999.
-* Slack conversation with [Rob Nelson](./people/rob-nelson.md) re [New Web](./projects/new-web) prioritisation. [Rob Nelson](./people/rob-nelson.md) raised concern that dev/staging setup vs productionised could be significantly more work. Agreed to prioritise for Sprint 11.4, starting next week. Target: ready by end of the iteration, giving 11.5 to finalise. [Rob Nelson](./people/rob-nelson.md) happy with the plan.
+* Slack conversation with [Rob Nelson](./people/rob-nelson.md) re new-web prioritisation. [Rob Nelson](./people/rob-nelson.md) raised concern that dev/staging setup vs productionised could be significantly more work. Agreed to prioritise for Sprint 11.4, starting next week. Target: ready by end of the iteration, giving 11.5 to finalise. [Rob Nelson](./people/rob-nelson.md) happy with the plan.
 
 ### Completed tasks
 - Wrote up [Nick Holt](./people/nick-holt.md)'s 1:1 notes from 11th Feb.
@@ -904,12 +904,12 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 
 ### Stand-up
 - [Jacek Zanko](./people/jacek-zanko.md): affiliate integration service (ZILCH-46901, Partnerize) — found and resolved concurrency problems at higher volumes during testing. Thinks it's ready for production. Will move to sign-off. Platform blockers removed with temporary solution.
-- [Jacek Zanko](./people/jacek-zanko.md): [Gateway Service](./projects/gateway-service) — authoriser ready for review. Has doubts about how to go to production. Will organise a meeting with stakeholders to take forward.
+- [Jacek Zanko](./people/jacek-zanko.md): gateway service — authoriser ready for review. Has doubts about how to go to production. Will organise a meeting with stakeholders to take forward.
 - [Michal Baran](./people/michal-baran.md): toggle backfill done and in sign-off.
 - [Michal Baran](./people/michal-baran.md): getting started with playbooks for fee changes.
 - [Michal Baran](./people/michal-baran.md): coordinating decommissioning of MSSQL fee database with Platform.
 - [Nick Holt](./people/nick-holt.md): on leave.
-- [Ossie Nwokedi](./people/ossie-nwokedi.md): fixed ZILCH-48105 (which caused an incident). [Yorkor Baffour](./people/yorkor-baffour.md) will test.
+- [Ossie Nwokedi](./people/ossie-nwokedi.md): fixed ZILCH-48105 (which caused an incident). Yorkor will test.
 - [Ossie Nwokedi](./people/ossie-nwokedi.md): will bring ZILCH-48355 (bottom rail hidden on online/storefront tabs) into sprint — everything else now in review or QA.
 
 ## 2026-02-13
@@ -926,12 +926,12 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 - ZILCH-48303: engineering done, ready for testing. [Tom McKenzie](./people/tom-mckenzie.md) wanted tests for both toggle-on and toggle-off cases. Discussed — he's satisfied the automated tests cover this and it can move forward.
 
 ### PM
-- Reviewed [fee-service](./projects/fee-service) backlog in Jira — identified 7 Merchant Team tickets in "To Do" state; logged to [fee-service](./projects/fee-service) project file.
+- Reviewed fee-service backlog in Jira — identified 7 Merchant Team tickets in "To Do" state; logged to fee-service project file.
 - Refinement prep — prepared descriptions for ZILCH-48355, ZILCH-48181, ZILCH-48195 (plus others done manually). Notified team of refinement candidates.
 - Published Backlog Management page to Confluence; updated local playbook to point there as single source of truth.
 
 ### Completed tasks
-- Set up cross-team refinement with Decisioning and Merchant (continuity of membership, [Zilch Pro](./projects/zilch-pro)).
+- Set up cross-team refinement with Decisioning and Merchant (continuity of membership, Zilch Pro).
 
 ### Observations
 - Testing discussions at stand-up are perennial — what types/levels of testing are appropriate for a given ticket. Suggested [Tom McKenzie](./people/tom-mckenzie.md) work on a test policy document that the team can collectively sign up to.
@@ -939,12 +939,12 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 
 ## 2026-02-12
 
-* 1:1 with [Nick Gilbert](./people/nick-gilbert.md). Topics: pressure from [Chris Walker](./people/chris-walker.md) on server-side rendering delivery (agreed with [Rob Nelson](./people/rob-nelson.md) to treat as planned work); timing for starting DevOps Scrum process ([Nick Gilbert](./people/nick-gilbert.md) suggested next iteration, I pushed for sooner); tech-devops channel noise (action to set up firefighter tag); his appraisal (feels fair and accurate, noted perception of pace — attributes to not communicating blockers); [Piotr Niebylski](./people/piotr-niebylski.md)'s ZOE presentation (good implementation, but large code submission without iterative review — pattern of working independently); feedback for me (lean in on [On-Call Rota](./projects/on-call-rota)); uncertainty about Platform team leadership.
+* 1:1 with [Nick Gilbert](./people/nick-gilbert.md). Topics: pressure from [Chris Walker](./people/chris-walker.md) on server-side rendering delivery (agreed with [Rob Nelson](./people/rob-nelson.md) to treat as planned work); timing for starting DevOps Scrum process ([Nick Gilbert](./people/nick-gilbert.md) suggested next iteration, I pushed for sooner); tech-devops channel noise (action to set up firefighter tag); his appraisal (feels fair and accurate, noted perception of pace — attributes to not communicating blockers); [Piotr Niebylski](./people/piotr-niebylski.md)'s ZOE presentation (good implementation, but large code submission without iterative review — pattern of working independently); feedback for me (lean in on on-call rota); uncertainty about Platform team leadership.
 * Meeting with [Zac Barclay](./people/zac-barclay.md) and Ethan re Pro roll-out planning — agreed 4–6 week experimentation window post-launch, then BAU with hold-out group for 6 months.
 * Catch-up with [Nikos Sofianos](./people/nikos-sofianos.md) re QA perspective on Pro roll-out — wants two weeks internal testing then 1% cohort for a week before experiments begin.
 * Time spent refining personal knowledge management system.
 * Wrote up [Abhishek Chatterjee](./people/abhishek-chatterjee.md)'s 1:1 notes from 11th Feb.
-* Built and presented Sprint Report #11.2 — published as a Confluence blog post in the Merchant space. Covers sprint plan, scope changes, carried-forward items, burndown, capacity planning, and defect cumulative flow. [Nick Holt](./people/nick-holt.md) demoed the [Expiring Rewards](./projects/expiring-rewards) piece; [Michal Baran](./people/michal-baran.md) demoed the blocked rewards piece. Observations:
+* Built and presented Sprint Report #11.2 — published as a Confluence blog post in the Merchant space. Covers sprint plan, scope changes, carried-forward items, burndown, capacity planning, and defect cumulative flow. [Nick Holt](./people/nick-holt.md) demoed the expiring rewards piece; [Michal Baran](./people/michal-baran.md) demoed the blocked rewards piece. Observations:
   - Including a sprint report in the demo was experimental. Polarised reaction: a couple of FE devs pushed back on seeing it; [Ossie Nwokedi](./people/ossie-nwokedi.md) was very positive. Suggests there isn't a shared understanding of what the demo meeting is for.
   - [Kieren Messenger](./people/kieren-messenger.md) announced in meeting chat that the Merchant team would pick up a specific piece of work in an upcoming sprint. This is outside his remit as a product designer — planning and scope commitments are my responsibility. Part of a pattern of stepping outside his lane.
 
@@ -957,7 +957,7 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 - ZILCH-46517: awaiting pick-up.
 - ZILCH-46901: in progress with [Jacek Zanko](./people/jacek-zanko.md). Reacts on Snowflake workspace bucket update event. Bucket not created in dev environments, blocking work. [Jacek Zanko](./people/jacek-zanko.md) and Platform agreed on hosting a bucket across all environments — still deciding where. Should resolve soon.
 - ZILCH-47687: test working, evidence added to ticket. Available for QA review.
-- ZILCH-48084: in progress with [Nick Holt](./people/nick-holt.md). Related to [Aurora Connectivity](./projects/aurora-connectivity-issue) issue. Way forward: downgrade JDBC driver for now. New ticket created for proper fix.
+- ZILCH-48084: in progress with [Nick Holt](./people/nick-holt.md). Related to Aurora connectivity issue. Way forward: downgrade JDBC driver for now. New ticket created for proper fix.
 - ZILCH-48105: in progress with [Ossie Nwokedi](./people/ossie-nwokedi.md). Might need to be down-prioritised in favour of RN new Architecture bugs.
 - ZILCH-48222: in progress with [Nick Holt](./people/nick-holt.md). Design task, but he's talking about tests — seems to be validating ideas.
 - ZILCH-48248: was with [Nick Holt](./people/nick-holt.md). Can be moved to QA sign-off.
@@ -968,16 +968,16 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 
 * Merchant stand-up
 * 1:1 with [Abhishek Chatterjee](./people/abhishek-chatterjee.md) (Architect)
-* Scheduled [Iteration 12](./projects/iteration-12-planning) initiative review meeting with [Zac Barclay](./people/zac-barclay.md) for 12th Feb
+* Scheduled Iteration 12 initiative review meeting with [Zac Barclay](./people/zac-barclay.md) for 12th Feb
 * Sent [Kieren Messenger](./people/kieren-messenger.md) money owed for [Alex Murphy](./people/alex-murphy.md)'s leaving gift
 * ZILCH-46355 (Block Rewards on Late Payments, [Michal Baran](./people/michal-baran.md)) released without a LaunchDarkly feature flag. **Retro item** — this is the second time in recent sprints that LD flag discipline has come up. Previous retro action was to require full LD flag enablement for minimum 3 days with regression and tests. Need to discuss why process wasn't followed.
-* Confirmed with [Zac Barclay](./people/zac-barclay.md) that milestone rewards has been descoped from [Zilch Pro](./projects/zilch-pro) — dropped early due to insufficient value vs effort. May return as a separate initiative. Updated project log.
+* Confirmed with [Zac Barclay](./people/zac-barclay.md) that milestone rewards has been descoped from Zilch Pro — dropped early due to insufficient value vs effort. May return as a separate initiative. Updated project log.
 * Clarified upgrade/downgrade status with Payments and Decisioning (Pro tier migration)
 * Checked higher rewards rate configuration for Pro — confirmed done
-* Started async conversation with [Steve Rayko](./people/steve-rayko.md) about vision for L5 FE role
+* Started async conversation with Steve Rayko about vision for L5 FE role
 * Wrote up [Jacek Zanko](./people/jacek-zanko.md)'s 1:1 notes from 10th Feb
 * Updated [Nick Holt](./people/nick-holt.md)'s file with year-end appraisal notes
-* Chased [Marcin Żołna](./people/marcin-zolna.md) and [Tommy Kwok](./people/tommy-kwok.md) on ZILCH-46727 (only apply additional rewards for loans in continuous subscription) — no Merchant backlog items for this, concerned it's gone stale. Got a response pointing to a Slack thread — need to follow up with [Jacek Zanko](./people/jacek-zanko.md) and [Michal Baran](./people/michal-baran.md) on what was agreed with Decisioning and capture as tickets.
+* Chased Marcin Żołna and Tommy Kwok on ZILCH-46727 (only apply additional rewards for loans in continuous subscription) — no Merchant backlog items for this, concerned it's gone stale. Got a response pointing to a Slack thread — need to follow up with [Jacek Zanko](./people/jacek-zanko.md) and [Michal Baran](./people/michal-baran.md) on what was agreed with Decisioning and capture as tickets.
 
 ## 2026-02-10
 
@@ -989,18 +989,18 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 ## 2026-02-09
 
 * Updated ADR for offer-service on Confluence — added "Notes and Corrections" section acknowledging pre-approval creation and naming issue
-* Wrote detailed [Tastecard](./projects/tastecard) project log from Jira and Confluence research — context, architecture, personnel, full timeline, and open items
-* Wrote [Incident-452](./incidents/incident-452.md) post-incident review
-* Raised epic ZILCH-48173 for [Incident-452](./incidents/incident-452.md) mitigations
-* Updated [Incident-452](./incidents/incident-452.md) record in Datadog
+* Wrote detailed Tastecard project log from Jira and Confluence research — context, architecture, personnel, full timeline, and open items
+* Wrote Incident-452 post-incident review
+* Raised epic ZILCH-48173 for Incident-452 mitigations
+* Updated Incident-452 record in Datadog
 * Informed Merchant team that [Michal Baran](./people/michal-baran.md) is moving to a new team on 24 Feb
-* Created [On-Call Rota](./projects/on-call-rota) project — documented context, tooling, personnel, and open questions
+* Created on-call rota project — documented context, tooling, personnel, and open questions
 * Organised task list — added Waiting On section, reorganised priorities
-* Started async conversation with DevOps team about [On-Call Rota](./projects/on-call-rota) setup
+* Started async conversation with DevOps team about on-call rota setup
 * Authored backlog management playbook — defined ticket lifecycle states, field rules, activities, and backlog hygiene principles; created team-facing Confluence draft; published to Confluence
 * Created [Stefan Amarie](./people/stefan-amarie.md) onboarding project — captured key contacts, significant work to brief on, [Chris Walker](./people/chris-walker.md)/competency lead dynamic, and tasked out onboarding preparation
 * Retro ([Tom McKenzie](./people/tom-mckenzie.md) hosting) — sprint 11.2 digest:
-  * **Liked:** Plus launched to all customers; adaptive header at 20%; rewards refunding live; Alex's handover documentation praised; Maestro epic closed; improved incident reaction — [Incident-452](./incidents/incident-452.md) caught early because we kept LD flags aligned between prod and pre-prod
+  * **Liked:** Plus launched to all customers; adaptive header at 20%; rewards refunding live; Alex's handover documentation praised; Maestro epic closed; improved incident reaction — Incident-452 caught early because we kept LD flags aligned between prod and pre-prod
   * **Learnt:** LD flag interactions not tested in combination (+2); capacity pressure over coming weeks with two engineers leaving (+2); need better test evidence in tickets (+2); rewards expiry scope grew outside normal process; cross-team dependencies likely to block without strong coordination
   * **Lacked:** Running out of BE tickets, again (+3); lack of informal collaboration — "where are the water cooler chats?" (+3); continued lack of clarity on Pro partnerships (+1); unpredictable waits on platform tickets; insufficient communication about fee service staging changes
   * **Actions:** Stricter test evidence requirements; full LD flag enablement for minimum 3 days with full regression and tests for each user state; create a playbook for enabling LaunchDarkly flags
@@ -1008,7 +1008,7 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 ## 2026-02-06
 
 * Wrote flash report for Merchant team
-* Wrote flash report for Payments team (covering for EM on leave; content from [Marek Chodak](./people/marek-chodak.md))
+* Wrote flash report for Payments team (covering for EM on leave; content from Marek Chodak)
 * Wrote flash report for DevOps team
 * 1:1 with [Piotr Niebylski](./people/piotr-niebylski.md)
 * Wrote flash report for Issuer team (covering for EM on leave)
@@ -1016,5 +1016,5 @@ Received immediate responses from [Charlie Hurst](./people/charlie-hurst.md) and
 
 ## 2026-02-05
 
-* Attended [Zilch Pro](./projects/zilch-pro) sync meeting
+* Attended Zilch Pro sync meeting
 * 1:1 with [Tom McKenzie](./people/tom-mckenzie.md)
