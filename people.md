@@ -3,7 +3,7 @@
 ## Guidelines for AI
 This is an index of people in my work network containing basic reference information in tabular format.  It should not be used for storing rich or narrative information.  Instead, each person has a row in the table, with strictly defined columns.
 
-Where relevant, richer information logs are stored in the folder ./people/ on a file-per-person basis.
+Where relevant, richer information logs are stored in the folder ./kb/people/ on a file-per-person basis.
 
 Maintain this index in alphabetical order by full name.
 
@@ -17,7 +17,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Location | Required | |
 | Team | Optional | |
 | Reports To | Optional | Referential integrity: where this field is filled, ensure the person refered to is in this index |
-| Projects | Optional | A comma-separated list of references to projects the person is associated with. Project names should match a folder name in ./projects/ or ./projects/archive/ |
+| Projects | Optional | A comma-separated list of references to projects the person is associated with. Project names should match a folder name in ./kb/projects/ or ./kb/projects/archive/ |
 | Left | Optional | Acceptable values: "Yes" (to indicated the person has left the company), a date (to indicate that the person has left the company and note the date they left), or blank to indicate that they are still active. |
 
 ## Entries

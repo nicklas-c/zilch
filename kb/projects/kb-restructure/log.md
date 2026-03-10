@@ -5,14 +5,16 @@ A project to improve the knowledge base by moving from distributed, replicated l
 ## Decisions
 
 ### Model
-- The main log (`./logs/log.md`) is the single source of truth. All entries go here.
+- The main log (`./kb/log.md`) is the single source of truth. All entries go here.
 - Secondary logs (people, projects, incidents) become **digests** — compacted summaries, not replicated logs.
 - On-demand compaction: when requested, tagged entries in the main log are compacted into the relevant digest and removed from the main log. Git history serves as the archive.
 - Compaction cadence: on-demand, with a quarterly recurring task as a reminder.
 
 ### Tagging
-- Tags are standard markdown links with **relative paths** and `.md` file extensions.
-- Tags are identified by their path resolving into the `./logs/` subfolder structure. From within `./logs/log.md`, tags take the form `[Friendly Name](./people/slug.md)`, `[Project Name](./projects/slug.md)`, `[Incident Name](./incidents/incident-nnn.md)`.
+- Tags are standard markdown links with **relative paths**.
+- Tags are identified by their path resolving into the `./kb/` subfolder structure. From within `./kb/log.md`, tags take the form `[Friendly Name](./people/slug.md)`, `[Project Name](./projects/project-slug)`, `[Incident Name](./incidents/incident-nnn.md)`.
+- Projects are tagged by **folder**, not file — e.g. `[Merchant Operations](./projects/merchant-operations)`. This is consistent regardless of whether a project has one file or several. Folder links are supported in VS Code's markdown previewer.
+- People and incidents are tagged by **file** as they are single-file entities.
 - External and absolute URLs are plain links and are not treated as tags.
 - Entity types (for now): **people**, **projects**, **incidents**.
 

@@ -1,4 +1,4 @@
-# Logging
+# Knowledge Base
 
 ## Purpose
 Maintain a chronological record of events and a curated record of my achievements. The daily log is the primary intake point for stand-up notes, project updates, decisions, incidents, and other events. The activity file is a periodic distillation of my own meaningful actions.
@@ -16,7 +16,7 @@ You should also:
 * When a task is removed from tasks.md because it has been completed, log the completion in log.md under today's date.
 
 ## Structure
-This folder contains two files:
+This folder contains the following:
 
 ### log.md
 * The daily chronological log of events — everything that happens, regardless of who did it.
@@ -33,6 +33,18 @@ This folder contains two files:
 * Organised in descending date order (newest first).
 * H2 headings for the date.
 * Bulleted lists of noted activities under each day.
+
+### people/
+* One file per person, named by slug (e.g. `firstname-lastname.md`).
+* Rich, narrative logs organising information on a per-person basis.
+
+### projects/
+* One folder per project, named by slug (e.g. `project-name/`).
+* Each folder contains a `log.md` and optionally reference files.
+
+### incidents/
+* One file per incident (e.g. `incident-001.md`).
+* Records of individual production incidents.
 
 ## Formatting Conventions
 * Log entries should be factual and concise — who, what, which ticket.
