@@ -3,7 +3,7 @@
 ## Context for AI
 Lukasz is a DevOps engineer on the DevOps team, graded at level 2, equivalent to a junior-to-mid level.  He is based in Krakow.
 
-## 2025 year-end appraisal
+## Year-End Appraisal
 
 ### His self-appraisal
 
@@ -43,7 +43,7 @@ Lukasz's helpfulness is a genuine strength, but as he matures as an engineer he 
 
 As Lukasz grows into more senior roles, he should also think about how he frames information for different audiences. He tends to lead with details rather than context, which works well within the team but may need adjusting when communicating with stakeholders.
 
-## Running Notes
+## Digest
 
 2026-02-02 Proposed Lukasz for promotion to L3 in appraisal submission.
 2026-03-02 Andrzej requested evidence to support the Exceeds Expectations rating. Prepared a structured justification document with Jira evidence (ZILCH and DEVOPS projects, full year) and Slack channel summary. See [content-authoring/lukasz-appraisal-justification.md](content-authoring/lukasz-appraisal-justification.md).

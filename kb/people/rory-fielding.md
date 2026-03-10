@@ -3,7 +3,7 @@
 ## Context for AI
 Rory is a Front End Engineer on the Retain team, based in London. He does not report to me.
 
-## Running Notes
+## Digest
 
 ### 2026-02-23 — RN Architecture release dispute
 

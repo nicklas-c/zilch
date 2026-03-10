@@ -1,6 +1,18 @@
 # EWA Extra
 
-## Jira
+## Also Known As
+
+Earned Wage Access; Zilch Extra; EWA/Extra
+
+## Context
+New strategic initiative raised at the Engineering Leadership Sync on 17 Feb 2026. The ask is to deliver an Earned Wage Access (EWA) product tied to a new membership tier called "Extra", by end of March 2026. The deadline is shared with Pay Monthly and Visa Flex — likely driven by the need to land all three products before the start of the new financial year.
+
+Merchant team is unlikely to be heavily involved, but tracking for awareness given it emerged as a strategic pivot.
+
+## References
+
+### Jira
+
 **Initiative:** [ZILCH-48756 — Earned Wage Access and Zilch Extra](https://payzilch.atlassian.net/browse/ZILCH-48756) (P1, In Dev)
 
 **Child epics:**
@@ -16,12 +28,11 @@
 
 No Merchant epic — Merchant's involvement is limited to UI component testing for the new Extra membership tier.
 
-## Context
-New strategic initiative raised at the Engineering Leadership Sync on 17 Feb 2026. The ask is to deliver an Earned Wage Access (EWA) product tied to a new membership tier called "Extra", by end of March 2026. The deadline is shared with Pay Monthly and Visa Flex — likely driven by the need to land all three products before the start of the new financial year.
+## Personnel
 
-Merchant team is unlikely to be heavily involved, but tracking for awareness given it emerged as a strategic pivot.
+*To be populated.*
 
-## Log
+## Digest
 
 ### #ewa-extra Channel Digest (pre-2026-03-04)
 

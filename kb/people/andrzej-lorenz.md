@@ -3,7 +3,7 @@
 ## Context for AI
 VP of Engineering, based in Krakow. My line manager.
 
-## Notes
+## Digest
 
 ### 2026-03-02
 

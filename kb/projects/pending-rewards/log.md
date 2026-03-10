@@ -24,7 +24,7 @@ Status is In Discovery. Confluence spec: https://payzilch.atlassian.net/wiki/spa
 - Nicklas Chapman — Engineering Manager
 - Kieren Messenger — Product Designer
 
-## Running Notes
+## Digest
 
 ### 2026-02-20
 

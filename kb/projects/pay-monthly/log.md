@@ -4,35 +4,6 @@
 
 Pay Monthly, Po6, Po12
 
-## Slack
-#pay-monthly-delivery
-
-## Jira
-**Initiative:** [ZILCH-48758 — Pay Monthly](https://payzilch.atlassian.net/browse/ZILCH-48758) (P1, reported by Kevin Came)
-
-**Child epics:**
-| Epic | Team | Status |
-|---|---|---|
-| [ZILCH-48609](https://payzilch.atlassian.net/browse/ZILCH-48609) — [Purchase] Pay Monthly – MVP | Purchase | In Dev |
-| [ZILCH-48650](https://payzilch.atlassian.net/browse/ZILCH-48650) — [Payments] Pay Monthly 3m/6m/12m | Payments (Craig Main) | In Dev |
-| [ZILCH-48762](https://payzilch.atlassian.net/browse/ZILCH-48762) — Decisioning - Pay Monthly | Decisioning | In Dev |
-| [ZILCH-48764](https://payzilch.atlassian.net/browse/ZILCH-48764) — Onboarding - Pay Monthly | Onboarding | In Dev |
-| [ZILCH-48859](https://payzilch.atlassian.net/browse/ZILCH-48859) — Merchant - Pay Monthly | Merchant | In Dev |
-| [ZILCH-48896](https://payzilch.atlassian.net/browse/ZILCH-48896) — Issuer - Pay Monthly | Issuer | Proposed |
-| [ZILCH-48898](https://payzilch.atlassian.net/browse/ZILCH-48898) — Acquirer - Pay Monthly | Acquirer | Proposed |
-| [ZILCH-48945](https://payzilch.atlassian.net/browse/ZILCH-48945) — [Retain] Pay Monthly & Visa Flex | Retain | Proposed |
-| [ZILCH-49153](https://payzilch.atlassian.net/browse/ZILCH-49153) — [Purchase] Pay Monthly – post-MVP | Purchase | Proposed |
-
-**Merchant epic stories ([ZILCH-48859](https://payzilch.atlassian.net/browse/ZILCH-48859)):**
-| Ticket | Summary | Status | Assignee |
-|---|---|---|---|
-| [ZILCH-48897](https://payzilch.atlassian.net/browse/ZILCH-48897) | Extend retailer schema to support credit rewards | Ready for Testing | Jacek |
-| [ZILCH-48903](https://payzilch.atlassian.net/browse/ZILCH-48903) | Enhance Admin Portal: credit reward config & simplify debit rewards | In QA | Jacek |
-| [ZILCH-48905](https://payzilch.atlassian.net/browse/ZILCH-48905) | Add static rewards for new Po6/Po12 credit purchases | Ready for Dev | Unassigned |
-| [ZILCH-48906](https://payzilch.atlassian.net/browse/ZILCH-48906) | Add dynamic rewards for new Po6/Po12 credit purchases | Created | Unassigned |
-| [ZILCH-49027](https://payzilch.atlassian.net/browse/ZILCH-49027) | Add distributed fee (tranches) support to fee calculation | In Dev | Jacek |
-| [ZILCH-49087](https://payzilch.atlassian.net/browse/ZILCH-49087) | [Admin Portal] Update 360Profile for Pay Monthly products | Created | Unassigned |
-
 ## Context
 
 Pay Monthly allows customers to spread fees across monthly instalments, extending Zilch's BNPL model with longer-term payment options. The strategic goals are reducing voluntary churn and creating a new loan product to help acquisition.
@@ -67,6 +38,39 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 - **EHI** — dependency on EHI supporting new fee response format from fee-service (Grzegorz Ziemiański).
 - **Stoplight** — API to be exposed there for cross-team review before implementation.
 
+## References
+
+### Jira
+
+**Initiative:** [ZILCH-48758 — Pay Monthly](https://payzilch.atlassian.net/browse/ZILCH-48758) (P1, reported by Kevin Came)
+
+**Child epics:**
+| Epic | Team | Status |
+|---|---|---|
+| [ZILCH-48609](https://payzilch.atlassian.net/browse/ZILCH-48609) — [Purchase] Pay Monthly – MVP | Purchase | In Dev |
+| [ZILCH-48650](https://payzilch.atlassian.net/browse/ZILCH-48650) — [Payments] Pay Monthly 3m/6m/12m | Payments (Craig Main) | In Dev |
+| [ZILCH-48762](https://payzilch.atlassian.net/browse/ZILCH-48762) — Decisioning - Pay Monthly | Decisioning | In Dev |
+| [ZILCH-48764](https://payzilch.atlassian.net/browse/ZILCH-48764) — Onboarding - Pay Monthly | Onboarding | In Dev |
+| [ZILCH-48859](https://payzilch.atlassian.net/browse/ZILCH-48859) — Merchant - Pay Monthly | Merchant | In Dev |
+| [ZILCH-48896](https://payzilch.atlassian.net/browse/ZILCH-48896) — Issuer - Pay Monthly | Issuer | Proposed |
+| [ZILCH-48898](https://payzilch.atlassian.net/browse/ZILCH-48898) — Acquirer - Pay Monthly | Acquirer | Proposed |
+| [ZILCH-48945](https://payzilch.atlassian.net/browse/ZILCH-48945) — [Retain] Pay Monthly & Visa Flex | Retain | Proposed |
+| [ZILCH-49153](https://payzilch.atlassian.net/browse/ZILCH-49153) — [Purchase] Pay Monthly – post-MVP | Purchase | Proposed |
+
+**Merchant epic stories ([ZILCH-48859](https://payzilch.atlassian.net/browse/ZILCH-48859)):**
+| Ticket | Summary | Status | Assignee |
+|---|---|---|---|
+| [ZILCH-48897](https://payzilch.atlassian.net/browse/ZILCH-48897) | Extend retailer schema to support credit rewards | Ready for Testing | Jacek |
+| [ZILCH-48903](https://payzilch.atlassian.net/browse/ZILCH-48903) | Enhance Admin Portal: credit reward config & simplify debit rewards | In QA | Jacek |
+| [ZILCH-48905](https://payzilch.atlassian.net/browse/ZILCH-48905) | Add static rewards for new Po6/Po12 credit purchases | Ready for Dev | Unassigned |
+| [ZILCH-48906](https://payzilch.atlassian.net/browse/ZILCH-48906) | Add dynamic rewards for new Po6/Po12 credit purchases | Created | Unassigned |
+| [ZILCH-49027](https://payzilch.atlassian.net/browse/ZILCH-49027) | Add distributed fee (tranches) support to fee calculation | In Dev | Jacek |
+| [ZILCH-49087](https://payzilch.atlassian.net/browse/ZILCH-49087) | [Admin Portal] Update 360Profile for Pay Monthly products | Created | Unassigned |
+
+### Slack
+
+#pay-monthly-delivery
+
 ## Personnel
 
 - Tom Wood — Head of Product (sponsor / product definition)
@@ -88,7 +92,7 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 - Andrzej Lorenz — VP Engineering (billing run discussion)
 - Mariusz Maciuszek — (fee tranche review)
 
-## Running Notes
+## Digest
 
 ### 2026-01-14 – 2026-02-23 (from #pay-monthly-delivery digest)
 

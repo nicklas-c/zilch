@@ -4,14 +4,6 @@
 
 *To be added*
 
-## Slack
-
-#april-pricing-changes
-
-## Jira
-
-**Epic:** [ZILCH-49226](https://payzilch.atlassian.net/browse/ZILCH-49226) — "Pricing changes April 2026" — Status: Proposed, Priority: Unknown, Assignee: Unassigned. Created 6 March 2026. Note: epic description covers only the Po6/Po3 changes (items 1–4); the FX fee (item 3) is not referenced — possibly a separate ticket or omitted because it requires no Zilch engineering effort.
-
 ## Context
 
 Pricing structure changes planned for April 2026, requiring 30 days' notice to customers. The channel was created on 5 March 2026; comms to customers began going out from the morning of 6 March.
@@ -79,11 +71,24 @@ FE-only changes — no BE dependency on pricing changes. Acknowledged tech debt:
 
 **Compliance:**
 - Wayne Badura confirmed that any delay beyond 7 April in activating the FX fee is to customers' benefit and is therefore acceptable.
-- Compliance ticket: https://trello.com/c/om0MbmHP/1585-crm-crm-email-rca-fee-change-current-05-03-2026
+## References
 
-**Reference:**
+### Jira
+
+**Epic:** [ZILCH-49226](https://payzilch.atlassian.net/browse/ZILCH-49226) — "Pricing changes April 2026" — Status: Proposed, Priority: Unknown, Assignee: Unassigned. Created 6 March 2026. Note: epic description covers only the Po6/Po3 changes (items 1–4); the FX fee (item 3) is not referenced — possibly a separate ticket or omitted because it requires no Zilch engineering effort.
+
+### Confluence
+
 - Product Brief (Tamara Quinn): https://payzilch.atlassian.net/wiki/spaces/ZP/pages/5188386851/April+Pricing+change+Brief
+
+### Slack
+
+#april-pricing-changes
+
+### Other
+
 - Designs (Isabela Coelho): https://www.figma.com/design/8qCUc616l1vDhMvkOp4Fmn/PO6-Fees?node-id=376-6500
+- Compliance ticket: https://trello.com/c/om0MbmHP/1585-crm-crm-email-rca-fee-change-current-05-03-2026
 
 ## Personnel
 
@@ -108,7 +113,7 @@ FE-only changes — no BE dependency on pricing changes. Acknowledged tech debt:
 - Grzegorz Ziemiański — Engineering Manager, Acquirer/Issuer (raised fee-service/EHI dependency)
 - Michał Górny — Engineering Manager (Purchase team scope, to confirm)
 
-## Running Notes
+## Digest
 
 ### 2026-03-05
 

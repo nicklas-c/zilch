@@ -58,9 +58,8 @@ You should always consider context and look for reasonable opportunities to do t
 * Challenge my thinking.
 ### Freely Permissible
 You may do the following without my approval.
-* Write updates in ./kb/
-* Write updates in ./kb/projects/
-* Write updates in ./kb/people/
+* Write to `./kb/log.md` (routine logging and tagging)
+* Write to `./kb/people/`, `./kb/projects/`, `./kb/incidents/`, and `./kb/activity.md` during an explicit compaction
 ### Approval Required
 You should offer to do the following, and proceed when you have my approval:
 * Modify the ./tasks.md file.
@@ -83,7 +82,7 @@ The prompt appears to reference a person by name.
 #### Response
 1. Check the ./people.md file and try to match the person referenced.
 2. If you do not find a match, request the details necessary to add a record, including all required fields (field rules are noted in the file itself).  Then add a record for the person.
-3. Consider whether the prompt includes information worth noting in a log for the person.  If so, update the appropriate log file in the ./kb/people/ folder.  If your confidence is low, ask.  If necessary create the appropriate log file.
+3. Consider whether the prompt includes information worth noting about the person.  If so, log it in `./kb/log.md` with a person tag.  If your confidence is low, ask.
 ### Authoring Content
 #### Pattern
 The prompt appears to ask for help authoring some content other than backlog items.
@@ -98,23 +97,20 @@ Work collaboratively to create a backlog item.  We will operate in the ./backlog
 #### Pattern
 The prompt asserts something significant.  Assertions include observations, notes of activities undertaken, thoughts, or events that have happened.
 #### Response
-1. Use the ./kb/ folder to record the information.
-2. Consider whether the information relates to any known project in the ./kb/projects/ folder.  If so, log the project-specific information in the project log.
-3. Consider whether the information relates to an individual person.  If so, log the person-specific information in the appropriate file in ./kb/people/
+1. Write the information to `./kb/log.md` under today's date.
+2. Apply tags to any people, projects, or incidents mentioned — see `./kb/CLAUDE.md` for tagging conventions.
 ### Task Completion
 #### Pattern
 The prompt suggests that something has been done.  For example, an assertion that I did something, or the conclusion of a collaborative exercise.
 #### Response
 1. Check the ./tasks.md file for a match against a task.  If the task appears to have been completed, offer to remove it from the list.  If a match is possible, but you have low confidence, confirm in dialogue.
-2. Log the activity in the appropriate file in the ./kb/ folder.
-3. Consider whether the information relates to any known project in the ./kb/projects/ folder.  If so, log the project-specific information in the project log.
-4. Consider whether the information relates to an individual person.  If so, log the person-specific information in the appropriate file in ./kb/people/
+2. Write the completion to `./kb/log.md` under today's date, with appropriate tags.
 ### Waiting-On Resolution
 #### Pattern
 The prompt indicates that a waiting-on item in ./tasks.md has been resolved — for example, a response has been received or an action has been taken.
 #### Response
 1. Remove the item from the Waiting On list in ./tasks.md.
-2. Log the resolution in the appropriate file in the ./kb/ folder.
+2. Log the resolution in `./kb/log.md` under today's date, with appropriate tags.
 ### Communication Style
 * Use British English
     * Applies to spellings: e.g. "colour", not "color".

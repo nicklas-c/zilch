@@ -3,7 +3,7 @@
 ## Context for AI
 Tom McKenzie is a QA Engineer Level 3 in the Merchant Team. 
 
-## Running Notes
+## Digest
 
 ### 2026-02-18
 * Raised concern in support-merchant that velocity limits may prevent users from fully redeeming rewards before a deadline — flagging potential customer experience issue.

@@ -12,7 +12,7 @@
 
 *To be added*
 
-## Running Notes
+## Digest
 
 ### 2025-02-04
 

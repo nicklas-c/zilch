@@ -20,7 +20,7 @@ He has previous FinTech experience, though his most recent role is not FinTech. 
 - Stefan — the new starter
 - Chris Walker — FE competency lead (will be a key relationship)
 
-## Running Notes
+## Digest
 
 ### 2026-03-02
 

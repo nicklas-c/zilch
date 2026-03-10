@@ -3,7 +3,7 @@
 ## Context for AI
 Michal Baran is a back-end engineer in the Merchant team, based in Krakow. He is departing the Merchant team on 24th February 2026 to join a newly created team.
 
-## 2025 year-end appraisal
+## Year-End Appraisal
 
 ### His self-appraisal
 
@@ -39,7 +39,7 @@ I would not have identified his chosen growth areas as concerns, and I read that
 #### Growth Areas
 Michal occasionally exhibits signs of imposter syndrome. I'd encourage him to recognise his strengths so that he can represent himself with greater confidence. This will matter as he grows his technical skills and experience: as he develops towards more senior roles he will need to be able to back his own judgement.
 
-## Running Notes
+## Digest
 
 ### 1:1 — 2026-02-17
 

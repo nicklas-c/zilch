@@ -19,7 +19,7 @@ A strategic DevOps project to build a platform for creating, managing, and destr
 - Phil Stevenson (DevOps)
 - Piotr Niebylski (DevOps)
 
-## Running Notes
+## Digest
 
 ### 2026-03-06
 

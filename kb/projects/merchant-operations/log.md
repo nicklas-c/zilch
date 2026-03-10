@@ -45,7 +45,7 @@ The following components are owned by the Merchant team.
 |---|---|
 | Nicklas Chapman | Engineering Manager — leading this workstream |
 
-## Running Notes
+## Digest
 
 ### 2026-03-03
 First session. Objective established: develop genuine hands-on operational understanding of Merchant team services, using ZILCH-47400 as a vehicle.

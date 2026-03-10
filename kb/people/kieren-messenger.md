@@ -3,7 +3,7 @@
 ## Context for AI
 Kieren is a Senior Product Designer, associated with the Merchant team but often working on cross-team initiatives. Based in London. He is not a direct report. He has worked on the Tastecard UX and Zilch Pro partnership designs.
 
-## Observations
+## Digest
 
 ### 2026-02-18 — Pending Rewards
 Identified as the next blocker on pending rewards: once Nick Holt's design doc is reviewed, the work will be gated on Kieren producing designs for how pending rewards are displayed to the customer.

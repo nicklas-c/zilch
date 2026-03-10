@@ -3,7 +3,7 @@
 ## Context for AI
 Zac is a Product Manager, based in London. He is the document owner and product lead for the Pending Rewards project. He also works on Zilch Pro, Visa Flex, and EWA/Extra.
 
-## Running Notes
+## Digest
 
 ### 2026-02-20 — EWA/Extra
 

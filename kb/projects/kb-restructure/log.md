@@ -60,3 +60,25 @@ Resumed the project with a view to beginning implementation this evening. Two fu
 - **`./kb/` folder adopted** in place of the previously proposed `./logs/`. The KB is functionally self-contained — information enters, is logged, and is compacted entirely within this boundary. Other system functions (content authoring, task management) consume it but never write to it. This makes it a clean partition deserving its own folder. `log.md` lives at `./kb/log.md`.
 
 **Migration approach agreed:** full migration in a single session, done incrementally so that any failing step can be backed out without losing prior progress. The system will not be used for real during the transition.
+
+### 2026-03-10 — Migration completed; tagging pass done
+
+Migration completed across two sessions (2026-03-09 and 2026-03-10).
+
+**Steps completed:**
+- `./logging/` renamed to `./kb/`; all CLAUDE.md references updated.
+- `./people/`, `./projects/`, and `./incidents/` moved inside `./kb/`.
+- All cross-references in CLAUDE.md files, `people.md`, and project logs updated.
+- Project folder structure retained (one `log.md` per project folder); project tags point to the folder rather than the log file.
+- Tagging pass completed on `./kb/log.md`: all people, projects, and incidents referenced in the log have been replaced with markdown link tags. Several hundred replacements made across ~1,000 lines.
+
+**Issues encountered during tagging:**
+- One link-inside-backtick corruption (`audit-fee-service.md` filename) — caught and fixed.
+- One nested link corruption (KB Restructure reference already linked; script double-linked it) — caught and fixed.
+- `Phil Stevenson` had been consistently misspelled as `Phil Stephenson` across the log and project files — corrected throughout; people file renamed from `phil-stephenson.md` to `phil-stevenson.md`.
+- A previous AI session had fabricated the surname "Slezak" for Stefan Amarie — corrected to `Stefan Amarie` throughout.
+- Several people referenced in the log were not yet in `people.md` — added: Alastair Gullan, Nandini Muraleedharan, Paweł Wasielewski, Jakub Pałka, Jakub Zrebiec, Matt Garfitt.
+
+**Pending / still to calibrate:**
+- Compaction format: not yet validated. First compaction pass will establish the standard.
+- A small number of references may remain untagged (names used in very peripheral contexts, or not yet identified). Acceptable — tagging is best-effort.

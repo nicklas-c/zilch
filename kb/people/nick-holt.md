@@ -3,29 +3,23 @@
 ## Context for AI
 Back end engineer on the Merchant team (Level 3), based in London.
 
-## Running Notes
-
-### 2026-02-18
-* Requested review for logging configuration change in prod.
-* Asked payments-be about the event fired for missed loan payments.
-
-## 2025 year-end appraisal
+## Year-End Appraisal
 
 ### His self-appraisal
 
 #### Achievements
-* Collaborated on the extraction of rewards logic from a legacy monolith into a dedicated service. This work reduced coupling with core systems and improved the team’s ability to evolve the rewards domain independently.
+* Collaborated on the extraction of rewards logic from a legacy monolith into a dedicated service. This work reduced coupling with core systems and improved the team's ability to evolve the rewards domain independently.
 * Worked as part of the team to design and implement semantic retailer search using OpenSearch, including ingestion and indexing of retailer vector embeddings. This enabled more relevant, intent-based retailer searching.
 * Individually designed and delivered core APIs for the Rewards Hub, owning the API contracts and implementation to provide a stable, well-documented interface unblocking downstream development.
 * Individually built and integrated the Taste Card membership offering delivering a customer benefit through a clean, extensible integration while ensuring alignment with existing architecture and operational requirements.
-* Contributed to the introduction of shared infrastructure libraries for Aurora database connectivity and security, helping to standardise best practices across services, reduce duplication, and improve the platform’s overall security and reliability.
+* Contributed to the introduction of shared infrastructure libraries for Aurora database connectivity and security, helping to standardise best practices across services, reduce duplication, and improve the platform's overall security and reliability.
 * Worked with external auditors to review reward and fee history to ensure Zilch was meeting our contractural obligations.
 
 #### Growth Areas
 * Refine how I influence decisions, focusing on when, where, and how ideas are introduced rather than on technical correctness alone.
 * Continue to improve communication by leading with outcomes, adjusting depth and framing to suit different audiences and decision-making contexts.
 * Develop my ability to guide discussions through questions and constraints, enabling others to arrive at sound conclusions collaboratively rather than relying on direct advocacy.
-* Focus on growth from “strong individual contributor” to “multiplier for the team,” improving my ability to bring others with me and increase overall team effectiveness.
+* Focus on growth from "strong individual contributor" to "multiplier for the team," improving my ability to bring others with me and increase overall team effectiveness.
 
 ### My appraisal of Nick H
 #### Impact
@@ -46,21 +40,24 @@ Communication style. Nick could demonstrate better situational awareness in some
 
 I'm delighted by Nick's self-appraisal which shows great self-awareness and aligns very well with my review.
 
-## Running Notes
+## Digest
 
-### PRD Review (Pending Rewards) — 2026-02-11
-- Observed Nick steering the conversation away from requirements clarification and into solution design, which derailed the meeting's purpose for a while. Other engineers got pulled in too — not solely on Nick — but he initiated the tangent.
+### Stand-up — 2026-03-05
 
-### Stand-up — 2026-02-11
-- ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): has done query optimisation, PR up, Jacek picking up review.
-- ZILCH-48084 (fix fee-service deployment): in PR. Staging deploy was broken — root cause still unclear to me; need to dig into what happened.
-- ZILCH-48248 (race condition between offer-service and product-service): fix is in PR, but it appears to have caused another issue with a failing test. Puts onus back on Platform — their move of a lambda for a static IP caused the original issue. May need to switch everything over to EventBridge.
+Zac briefly hinted at new requirements in stand-up. Nick H immediately went into solutionising mode, well ahead of any requirements being clearly articulated. Consistent with the pattern noted in the PRD review on 2026-02-11 and his appraisal feedback. Worth raising in the next 1:1.
 
-### Aurora / fee-service connectivity — 2026-02-12
-- Identified that a Dependabot update to the AWS JDBC driver was the cause of the staging connectivity breakage (confirming Michal's hunch). Downgraded the driver and staging came back up.
-- Excluded the AWS JDBC driver from Dependabot ([PR #336](https://github.com/zilchdev/fee-service/pull/336)).
-- Plans to raise a separate ticket to investigate upgrading the driver safely.
-- Good debugging instinct and follow-through here — identified the issue, fixed it, and took preventive action promptly.
+### Next 1:1 — Talking Points
+
+1. **Michal's departure** — Carried over from 11th Feb. Michal left on 24th Feb. Discuss Nick's view of the impact — on capacity, on the dynamic with Jacek as the only other BE engineer, and on any work that's landed back on him.
+
+### Pending Rewards design review — 2026-02-18
+- Read the design overview doc (Confluence: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230/Pending+Rewards+Design+Overview+V2). Straightforward.
+- Raised a follow-up question in Slack: need to define what triggers the reversal of a pending reward on a late payment. Expectation is that pending rewards are removed immediately, which would require listening to payment events.
+
+### Stand-up — 2026-02-18
+- ZILCH-48222 (pending rewards design): basically done. Wants review.
+* Requested review for logging configuration change in prod.
+* Asked payments-be about the event fired for missed loan payments.
 
 ### Stand-up — 2026-02-12
 - ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): Jacek has reviewed it. Found a place where the removed code might be called from the front end. Back with Nick H to check with Ossie.
@@ -68,6 +65,12 @@ I'm delighted by Nick's self-appraisal which shows great self-awareness and alig
 - ZILCH-48222 (design task): in progress. Talking about tests despite this being a design task — appears to be validating his ideas work. Characteristic of his tendency to jump into implementation.
 - ZILCH-48248 (race condition fix): can be moved to QA sign-off.
 - **WIP observation:** Four tickets in flight at stand-up. Pattern of high WIP — consistent with the tendency to pick up the next thing before the current one is fully closed out.
+
+### Aurora / fee-service connectivity — 2026-02-12
+- Identified that a Dependabot update to the AWS JDBC driver was the cause of the staging connectivity breakage (confirming Michal's hunch). Downgraded the driver and staging came back up.
+- Excluded the AWS JDBC driver from Dependabot ([PR #336](https://github.com/zilchdev/fee-service/pull/336)).
+- Plans to raise a separate ticket to investigate upgrading the driver safely.
+- Good debugging instinct and follow-through here — identified the issue, fixed it, and took preventive action promptly.
 
 ### 1:1 — 2026-02-11
 
@@ -100,17 +103,10 @@ Only the appraisal was discussed from the planned items. Michal's departure and 
 **AI scepticism**
 - Conversation segued into AI. He is sceptical.
 
-### Stand-up — 2026-02-18
-- ZILCH-48222 (pending rewards design): basically done. Wants review.
+### Stand-up — 2026-02-11
+- ZILCH-43742 (remove fetchRecentlyPurchasedRetailers query): has done query optimisation, PR up, Jacek picking up review.
+- ZILCH-48084 (fix fee-service deployment): in PR. Staging deploy was broken — root cause still unclear to me; need to dig into what happened.
+- ZILCH-48248 (race condition between offer-service and product-service): fix is in PR, but it appears to have caused another issue with a failing test. Puts onus back on Platform — their move of a lambda for a static IP caused the original issue. May need to switch everything over to EventBridge.
 
-### Pending Rewards design review — 2026-02-18
-- Read the design overview doc (Confluence: https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5112201230/Pending+Rewards+Design+Overview+V2). Straightforward.
-- Raised a follow-up question in Slack: need to define what triggers the reversal of a pending reward on a late payment. Expectation is that pending rewards are removed immediately, which would require listening to payment events.
-
-### Stand-up — 2026-03-05
-
-Zac briefly hinted at new requirements in stand-up. Nick H immediately went into solutionising mode, well ahead of any requirements being clearly articulated. Consistent with the pattern noted in the PRD review on 2026-02-11 and his appraisal feedback. Worth raising in the next 1:1.
-
-### Next 1:1 — Talking Points
-
-1. **Michal's departure** — Carried over from 11th Feb. Michal left on 24th Feb. Discuss Nick's view of the impact — on capacity, on the dynamic with Jacek as the only other BE engineer, and on any work that's landed back on him.
+### PRD Review (Pending Rewards) — 2026-02-11
+- Observed Nick steering the conversation away from requirements clarification and into solution design, which derailed the meeting's purpose for a while. Other engineers got pulled in too — not solely on Nick — but he initiated the tangent.

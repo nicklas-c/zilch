@@ -37,7 +37,7 @@ Nicklas is taking ownership as part of managing the DevOps team. The goal is to 
 
 - **Paul Batey** — Platform team (reason unknown)
 
-## Running Notes
+## Digest
 
 ### 2026-03-02
 

@@ -2,12 +2,7 @@
 
 ## Context for AI
 
-## Running Notes
-
-### 2026-02-18
-* Worked with Phil Stevenson to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases.
-
-## 2025 year-end appraisal
+## Year-End Appraisal
 
 ### Their self-appraisal
 
@@ -20,7 +15,7 @@
 
 #### Growth Areas
 
-## Running Notes
+## Digest
 
 ### Stand-up — 2026-03-05
 
@@ -71,3 +66,6 @@ Nick is currently away. A batch of security vulnerability tickets in the reactiv
 
 **Other**
 - He's no longer sure who is leading the Platform team.
+
+### 2026-02-18
+* Worked with [Phil Stevenson](./phil-stevenson.md) to resolve deployment issues — IP exhaustion and RBAC permission problems blocking releases.

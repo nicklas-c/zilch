@@ -3,7 +3,7 @@
 ## Context for AI
 Engineering Manager, based in London. Manages the Retain team.
 
-## Running Notes
+## Digest
 
 ### 2026-02-23 — Rory Fielding escalation
 

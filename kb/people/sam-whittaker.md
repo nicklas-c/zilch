@@ -3,7 +3,7 @@
 ## Context for AI
 Back End Engineer (Level 5), remote. Moving to the Retain team.
 
-## Running Notes
+## Digest
 
 ### 1:1 with Andrzej — 2026-02-16
 

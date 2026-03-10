@@ -3,7 +3,7 @@
 ## Context for AI
 Ossie is a front-end engineer in the Merchant team, graded at level 3, equivalent to a mid-to-senior level.  He is based in London.
 
-## 2025 year-end appraisal
+## Year-End Appraisal
 
 ### His self-appraisal
 
@@ -40,7 +40,7 @@ Ossie's instinct to provide the best solution to a problem can sometimes result 
 
 A fear of missing out, or a sense that he should be aware of the many discussions happening in various channels, can sometime be a distraction from his preferred heads-down in-the-zone approach.  He could allow himself to shut out the noise and focus and trust that he can catch up later if he needs to.
 
-## Running Notes
+## Digest
 
 ### 2026-03-09 — 1:1
 

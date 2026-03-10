@@ -114,7 +114,7 @@ The channel shows active work across several areas:
 - **Mike Davis** — Involved in PR-to-prod discussions.
 - **DevOps team** — Owns the underlying infrastructure (ArgoCD, EKS clusters, Helm charts, deploy-tools, deploy-zilch).
 
-## Running Notes
+## Digest
 
 ### 2026-03-05
 

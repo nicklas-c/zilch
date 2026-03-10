@@ -3,7 +3,7 @@
 ## Context for AI
 Architect at Zilch. Not a direct report — peer/stakeholder relationship. Regular check-ins to stay aligned on architectural decisions affecting Merchant and DevOps teams.
 
-## Running Notes
+## Digest
 
 ### 2026-02-11 — 1:1 notes
 

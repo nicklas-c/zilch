@@ -3,7 +3,7 @@
 ## Context for AI
 Competency Lead for Front End Engineering, based in London. Reports to Rob Nelson.
 
-## Running Notes
+## Digest
 
 ### Nick Gilbert 1:1 — 2026-02-12
 

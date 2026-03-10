@@ -180,7 +180,7 @@ Key metrics: GP per user, penetration, GMV per user, adoption/retention rates, b
 - George Sharpe (cohort management)
 - Harrison Curtis (data/analytics)
 
-## Running Notes
+## Digest
 
 ### 2026-02-04
 

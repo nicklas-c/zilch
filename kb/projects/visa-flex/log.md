@@ -80,7 +80,7 @@ Strategic project leveraging **Visa's Flexible Credentials (VFC)** to dynamicall
 - Kevin Came (Engineering Lead)
 - External partners: Visa, Thredd, Apple, Google, Samsung, Fime
 
-## Running Notes
+## Digest
 
 ### 2026-02-12
 

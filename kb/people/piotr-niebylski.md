@@ -3,7 +3,7 @@
 ## Context for AI
 Piotr Niebylski is a DevOps Engineer (Level 4) in the DevOps team.  There are sometimes clashes between Piotr and Phil.  I have wondered whether Piotr sees Phil acting as de facto tech lead and feels he needs to challenge because they are graded at the same level.
 
-## 2025 year-end appraisal
+## Year-End Appraisal
 ### His self-appraisal
 #### Achievements
 I worked on crossplane deployments for ephemerals, created all helm charts and configurations needed for all resources used in AWS by Zilch services, lambdas and frontends. Adapted lambdas to be deployed by crossplane using container approach. Configured helm charts for frontend UI's like admin-ui and customer-ui (legacy) and successfully deployed them to ephemerals with proper authentication in customer-ui.
@@ -47,7 +47,7 @@ Piotr has acknowledged that he could lean in better to the support rota, and I'd
 
 On the Ephemerals project, there have been times when Piotr's enthusiasm has led him to take ownership in a way that cut others out. I'd encourage him to think about working to the plan, and keeping the whole team involved through usual sprint processes.
 
-## Running Notes
+## Digest
 
 ### 2026-02-06 1:1
 

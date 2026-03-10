@@ -3,7 +3,7 @@
 ## Context for AI
 Front End Engineer (Level 3) on the Merchant Team, based in London. Left the company on 6th Feb 2026.
 
-## Running Notes
+## Digest
 
 ### 2026-02-06 Handover Complete
 

@@ -18,7 +18,7 @@ Skills matrix: https://payzilch.atlassian.net/wiki/spaces/PAYZ/pages/2725707846/
 - **Andrzej** — VP Engineering; decision-maker; raised the challenge
 - **Nicklas Chapman** — Lukasz's line manager; author of the proposal
 
-## Running Notes
+## Digest
 
 ### 2026-02-02
 

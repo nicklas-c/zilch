@@ -3,7 +3,7 @@
 ## Context for AI
 Jacek is a back-end engineer in the Merchant team, graded at level 4, equivalent to a senior or tech lead.  He acts as de facto tech lead for the team and is the foremost subject matter expert on the systems the team owns.  He is based in Krakow.
 
-## 2025 year-end appraisal
+## Year-End Appraisal
 
 ### His self-appraisal
 
@@ -60,7 +60,7 @@ I'd like Jacek to think about how he provides visibility on the things he's doin
 
 Jacek could be a little more ambitious if he chooses. He sometimes seems happy to stay in his lane and go with the flow. I'm happy with that if he is, but the opportunity is there for him to lead more and work towards an L5 promotion. To do that, I'd like to see him think about his cross-team impact in terms of leadership rather than contribution.
 
-## Running Notes
+## Digest
 
 2026-02-02 In a conversation with Michal, he mentioned that he thought Jacek may be feeling jaded about the projects he's working on - having been tied to the same codebases for a long time.  He thought Jacek might enjoy changing team.
 

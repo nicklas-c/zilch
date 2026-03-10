@@ -3,7 +3,7 @@
 ## Context for AI
 Front End Engineer (Level 5), based in London. Reports to me. Joining the Merchant team — Zilch's first L5 FE hire. Expected to provide FE engineering leadership beyond the Merchant team.
 
-## Running Notes
+## Digest
 
 ### Steve Rayko — L5 IC Expectations (informal) — ingested 2026-03-02
 

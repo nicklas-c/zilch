@@ -19,7 +19,7 @@ An Iteration 12 initiative review meeting with Zac was first referenced on 11 Fe
 - **Parry Champaneriya** — Scrum Master
 - **Kevin Came** — Product Delivery Manager
 
-## Running Notes
+## Digest
 
 ### 2026-02-11
 

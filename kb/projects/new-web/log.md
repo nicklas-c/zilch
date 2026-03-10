@@ -11,7 +11,7 @@
 
 ## Personnel
 
-## Running Notes
+## Digest
 
 ### 2026-03-04
 

@@ -46,7 +46,7 @@ Zilch has partnered with Tastecard (operated by Ello as a B2B2C provider) to off
 - **Ethan Stockwell** — Data/Analytics (tastecard reporting, billing data for Ello)
 - **Chris Prowse / Charlie Hurst / Paul Batey / Alfie Cleveland** — Platform/DevOps (SFTP setup, key-pairs, S3 operations, secrets)
 
-## Running Notes
+## Digest
 
 ### 2025-07-10
 
