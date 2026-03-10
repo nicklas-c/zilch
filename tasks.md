@@ -20,7 +20,6 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Implement knowledge base restructure | kb-restructure | See project log for design decisions. Expect several hours of collaborative work including compaction calibration. Proceed incrementally. |
 | Investigate Slack-to-ticket automation for DevOps reactive work | devops-process | Action from Phil 1:1, 18 Feb |
 | Create LaunchDarkly flag enablement playbook | | Retro action |
 | Ask Mike Davis what his engineering dependencies are for Pro | zilch-pro | |
