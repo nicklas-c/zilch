@@ -35,7 +35,7 @@ This file.
 * Activity entries should be written as assertions in the past tense.
 
 ### Entity Files
-Each entity type is represented by an index file and corresponding folder of files for entities of that entity type.  For example, for the entity type `people`, there is the index file `people.md` and the folder `people/`.
+Each entity type is represented by an index file and a corresponding folder.  The folder contains one subfolder per entity, each named by slug (e.g. `people/nick-holt/`).  Each entity subfolder contains a `log.md` digest and optionally other reference files.  For example, the entity type `people` has the index file `people.md` and the folder `people/`, which contains subfolders like `people/nick-holt/log.md`.
 
 ## Role of AI
 When working in the Knowledge Base you should start by reading the `log.md` file and all the index files for entity types to familiarise youself with recent events and the known entities.
@@ -73,9 +73,9 @@ When compaction is requested:
 Tags are standard markdown links with relative paths. They identify entities so that entries can be found and compacted later.
 
 ### Tag formats (from within `kb/log.md`)
-* **People:** `[Full Name](./people/slug.md)`
+* **People:** `[Full Name](./people/slug)` — link to the folder, not the log file
 * **Projects:** `[Project Name](./projects/project-slug)` — link to the folder, not the log file
-* **Incidents:** `[Incident-NNN](./incidents/incident-nnn.md)`
+* **Incidents:** `[Incident-NNN](./incidents/incident-nnn)` — link to the folder, not the log file
 
 External and absolute URLs are plain links and are not treated as tags.
 

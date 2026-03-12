@@ -1,30 +1,15 @@
 # People
 
-## Purpose
-You will be helping me maintain notes and observations on the people I work with — direct reports, my manager, peers, architects, stakeholders, and other cross-functional contacts.  This includes preparing for one-to-one meetings, tracking observations, considering how to challenge and motivate staff, evaluating staff for appraisals, and staying aligned with peers and stakeholders.
+This folder contains the Knowledge Base digests for people.
 
-## Role of AI
-Your role will be:
-* To track and summarise notes and information over time.
-* To act as a rubber duck or sounding board, prompting and challenging my thinking.
+Each person is represented by a subfolder using the person's slug, composed of first name and last name in lower kebab case.
 
-As this is a human-to-human domain of work, it is important that you don't try to do the job for me.  For example, you should not attempt to ghostwrite on my behalf unless specifically asked.
+Within the folder are markdown files relating to that person one of which MUST be the digest file named `log.md`.
 
-## Standard Structure
+## Digest File Structure
 
-```
-# Full Name
-## Context for AI
-## Year-End Appraisal  (optional — only present when appraisal content exists)
-## Digest
-```
+Each person's `log.md` file is structured in a consistent way
 
-## Structure Notes
-
-When creating a new file here, also add the person to `people.md` (the cross-reference index in the root folder) with the required fields: name, role, location. The "Context for AI" section in the relationships file holds richer detail; `people.md` is just for lookup and routing.
-
-Do not write to people files during routine logging — use `kb/log.md` with a person tag instead. People files are populated during compaction.
-
-## General Instructions
-* 1:1 indicates a one-to-one meeting.
-* I will ask for your help to spot themes and patterns, to generate summaries and to use that in our conversations to prompt meeting plans, individual development plans, etc.
+* REQUIRED H2 Heading **Context for AI** heads a section with brief context information on who the person is.
+* OPTIONAL H2 Heading **Year End Appraisal** heads a section with details of the person's most recent anual appraisal.
+* REQUIRED H2 Heading **Digest** heads a section for the digest, compacted from the main log.  Digest entries are grouped under H3 headings named for the date in **YYYY-MM-DD** format, and written in ascending chronological order.
