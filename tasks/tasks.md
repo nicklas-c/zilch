@@ -4,7 +4,6 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Prep for iteration review | | |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | merchant-operations | Break epic into refinable tickets |
 | Follow up with Phil Stevenson: which team should own Snooze Config alert; arrange handover discussion with relevant EM | on-call-rota | |
 | Catch up with Phil Stevenson async: how to handle AWS Lambda throttling (overdue-outsystems) with Retain | on-call-rota | |
@@ -12,6 +11,9 @@
 | Chase Phil Stevenson re: ZILCH-41286 — update from George on auto-create fix versions | | Overdue from 6 Mar |
 | Chase Charlie Hurst re: ZILCH-42041 (decommission fee-service MSSQL database) — escalate if necessary | fee-service | Jacek blocked on this |
 | Clarify Sign Off stage definition on DevOps reactive Kanban board with the team | devops-process | |
+| Raise Platform ticket for retailer-service Terraform drift between prod and other environments | | Raised at stand-up and discussed in Nick G 1:1, 12 Mar |
+| Confirm appraisal process completion timeline and get back to Nick Gilbert | | He asked in 1:1, 12 Mar |
+| Follow up with Iman Buraleh re Nick Gilbert's burnout and workation request | | Already messaged her; discuss in person |
 
 ## Soon
 

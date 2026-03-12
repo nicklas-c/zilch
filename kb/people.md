@@ -30,6 +30,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Alex Murphy | Front End Engineer (Level 3) | London | Merchant | Me | Yes |
 | Ali Aziz | Engineering Manager | London | Platform | | Yes |
 | Andrea Ponte Martins | Product GM | London | | | |
+| Anita Maini | Associate Director of Learning & Development | London | | Helen Pericleous | |
 | Andrzej Lorenz | VP of Engineering | Krakow | | Steve Rayko | |
 | Arled Kola | Front End Software Engineer (Level 3) | London | Purchase | Michal Gorny | |
 | Charlie Hurst | Platform | London | | | |
@@ -42,6 +43,8 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | George Sharpe | Change Manager | London | | | |
 | Gini Gill | Senior Product Designer | London | | | |
 | Grzegorz Ziemiański | Engineering Manager | Krakow | Acquirer, Issuer | Andrzej Lorenz | |
+| Helen Pericleous | VP of People & Talent | London | | | |
+| Iman Buraleh | Senior People Partner | London | | Helen Pericleous | |
 | Jacek Zanko | Back End Engineer (Level 4) | Krakow | Merchant | Me | |
 | Jake Pickup | Technical Finance & Accounting Projects Lead | London | | | |
 | Jakub Pałka | QA Engineer | Krakow | Issuer | | |

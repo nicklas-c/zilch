@@ -2,8 +2,51 @@
 
 ## 2026-03-12
 
+### Iteration 11 Review
+* Presented on behalf of the DevOps team. [Zac Barclay](./people/zac-barclay) presented on behalf of the Merchant team.
+
+### DevOps Refinement
+* Ran a non-standard refinement — reviewed existing epics to get a sense of the overall plan rather than refining individual tickets.
+* Key takeaway: too many epics started but not finished; need to start closing some off.
+* Implemented a WIP limit of 7 for in-progress epics.
+* Identified one or two epics to focus on closing because they have only a small number of remaining tickets, plus one to close because it's been hanging around for over four years.
+
+### Out-of-Hours Call-Outs as Incidents
+* Discussed plans to treat out-of-hours call-outs as incidents with [George Sharpe](./people/george-sharpe) and [Chris Prowse](./people/chris-prowse). They seemed hesitant but the conversation was cut short by the iteration review starting. Suspect George may be concerned about inflating incident statistics. I remain convinced it's a good idea. [On-Call Rota](./projects/on-call-rota)
+
+### PluralSight Engagement Initiative
+* [Anita Maini](./people/anita-maini) hosted a meeting proposing an initiative to get engineers more engaged with PluralSight learning opportunities.
+* She was getting somewhat aggressive in pushing for support — possibly under pressure to improve adoption and turn around low sentiment scores about training support at Zilch.
+* Sceptical about the approach: it starts with requiring engineers to complete an assessment, which risks being perceived as a judgement of technical skills rather than a route to training opportunities.
+* Delivery pressure at Zilch makes it hard to see where engineers will find time for this.
+
+### 1:1 with [Nick Gilbert](./people/nick-gilbert)
+* He opened by saying he's feeling very tired and nearing burnout. His demeanour reinforced this — he appeared to be nearly in tears.
+  * I asked what I could do.
+  * He asked if it might be possible to take a "workation" — a period away somewhere he can reset, working remotely.
+  * I asked how long — he said two or three weeks.
+  * I told him that if it was shorter (say one week), I'd feel comfortable approving that on my own authority. If it was as long as three weeks, I'd support it but would want to run it past HR first. I said I'd put it to them as something I want to support and ask what we need to do to get it approved.
+* I asked if there was anything else I could do.
+  * Part of the problem is pressure from the 31 March deadline projects.
+  * I asked if the more formalised process might help — by putting guardrails around the amount of work we commit to.
+  * He thinks it might help a bit, but the bigger problem is that engineers under pressure are handing off tasks to DevOps that they'd previously have attempted themselves.
+  * I referenced and reinforced the suggestions from the retro on how to push back effectively.
+  * Side notes (not from the meeting):
+    * The team do need to be better at pushing back appropriately.
+    * I have messaged Iman (HR) for a chat. Regardless of the workation idea, I want to share with her that Nick is feeling close to burnout.
+    * From his demeanour, I wondered whether he may be suffering from depression.
+* We discussed his recent leave.
+  * It didn't go well — the flight was cancelled and they couldn't get to Madeira as planned. Ended up spending some time in Brighton instead.
+* He asked about the appraisal process and when it completes.
+  * I told him I thought it was supposed to wind up by the end of the month. I should confirm that and get back to him.
+* We discussed improving the situation with noisy monitors calling people out in the middle of the night.
+  * Covered many of the same points already logged under the [On-Call Rota](./projects/on-call-rota) project. He thinks dealing with that situation will help.
+* We discussed an issue raised at stand-up with Terraform drift for retailer-service — significant drift between prod and other environments. I need to raise a ticket for the Platform team to get it sorted.
+
 * Actioned [EC-2182](https://payzilch.atlassian.net/browse/EC-2182) — LaunchDarkly change to enable the "Free Trial" CTA to 50% of customers (replacing "Upgrade" on the membership header). Reported by Zac Barclay. [Memberships](./projects/memberships)
 * Rewrote `kb/CLAUDE.md` — restructured the Knowledge Base instructions to be clearer about the AI's role (reading, writing, compacting), introduced entity index files as a formal concept, and removed the "factual and concise" formatting constraint on log entries to keep the log open to richer content including opinions and commentary.
+* Restructured the project — moved task management into its own `./tasks/` folder with a dedicated `CLAUDE.md`, and rewrote the root `CLAUDE.md` to frame the system around three subsystems (Knowledge Base, Task Management, Content Authoring) with detail delegated to each folder's own instructions.
+* Multi-session system refactor nearing completion. Remaining item: refactor the content authoring subsystem (currently split across `./backlog-authoring/` and `./content-authoring/`). Once done, plan is to expand with new capabilities.
 * Authored epic [ZILCH-49461](https://payzilch.atlassian.net/browse/ZILCH-49461) (On-Call Noise Reduction) — cross-team initiative to reduce noisy and unnecessary out-of-hours call-outs from Datadog monitors. Owned by DevOps, under the [On-Call Rota](./projects/on-call-rota) project.
 
 ### Merchant Stand-Up

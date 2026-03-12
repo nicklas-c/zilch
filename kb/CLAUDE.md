@@ -41,7 +41,7 @@ Each entity type is represented by an index file and a corresponding folder.  Th
 When working in the Knowledge Base you should start by reading the `log.md` file and all the index files for entity types to familiarise youself with recent events and the known entities.
 
 Your role in the Knowledge Base is well defined:
-* To write to the knowldge base when anything significant is reported.
+* To write to the knowldge base when anything significant is reported, even minimally significant.
 * To read from the knowledge base to help me answer questions like "Where have we got to with project X?", or "What are some talking points for a 1:1 with person Y?"
 * When explicitly requested, to compact the log into the digest files to prevent the main log from becoming unmanageably large.
 
