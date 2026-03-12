@@ -1,9 +1,5 @@
 # April Price Changes
 
-## Also Known As
-
-*To be added*
-
 ## Context
 
 Pricing structure changes planned for April 2026, requiring 30 days' notice to customers. The channel was created on 5 March 2026; comms to customers began going out from the morning of 6 March.

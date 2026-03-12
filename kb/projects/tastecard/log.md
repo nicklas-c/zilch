@@ -1,9 +1,5 @@
 # Tastecard
 
-## Also Known As
-
-Member Exclusive Offers, offer-service
-
 ## Context
 
 Zilch has partnered with Tastecard (operated by Ello as a B2B2C provider) to offer dining and lifestyle discounts as a benefit of Zilch Plus membership. Tastecard is the first "Member Exclusive Offer" — a category of partner-provided perks designed to reinforce the value proposition of Plus beyond its core Rewards feature.
@@ -44,6 +40,7 @@ Zilch has partnered with Tastecard (operated by Ello as a B2B2C provider) to off
 - **Kieren Messenger** — Designer
 - **Nicklas Chapman** — Engineering Manager (reporter on initial BE tickets)
 - **Ethan Stockwell** — Data/Analytics (tastecard reporting, billing data for Ello)
+- **Jacek Zanko** — Back End Engineer (Merchant)
 - **Chris Prowse / Charlie Hurst / Paul Batey / Alfie Cleveland** — Platform/DevOps (SFTP setup, key-pairs, S3 operations, secrets)
 
 ## Digest

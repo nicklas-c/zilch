@@ -1,9 +1,5 @@
 # On Call Rota
 
-## Also Known As
-
-On Call, Incident Response Rota
-
 ## Context
 
 24/7 incident response rota staffed by engineers from the DevOps and Platform teams. Has lacked managerial oversight since the Platform team manager left — currently self-organised with Matt Swirski (Platform) coordinating.

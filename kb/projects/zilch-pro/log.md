@@ -1,11 +1,5 @@
 # Zilch Pro
 
-## Also Known As
-* Memberships Pro
-* Pro Tier
-* Pro Memberships
-* Pro Subscriptions
-
 ## Context
 
 ### Overview
@@ -174,9 +168,18 @@ Key metrics: GP per user, penetration, GMV per user, adoption/retention rates, b
 - Ozzie Yuce (SVP Product — launch decision-maker)
 - Zac Barclay (PM)
 - **Nicklas Chapman (coordinating Pro launch)**
+- Rob Nelson — VP Engineering
+- Marcin Zolna — EM, Decisioning
+- Mike Davis — EM, Retain
 - Craig Main, Marek Chodak (Payments)
-- Tomasz Michalski, Tommy Kwok, John Strawhorne (Decisioning/Product Service)
-- Rory Fielding, Jan Michalak (Retain FE)
+- Tomasz Michalski, Tommy Kwok, John Strawhorne, Tomasz Więckowski (Decisioning/Product Service)
+- Rory Fielding, Jan Michalak, Paweł Pęcikiewicz (Retain)
+- Ossie Nwokedi (Merchant FE)
+- Kieren Messenger (Design)
+- Ethan Stockwell (Product Analyst)
+- Tamara Quinn (Senior PM, Purchase)
+- Luke Williams (Sales & Partnerships)
+- Nikos Sofianos (QA Manager)
 - George Sharpe (cohort management)
 - Harrison Curtis (data/analytics)
 

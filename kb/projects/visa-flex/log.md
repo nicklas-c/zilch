@@ -1,8 +1,5 @@
 # Visa Flex
 
-## Also Known As
-* Zilch Flex
-
 ## Context
 
 ### Overview
@@ -78,6 +75,11 @@ Strategic project leveraging **Visa's Flexible Credentials (VFC)** to dynamicall
 - Saurabh Raman (Project Owner)
 - Andrea Ponte Martins (Product GM)
 - Kevin Came (Engineering Lead)
+- Zac Barclay — Product Manager
+- Ethan Stockwell — Product Analyst
+- Max Nicol — Product Analytics Intern
+- Wojciech Mielczarek — Software Engineer
+- Jakub Pałka — QA Engineer (certification testing)
 - External partners: Visa, Thredd, Apple, Google, Samsung, Fime
 
 ## Digest

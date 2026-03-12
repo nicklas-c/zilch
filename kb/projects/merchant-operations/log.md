@@ -1,8 +1,5 @@
 # Merchant Operations
 
-## Also Known As
-N/A
-
 ## Context
 A personal workstream to develop hands-on operational knowledge of the Merchant team's software portfolio. Motivated by approximately 18 months of managing the team without having deeply understood the services from an operational perspective. The Merchant O11y Audit & Refresh epic (ZILCH-47400) provides a practical vehicle for this.
 

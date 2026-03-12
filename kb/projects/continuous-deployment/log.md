@@ -1,9 +1,5 @@
 # Continuous Deployment
 
-## Also Known As
-
-CD, Streamline Release and Deployment
-
 ## Context
 
 A cross-team initiative to move Zilch from batch releases (deploying everything at once) to independent, continuous deployment of individual microservices. The goals are to reduce release risk, shorten delivery time, increase deployment frequency, and give engineering teams more autonomy.
@@ -112,6 +108,7 @@ The channel shows active work across several areas:
 - **Radek Kachel** — Working on automated regression testing and TestRail integration.
 - **Nikos Sofianos** — QA Manager. Suggesting earlier automation of quality checks.
 - **Mike Davis** — Involved in PR-to-prod discussions.
+- **John Strawhorne** — QA Engineer
 - **DevOps team** — Owns the underlying infrastructure (ArgoCD, EKS clusters, Helm charts, deploy-tools, deploy-zilch).
 
 ## Digest

@@ -1,16 +1,14 @@
 # Gateway Service
 
-## Also Known As
-
-*To be added*
-
 ## Context
 
 *To be populated from reference material*
 
 ## Personnel
 
-*To be added*
+- Jacek Zanko — Back End Engineer (Merchant)
+- Saeed Aghaee — Solutions Architect
+- Tomasz Surowiec — Back End Engineer
 
 ## Digest
 

@@ -1,9 +1,5 @@
 # Intelligent Commerce
 
-## Also Known As
-
-*To be added*
-
 ## Context
 
 *To be populated from reference material*

@@ -1,8 +1,5 @@
 # Stefan Onboarding
 
-## Also Known As
-Stefan's onboarding, FE L5 onboarding, Alex backfill onboarding
-
 ## Context
 
 Stefan is joining the Merchant team on 23 March 2026 as a Front End Engineer (Level 5).  He is Alex Murphy's backfill, but more than a like-for-like replacement: he will be the most senior FE engineer on the team and the first L5 FE at Zilch.

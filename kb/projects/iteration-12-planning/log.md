@@ -1,9 +1,5 @@
 # Iteration 12 Planning
 
-## Also Known As
-
-It12, Iter 12, Iteration 12
-
 ## Context
 
 Iteration 12 is the planning cycle following Iteration 11. Based on the sprint calendar, Iteration 11 ends on 23 March 2026 (coinciding with Stefan's first day), placing Iteration 12 starting from 24 March 2026.

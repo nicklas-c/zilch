@@ -1,9 +1,5 @@
 # Aurora Connectivity Issue
 
-## Also Known As
-
-Aurora cluster endpoint issue; globalClusterInstanceHostPatterns issue.
-
 ## Context
 
 The Platform team made a change to Aurora infrastructure to support regional failover (Aurora Global Database). This change introduced a hard requirement for services to include a `globalClusterInstanceHostPatterns` configuration property in their JDBC connection setup, via the AWS Advanced JDBC Wrapper's failover plugin.

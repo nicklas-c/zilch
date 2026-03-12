@@ -1,9 +1,5 @@
 # Pay Monthly
 
-## Also Known As
-
-Pay Monthly, Po6, Po12
-
 ## Context
 
 Pay Monthly allows customers to spread fees across monthly instalments, extending Zilch's BNPL model with longer-term payment options. The strategic goals are reducing voluntary churn and creating a new loan product to help acquisition.
@@ -91,6 +87,9 @@ Pay Monthly allows customers to spread fees across monthly instalments, extendin
 - Chris Walker — Onboarding (credit limit)
 - Andrzej Lorenz — VP Engineering (billing run discussion)
 - Mariusz Maciuszek — (fee tranche review)
+- Gini Gill — Senior Product Designer
+- Krzysztof Uroda — Back End Engineer
+- Michał Ptaszek — Full-Stack Engineer
 
 ## Digest
 

@@ -4,22 +4,20 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Add notes from Merchant retro (2026-03-09) to log | | If time allows |
+| Prep for iteration review | | |
 | Task out [ZILCH-47400](https://payzilch.atlassian.net/browse/ZILCH-47400) (Merchant O11y Audit & Refresh) | merchant-operations | Break epic into refinable tickets |
-| Find out the status of retailer-admin-ui — active or dormant? | merchant-operations | Useful context ahead of Stefan's arrival |
 | Follow up with Phil Stevenson: which team should own Snooze Config alert; arrange handover discussion with relevant EM | on-call-rota | |
 | Catch up with Phil Stevenson async: how to handle AWS Lambda throttling (overdue-outsystems) with Retain | on-call-rota | |
 | Chase Grzegorz re: ZILCH-44139 (string/binary data truncation) — ensure planned into a sprint | on-call-rota | |
-| Speak to Grzegorz Ziemiański and Nikos Sofianos re: friction with Radek Kachel on EWA | | Frame as a light-touch question about observed friction, not a formal escalation |
-| Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
-| Fix backlog hygiene on defect candidates | | ZILCH-47174, ZILCH-46150, ZILCH-45502: all missing story points only (otherwise compliant). ZILCH-44467: missing story points, parent epic, and Owned By. ZILCH-48542: missing story points and parent epic; no priority set. ZILCH-48154: missing story points and parent epic; no priority set. |
+| Chase Phil Stevenson re: ZILCH-41286 — update from George on auto-create fix versions | | Overdue from 6 Mar |
+| Chase Charlie Hurst re: ZILCH-42041 (decommission fee-service MSSQL database) — escalate if necessary | fee-service | Jacek blocked on this |
 | Clarify Sign Off stage definition on DevOps reactive Kanban board with the team | devops-process | |
-| Chase Security team (Julien) to get written agreement on pen testing environment for New Web — staging sufficient per Phil Stevenson, needs sec team confirmation in writing | new-web | Chris Walker's ask from 2026-03-04 |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
+| Schedule a session with Merchant team to review existing tech debt tickets and assign to iteration-aligned epics | | Agreed with Jacek, 10 Mar |
 | Investigate Slack-to-ticket automation for DevOps reactive work | devops-process | Action from Phil 1:1, 18 Feb |
 | Create LaunchDarkly flag enablement playbook | | Retro action |
 | Ask Mike Davis what his engineering dependencies are for Pro | zilch-pro | |
@@ -32,7 +30,7 @@
 | Add Stefan to regular team meetings | stefan-onboarding | |
 | Set up 1:1s with Stefan | stefan-onboarding | |
 | Add Stefan to the Merchant team in DataDog | stefan-onboarding | Do on or after his start date (23 Mar 2026) |
-| Dig into the crossover between pending rewards and pay monthly rewards | | |
+| Update retro rota on Confluence | | Remove Alex and Michal; extend beyond 12.1 |
 
 
 ## Later

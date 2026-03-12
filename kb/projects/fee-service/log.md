@@ -1,9 +1,5 @@
 # Fee Service
 
-## Also Known As
-
-*To be added*
-
 ## Context
 
 *To be populated as context arises.*

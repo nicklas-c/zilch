@@ -1,8 +1,277 @@
 # Log
 
+## 2026-03-12
+
+* Actioned [EC-2182](https://payzilch.atlassian.net/browse/EC-2182) — LaunchDarkly change to enable the "Free Trial" CTA to 50% of customers (replacing "Upgrade" on the membership header). Reported by Zac Barclay. [Memberships](./projects/memberships)
+* Rewrote `kb/CLAUDE.md` — restructured the Knowledge Base instructions to be clearer about the AI's role (reading, writing, compacting), introduced entity index files as a formal concept, and removed the "factual and concise" formatting constraint on log entries to keep the log open to richer content including opinions and commentary.
+* Authored epic [ZILCH-49461](https://payzilch.atlassian.net/browse/ZILCH-49461) (On-Call Noise Reduction) — cross-team initiative to reduce noisy and unnecessary out-of-hours call-outs from Datadog monitors. Owned by DevOps, under the [On-Call Rota](./projects/on-call-rota) project.
+
+### Merchant Stand-Up
+
+* [ZILCH-49228](https://payzilch.atlassian.net/browse/ZILCH-49228) (ECJ pricing change update — mobile) — [Ossie Nwokedi](./people/ossie-nwokedi.md): missed some requirements in planning (notice needed on card active screen as well as other specified places). Now in review. [April Price Changes](./projects/april-price-changes)
+* [ZILCH-42041](https://payzilch.atlassian.net/browse/ZILCH-42041) (Decommission fee-service MSSQL database) — [Jacek Zanko](./people/jacek-zanko.md): still waiting on [Charlie Hurst](./people/charlie-hurst.md). I will chase Charlie and escalate if necessary — want this closed off. [Fee Service](./projects/fee-service)
+* [ZILCH-48536](https://payzilch.atlassian.net/browse/ZILCH-48536) (Calculate and store pending rewards for credit purchases) — [Nick Holt](./people/nick-holt.md): moved to In Review. Has questions about what we should be testing. [Pending Rewards](./projects/pending-rewards)
+* [ZILCH-49269](https://payzilch.atlassian.net/browse/ZILCH-49269) (Setup fee code fc-extra-monthly for EWA) & [ZILCH-48793](https://payzilch.atlassian.net/browse/ZILCH-48793) (Fee-service: include fee type and percentage in fetch by calculationId response) — Jacek: will continue today. Set up in pre-prod, will include prod too. Needs changes to fee-service to handle maximum properly — will raise a new ticket for that. [EWA/Extra](./projects/ewa-extra)
+* [ZILCH-48873](https://payzilch.atlassian.net/browse/ZILCH-48873) (Fix the receipt banner Maestro test) — [Tom McKenzie](./people/tom-mckenzie.md): talking to LambdaTest to establish a fix.
+* Nick Holt: having successfully sent cancellation files to Ello last week, we should look at setting up the task on an automated schedule. [Tastecard](./projects/tastecard)
+* Jacek: will be closing PRs relating to credit rewards — requirements have been simplified (rewards descoped from Pay Monthly). [Pay Monthly](./projects/pay-monthly)
+* Tom McKenzie: fee-service timeouts on Prod. EHI service logged them; Lukasz Krauzowicz reported them to us. Jacek: not sure of the cause, but better logging will help diagnose. A ticket to improve logging is already in the sprint. [Fee Service](./projects/fee-service)
+
+### DevOps Stand-Up
+
+* [ZILCH-47773](https://payzilch.atlassian.net/browse/ZILCH-47773) (Prepare environments for customer-web-app deployments) — [Nick Gilbert](./people/nick-gilbert.md): now has K8s ACM Terraform config working to provision host certificates. [New Web](./projects/new-web)
+* [ZILCH-49441](https://payzilch.atlassian.net/browse/ZILCH-49441) (Configure VGS credential secret for zephyrs — new vault) — Nick Gilbert: has the details he needs from [Julien Morvan](./people/julien-morvan.md), will pick it up today. [Ephemeral Environments](./projects/ephemeral-environments)
+* [ZILCH-49315](https://payzilch.atlassian.net/browse/ZILCH-49315) (Diagnose and fix upwind-admission-webhook pulling incorrect image) — Nick Gilbert: stabilised in staging, moving to sign-off.
+* [ZILCH-48463](https://payzilch.atlassian.net/browse/ZILCH-48463) (Enable AWS Gateway OpenAPI spec generation and deployment for retailer-service) — [Lukasz Kowalczyk](./people/lukasz-kowalczyk.md): in progress. His update was hard to follow — a recurring communication issue. Need to think about how to coach him to communicate in a way more appropriate for the audience. [Gateway Service](./projects/gateway-service)
+* [ZILCH-47380](https://payzilch.atlassian.net/browse/ZILCH-47380) (Automate Auth0 resource creation) — Lukasz Kowalczyk: in review, will walk the team through it. Again, details were hard to follow.
+* [ZILCH-48462](https://payzilch.atlassian.net/browse/ZILCH-48462) (Migrate retailer-service Terraform to use microservice module) — [Phil Stevenson](./people/phil-stevenson.md): in progress. Concerned about Terraform drift between environments — should raise a ticket for Platform to fix. Open question: why does Platform own this Terraform? It is service-specific, so feels like it belongs at the application level, not infrastructure level.
+* [ZILCH-48604](https://payzilch.atlassian.net/browse/ZILCH-48604) (Move Flink app Terraform module to module repo) — Phil: in progress, should be done this morning.
+* [ZILCH-49450](https://payzilch.atlassian.net/browse/ZILCH-49450) (New SNS topic for payouts service in SDE) — [Piotr Niebylski](./people/piotr-niebylski.md): got it working on Dev, now applying in staging and prod. [EWA/Extra](./projects/ewa-extra)
+* [ZILCH-49221](https://payzilch.atlassian.net/browse/ZILCH-49221) (Update deployment dashboard to include sensitive services) — Piotr: will pick up as a 5-minute job. [Continuous Deployment](./projects/continuous-deployment)
+* [ZILCH-49134](https://payzilch.atlassian.net/browse/ZILCH-49134) (Review number of cronjobs on product clusters) & [ZILCH-49455](https://payzilch.atlassian.net/browse/ZILCH-49455) (RBAC missing for dev to view Crossplane resources) — Piotr raised these into the reactive board.
+
+## 2026-03-11
+
+### [EWA/Extra](./projects/ewa-extra) — #ewa-delivery Channel Digest (4–11 Mar)
+
+New information from Slack digest (179 messages, 30 participants):
+
+**Fee code naming:**
+* Agreed fee code for EWA disbursement fee: "ewa-advance" (preferred over "advance-fee" proposed by Marcin Żołna). [Tommy Kwok](./people/tommy-kwok.md) initially agreed with Marcin's suggestion; I overrode with "ewa-advance".
+
+**Virtual wallet setup:**
+* [Abhishek Chatterjee](./people/abhishek-chatterjee.md) working on virtual wallet setup for Finance, blocked on [PO-1694](https://payzilch.atlassian.net/browse/PO-1694). Handover to Jake Pickup once unblocked, to ensure it's tested and ready from a finance perspective.
+* [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) needed to add someone as admin to the Plaid team — unsure who from Platform should be added.
+
+**Eligibility and affordability:**
+* [Alastair Gullan](./people/alastair-gullan.md) summarised the decision not to ask customers for their payday — Zilch will choose the day based on decisioning logic, accepting the risks of not aligning to actual payday.
+* APR: the £25 Zilch Advance disbursement fee is considered an optional instant disbursal fee and not included in APR (confirmed by Alex Ivison).
+* [John Strawhorne](./people/john-strawhorne.md) and [Tommy Kwok](./people/tommy-kwok.md) discussed capping logic — Zilch Advance amount based on customer affordability level and downpayment percentage.
+
+**Customer research:**
+* [Zac Barclay](./people/zac-barclay.md) shared survey results: probable unmet need for short-term cash advance, but PMF risks — low product awareness, demand for larger loan amounts than offered, and infrequent expected usage patterns. Controlled pilot planned to address.
+* Thomas Peter Breakwell agreed to provide customer IDs for survey responses.
+
+**Frequency cap:**
+* [Andrea Ponte Martins](./people/andrea-ponte-martins.md) proposed basing the frequency cap on calendar month rather than subscription month. Agreed for MVP. Marcin Żołna preferred a lock-out period based on days since last advance, but calendar month accepted as simpler for now.
+* Ozzie confirmed: once per calendar month per customer for MVP.
+
+**Income and eligibility requirements:**
+* [Tommy Kwok](./people/tommy-kwok.md) shared updated requirements: minimum £125 per deposit transaction to achieve the £25 Zilch Advance floor. Income source must have a deposit in the last month. Largest value deposit selected regardless of pay frequency.
+* No frontend changes — decisioning logic only.
+
+**RCA and customer notification:**
+* [Alastair Gullan](./people/alastair-gullan.md) and John Moore aligned: customers will be notified about the new Zilch Advance feature being added to their existing RCA. No new RCA required. Template email wording from previous notifications to be reused.
+
+**Mobile app release cadence:**
+* [George Sharpe](./people/george-sharpe.md): v2.47.0 (containing Zilch Advance MVP) created from 24 March; testing and rollout from ~30 March; all customers on v2.47.0 by Zilch Advance launch on **13 April**.
+* Pay Monthly MVP in v2.46.0. v2.48.0 (Pay Monthly fast-follows) timing TBD to avoid impacting Advance rollout.
+
+**Data tracking:**
+* Yasmin Lepech building Looker performance dashboard — three tabs: high-level performance, Extra performance, EWA performance. Meeting with [Rob Nelson](./people/rob-nelson.md) to scope data ingestion and modelling.
+
+**Rollout planning:**
+* ~30K control group alongside test group. Same auto-freeze logic for credit limits applied to both test and control for consistency.
+* Zilch Advance and Pay Monthly rollout groups will be **mutually exclusive**.
+
+### [Visa Flex](./projects/visa-flex) — #proj-visa-flex Channel Digest (3 Feb – 11 Mar)
+
+New information from Slack digest (170 messages, 20 participants):
+
+**Technical implementation:**
+* [Saurabh Raman](./people/saurabh-raman.md) shared the team's thinking on changes to authorisation, reporting, and clearing.
+* [Abhishek Chatterjee](./people/abhishek-chatterjee.md) and [Derek McCallum](./people/derek-mccallum.md) raised concerns around fraud and velocity checks in the proposed changes.
+* [Sam Whittaker](./people/sam-whittaker.md) noted that adding new EHI fields may require Platform team effort.
+
+**Single secondary commercial card proposal:**
+* [Derek McCallum](./people/derek-mccallum.md) proposed using a single shared secondary commercial card for all customers rather than issuing individual cards, to simplify implementation.
+* [Abhishek Chatterjee](./people/abhishek-chatterjee.md) and [Saurabh Raman](./people/saurabh-raman.md) discussed implications — need to ensure no negative outcomes.
+
+**Certification and testing:**
+* [Jakub Pałka](./people/jakub-palka.md) shared the Visa Flex test plan and approach, including documenting all certification scenarios.
+* [Wojciech Mielczarek](./people/wojciech-mielczarek.md) outlined the customer migration approach — admin endpoints and LaunchDarkly toggles.
+* [Sam Whittaker](./people/sam-whittaker.md) reported the first successful Visa Flex transaction on UAT.
+
+**Retailer list and affiliate identification:**
+* [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) requested an up-to-date list of in-network retailers from [Zac Barclay](./people/zac-barclay.md).
+* [Saurabh Raman](./people/saurabh-raman.md) referenced a previous list from Antri and noted the need to validate and refresh it regularly.
+* [Max Nicol](./people/max-nicol.md) clarified that the 'Has Affiliate' field is more accurate than 'Current Affiliate' for identifying currently affiliated retailers. This connects to the open question about whether all Affiliates in the database qualify for Visa Flex purposes.
+
+**Merchant affiliate status:**
+* [Andrea Ponte Martins](./people/andrea-ponte-martins.md) led a discussion on defining and identifying affiliated retailers — what changes are needed to align with Visa's requirements.
+
+### [Pay Monthly](./projects/pay-monthly) — #pay-monthly-delivery Channel Digest (4–11 Mar)
+
+New information not already captured elsewhere:
+
+**Refunds:**
+* Fees already paid at the point of refund are not refunded. For partial refunds that reduce the outstanding loan, future fees are calculated against the new loan balance. Confirmed by [Tamara Quinn](./people/tamara-quinn.md).
+
+**Fee calculation ID:**
+* [Craig Main](./people/craig-main.md) and Tomasz Surowiec agreed that the fee calculation ID used for the downpayment should be reused for remaining instalments — no recalculation. This resolves the open question from the 5 March design debate about whether to calculate once or per-instalment.
+
+**Mobile release cadence:**
+* [George Sharpe](./people/george-sharpe.md): release 2.47.0 (containing all MVP functionality for Zilch Advance/[EWA](./projects/ewa-extra)) to be rolled out by 13 March, before 2.48.0 for Pay Monthly features. [Tamara Quinn](./people/tamara-quinn.md) noted Pay Monthly should be rolled out before Advance.
+
+**Apple Checkout:**
+* Mariusz Kuligowski shared examples of Pay Monthly in Apple Checkout. [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) flagged that only the monthly fee should be displayed, not the total cost.
+
+**Fee/instalment rounding:**
+* [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) raised concern about ensuring the difference in instalment amounts is not greater than 1p.
+
+**Fee events (potential risk):**
+* [Mike Davis](./people/mike-davis.md) asked which events would include per-instalment fees or fee codes for Pay Monthly. Marek Chodak noted this is not in scope for MVP but may be problematic to exclude. Worth monitoring — could surface as a late blocker.
+
+**Test environments:**
+* Tomasz Michalski and Jan Michalak provided instructions for assigning users to the new product lines in dev-cu, dev-ci, and qa-sit.
+
+**Fee schedule updates:**
+* [Jacek Zanko](./people/jacek-zanko.md) confirmed he will update fee schedules in dev environments.
+
+### DevOps Stand-up
+
+* [Phil Stevenson](./people/phil-stevenson.md) raised out-of-hours call-outs for Decisioning alerts that don't require immediate action:
+  * "Pre Approval (UK): Low percentage of 'PREAPPROVED' final outcome responses" (DataDog monitor 22219374)
+  * "Credit Decision (UK): High Percentage of 'DECLINE' final outcome responses" (DataDog monitor 14209807)
+* Phil's view: these are P3 alerts that can be reviewed in hours; they should not trigger OpsGenie pages overnight.
+* Paul Batey (Decisioning) agreed — P3 should not be a call-out regardless of the specific alert.
+* Wider context: all DevOps engineers report that overnight call-outs are so frequent they cannot share a bedroom with their partners during on-call rotations. This is a significant quality-of-life impact and needs addressing. [On-Call Rota](./projects/on-call-rota)
+* **Follow-up needed:** Ensure these specific alerts are downgraded or have their notification routing changed so they don't page overnight. Escalate the broader call-out frequency issue.
+
+### DataDog Monitor Noise — Initiative Launched [On-Call Rota](./projects/on-call-rota)
+
+* Confirmed with DevOps team that the vast majority of call-outs originate from DataDog. Root cause: many teams own monitors and routinely add SRE integration without realising it results in OpsGenie pages. No standard approach to monitor ownership or notification routing.
+* Initiated a project to define a standard approach to DD monitors to reduce noise. Plan:
+  1. Ensure all DevOps-owned monitors are properly attributed to the DevOps team (own house in order first).
+  2. Ensure every DD monitor has a team attribution, so non-compliant monitors can be traced to an owner.
+  3. Define and roll out a standard approach to monitor configuration that reduces unnecessary call-outs.
+* Current state: 465 DD monitors have no team attribution. Of those, all but 12 are managed by Terraform.
+* Asked the team: (a) is there an easy way to identify Terraform-managed monitors that belong to DevOps and add the team tag? (b) what can be done with the remaining 12 non-Terraform monitors?
+
+### [Pay Monthly](./projects/pay-monthly) — Sync Meeting
+
+* Attended. Shared Merchant status. No significant new information.
+* Items arising requiring follow-up with [Mike Davis](./people/mike-davis.md) and [Michał Górny](./people/michal-gorny.md) — meeting scheduled for 12 March.
+
+### [Pay Monthly](./projects/pay-monthly) — Team Review Meeting
+
+[Zac Barclay](./people/zac-barclay.md) clarified the latest requirements changes:
+
+**Scope:**
+* Changes apply to Pay Monthly only — no changes to other existing loan products.
+* Two variants of Po3M will exist: standard (existing) and Pay Monthly (new).
+* ExCo decided a stronger customer incentive is to reduce fees rather than offer rewards.
+
+**Fee rates (confirmed):**
+* 1.5% per month for ECJ (Online and In-store default)
+* 1.8% per month for Anywhere and Express
+* £80 cap on existing loan products (up from £40)
+* No cap on new Pay Monthly products
+* Arsenal pricing: no fees on Po6W; fees on Po3M, Po6M, Po12M (including existing Po3M product)
+
+**Rewards — descoped entirely:**
+* No additional rewards for retailers on any BNPL products, including new Pay Monthly.
+* This means **no rewards work is required for Pay Monthly** — no code changes, no new configuration.
+* ZILCH-48905 (static rewards) and ZILCH-48906 (dynamic rewards) are no longer needed.
+
+**Fee service:**
+* Confirmed no change to fee-service behaviour required.
+
+**Remaining Merchant work:**
+* Admin portal updates needed, especially 360 Profile — for customer success.
+* [Tom McKenzie](./people/tom-mckenzie.md) to add test tickets for new loan products.
+
+**Net impact on Merchant scope:** Significantly reduced. Rewards work eliminated entirely. Remaining work is admin portal (ZILCH-49087) and testing.
+
+### Iteration Review Prep — DevOps Team
+
+Compiled an achievement digest for the DevOps team covering Iteration 11 (13 Jan – 11 Mar 2026). Sources: weekly flash reports (intake/DevOps-i11.md), Jira (ZILCH project, Team = DevOps Team, Done + Ready for Release), and KB log entries.
+
+Key stats: 45 tickets completed or effectively complete, 5 incidents responded to, 4 engineers.
+
+Major workstreams: [Ephemeral Environments](./projects/ephemeral-environments) (ZOE to MVP, Zephyr Zero operational — 23 tickets), EWA/payout-service infrastructure on Sensitive Data Environment, fraud detection platform (AI agent, auto-scaling, Athena pipeline), Upwind to production, EKS cluster upgrades, GitHub runner optimisation, Flink Apps monorepo, and process adoption (hybrid Scrum/Kanban).
+
+Suggested big-ticket highlights: ZOE MVP, EWA infrastructure delivery, Upwind to production, fraud detection platform, incident response load.
+
+### [Pay Monthly](./projects/pay-monthly) — Requirements Changes (Slack, #pay-monthly-delivery)
+
+[Zac Barclay](./people/zac-barclay.md) shared key requirement changes following ExCo discussions:
+
+* **Fee rate change:** Pay Monthly fees now **1.8% monthly** on purchase amount for all term lengths (3, 6, 12 months). Previous rate was 1.6%.
+* **Fee cap:** No fee cap on Pay Monthly (PO3M, PO6M, PO12M). Legacy PO3M will have an £80 fee cap.
+* **Rewards change:** No dynamic rewards or base rewards on Pay Monthly loans. Only the incremental Plus rate of 1% will remain, applied to PO6W, PO3M, PO6M, PO12M. In effect: rewards only for Plus members, with different rates depending on loan product.
+* **Fee rates table:** Updated in Confluence (https://payzilch.atlassian.net/wiki/spaces/ZP/pages/4419354651/Fees+Rate+Table).
+
+Nicklas pushed back on the instability of requirements — requested these changes be treated as final, and that stakeholders be informed any further changes will mean the 31 March deadline is missed. Zac acknowledged but noted he doesn't own the requirements for this project.
+
+**Impact on Merchant epic:**
+* ZILCH-48905 (static rewards for Po6/Po12) and ZILCH-48906 (dynamic rewards for Po6/Po12) — scope significantly reduced. Dynamic rewards (ZILCH-48906) may no longer be needed at all.
+* The confirmed fee rate is now 1.8%, not 1.6% — the Option B decision from 4 March needs updating.
+
+### Merchant Stand-up
+
+* Missed the start of stand-up — [George Sharpe](./people/george-sharpe.md) caught me at my desk beforehand to discuss mobile releases for [EWA/Extra](./projects/ewa-extra) and [April Pricing Changes](./projects/april-price-changes).
+* Mobile releases will need close management: time is needed for adoption of new app versions before features are switched on.
+* George has specific requirements and will coordinate with [Ossie Nwokedi](./people/ossie-nwokedi.md).
+
+### [Pay Monthly](./projects/pay-monthly) — Jira Review
+
+* Reviewed Merchant epic ([ZILCH-48859](https://payzilch.atlassian.net/browse/ZILCH-48859)) live status ahead of status update meeting.
+* ZILCH-48897 and ZILCH-48903 both now Ready for Release ([Jacek Zanko](./people/jacek-zanko.md)).
+* ZILCH-48905 (static rewards for Po6/Po12) picked up by [Nick Holt](./people/nick-holt.md), In Dev.
+* ZILCH-49027 (distributed fee/tranches) confirmed Rejected. No replacement needed — the scalar approach means fee-service already supports the required behaviour.
+* Identified that the Merchant epic may be missing tickets for other work areas (e.g. fee code configuration). Scheduling a review meeting with the team this afternoon ahead of the status update.
+
+### 1:1 — [Nick Holt](./people/nick-holt.md)
+
+* **Michal's departure:** Nick thinks it's a shame — he was a good engineer. However, the dynamic with [Jacek Zanko](./people/jacek-zanko.md) has actually improved: previously, in-person conversations between Jacek and Michal in the Krakow office left Nick out of the loop. Now everything happens in Slack and he's involved.
+* **[Pending Rewards](./projects/pending-rewards) / [Pay Monthly](./projects/pay-monthly):** Discussed how pending rewards work blocks rewards for Pay Monthly. Nick's explanation was hard to follow — stream of consciousness. Concern that this thread needs to be wrestled under control before it becomes a risk to 31 March deadlines. Scheduled an afternoon meeting to review.
+* *Private note:* Merchant's responsibility on the 31 March projects is light compared to other teams. It would be very embarrassing if we were the ones who failed to meet the deadline.
+
+### Task List Grooming
+
+* Confirmed retailer-admin-ui is a defunct codebase — can be ignored or removed. [Merchant Operations](./projects/merchant-operations)
+* Backlog hygiene on defect candidates completed as a byproduct of sprint planning activities.
+* Dropped: Merchant retro (2026-03-09) notes — deprioritised.
+* Dropped: conversation with [Grzegorz Ziemiański](./people/grzegorz-ziemianski.md) and [Nikos Sofianos](./people/nikos-sofianos.md) re friction with [Radek Kachel](./people/radek-kachel.md) on [EWA/Extra](./projects/ewa-extra) — window of opportunity passed.
+* Dropped: chase on pen testing environment for [New Web](./projects/new-web) — completed through other activities.
+
 ## 2026-03-10
 
 * Completed the KB Restructure project. First full compaction cycle finished: project digests, incident digests, people digests, and activity.md all populated from log entries up to 2026-02-24. Log entries for that period removed. Task closed.
+
+### Sprint Planning — DevOps
+
+- Sprint "DevOps #11.5" planned. [Ephemeral Environments](./projects/ephemeral-environments) and [DevOps Process](./projects/devops-process) relevant.
+- Team largely guided the session themselves — they still know their backlog and priorities better than I do.
+- Identified need for increased refinement sessions to redefine the [Ephemeral Environments](./projects/ephemeral-environments) project and better understand the backlog.
+
+### Sprint Planning — Merchant
+
+- Sprint "Merchant #11.Q" planned. [April Pricing Changes](./projects/april-price-changes), [EWA/Extra](./projects/ewa-extra), [Pay Monthly](./projects/pay-monthly) relevant.
+- Managed to get all tickets required for 31 March deadline projects included.
+
+### Engineering Leadership Sync
+
+- Main topic: how to handle the upcoming iteration review and planning, given the department is struggling under the weight of three concurrent projects with 31 March deadlines.
+
+### [Visa Flex](./projects/visa-flex) — Meeting Skipped
+
+- Skipped the Visa Flex meeting — no critical responsibility in this project.
+
+### [EWA/Extra](./projects/ewa-extra) — Extra Meeting
+
+- Simple meeting. Updated that EWA/Extra work is underway.
+
+### 1:1 — [Jacek Zanko](./people/jacek-zanko.md)
+
+- Discussed how he's getting on since [Michal Baran](./people/michal-baran.md) left.
+  - Would be nice to have someone else in the Krakow office to work with, but he's not too bothered.
+  - Acknowledged that conversations with [Nick Holt](./people/nick-holt.md) can be challenging because of Nick's tendency to talk at length, unaware that he's not bringing others with him. Asked whether I'd given Nick that feedback — I hinted that I had.
+- Discussed how the team can be better at raising and tracking tech debt.
+  - Engineers need to do better at raising tech debt tickets at the point the debt is recognised.
+  - Jacek thinks the habit has fallen away since the big bucket epic was banned.
+  - Discussed mitigations. Agreed the team should continue raising tech debt tickets even without an epic to attach them to, and that we would review existing tech debt tickets and assign them to epics aligned with the iterations we intend to address them in.
 
 ## 2026-03-09
 
@@ -42,6 +311,10 @@ Both stand-ups held. No notes taken.
 - AI usage: [Ossie Nwokedi](./people/ossie-nwokedi.md) is getting significant value from AI tooling. Shared an example where he picked up a defect ticket, asked AI to analyse possible causes, and was told the defect had already been fixed a few hours earlier — highlighting a communication gap between engineers rather than an unresolved defect.
 
 ## 2026-03-06
+
+### [New Web](./projects/new-web) — Pen Testing Scheduled
+
+* [Oliver Hamilton](./people/oliver-hamilton.md) announced in Slack that pen testing is targeted for the week of 9 March.
 
 ### 1:1 — [Piotr Niebylski](./people/piotr-niebylski.md)
 

@@ -1,16 +1,12 @@
 # Expiring Rewards
 
-## Also Known As
-
-*To be added*
-
 ## Context
 
 *To be populated from reference material*
 
 ## Personnel
 
-*To be added*
+- Nick Holt — Back End Engineer (Merchant)
 
 ## Digest
 

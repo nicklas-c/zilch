@@ -1,7 +1,5 @@
 # New Web
 
-## Also Known As
-
 ## Context
 
 ### Channels
@@ -10,6 +8,12 @@
 - Slack: #new-web-project
 
 ## Personnel
+
+- Chris Walker — Competency Lead, Front End Engineering
+- Julien Morvan — Security Engineer
+- Oliver Hamilton — vCISO
+- Phil Stevenson — DevOps Engineer
+- Nick Gilbert — DevOps Engineer
 
 ## Digest
 

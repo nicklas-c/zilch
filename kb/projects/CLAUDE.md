@@ -17,7 +17,6 @@ Your role is to:
 * One subfolder is special: `archive/` contains inactive projects that retained for posterity, but no longer active.  It should rarely be necessary to reference these projects.
 * Each project folder will contain a file called log.md with the following structure:
     * H1: Project name
-    * H2 Also Known As: Alternative names and pseudonyms for the project (helps disambiguate)
     * H2 Context: Background information — persistent reference material about the project
     * H2 References (optional): External links — use H3 subsections for Jira, Confluence, and Slack as applicable
     * H2 Personnel: People involved in the project

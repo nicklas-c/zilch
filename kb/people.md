@@ -54,7 +54,6 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Kieren Messenger | Senior Product Designer | London | Merchant | | |
 | Krzysztof Uroda | Back End Engineer (Level 3) | Krakow | | | |
 | Lukasz Kowalczyk | DevOps Engineer (Level 2) | Krakow | DevOps | Me | |
-| Lukasz Krauzowicz | Software Engineer (Level 3) | Krakow | Issuer | | |
 | Luke Williams | Senior Sales & Partnerships Manager | London | | | |
 | Marcin Zolna | Engineering Manager | Krakow | Decisioning | | |
 | Marek Chodak | Back End Engineer (Level 5) | Krakow | Payments | | |

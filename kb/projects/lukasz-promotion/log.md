@@ -1,9 +1,5 @@
 # Lukasz Kowalczyk — Promotion to L3
 
-## Also Known As
-
-Lukasz promotion, Lukasz appraisal
-
 ## Context
 
 Lukasz Kowalczyk is a DevOps Engineer on the DevOps team, currently graded at L2 (junior-to-mid). He is based in Krakow.

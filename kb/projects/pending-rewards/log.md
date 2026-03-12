@@ -1,9 +1,5 @@
 # Pending Rewards
 
-## Also Known As
-
-Component: Pending Rewards
-
 ## Context
 
 Pending Rewards introduces a "Pending" state into the Rewards lifecycle, applying specifically to credit rewards, which are conditional by nature. When a customer makes a qualifying action (e.g. a purchase as a member), rewards are issued immediately in a pending state rather than waiting until maturity. They become realised (spendable) only once maturity conditions are met — e.g. the customer completes a loan on time while remaining a member. Pending rewards are forfeited if conditions are not met, for example due to late payment.

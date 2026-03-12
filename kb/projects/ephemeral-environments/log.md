@@ -1,9 +1,5 @@
 # Ephemeral Environments
 
-## Also Known As
-* Zephyrs (technically the term for an ephemeral environment instance - a play on a portmanteau of Zilch and Ephemeral)
-* ZOE (technically the name of the orchestration service; stands for Zephyr Orchestration Engine)
-
 ## Context
 
 A strategic DevOps project to build a platform for creating, managing, and destroying ephemeral environments — full, working, sandboxed stacks that engineers can use for development and debugging, and that pipelines can use for automated testing. Key benefits: no environment contention, clean state, and no wasted resource usage from long-running environments that exist even when unused.
@@ -18,6 +14,7 @@ A strategic DevOps project to build a platform for creating, managing, and destr
 
 - Phil Stevenson (DevOps)
 - Piotr Niebylski (DevOps)
+- Radek Kachel (QA — automated regression testing)
 
 ## Digest
 

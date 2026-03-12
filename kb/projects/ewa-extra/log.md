@@ -1,9 +1,5 @@
 # EWA Extra
 
-## Also Known As
-
-Earned Wage Access; Zilch Extra; EWA/Extra
-
 ## Context
 New strategic initiative raised at the Engineering Leadership Sync on 17 Feb 2026. The ask is to deliver an Earned Wage Access (EWA) product tied to a new membership tier called "Extra", by end of March 2026. The deadline is shared with Pay Monthly and Visa Flex — likely driven by the need to land all three products before the start of the new financial year.
 
@@ -30,7 +26,26 @@ No Merchant epic — Merchant's involvement is limited to UI component testing f
 
 ## Personnel
 
-*To be populated.*
+- Kevin Came — Product Delivery Manager
+- Michael Charash — Product Consultant
+- Zac Barclay — Product Manager
+- Tommy Kwok — Product Manager (Decisioning)
+- Alastair Gullan — Product Manager (Onboarding)
+- Ozzie Yuce — SVP Product
+- Alex Ivison — SVP Credit, Fraud & Collections
+- Karan Gupta — Strategic Finance Director
+- Jake Pickup — Technical Finance & Accounting Projects Lead
+- Yasmin Lepech — Lead Product Analyst
+- Zoe Chen — Lead Data Analyst
+- John Moore — Compliance Manager
+- Steve Rayko — SVP Engineering
+- Andrzej Lorenz — VP Engineering
+- Rob Nelson — VP Engineering
+- Grzegorz Ziemiański — Engineering Manager
+- Abhishek Chatterjee — Solutions Architect
+- Oleksandr Tertyshnyi — Back End Engineer (Decisioning)
+- Radek Kachel — QA Engineer (Acquirer)
+- Phil Stevenson — DevOps
 
 ## Digest
 

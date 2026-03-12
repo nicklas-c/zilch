@@ -1,9 +1,5 @@
 # DevOps Process
 
-## Also Known As
-
-*To be added*
-
 ## Context
 
 *To be populated*
