@@ -27,6 +27,7 @@ Maintain this index in alphabetical order by name.
 | Ephemeral Environments | ephemeral-environments | Zephyrs, ZOE | Platform for creating, managing, and destroying sandboxed ephemeral environments for dev, debug, and automated testing |
 | EWA/Extra | ewa-extra | Earned Wage Access, Zilch Extra, Zilch Advance | Earned Wage Access product tied to a new "Extra" membership tier at £2.99/month |
 | Expiring Rewards | expiring-rewards | | Rewards expiry mechanism |
+| Fee Discounts | fee-discounts | | Ability to offer discounted membership fees to customers |
 | Fee Service | fee-service | | Fee service ownership and migration |
 | Gateway Service | gateway-service | | API gateway service development |
 | Intelligent Commerce | intelligent-commerce | | Intelligent commerce initiative |
@@ -37,6 +38,7 @@ Maintain this index in alphabetical order by name.
 | Merchant Operations | merchant-operations | | Hands-on operational knowledge of Merchant team's software portfolio via ZILCH-47400 |
 | New Web | new-web | | New web application development with SSR |
 | On Call Rota | on-call-rota | On Call, Incident Response Rota | 24/7 incident response rota staffed by DevOps and Platform engineers |
+| Rewards Bag | rewards-bag | Delight | Third-party rewards SDK integration being evaluated as an alternative to Rokt |
 | Pay Monthly | pay-monthly | Po6, Po12 | Product allowing customers to spread payments across monthly instalments with fees |
 | Pending Rewards | pending-rewards | | Introduces "Pending" state into Rewards lifecycle for credit rewards using an immutable ledger approach |
 | Stefan Onboarding | stefan-onboarding | FE L5 onboarding, Alex backfill onboarding | Onboarding Stefan Amarie to the Merchant team as Front End Engineer (Level 5) from 23 March 2026 |

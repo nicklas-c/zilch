@@ -29,6 +29,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Alex Ivison | SVP Credit, Fraud & Collections | London | | | |
 | Alex Murphy | Front End Engineer (Level 3) | London | Merchant | Me | Yes |
 | Ali Aziz | Engineering Manager | London | Platform | | Yes |
+| Andreas Andreou | Chief Revenue Officer | London | | | |
 | Andrea Ponte Martins | Product GM | London | | | |
 | Anita Maini | Associate Director of Learning & Development | London | | Helen Pericleous | |
 | Andrzej Lorenz | VP of Engineering | Krakow | | Steve Rayko | |
@@ -37,6 +38,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Chris Prowse | Platform | London | | | |
 | Chris Walker | Competency Lead, Front End Engineering | London | | Rob Nelson | |
 | Craig Main | Payments | South Africa | | | |
+| Crinan Strachan | Senior Product Manager | London | Retain | | |
 | David Rodriguez Vazquez | Back End Engineer (Level 3) | London | | | |
 | Derek McCallum | Back End Engineer (Level 5) | London | | | |
 | Ethan Stockwell | Product Analyst | London | | | |
@@ -79,6 +81,7 @@ Observe these data integrity rules when updating this file.  Request clarificati
 | Ozzie Yuce | SVP of Product | London | | | |
 | Parry Champaneriya | Scrum Master | London | | | |
 | Paul Batey | Senior Platform Engineer (Level 1) | London | Platform | | |
+| Paweł Gąsiorek | QA Engineer (Level 3) | Krakow | | Nikos Sofianos | |
 | Paweł Pęcikiewicz | Mobile App Developer | Krakow | Retain | | |
 | Paweł Wasielewski | Software Engineer (Level 3) | Krakow | Purchase | | |
 | Phil Stevenson | DevOps Engineer (Level 4) | London | DevOps | Me | |

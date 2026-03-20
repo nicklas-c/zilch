@@ -85,5 +85,5 @@ External and absolute URLs are plain links and are not treated as tags.
 * A tag on a standalone line applies to that line only.
 
 ### Coverage
-* Tag every named person, project, and incident on first mention in each entry. Repeated mentions within the same heading scope do not need re-tagging, but it is acceptable to tag them.
+* Tag every named person, project, and incident on first mention in each tagging scope. Tagging scopes follow the granularity rules above: a heading (until the next heading of equal or higher level), a top-level bullet (including its sub-items), or a standalone line. A tag in one scope does not carry into sibling scopes — for example, tagging a person in one bullet does not cover a reference to them in the next bullet.
 * Entries do not need to be exhaustively tagged — peripheral references (e.g. a person mentioned in passing) can be left untagged at your discretion.

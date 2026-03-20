@@ -1,5 +1,268 @@
 # Log
 
+## 2026-03-18
+
+* [Fee Discounts](./projects/fee-discounts) project created — a project to offer discounted membership fees to customers.
+* [Fee Discounts](./projects/fee-discounts) — ingested context from #fee-discounts-design-group Slack channel (Jan–Mar 2026). Key points: [Abhishek Chatterjee](./people/abhishek-chatterjee) proposed discount-service and offer-service architecture; [Marcin Żołna](./people/marcin-zolna) formed a design work group; group agreed to start with offer-service only; physical card fees prioritised above discounts (£312k vs £145k EBITDA); ownership of discount-service and implementer for offer-service still TBD.
+* [Fee Discounts](./projects/fee-discounts) — [Crinan Strachan](./people/crinan-strachan) (Retain PM) is the single PM coordinating the cross-team initiative. [Zac Barclay](./people/zac-barclay) will act as PM for any Merchant-specific deliveries.
+
+### [Fee Discounts](./projects/fee-discounts) — Confluence Review
+
+Reviewed two Confluence pages for additional context on the fee discounts project.
+
+#### ADR: discount-service
+* Source: [Confluence — [ADR] discount-service](https://payzilch.atlassian.net/wiki/spaces/ZARCH/pages/5060329539/ADR+discount-service) (Architecture space, v4)
+* Defines a Discount domain model: code, version, applicability (scope: `fees` or `purchase-amount`), currency, type (flat or percentage), validity rules (start/expiry, max uses per customer, global use count, global budget cap, accumulated discount cap), terms reference, and state.
+* Proposed APIs: create discount (`POST`), get available discounts (`GET` with type/version), calculate discount, expiry, and revoke.
+* Management capabilities include CRUD, bulk operations, programmatic revoke/pause, audit trail (applied/expired/revoked events), and usage/financial-impact monitoring.
+* Open question: whether discounts can be non-monetary (accounting treatment unclear).
+* The ADR is still fairly skeletal — several sections are placeholder text ("intro", "guideline-1") and the service repo hasn't been created yet (URLs contain `????-service`). This suggests the architecture is early-stage and not yet finalised.
+
+#### Product Document: Discounts and Offers System
+* Source: [Confluence — Project: Discounts and offers system](https://payzilch.atlassian.net/wiki/spaces/ZP/pages/5051318291/Project+Discounts+and+offers+system) (Product space, v9)
+* Owned by [Crinan Strachan](./people/crinan-strachan); EM listed as [Mike Davis](./people/mike-davis); team listed as Retain.
+* Broader vision encompasses: voucher/code system, fee discounts (retailer-specific, category-specific, or universal), membership discounts, boosted referrals, birthday/anniversary offers, credit builder point boosts, and physical card fee discounts. The voucher system is highlighted as important for campaign attribution.
+* **First use case — discounted membership months:**
+    * MVP: 50% discount on the next 2 billing months, offered during cancellation, pending-cancellation (un-cancel), and signup flows.
+    * Pricing: Plus £1.99/£1.99 then reverts to £3.99; Pro £3.99/£3.99 then reverts to £7.99.
+    * Three user stories: (1) cancellation intercept with discount offer, (2) consistent discounted pricing across all app touchpoints, (3) offers visibility section showing active and expired offers.
+    * MVP exclusions: no discount stacking, no multiple active discounts per customer, no immediate price changes (next billing period only), no auto-targeting, no partial billing periods.
+* Post-MVP aspirations: admin UI for non-technical users to manage offers, admin portal visibility (offer type, duration, expiry, status, source).
+* Meeting notes record a scope/architecture discussion attended by [Abhishek Chatterjee](./people/abhishek-chatterjee), [Mike Davis](./people/mike-davis), [Marcin Żołna](./people/marcin-zolna), [Crinan Strachan](./people/crinan-strachan), and Tommy Kwok. Teams required: whoever owns discount-service, Retain (in-app flows), Payments (discount application and ledger), Decisioning (product-service orchestration and targeting).
+* A separate marketing team chat (Ella, Esme, Tom B, Crinan) explored wider use cases and emphasised the attribution value of a voucher code system for CRM.
+
+#### Insights
+* The product document lists [Mike Davis](./people/mike-davis) as EM and the team as Retain — not Merchant. This implies Merchant's involvement may be limited to specific deliverables (e.g. fee-service integration) rather than ownership of the core system.
+* The ADR and product document are somewhat disconnected: the ADR describes a general-purpose discount-service, whilst the product document is tightly focused on membership discounts as the MVP. The broader discount-service design may be over-engineered relative to the near-term need.
+* Ownership remains the key blocker. The product doc's meeting notes record that [Mike Davis](./people/mike-davis) and [Marcin Żołna](./people/marcin-zolna) were to take the discount-service ownership question to engineering leadership — no resolution is documented.
+* The scope of involved teams (Retain, Payments, Decisioning, discount-service owner) makes this a cross-cutting initiative with coordination overhead. Clear ownership boundaries per service will be important.
+
+## 2026-03-17
+
+### Slack Conversation with [Sean Hederman](./people/sean-hederman) — [Incident-479](./incidents/incident-479) / [Incident-480](./incidents/incident-480)
+* Gave [Sean Hederman](./people/sean-hederman) a direct update on the Partnerize and Rakuten issues, at [Steve Rayko](./people/steve-rayko)'s request.
+* Shared early understanding: the two issues appear unrelated. Partnerize — Merchant's integration service is functioning but the Data Team's file didn't generate correctly. Rakuten — a Lambda that failed silently; ownership believed to be Platform.
+* Situation stabilised with a manual SFTP upload.
+* Sean confirmed he was alerted via [Andreas Andreou](./people/andreas-andreou), who was complaining that the issues might cost the eBay deal due to poor integrations. This is concerning context — the incidents have commercial visibility at CRO level.
+* Sean is catching up with the sales team on 19 March.
+* Sean emphasised that alerting should be on **lack of success** (e.g. expected file of a given size in a given location by a given time), not just on known failure modes. This aligns with the monitor already raised as [ZILCH-49629](https://payzilch.atlassian.net/browse/ZILCH-49629).
+* Nicklas confirmed he has identified one Merchant-side alerting opportunity (ZILCH-49629) but needs to dig deeper for upstream observability improvements.
+* Nicklas confirmed no awareness of other integration issues, but noted the failures were upstream of Merchant's components and will need time with other teams to understand fully.
+* Raised incidents 479 and 480 to track. RCAs to be completed ASAP; Post Incident Reviews booked for Friday 20 March.
+
+### [Iteration 12 Planning](./projects/iteration-12-planning)
+* Teams shared candidates for the next iteration and engineering initiatives.
+* All fairly standard — a little performative given the unknowns and the likelihood of a mid-iteration pivot.
+
+### [EWA/Extra](./projects/ewa-extra) Sync Meeting
+* Gave update on behalf of Merchant and DevOps. Both green.
+* Merchant work now underway — was stuck in a queue behind [April Price Changes](./projects/april-price-changes) work last week, so good progress.
+* DevOps have three tickets: two done, one nearly done. The two completed tickets were showing as "In Dev" due to strange column mappings on the Jira board [George Sharpe](./people/george-sharpe) was using, making it look like no progress had been made. Corrected the impression in the meeting.
+
+### DevOps Ticket Sign-Off
+* Reviewed ZILCH-48462 and EC-2186 ([Phil Stevenson](./people/phil-stevenson)). Not ready to sign off yet — need to understand the changes better first. Told Phil I'll chat with him tomorrow. Expect they'll be fine once understood. [Gateway Service](./projects/gateway-service)
+
+### Incidents Raised — Partnerize and Rakuten
+* Raised [Incident-479](./incidents/incident-479) in DataDog for the Partnerize/eBay integration issue. Status: Stable.
+* Raised [Incident-480](./incidents/incident-480) in DataDog for the Rakuten integration issue. Status: Stable.
+
+### Partnerize File Pickup Monitor [Incident-479](./incidents/incident-479)
+* Created [ZILCH-49629](https://payzilch.atlassian.net/browse/ZILCH-49629) — monitor to alert if no Partnerize file has been picked up for more than a configurable number of days. Follows from discussion with [Jacek Zanko](./people/jacek-zanko) earlier today.
+
+### OKR KR Statement — [Ephemeral Environments](./projects/ephemeral-environments)
+* Wrote KR statements for Zephyrs and proposed them to the DevOps team for buy-in. Actioned from the OKRs review on 16 March; not yet submitted.
+
+### Merchant Tech Debt Session
+* Scheduled a session with the Merchant team to review existing tech debt tickets and assign to iteration-aligned epics. Booked for Monday 30 March — earliest available slot given calendar pressure.
+
+### Partnerize Integration Issues — Follow-Up [Incident-479](./incidents/incident-479)
+* Spoke with [Jacek Zanko](./people/jacek-zanko). The Merchant integration itself is working; the issue appears to be on the Data Team's side — no file is being generated for us to send.
+* [Jacek Zanko](./people/jacek-zanko) will work with the Data Team to resolve.
+* I suggested adding a monitor that triggers an alert if a file has not been picked up for more than a configurable number of days. Jacek agreed. I will create a Jira ticket for this.
+
+### Merchant Stand-Up
+* ZILCH-49231 — [Ossie Nwokedi](./people/ossie-nwokedi): moved back to in progress to refactor feature switch use.
+* ZILCH-49228 — [Ossie Nwokedi](./people/ossie-nwokedi): issue [Tom McKenzie](./people/tom-mckenzie) found has been fixed.
+* ZILCH-42041 — (tracking PO-1597) [Charlie Hurst](./people/charlie-hurst) finally has it in progress. [Fee Service](./projects/fee-service)
+* ZILCH-48536 — [Nick Holt](./people/nick-holt): he and Nick are working to figure out how to simulate late payments for testing purposes. [Pending Rewards](./projects/pending-rewards)
+* ZILCH-49116 — [Nick Holt](./people/nick-holt): on hold while he works on the above.
+* ZILCH-49269 and ZILCH-49156 — [Jacek Zanko](./people/jacek-zanko): tickets in review. Wants feedback from the team on what 'category' and 'type' to give the new fee schedule.
+* ZILCH-49462 — [Jacek Zanko](./people/jacek-zanko): done, but [Tom McKenzie](./people/tom-mckenzie) fed back that the approach for configuring Min and Max for pay monthly codes is more complex than it needs to be. Jacek will review and discuss. [Pay Monthly](./projects/pay-monthly)
+* ZILCH-49419 — [Tom McKenzie](./people/tom-mckenzie): completed.
+* ZILCH-48873 — [Tom McKenzie](./people/tom-mckenzie): in progress.
+
+### DevOps Stand-Up
+* **Reactive:**
+  * ZILCH-49134 — [Piotr Niebylski](./people/piotr-niebylski): just waiting on PR review from Merchant for fee-service change. [Fee Service](./projects/fee-service)
+  * ZILCH-49591 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk): created IAM test web app user. Needs to add missing creds and policies to trigger from GitHub. Will also need a change in Branch Deploy. In progress.
+  * I asked why [Piotr Niebylski](./people/piotr-niebylski) and [Lukasz Kowalczyk](./people/lukasz-kowalczyk) are working on reactive work when [Nick Gilbert](./people/nick-gilbert) is the one on duty for reactive. Discussion followed — the outcome is that we still need more discipline about how we accept work and which board we put it through. [Lukasz Kowalczyk](./people/lukasz-kowalczyk) took on a walk-up at the desk rather than redirecting it to Nick on duty. [DevOps Process](./projects/devops-process)
+* **Planned:**
+  * ZILCH-48462 — [Phil Stevenson](./people/phil-stevenson): in progress, needs to chase a PR on retailer-service. [Gateway Service](./projects/gateway-service)
+  * ZILCH-48961 — [Piotr Niebylski](./people/piotr-niebylski): has fixed all the Lambdas — Zephyrs are back to green. In progress. [Ephemeral Environments](./projects/ephemeral-environments)
+  * ZILCH-47773 — [Nick Gilbert](./people/nick-gilbert): got a bit more done, but still quite a lot of work outstanding. [New Web](./projects/new-web)
+  * ZILCH-49441 — [Nick Gilbert](./people/nick-gilbert): references the VGS issue. Need to consider options. [Ephemeral Environments](./projects/ephemeral-environments)
+  * [Nick Gilbert](./people/nick-gilbert) had a lot of distractions yesterday from walk-ups — expected, as he is on reactive duty and the rota is designed to shield the rest of the team from interruptions.
+
+## 2026-03-16
+
+### On-Call Review — Platform & DevOps
+* Shared plans for tackling the high number of out-of-hours call-outs. Two-pronged approach: [On Call Rota](./projects/on-call-rota)
+  * **DataDog Monitor hygiene** — drive an initiative to enforce a required Team field on monitors as a baseline, so accountability for alerts can be determined.
+  * **Treat out-of-hours call-outs as incidents** — formalise the response and follow-up process.
+* There were some questions from the teams, but general buy-in to the approach.
+* Reviewed alerts from the past couple of weeks, but the discussion was unstructured and no actions were taken away from it.
+* Self-reflection: need to be better prepared for this meeting — should arrive with a pre-compiled list of alerts fired over the past two weeks to work through methodically. Did this two weeks ago and the difference was notable; didn't do it this time and the quality of the discussion suffered.
+
+### Engineering OKRs Review
+* Almost all KRs are carrying over from the current iteration to the next, due to the pivot onto high-priority product work (31 March deadlines).
+* Took an action to write a simple KR statement for [Ephemeral Environments](./projects/ephemeral-environments) (Zephyrs).
+
+### Merchant Stand-Up
+* Attended remotely from home.
+
+### DevOps Stand-Up
+* Attended remotely from home.
+
+### Appraisal Timeline
+* Confirmed appraisal process completion timeline and communicated it to [Nick Gilbert](./people/nick-gilbert) and [Lukasz Kowalczyk](./people/lukasz-kowalczyk), both of whom had asked.
+
+### [Rewards Bag](./projects/rewards-bag) — Slack Discussion
+* [Luke Williams](./people/luke-williams) shared that he and [Andreas Andreou](./people/andreas-andreou) met with Rewards Bag (a competitor to Rokt) on Wednesday. Rewards Bag's product is called "Delight". Both are SDK integrations, but Rewards Bag requires no data sharing, which could make it lower effort than the medium estimate previously given for Rokt.
+* [Luke Williams](./people/luke-williams) shared a tech document ("Zilch Delight Setup Guide (App)") and asked [Tamara Quinn](./people/tamara-quinn) to review it so they can compare effort against Rokt.
+* [Tamara Quinn](./people/tamara-quinn) agreed to discuss with the team and get back to Luke.
+* I asked [Tamara Quinn](./people/tamara-quinn) and [Zac Barclay](./people/zac-barclay) which team would own this — likely Merchant given the existing Tastecard integration ownership.
+* I cautioned strongly against option 2 in the setup guide (taking a dependency on their SDK code).
+* I flagged that their delivery time estimates should be completely disregarded — it's not appropriate for an external party to assert effort estimates on our codebase, our team, our standards, and our processes.
+* [Tamara Quinn](./people/tamara-quinn) will add this to Iteration 12 discussions and agree ownership with [Zac Barclay](./people/zac-barclay).
+* Rewards Bag website for reference: https://www.rewardsbag.com/
+
+### Chases
+* Chased [Charlie Hurst](./people/charlie-hurst) re ZILCH-42041 (decommission fee-service MSSQL database). He said he'd action his part this afternoon. [Fee Service](./projects/fee-service)
+* Chased [Grzegorz Ziemiański](./people/grzegorz-ziemianski) re ZILCH-44139 (string/binary data truncation). No response yet. [On Call Rota](./projects/on-call-rota)
+
+### Retailer-Service Terraform Drift
+* Started an async conversation with the DevOps team about the retailer-service Terraform drift between prod and other environments. Need to get details confirmed before raising a Platform ticket.
+
+### [Zilch Pro](./projects/zilch-pro)
+* Project is paused. Engineering dependencies question (Mike Davis) deferred until the project restarts.
+
+### [Stefan Onboarding](./projects/stefan-onboarding)
+* Ordered two Lego unicorns — one for [Stefan Amarie](./people/stefan-amarie), one for [Michal Baran](./people/michal-baran)'s backfill.
+
+### [Michal Baran](./people/michal-baran)
+* Scheduled a 1:1 for next week to check in after his move to Andrzej's reporting line.
+
+### Retro Rota
+* Updated the retro rota on Confluence — removed [Alex Murphy](./people/alex-murphy) and [Michal Baran](./people/michal-baran); extended beyond iteration 12.1.
+
+### Partnerize Integration Issues — eBay and Rakuten [Incident-479](./incidents/incident-479) [Incident-480](./incidents/incident-480)
+* [Andrzej Lorenz](./people/andrzej-lorenz) messaged after hours to relay that [Sean Hederman](./people/sean-hederman) had mentioned hearing about issues with the Partnerize integration for eBay, and also with Rakuten. No further details available.
+* I said I was unaware of the issues and would speak to [Jacek Zanko](./people/jacek-zanko) in the morning.
+
+### [Ephemeral Environments](./projects/ephemeral-environments) — VGS Limitation
+* [Nick Gilbert](./people/nick-gilbert) flagged that there is no way to automate registering a new domain with VGS. Zephyr Zero can be configured easily enough, but automating VGS integration for truly ephemeral environments will be difficult.
+
+### [April Price Changes](./projects/april-price-changes) — Front-End Progress
+* [Michal Gorny](./people/michal-gorny) checked in on progress with the front-end work being done to support his team. [Ossie Nwokedi](./people/ossie-nwokedi) and Michal had some dialogue — overall he is pleased with how things are going.
+* Prices shown in-app will be dynamic where appropriate, and the right feature switches are in place to release as intended.
+* Some discussion about precisely which switches would be most appropriate.
+* I set up two new switches for [Ossie Nwokedi](./people/ossie-nwokedi) on the basis of this discussion.
+
+### General
+* Worked from home in the morning; arrived at the office around lunchtime.
+
+## 2026-03-13
+
+### DevOps Stand-Up
+* [Phil Stevenson](./people/phil-stevenson) on leave.
+* **Reactive:**
+  * ZILCH-49091 — [Phil Stevenson](./people/phil-stevenson). Done, in sign-off.
+  * ZILCH-49094 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk). Done, in sign-off.
+  * Plenty of items in sign-off — unclear how many have been moved.
+  * ZILCH-49315 — [Nick Gilbert](./people/nick-gilbert). Thinks it's fixed; monitoring to confirm.
+  * ZILCH-49450 — [Piotr Niebylski](./people/piotr-niebylski). In progress; asked Platform to review.
+  * ZILCH-49455 — [Piotr Niebylski](./people/piotr-niebylski). Ready to merge, awaiting review.
+  * ZILCH-49134 — [Piotr Niebylski](./people/piotr-niebylski). Also in progress.
+* **Planned:**
+  * ZILCH-47773 — [Nick Gilbert](./people/nick-gilbert). Moving again. ACM Terraform config done and working. LBC routing mostly done, needs more testing. Ready to start on security groups soon. [New Web](./projects/new-web)
+  * ZILCH-48462 — [Phil Stevenson](./people/phil-stevenson). Ready for sign-off, PR merged. [Lukasz Kowalczyk](./people/lukasz-kowalczyk) will apply on Tuesday if all goes well.
+  * ZILCH-48463 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk). Added PRs in Terraform repo and retailer-service repo. Awaiting review. Note: will require review from Merchant team. [Gateway Service](./projects/gateway-service)
+  * ZILCH-47380 — [Lukasz Kowalczyk](./people/lukasz-kowalczyk). Good progress.
+
+### [EWA/Extra](./projects/ewa-extra) Sync
+* Attended and gave a status update. Nothing significant to report.
+
+### Interview
+* Conducted a Level 4 back-end engineer interview with [Grzegorz Ziemiański](./people/grzegorz-ziemianski) as co-interviewer.
+* Candidate showed reasonable technical breadth — code quality, CI/CD, static analysis, security, system design — and decent research into Zilch.
+* Communication was a significant concern: answers were unstructured and rambling, frequently drifting off-topic. Both interviewers had to redirect multiple times.
+* Outcome: **No**. The communication skills gap is too large for Level 4, where forming and articulating opinions clearly is essential. Grzegorz saw potential in the technical skills but agreed the communication wasn't strong enough.
+
+### Merchant Refinement
+* Cancelled today's refinement — I'm attending a medical appointment. The team were happy to skip it rather than run it without me.
+
+### Merchant Stand-Up
+* ZILCH-49228 — [Ossie Nwokedi](./people/ossie-nwokedi): in QA.
+* ZILCH-49231 — [Ossie Nwokedi](./people/ossie-nwokedi): in review.
+* ZILCH-49230 — [Ossie Nwokedi](./people/ossie-nwokedi): just picked up. Expected to be trivial.
+* Good progress on high-priority front-end work for [April Price Changes](./projects/april-price-changes). Ossie's throughput looks strong.
+* ZILCH-42041 — I said I'd chase yesterday; still need to. [Fee Service](./projects/fee-service)
+* ZILCH-48536 — [Nick Holt](./people/nick-holt)'s [Pending Rewards](./projects/pending-rewards) work. Waiting for [Jacek Zanko](./people/jacek-zanko) review. [Tom McKenzie](./people/tom-mckenzie) also needs to review. Failing tests that need attention. Simulating late payment capability in test pack is missing. Tom will suggest a path forward. Thinks [Paweł Gąsiorek](./people/pawel-gasiorek) may already have closed that gap.
+* ZILCH-49116 — [Nick Holt](./people/nick-holt): logging work underway. Surprised it's being picked up before ZILCH-49115, which I consider a prerequisite. Nick is using the logging refactor to refamiliarise himself with the code so he can propose metrics — makes some sense, but fits with Nick's pattern of favouring coding work over other important functions such as documentation.
+* ZILCH-49242 — [Jacek Zanko](./people/jacek-zanko): done in pre-prod. Needs adjustment according to shifted requirements. Still needs to be done in prod.
+* ZILCH-49462 — [Jacek Zanko](./people/jacek-zanko): in progress. Seems to think it's simple. Needed for Arsenal.
+
+### 1:1 with [Lukasz Kowalczyk](./people/lukasz-kowalczyk)
+* **Pushing back:** He's finding it easier to push back on unplanned work now.
+  * When approached with ad-hoc requests, he directs people to the DevOps firefighter.
+  * He finds planned sprint work makes it easier — he can point to his committed work.
+  * [Piotr Niebylski](./people/piotr-niebylski) has independently fed back that Lukasz is doing better at this.
+  * I'm pleased that he's demonstrating responsiveness to the feedback from his appraisal.
+* **[Ephemeral Environments](./projects/ephemeral-environments):** Looks forward to picking up more ZOE work.
+* **Sprints and planned work:** Really likes working in planned sprints.
+  * Can just pick work from the to-do column — doesn't have to constantly figure out what to do next.
+  * Also makes it easier to push back on interruptions.
+  * Asked if I've noticed improvement. I said I'd still like to use refinements to understand the work better — much of it is meaningful to the engineers but opaque to me. Happy for now because the team has been self-managing.
+  * He seems to agree we should improve ticket descriptions.
+  * For now I'm using refinements to understand the overall shape of the backlog; once that's done, we'll focus on individual tickets.
+* **Delivery pressure:**
+  * Agrees there is a lot of pressure. Illustrated with a ticket he had to hand off.
+  * Thinks [Phil Stevenson](./people/phil-stevenson) is carrying a lot of the weight.
+  * I asked if the team can hang on for the next couple of weeks. He thinks so, but a lot of stuff is being deferred.
+  * Expects some sprint points to carry over.
+  * I discussed Scrum norms — burning 85% of points in a sprint is realistic; 100% is the ideal, not the expectation.
+* **Communication style:**
+  * I raised that I get lost by his updates during stand-up.
+  * Noted he's good at responding to feedback, so I'm hopeful.
+  * We've previously discussed his tendency to go straight to detail.
+  * Suggested stand-up is a good opportunity to practise framing updates for a stakeholder audience.
+* **Appraisal process:** He asked when it completes. I gave the same answer as to Nick Gilbert — I think before end of month, and I'll confirm and get back to him.
+* **General outlook:** Looks forward to things returning to normal in April.
+* **Bank acquisition:** Wondered what impact Zilch's recent purchase of a bank will have on the roadmap. I admitted I don't know.
+
+### Flash Reports
+* Completed and sent both the Merchant and DevOps flash reports.
+
+### DevOps Flash Report (w/c 2026-03-09)
+* Bug-fixes on Upwind and re-roll-out.
+* [New Web](./projects/new-web): Host certificate provisioning — ACM Terraform config done.
+* [Gateway Service](./projects/gateway-service): Migration of retailer-service Terraform to reusable module.
+* [EWA/Extra](./projects/ewa-extra): Crossplane config on SDE for SQS/SNS.
+* **Issue:** Reviewing on-call monitoring and escalation due to a number of antisocial-hours call-outs. [On Call Rota](./projects/on-call-rota)
+
+### Merchant Flash Report (w/c 2026-03-09)
+* Issue causing error logs in retailer-service resolved.
+* UI test pack improvements: centralised configuration for better maintainability; hardened with test fixes and performance improvements.
+* [Pay Monthly](./projects/pay-monthly) support: fee type and percentage value added to response from [fee-service](./projects/fee-service) endpoint to support other teams.
+* UI defect fixed: status banner not showing consistently.
+* Fee schedules set up in pre-prod to unblock development:
+  * [EWA/Extra](./projects/ewa-extra) membership fees
+  * [Pay Monthly](./projects/pay-monthly) load products
+* **Issue:** Elevated EHI → fee-service timeouts detected, likely caused by increased use of fee-service. Monitoring to see if it's a persistent issue. [Fee Service](./projects/fee-service)
+
+### ZILCH-41286 Resolved
+* Phil Stevenson/George Sharpe query on auto-create fix versions (ZILCH-41286) resolved. Waiting-on and chase task closed.
+
 ## 2026-03-12
 
 ### Iteration 11 Review
