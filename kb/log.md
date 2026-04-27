@@ -1,5 +1,17 @@
 # Log
 
+## 2026-04-27
+
+### System Resumption
+* Resumed use of the assistant system after several weeks of disuse (last entry 18 March).
+* Two technical issues caused the pause: one believed fixed, another mitigated.
+* Knowledge base and task list are significantly out of date and will need tidying.
+
+### MCP Server Setup
+* Verified Confluence and Jira MCP connections working.
+* Successfully configured Slack MCP server (`slack-mcp-server` package) using browser tokens (xoxc/xoxd).
+* Slack MCP now available for accessing workspace channels, messages, and users.
+
 ## 2026-03-18
 
 * [Fee Discounts](./projects/fee-discounts) project created — a project to offer discounted membership fees to customers.

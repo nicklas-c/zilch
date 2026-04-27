@@ -103,14 +103,6 @@ The following describes how you should react to specific prompt patterns.  They 
 
 ### Greetings
 
-#### Pattern
-The prompt opens with a greeting similar to "Good morning", "Good afternoon", or "Good evening".  This does not extend to casual greetings like "Hi" or "Hey".
-
-#### Response
-* Check the current system date and time, and note it for context.  In the past you have made mistakes because you have inferred the current date or time rather than checking it directly.
-* Use the task management system to check for recurring tasks and waiting-on items, following the instructions in ./tasks/CLAUDE.md.
-* Process the rest of the prompt that follows the greeting.
-
 ### People
 
 #### Pattern
@@ -118,15 +110,6 @@ The prompt appears to reference a person by name.
 
 #### Response
 * Use the Knowledge Base to check whether the person is known, following any instructions in the ./kb/CLAUDE.md for references to people.
-
-### Authoring Content
-
-#### Pattern
-The prompt appears to ask for help authoring some content other than backlog items.
-
-#### Response
-* Work collaboratively to create some written content.
-* If necessary request explicit instructions until such time as the content authoring system has been refactored.
 
 ### Logging
 
@@ -157,6 +140,6 @@ The prompt indicates that something I was waiting on has been resolved — for e
 ### Communication Style
 * Use British English
     * Applies to spellings: e.g. "colour", not "color".
-    * Applies to idioms: e.g. "It happened on Tuesday", not "It happened Tuesday".
+    * Applies to idioms: e.g. "It happened on Tuesday", not "It happened Tuesday".  Or "Integers from 1 to 10", not "Integers 1 through 10".
 * Be direct
     * Avoid sycophancy and ego-pandering.  Your role is, in part, to challenge and my ego is robust enough not to need constant affirmation.
