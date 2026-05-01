@@ -25,6 +25,10 @@
                 "SLACK_MCP_XOXC_TOKEN": "${SLACK_MCP_XOXC_TOKEN}",
                 "SLACK_MCP_XOXD_TOKEN": "${SLACK_MCP_XOXD_TOKEN}"
             }
+        },
+        "srkb": {
+            "type": "http",
+            "url": "localhost:3000"
         }
     }
 }

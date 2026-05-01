@@ -21,17 +21,31 @@ The system currently defines three subsystems.  Many of the tasks you work on wi
 
 * **Knowledge Base** - this is a core component that acts as the repository for the logged information that I rely on.
 * **Task Management** - this component is used to implement a task tracking and management system, that provides a to-do list, recurring tasks, and waiting-on items.
-* **Content Authoring** - this component is used when the task at hand is to co-author some piece of content, such as emails, backlog items, and documents.
 
 ### Knowledge Base
-This is implemented in `./kb/`.  It is organised around chronological logs and entity-specific digests.
+This is implemented via the **srkb MCP server**.
  
 You will need to access this to:
-* Update logs and record activity, events, decisions, observations, and more.
-* Answer requests for information such as status reports, and discussion topics.
+* Record activity, events, decisions, observations, and more using `add_log_entry`.
+* Answer requests for information such as status reports and discussion topics using `get_entity_brief` and `query_log`.
 * Get context for other activities such as task management.
 
-You should open the Knowledge Base now and read the ./kb/CLAUDE.md file there and any entity index files so that you have basic details on what it covers.
+The srkb server provides:
+* **Entities** - structured records for people, projects, and incidents with comprehensive context, links, and resources
+* **Activity Ledger** - chronological log entries tagged to entities via markdown links
+* **Querying** - filter by entity, date range, or both
+
+Key tools:
+* `list_entity_types` - see what entity types exist
+* `list_entities` - list all entities of a given type
+* `get_entity` - get full entity record (name, summary, notes, links, resources)
+* `get_entity_brief` - get entity record plus activity log filtered to that entity
+* `add_entity` - create new entity
+* `add_log_entry` - record activity with date, headline, and optional sub-entries
+* `query_log` - query activity ledger by entity and/or date range
+* `replace_entity_notes` - update entity's notes field
+
+When logging activity, embed entity references as markdown links: `[Person Name](srkb://people/slug)` or `[Project Name](srkb://projects/slug)`. These become tags for filtering.  Any entity can be tagged.  Always use the format `srkb://entity-type/entity-slug`.  Use the list_entity_types tool for a definitive list of entity types.
 
 ### Task Management
 This is implemented in `./tasks/`.  It uses a simple markdown file for listing tasks.
@@ -52,8 +66,6 @@ This repo is organised as follows.
 ### ./CLAUDE.md
 This file
 
-### ./kb/
-The Knowledge Base, as previously discussed.  The internal structure of this folder is described in the CLAUDE.md file in the folder itself.
 
 ### ./tasks/
 The Task Management system, as previously discussed.  The internal structure of this folder is trivial and is described in the CLAUDE.md file and tasks.md file in the folder itself.
@@ -84,9 +96,9 @@ You should always consider context and look for reasonable opportunities to do t
 
 ### Freely Permissible
 You may do the following without my approval.
-* Access the knowledge base for context or other reasons.  Though, note that you MUST ALWAYS follow any access rules laid out in the CLAUDE.md file there.
+* Access the knowledge base (srkb MCP server) for context or other reasons.
 * Access the task management system for context or other reasons.  Though, note that you MUST ALWAYS follow any access rules laid out in the CLAUDE.md file there.
-* Access MCP sources to read or search for information.  (Note that authoring or editing content is strictly forbidden below)
+* Access MCP sources to read or search for information.  (Note that authoring or editing content in Confluence/Jira is strictly forbidden below)
 * Access Git to check status or perform other read-only operations.  (Note that explicit permission is required below to make changes to the state of git commits.)
 
 ### Permission Required
@@ -109,7 +121,7 @@ The following describes how you should react to specific prompt patterns.  They 
 The prompt appears to reference a person by name.
 
 #### Response
-* Use the Knowledge Base to check whether the person is known, following any instructions in the ./kb/CLAUDE.md for references to people.
+* Use the Knowledge Base (srkb) to check whether the person is known: `list_entities` with entity_type "people", or `get_entity` if you know their slug.
 
 ### Logging
 
@@ -117,7 +129,7 @@ The prompt appears to reference a person by name.
 The prompt asserts something significant, even minimally so.  Assertions include observations, notes of activities undertaken, thoughts, or events that have happened.
 
 #### Response
-* Use the knowledge base to record the information, following any instructions in ./kb/CLAUDE.md.
+* Use the knowledge base (srkb) to record the information using `add_log_entry` with appropriate entity tags embedded as markdown links.
 
 ### Task Completion
 
@@ -126,7 +138,7 @@ The prompt suggests that something has been done.  For example, an assertion tha
 
 #### Response
 * Use the task management system to check for tasks that can be removed, following any instructions in ./tasks/CLAUDE.md 
-* Use the Knowledge Base to record the activity, following any instructions in ./kb/CLAUDE.md
+* Use the Knowledge Base (srkb) to record the activity using `add_log_entry`.
 
 ### Waiting-On Resolution
 
@@ -135,7 +147,7 @@ The prompt indicates that something I was waiting on has been resolved — for e
 
 #### Response
 * Use the task management system to check whether the action resolves a waiting-on item, following any instructions in ./tasks/CLAUDE.md
-* Use the Knowledge Base to record the activity or resolution, following any instructions in ./kb/CLAUDE.md
+* Use the Knowledge Base (srkb) to record the activity or resolution using `add_log_entry`.
 
 ### Communication Style
 * Use British English
