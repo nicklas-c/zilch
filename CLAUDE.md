@@ -113,8 +113,6 @@ You MUST NEVER do the following.
 ## Specific Prompt Responses
 The following describes how you should react to specific prompt patterns.  They are not mutually exclusive and a single prompt may match zero to many of these patterns.  EVERY prompt you receive in a conversation should be considered against ALL of these patterns.
 
-### Greetings
-
 ### People
 
 #### Pattern

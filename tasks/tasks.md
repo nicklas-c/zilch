@@ -4,12 +4,13 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Write LinkedIn reference for Alex Murphy | | |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
+| Finalise list of Skills IQ skills | | |
+| Write LinkedIn reference for Alex Murphy | | |
 
 ## Later
 

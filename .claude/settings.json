@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__srkb__list_entities",
+      "mcp__srkb__get_entity_brief",
+      "mcp__srkb__list_entity_types",
+      "mcp__srkb__add_log_entry",
+      "mcp__srkb__query_log",
+      "mcp__srkb__get_entity",
+      "mcp__srkb__archive_entity",
+      "mcp__srkb__replace_entity_notes",
+      "mcp__srkb__add_entity_resource",
+      "mcp__srkb__add_entity_link",
+      "mcp__srkb__add_entity",
+      "mcp__srkb__replace_log_entry",
+      "mcp__srkb__replace_entity_summary"
+    ],
+    "additionalDirectories": [
+      "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory"
+    ]
+  }
+}
