@@ -27,8 +27,7 @@
             }
         },
         "srkb": {
-            "type": "http",
-            "url": "localhost:3000"
+            "command": "/Users/nicklas.chapman/.srkb/sitrep-mcp"
         }
     }
 }

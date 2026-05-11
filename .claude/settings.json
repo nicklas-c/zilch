@@ -13,7 +13,14 @@
       "mcp__srkb__add_entity_link",
       "mcp__srkb__add_entity",
       "mcp__srkb__replace_log_entry",
-      "mcp__srkb__replace_entity_summary"
+      "mcp__srkb__replace_entity_summary",
+      "WebFetch(domain:miro.com)",
+      "Bash(mcp__srkb list_entity_types)",
+      "Bash(mcp__srkb list_entities --entity-type teams)",
+      "Bash(mcp__srkb list_entities --entity-type projects)",
+      "WebFetch(domain:www.lytics.com)",
+      "WebFetch(domain:www.contentstack.com)",
+      "Bash(grep -v \"^[0-9]*:\\\\s*$\")"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory"
