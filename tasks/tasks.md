@@ -4,11 +4,21 @@
 
 | Task | Project | Notes |
 |---|---|---|
+| Clear down backlog of Slacks post holiday | | |
+| Set up epics for engineering initiatives in iteration 13 | | |
+| Sync engineering initiative epics back to Productboard | | |
+| Schedule 1:1 with Phil | | Missed one due to planning meeting. Discuss his ownership of the DD costs thing |
+| Let the team know about the org changes | | |
+| Add Kieran Patel to team slack channels | | |
+| Nudge the team to respond to the RSVP for Momentum Day | | |
+| Read and digest QA documentation | | https://payzilch.atlassian.net/wiki/spaces/PAYZ/pages/5387681850/Quality+Assurance |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
+| Check in with Corina re recruitment in Vilnius | | |
+| Follow up on the voice coaching thing | | |
 | Discuss Segmented Storefront frontend implementation with Stefan in next 1:1 | Segmented Storefront | Understand how frontend handles segments |
 | Talk to Platform/Data team about Segmented Storefront segmentation logic | Segmented Storefront | Understand how multi-segment conflicts are resolved and backend architecture |
 | Schedule 1:1 with Ethan Stockwell to clarify data team remit and involvement | | |

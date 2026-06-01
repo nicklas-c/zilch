@@ -20,7 +20,8 @@
       "Bash(mcp__srkb list_entities --entity-type projects)",
       "WebFetch(domain:www.lytics.com)",
       "WebFetch(domain:www.contentstack.com)",
-      "Bash(grep -v \"^[0-9]*:\\\\s*$\")"
+      "Bash(grep -v \"^[0-9]*:\\\\s*$\")",
+      "mcp__srkb__add_entity_alias"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory"
