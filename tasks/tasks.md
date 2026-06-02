@@ -4,7 +4,6 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Clear down backlog of Slacks post holiday | | |
 | Set up epics for engineering initiatives in iteration 13 | | |
 | Sync engineering initiative epics back to Productboard | | |
 | Schedule 1:1 with Phil | | Missed one due to planning meeting. Discuss his ownership of the DD costs thing |
@@ -12,11 +11,13 @@
 | Add Kieran Patel to team slack channels | | |
 | Nudge the team to respond to the RSVP for Momentum Day | | |
 | Read and digest QA documentation | | https://payzilch.atlassian.net/wiki/spaces/PAYZ/pages/5387681850/Quality+Assurance |
+| Review Ephemeral environments and Fraud engine projects for tax credits doc | | For Parry - Projects 4 and 5. Due 3pm Friday 6 June |
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
+| Organise fee-service handover with Grzegorz | | Part of post-reorg service ownership changes |
 | Check in with Corina re recruitment in Vilnius | | |
 | Follow up on the voice coaching thing | | |
 | Discuss Segmented Storefront frontend implementation with Stefan in next 1:1 | Segmented Storefront | Understand how frontend handles segments |
