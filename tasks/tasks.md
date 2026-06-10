@@ -12,6 +12,9 @@
 | Nudge the team to respond to the RSVP for Momentum Day | | |
 | Read and digest QA documentation | | https://payzilch.atlassian.net/wiki/spaces/PAYZ/pages/5387681850/Quality+Assurance |
 | Review Ephemeral environments and Fraud engine projects for tax credits doc | | For Parry - Projects 4 and 5. Due 3pm Friday 6 June |
+| Draft L6 engineer job spec proposal | | |
+| Sign off Jira tickets in the sign-off column | | |
+| Write up interview for Arkadiusz Kowal | | |
 
 ## Soon
 
