@@ -10,7 +10,6 @@
 | Get Ephemerals status from Nick G before next Steve 1:1 | Ephemeral Environments | |
 | Speak to Tom Wood about unequal fee splitting — still wanted? Look into feasibility | Fee Service | Descoped from Pay Monthly |
 | Speak to Michal P about adtech experience to inform Merchant role decision | | |
-| Set up meeting between David Ramsay and DevOps team | | "Bring out your dead" — prep team to focus on concrete, solvable concerns |
 
 ## Soon
 
