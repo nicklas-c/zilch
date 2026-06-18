@@ -12,6 +12,7 @@
 | Document Stefan Amarie's probation pass in Lattice | | Need Stefan's input for his question — cover in next 1:1 |
 | Get Ephemerals status from Nick G before next Steve 1:1 | Ephemeral Environments | |
 | Speak to Michal P about adtech experience to inform Merchant role decision | | |
+| Review Steve Rayko's "Top 10 Bottlenecks in Engineering Cycle Time" doc (June 2026) | | [Slack message](https://payzilch.slack.com/archives/C028GA4CW80/p1780646019602079). Based on LinearB metrics, Mar–May 2026. Relevant to DevOps and frontend deploy work |
 
 ## Soon
 
@@ -30,6 +31,8 @@
 | Check in with DevOps team on morale and Phil's influence on tone | | Use 1:1s with other team members |
 | Start writing Phil Stevenson's next appraisal | | Six months early — keeps feedback consistent. Consider doing for all reports. |
 | Start writing Stefan Amarie's end-of-year appraisal | | Probation write-up is a good basis |
+| Improve and manage the engineering interview rota | | Volunteered 2026-06-16. [Current rota](https://payzilch.atlassian.net/wiki/spaces/~109753812/pages/3516367008) |
+| Arrange office visit for Amr Aljundi | | New starter — wants to see the offices and meet key people before joining |
 
 ## Later
 
