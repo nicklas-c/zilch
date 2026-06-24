@@ -13,7 +13,6 @@
 | Task | Project | Notes |
 |---|---|---|
 | Populate tech debt epic for iteration 13 | | |
-| Build AI skill for flash report generation | | Incorporate Steve's feedback on abstraction level and format; leverage knowledge base |
 | Sync engineering initiative epics back to Productboard | | |
 | Discuss Segmented Storefront frontend implementation with Stefan in next 1:1 | Segmented Storefront | Understand how frontend handles segments |
 | Talk to Platform/Data team about Segmented Storefront segmentation logic | Segmented Storefront | Understand how multi-segment conflicts are resolved and backend architecture |
@@ -25,6 +24,7 @@
 | Start writing Phil Stevenson's next appraisal | | Six months early — keeps feedback consistent. Consider doing for all reports. |
 | Start writing Stefan Amarie's end-of-year appraisal | | Probation write-up is a good basis |
 | Move Merchant team's support rota into JSM | | Blocked on ITOPS-14282. Remove Michal Baran. |
+| Create checklist for service handover between teams | | Things that need updating when a service moves from one team to another |
 
 ## Later
 

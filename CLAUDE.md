@@ -50,6 +50,7 @@ A simple list of pending tasks, recurring tasks, and actions I'm waiting on from
 In addition to the components of this system, there are external sources you can interact with via MCP servers. The following are available for **read-only** context gathering (writing to these systems is strictly forbidden):
 * **Confluence** - for company documentation and decision records
 * **Jira** - for project and issue tracking
+* **Slack** - for access to Slack conversations
 
 ## Your Role
 

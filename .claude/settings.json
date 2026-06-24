@@ -23,10 +23,35 @@
       "Bash(grep -v \"^[0-9]*:\\\\s*$\")",
       "mcp__srkb__add_entity_alias",
       "mcp__confluence__confluence_get_space_page_tree",
-      "WebFetch(domain:www.ashbyhq.com)"
+      "WebFetch(domain:www.ashbyhq.com)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "mcp__plugin_slack_slack__slack_search_channels",
+      "mcp__plugin_atlassian_atlassian__getAccessibleAtlassianResources",
+      "mcp__plugin_atlassian_atlassian__getConfluenceSpaces",
+      "mcp__plugin_atlassian_atlassian__getVisibleJiraProjects",
+      "mcp__plugin_miro_miro__user_who_am_i",
+      "WebFetch(domain:smithery.ai)",
+      "WebFetch(domain:github.com)",
+      "Edit(/.claude/skills/flash-report/**)",
+      "mcp__plugin_atlassian_atlassian__searchJiraIssuesUsingJql",
+      "mcp__plugin_slack_slack__slack_read_channel",
+      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-06-19 00:00:00\" \"+%s\")"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "date"
+          }
+        ]
+      }
     ]
   }
 }
