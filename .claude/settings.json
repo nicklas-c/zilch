@@ -21,7 +21,9 @@
       "WebFetch(domain:www.lytics.com)",
       "WebFetch(domain:www.contentstack.com)",
       "Bash(grep -v \"^[0-9]*:\\\\s*$\")",
-      "mcp__srkb__add_entity_alias"
+      "mcp__srkb__add_entity_alias",
+      "mcp__confluence__confluence_get_space_page_tree",
+      "WebFetch(domain:www.ashbyhq.com)"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory"
