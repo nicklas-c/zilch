@@ -36,10 +36,18 @@
       "Edit(/.claude/skills/flash-report/**)",
       "mcp__plugin_atlassian_atlassian__searchJiraIssuesUsingJql",
       "mcp__plugin_slack_slack__slack_read_channel",
-      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-06-19 00:00:00\" \"+%s\")"
+      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-06-19 00:00:00\" \"+%s\")",
+      "Edit(/.claude/skills/interview-write-up/**)",
+      "Edit(/.claude/skills/interview-prep/**)",
+      "Bash(mkdir -p /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/content/temp)",
+      "Bash(cp /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/content/temp/interview-prep-neli-hargeliya.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/interview-prep/example.md)",
+      "Bash(mkdir -p /Users/nicklas.chapman/.claude/memory)"
     ],
     "additionalDirectories": [
-      "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory"
+      "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
+      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/content",
+      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/interview-prep",
+      "/Users/nicklas.chapman/.claude"
     ]
   },
   "hooks": {

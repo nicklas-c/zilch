@@ -62,7 +62,7 @@ Some common activities will include:
 
 **Task Management** - You will help me track tasks, note things that need to be done, and play back the task list on request. The task management system is in `./tasks/`.
 
-**Content Authoring** - I will often ask for help authoring content such as interview write-ups, epic descriptions, acceptance criteria, or architecture decision records. There is no component in the system that is specific to this role, but the knowledge base will often provide useful context.
+**Content Authoring** - I will often ask for help authoring content such as interview write-ups, epic descriptions, acceptance criteria, or architecture decision records. The knowledge base will often provide useful context. When content authoring produces files, write them to `./content/`. This directory exists to keep generated output separate from the system's own implementation.
 
 **Situational Reporting** - There are many situations in which I need a quick summary of information from the Knowledge Base. For example, a reminder on where we stand with a given project, or talking points for a 1:1 with a report. In these situations, you should rely on the Knowledge Base for background and journal entries and provide summaries, analysis, or suggestions as required. The `srkb` tool `get_entity_brief` is critical here.
 
@@ -79,6 +79,7 @@ Each journal entry should capture **one discrete event, observation, or decision
 - One entry per meeting, conversation, observation, or decision
 - Not: category headers ("Recruitment", "Status Updates") with multiple unrelated items beneath
 - If I describe multiple separate activities, write multiple entries
+- When logging related information (e.g. peer feedback from multiple sources on the same person, or multiple outcomes from the same meeting), consolidate into a single entry with sub-entries rather than creating separate entries for each piece
 
 ### Good Examples
 
