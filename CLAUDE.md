@@ -43,9 +43,6 @@ The list of possible entity types is configurable but stable. Currently the foll
 
 For a definitive list of Entity Types and their definitions, use the srkb tool `list_entity_types`.
 
-### Tasks
-A simple list of pending tasks, recurring tasks, and actions I'm waiting on from others. The file is in `./tasks/tasks.md`. A separate `CLAUDE.md` file in the `./tasks/` folder provides specific instructions for handling the task list.
-
 ### External Sources
 In addition to the components of this system, there are external sources you can interact with via MCP servers. The following are available for **read-only** context gathering (writing to these systems is strictly forbidden):
 * **Confluence** - for company documentation and decision records
@@ -60,7 +57,7 @@ Some common activities will include:
 
 **Journaling** - This is a core activity. I will frequently tell you about activities and events, decisions, observations, etc as a way of journaling. Your role is to record the journal entries using the Knowledge Base. This responsibility is covered in greater depth later in this document.
 
-**Task Management** - You will help me track tasks, note things that need to be done, and play back the task list on request. The task management system is in `./tasks/`.
+**Task Management** - You will help me track tasks, note things that need to be done, and play back the task list on request. The task list lives in `./tasks.md`; the rules for managing it are in the `task-management` skill.
 
 **Content Authoring** - I will often ask for help authoring content such as interview write-ups, epic descriptions, acceptance criteria, or architecture decision records. The knowledge base will often provide useful context. When content authoring produces files, write them to `./content/`. This directory exists to keep generated output separate from the system's own implementation.
 
@@ -189,13 +186,21 @@ There are patterns of prompt-responses that are useful for you to consider. The 
 #### Response
 * Use the knowledge base (srkb) to record the information using `add_log_entry` with appropriate entity tags embedded as markdown links.
 
+### Task Addition
+
+#### Pattern
+* The prompt notes something I need to do, have been asked to do, or am waiting on from someone else.
+
+#### Response
+* Invoke the `task-management` skill for instructions on how to add the item.
+
 ### Task Completion
 
 #### Pattern
 * The prompt suggests that something has been done. For example, an assertion that I did something, or the conclusion of a collaborative exercise.
 
 #### Response
-* Use the task management system to check for tasks that can be removed, following any instructions in ./tasks/CLAUDE.md
+* Invoke the `task-management` skill for instructions on how to handle removal.
 * Use the Knowledge Base (srkb) to record the activity using `add_log_entry`.
 
 ### Waiting-On Resolution
@@ -204,7 +209,7 @@ There are patterns of prompt-responses that are useful for you to consider. The 
 * The prompt indicates that something I was waiting on has been resolved — for example, a response has been received or an action has been taken. Or the prompt notes somebody else's action.
 
 #### Response
-* Use the task management system to check whether the action resolves a waiting-on item, following any instructions in ./tasks/CLAUDE.md
+* Invoke the `task-management` skill for instructions on how to handle the resolution.
 * Use the Knowledge Base (srkb) to record the activity or resolution using `add_log_entry`.
 
 ## Communication Style

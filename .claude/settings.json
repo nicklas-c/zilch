@@ -41,13 +41,22 @@
       "Edit(/.claude/skills/interview-prep/**)",
       "Bash(mkdir -p /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/content/temp)",
       "Bash(cp /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/content/temp/interview-prep-neli-hargeliya.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/interview-prep/example.md)",
-      "Bash(mkdir -p /Users/nicklas.chapman/.claude/memory)"
+      "Bash(mkdir -p /Users/nicklas.chapman/.claude/memory)",
+      "Bash(mkdir -p /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/task-management)",
+      "Edit(/.claude/skills/task-management/**)",
+      "Bash(rm /Users/nicklas.chapman/.claude/projects/-Users-nicklas-chapman-repos-github-com-nicklas-c-zilch/memory/feedback_journal-entries-no-presumption.md)",
+      "mcp__plugin_atlassian_atlassian__getJiraIssue",
+      "mcp__plugin_slack_slack__slack_read_thread",
+      "mcp__plugin_slack_slack__slack_search_users",
+      "mcp__plugin_atlassian_atlassian__searchConfluenceUsingCql",
+      "mcp__plugin_slack_slack__slack_search_public_and_private"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
       "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/content",
       "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/interview-prep",
-      "/Users/nicklas.chapman/.claude"
+      "/Users/nicklas.chapman/.claude",
+      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills"
     ]
   },
   "hooks": {
