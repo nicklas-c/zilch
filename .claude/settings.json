@@ -49,7 +49,8 @@
       "mcp__plugin_slack_slack__slack_read_thread",
       "mcp__plugin_slack_slack__slack_search_users",
       "mcp__plugin_atlassian_atlassian__searchConfluenceUsingCql",
-      "mcp__plugin_slack_slack__slack_search_public_and_private"
+      "mcp__plugin_slack_slack__slack_search_public_and_private",
+      "Bash(rm /Users/nicklas.chapman/.claude/projects/-Users-nicklas-chapman-repos-github-com-nicklas-c-zilch/memory/feedback_no_merge_stubs.md)"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
