@@ -50,14 +50,24 @@
       "mcp__plugin_slack_slack__slack_search_users",
       "mcp__plugin_atlassian_atlassian__searchConfluenceUsingCql",
       "mcp__plugin_slack_slack__slack_search_public_and_private",
-      "Bash(rm /Users/nicklas.chapman/.claude/projects/-Users-nicklas-chapman-repos-github-com-nicklas-c-zilch/memory/feedback_no_merge_stubs.md)"
+      "Bash(rm /Users/nicklas.chapman/.claude/projects/-Users-nicklas-chapman-repos-github-com-nicklas-c-zilch/memory/feedback_no_merge_stubs.md)",
+      "Bash(mkdir -p /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep)",
+      "Edit(/.claude/skills/slack-sweep/**)",
+      "Bash(date -j -v-3d -v9H -v0M -v0S +%s)",
+      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-06-26 09:00:00\" +%s)",
+      "Bash(mkdir -p /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/temp)",
+      "mcp__srkb__add_sub_entries",
+      "mcp__plugin_atlassian_atlassian__getConfluencePage",
+      "mcp__plugin_slack_slack__slack_search_public",
+      "Bash(pip3 install *)"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
       "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/content",
       "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/interview-prep",
       "/Users/nicklas.chapman/.claude",
-      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills"
+      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills",
+      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch"
     ]
   },
   "hooks": {

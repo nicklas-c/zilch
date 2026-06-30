@@ -1,7 +1,7 @@
 {
     "mcpServers": {
         "srkb": {
-            "command": "/Users/nicklas.chapman/.srkb/sitrep-mcp"
+            "command": "/Users/nicklas.chapman/.sitrep/sitrep-mcp"
         }
     }
 }
