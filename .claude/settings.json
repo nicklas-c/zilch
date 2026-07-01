@@ -59,7 +59,9 @@
       "mcp__srkb__add_sub_entries",
       "mcp__plugin_atlassian_atlassian__getConfluencePage",
       "mcp__plugin_slack_slack__slack_search_public",
-      "Bash(pip3 install *)"
+      "Bash(pip3 install *)",
+      "Bash(rm /Users/nicklas.chapman/.claude/projects/-Users-nicklas-chapman-repos-github-com-nicklas-c-zilch/memory/feedback_task_completion.md)",
+      "mcp__plugin_atlassian_atlassian__search"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
