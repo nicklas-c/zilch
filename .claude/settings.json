@@ -61,7 +61,14 @@
       "mcp__plugin_slack_slack__slack_search_public",
       "Bash(pip3 install *)",
       "Bash(rm /Users/nicklas.chapman/.claude/projects/-Users-nicklas-chapman-repos-github-com-nicklas-c-zilch/memory/feedback_task_completion.md)",
-      "mcp__plugin_atlassian_atlassian__search"
+      "mcp__plugin_atlassian_atlassian__search",
+      "Edit(/.claude/skills/review-jira-issue/**)",
+      "Bash(mv /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.old.md)",
+      "Bash(mv /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.proposed.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.md)",
+      "Bash(mv /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.old2.md)",
+      "Bash(rm /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.old.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.old2.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/excluded-channels.md)",
+      "Bash(mkdir -p /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/resources/slack && mv /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/watch-list.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/resources/slack/watch-list.md)",
+      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-07-01 12:00:00\" \"+%s\")"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
@@ -69,7 +76,8 @@
       "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/interview-prep",
       "/Users/nicklas.chapman/.claude",
       "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills",
-      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch"
+      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch",
+      "/Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep"
     ]
   },
   "hooks": {
