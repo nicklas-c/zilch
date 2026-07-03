@@ -25,3 +25,4 @@
 | #recruitment-engineering-vilnius | C0B5PL0S8JD |
 | #tmp-devops-ssr-web | C0BE3QDPQSW |
 | #tech-announcements | C049Y4AH5PU |
+| #zephyr-zero-debugging-sanity-pack | |

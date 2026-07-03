@@ -33,7 +33,7 @@ Use `slack_search_public_and_private` with:
 - `after` set to the stored timestamp
 - `channel_types: "im,mpim"`
 - `sort: "timestamp"`, `sort_dir: "asc"`
-- `include_context: false`
+- `include_context: true`
 
 **Paginate to exhaustion** — continue requesting pages until no cursor is returned.
 
@@ -46,9 +46,19 @@ Read the watch list from `./resources/slack/watch-list.md`. For each channel on 
 
 Paginate each channel to exhaustion if results exceed a single page.
 
+#### Pass 3: Mentions
+
+Use `slack_search_public_and_private` with:
+- `query: "to:me"`
+- `after` set to the stored timestamp
+- `sort: "timestamp"`, `sort_dir: "asc"`
+- `include_context: true`
+
+Paginate to exhaustion. Deduplicate against messages already gathered in Pass 1 and Pass 2 — this pass exists to catch mentions in channels not on the watch list.
+
 #### Pagination Rule
 
-Both passes MUST be paginated to exhaustion. "To exhaustion" means: continue requesting pages until the API returns no cursor (for Pass 1) or no further messages (for Pass 2). Do not stop early based on a judgement that enough signal has been found. The sweep is not complete until both passes are fully exhausted.
+All passes MUST be paginated to exhaustion. "To exhaustion" means: continue requesting pages until the API returns no cursor (for Pass 1 and Pass 3) or no further messages (for Pass 2). Do not stop early based on a judgement that enough signal has been found. The sweep is not complete until all passes are fully exhausted.
 
 #### Thread Expansion
 
@@ -92,7 +102,7 @@ Read the tasks list in `./tasks.md` to familiarise yourself with tasks currently
 
 ### 5. Update Timestamp
 
-Write the timestamp captured in step one to `./slack-sweep-timestamp.txt`.
+Write the timestamp captured in step one to `./slack-sweep-timestamp.txt`. This happens NOW, not after confirmation — it marks the end of the gathering window, ensuring no gap between sweeps regardless of whether logs are written.
 
 ### 6. Request Confirmation
 
