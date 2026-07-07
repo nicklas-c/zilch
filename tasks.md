@@ -6,10 +6,12 @@
 |---|---|---|
 | Action [ZILCH-51748](https://payzilch.atlassian.net/browse/ZILCH-51748) — multi-language support for semantic search (globalisation) | | Volunteered to own this. Vectors + profanity lists for supported languages. [DM with Grzegorz](https://payzilch.slack.com/archives/D07H7QCPNLS/p1782823849009009) |
 | Get bulk rewards endpoint estimated for 13.3 | | Purchase team needs bulk endpoint in rewards-service (ZILCH-51638). Nick Holt's initial estimate: 2–3 SP. [Thread](https://payzilch.slack.com/archives/C03NXR62HQ8/p1782389798335029) |
-| Agree timelines with Marcin for rewards/offer handover execution | Rewards & Offer Services Handover | |
 | Plan rewards/offer handover changes into a sprint | Rewards & Offer Services Handover | |
-| Schedule fee-service knowledge transfer for next sprint (13.5) | Fee Service Handover | |
 | Plan fee-service handover changes into a sprint (target 13.6) | Fee Service Handover | |
+| Chase Tom McKenzie for affiliate-integration-service test strategy findings | | Chase date lapsed today. Give him the morning; chase afternoon. |
+| Archive LD flags `semantic-search-swipe-feedback` and `semantic-search` (Ossie confirmed code deleted; keeping `semantic-search-results`) | | [DM](https://zilch.enterprise.slack.com/archives/D07D07G8T7V/p1783428540333899) |
+| Write up appraisal process suggestion and post to #eng-management | | Announced in leadership synch but ran out of time to discuss. |
+| Cascade Steve's instruction re: Grafana/Datadog confidentiality to DevOps team | Observability Infrastructure | No Grafana negotiation work to be visible to DD. [DM](https://zilch.enterprise.slack.com/archives/D097D2RU0UQ/p1783438246858199) |
 
 
 ## Soon
@@ -50,7 +52,6 @@
 | Task | Project | Chase date | Notes |
 |---|---|---|---|
 | Tom McKenzie to report on affiliate-integration-service test strategy and coverage | | 7 Jul | George Sharpe flagged only 3 regression tests. Tom to satisfy himself and message findings. |
-| Grzegorz Ziemiański to confirm point person for fee-service handover | Fee Service Handover | 8 Jul | Suggested Michał Baran. [DM](https://zilch.enterprise.slack.com/archives/D07H7QCPNLS/p1783352017163999) |
 | Marcin, George, Jacek, DevOps to validate systems-to-update list for rewards/offer handover | Rewards & Offer Services Handover | 8 Jul | Asked in Slack. [Thread](https://payzilch.slack.com/archives/C0BFC37U5C5/p1783351430370239) |
 | Kieran Patel to complete retailer category backfill for Sponsored Search | Sponsored Retailer Search | 10 Jul | Aiming for today (6 Jul) ahead of Thursday code cutoff. [DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1783332348067919) |
 | Tom Wood to advise whether unequal fee splitting is required, likely to be, or no longer needed | Fee Service | | Descoped from Pay Monthly |

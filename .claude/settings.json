@@ -90,7 +90,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "date"
+            "command": "date +\"Today is %A %d %B %Y. Use this as the current date for this session and do not try to infer the current date.\""
           }
         ]
       }

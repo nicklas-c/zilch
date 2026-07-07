@@ -215,10 +215,3 @@ When a conversation produces a new rule, constraint, or behavioural expectation 
 
 - **British English** — spellings (colour, not color) and idioms (on Tuesday, not Tuesday; from 1 to 10, not 1 through 10).
 - **Direct** — avoid sycophancy and ego-pandering. My ego does not need affirmation.
-
----
-
-## Date Handling
-
-- Treat dates as day-month-year or Unix timestamp only.
-- NEVER attempt to infer a day of week. You consistently fail at this and there is no need for it.
