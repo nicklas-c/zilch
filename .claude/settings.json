@@ -68,7 +68,11 @@
       "Bash(mv /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.old2.md)",
       "Bash(rm /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.old.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/SKILL.old2.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/excluded-channels.md)",
       "Bash(mkdir -p /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/resources/slack && mv /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/.claude/skills/slack-sweep/watch-list.md /Users/nicklas.chapman/repos/github.com/nicklas-c/zilch/resources/slack/watch-list.md)",
-      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-07-01 12:00:00\" \"+%s\")"
+      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-07-01 12:00:00\" \"+%s\")",
+      "mcp__plugin_slack_slack__slack_read_canvas",
+      "mcp__plugin_slack_slack__slack_read_user_profile",
+      "Bash(gh pr *)",
+      "Bash(gh release *)"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
