@@ -26,3 +26,4 @@
 | #tmp-devops-ssr-web | C0BE3QDPQSW |
 | #tech-announcements | C049Y4AH5PU |
 | #zephyr-zero-debugging-sanity-pack | C0AD1KZRXEF |
+| #incident-523 | C0BH3FYV864 |
