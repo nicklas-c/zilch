@@ -4,20 +4,28 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Schedule a follow-up session with Louise Collins | | Voice coaching |
-| Add agenda item to next leadership synch: escalate poor attendance at hold-people-to-account meeting | DevOps Ownership and Accountability | Only Nikos, onboarding, decisioning, retain attended. [Thread](https://zilch.enterprise.slack.com/archives/C03EDM9MSCT/p1783497803591419) |
-| Get a copy of the office plan — find out what desks Amr and Reeya are at | Amr and Reeya Onboarding | By 25 Jul. |
-| Buy a couple of Lego unicorns | Amr and Reeya Onboarding | Team mascot. By 25 Jul. |
-| Ask George Sharpe for more info on his Jira/LD integration | | Demonstrated at engineering leadership sync. Creates Jira tickets tracking LD flag status to drive hygiene. |
-| Create flash report for Merchant team | | Friday recurring |
-| Create flash report for DevOps team | | Friday recurring |
-| Plan PIR for Incident-523 (fee cap misconfiguration) | | Audience: Tom Wood, Tamara Quinn, Mark Reddington, Jacek Zanko at minimum. Establish facts (timeline, RCA, impact), schedule a PIR meeting to run through facts and discuss remediations, then document and distribute. |
+| Create Incident-523 PIR page in Confluence | Incident-523 PIR | |
+| Build and document detailed timeline of the fee cap issue | Incident-523 PIR | |
+| Establish and document root cause (human error — fee cap not updated during April pricing changes) | Incident-523 PIR | |
+| Validate Tom Wood's £300k revenue impact figure — understand methodology and document findings | Incident-523 PIR | |
+| Make Tamara Quinn aware of Incident-523 — she was PM on the initiative at the time and may not know | Incident-523 PIR | |
+| Announce intent to hold PIR meeting in #incident-523 — ask who wants to attend | Incident-523 PIR | |
+| Schedule PIR meeting — invitees are superset of (Tom Wood, Tamara Quinn, Mark Reddington, Jacek Zanko) plus anyone expressing interest in the channel | Incident-523 PIR | After step 6 |
+| Raise tickets for remedial actions agreed at PIR and document them in the Confluence page | Incident-523 PIR | After PIR meeting |
+| Get up to speed on on-call expectations and process — then spawn follow-up tasks | On Call Rota | Target 3 Aug for rotas to be operational. Start by understanding what's expected of EMs, what the process looks like, tooling, stipend rules, escalation paths. [Thread](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783610347879719) |
+| Review #tmp-devops-ssr-web scope creep and step in if necessary — Chris Walker raising unplanned requirements on DevOps | New Web | [#tmp-devops-ssr-web](https://zilch.enterprise.slack.com/archives/C0BE3QDPQSW/p1783689319891049) |
+| Chase Nick Gilbert for Ephemeral workshop action list and ensure items are assigned to owning teams, not absorbed into DevOps | Ephemeral Environments | |
+| Review Corinna's interview deck and confirm which assignment format to use | Recruitment — Vilnius 2026 | [DM](https://zilch.enterprise.slack.com/archives/D0A06L754F4/p1783680376074029) |
+| Respond to Steve Rayko re Pluralsight usage challenge | | [Group DM](https://zilch.enterprise.slack.com/archives/C0BG70KT4SE/p1783680387108579) |
 
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
+| Find out how on-call affects contract employees | On Call Rota | Eligibility, compensation, legal/contractual implications. |
+| Ask Chris Walker for feedback on Lukasz Kowalczyk and share it with him | New Web | |
+| Answer Kieran's question re process documentation for adding affiliate networks to Admin Portal | | [Thread](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1783670640420149) |
 | Plan rewards/offer handover changes into a sprint | Rewards & Offer Services Handover | Actionable at Planning on 14 Jul |
 | Plan fee-service handover changes into a sprint (target 13.6) | Fee Service Handover | Actionable at Planning on 14 Jul |
 | Get written onboarding guide from Jacek (how to build, run, test the code) | Amr and Reeya Onboarding | For Amr — Jacek on leave for Amr's first week. By 22 Jul. |
@@ -47,11 +55,13 @@
 
 | Task | Project | Chase date | Notes |
 |---|---|---|---|
-| Ossie Nwokedi to check in re LD flags `semantic-search-swipe-feedback` and `semantic-search` — live evaluations still showing despite code deletion | | 10 Jul | [DM thread](https://zilch.enterprise.slack.com/archives/D07D07G8T7V/p1783616655516329?thread_ts=1783428540.333899&cid=D07D07G8T7V) |
+| Fee cap fix to be applied to production on Monday 13 Jul — then set Incident-523 state to RESOLVED | Incident-523 PIR | 13 Jul | Boris Karaulov / ITAM executing via SD-218509 |
 | Tom McKenzie to provide write-up on affiliate-integration-service test strategy and coverage | | 16 Jul | Promised to George Sharpe. Not urgent but want the team to look responsive. |
 | Tom McKenzie to introduce gate on PR-merge builds so no merge can turn a Maestro test red | | 23 Jul | Tests now stable and passing. Gate expected within a couple of weeks. |
 | Tom Wood to advise whether unequal fee splitting is required, likely to be, or no longer needed | Fee Service | | Descoped from Pay Monthly |
 | Stefan Amarie to create or find an epic for Module Federation POC (O5.KR3) | | | |
+| Louise Collins to respond re follow-up voice coaching session | | | Emailed with suggested availability |
+| Michael Davis to clarify Okta roles simplification spreadsheet | | | Responded with request for clarification. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783685411664999) |
 
 ## Recurring
 

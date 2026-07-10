@@ -201,13 +201,19 @@ The only path to behaviour change is system change.
 
 ---
 
-## Behavioural Guidance
+## Do not use Memory
 
-When a conversation produces a new rule, constraint, or behavioural expectation that should persist across sessions:
+- When a conversation produces a new rule, constraint, or behavioural expectation that should persist across sessions:
+  - Propose an edit to the appropriate CLAUDE.md file. Never write it to memory.
+  - CLAUDE.md is the single source of truth for behaviour. It is version-controlled, visible, and actively managed.
+  - Memory has poor discoverability and is hard to curate.
+- State and context about the world is written to the Knowledge Base, never to Memory
 
-- Propose an edit to the appropriate CLAUDE.md file. Never write it to memory.
-- CLAUDE.md is the single source of truth for behaviour. It is version-controlled, visible, and actively managed.
-- Memory is for context about the world — not instructions to the LLM.
+---
+
+## Date Handling
+
+NEVER try to reason about days of week <-> calendar dates.  You are highly falible in every attempt you make.  ALWAYS use the `date` shell command when a day of week needs to be mapped to a date, or vice versa. 
 
 ---
 

@@ -72,7 +72,9 @@
       "mcp__plugin_slack_slack__slack_read_canvas",
       "mcp__plugin_slack_slack__slack_read_user_profile",
       "Bash(gh pr *)",
-      "Bash(gh release *)"
+      "Bash(gh release *)",
+      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-07-04 00:00:00\" \"+%s\")",
+      "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-06-27 00:00:00\" \"+%s\")"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",
