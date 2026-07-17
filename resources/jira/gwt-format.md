@@ -112,7 +112,7 @@ Where possible, reuse the same phrase to express the same constraint across diff
 ## Full Example
 
 ```
-Given I am logged in as a merchant
+Given I am logged in as a fully-onboarded customer
 And I have configured a spend limit of £100
 When I attempt a purchase of £150
 Then the transaction is declined

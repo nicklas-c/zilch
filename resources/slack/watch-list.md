@@ -27,3 +27,4 @@
 | #tech-announcements | C049Y4AH5PU |
 | #zephyr-zero-debugging-sanity-pack | C0AD1KZRXEF |
 | #incident-523 | C0BH3FYV864 |
+| #adtech-engineering | C0A9H4JPWP8 |

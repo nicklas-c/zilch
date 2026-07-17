@@ -76,7 +76,13 @@
       "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-07-04 00:00:00\" \"+%s\")",
       "Bash(date -j -f \"%Y-%m-%d %H:%M:%S\" \"2026-06-27 00:00:00\" \"+%s\")",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Edit(/.claude/skills/cv-review/**)"
+      "Edit(/.claude/skills/cv-review/**)",
+      "Bash(date -j -f \"%Y-%m-%d\" \"2026-07-13\" \"+%A\")",
+      "Bash(date -v-14d +%Y-%m-%d)",
+      "Bash(date -j -f \"%Y-%m-%d\" \"2026-07-03\" +%s)",
+      "WebFetch(domain:api.ashbyhq.com)",
+      "WebFetch(domain:jobs.ashbyhq.com)",
+      "mcp__srkb__replace_entity_background"
     ],
     "additionalDirectories": [
       "/Users/nicklas.chapman/.claude/projects/-Users-nicklas-c-zilch/memory",

@@ -4,16 +4,17 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Establish and document root cause (human error — fee cap not updated during April pricing changes) | Incident-523 PIR | |
 | Raise tickets for remedial actions agreed at PIR and document them in the Confluence page | Incident-523 PIR | After PIR meeting |
-| Get up to speed on on-call expectations and process — then spawn follow-up tasks | On Call Rota | Target 3 Aug for rotas to be operational. Start by understanding what's expected of EMs, what the process looks like, tooling, stipend rules, escalation paths. [Thread](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783610347879719) |
-| Review #tmp-devops-ssr-web scope creep and step in if necessary — Chris Walker raising unplanned requirements on DevOps | New Web | [#tmp-devops-ssr-web](https://zilch.enterprise.slack.com/archives/C0BE3QDPQSW/p1783689319891049) |
+| Share runbook writing guidance with Merchant team | All Teams On-Call 2026 | |
+| Discuss on-call rota with Merchant team on Monday | All Teams On-Call 2026 | Tentative rota built in JSM (4 days per person, 2 for EM). Validate cycle length with team. Clarify: does on-call merge with the existing firefighter role? (Take is: yes, it should.) |
 | Chase Nick Gilbert for Ephemeral workshop action list and ensure items are assigned to owning teams, not absorbed into DevOps | Ephemeral Environments | |
-| Respond to Steve Rayko re Pluralsight usage challenge | | [Group DM](https://zilch.enterprise.slack.com/archives/C0BG70KT4SE/p1783680387108579) |
 | Schedule regular backlog analysis of security tickets | Drive Down Defect Backlog 2026 | Retro action 13 Jul. [#unicorn](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1783955560144189) |
-| Respond to Ossie re ZILCH-47685 — pushed back on need for Maestro test | | He says it's covered by unit tests in two places. Decide whether to accept or explain rationale. [DM](https://zilch.enterprise.slack.com/archives/D07D07G8T7V/p1783939387461439) |
 | Review engineering roles/levels spreadsheet (desired state) | | Michael Davis asked you and Grzegorz to take another look. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783949323066099) |
-| Talk through upcoming on-call rota with Merchant team | On Call Rota | |
+| Find out which architects work with which teams — is Spend Platform working with Abhishek or Saeed? | | |
+| Prioritise geo expansion KR items ZILCH-51748 and ZILCH-51747 for Merchant team | Global Market Readiness | [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784191731419739) |
+| Chase Tom McKenzie for affiliate-integration-service test strategy write-up | | Was promised to George Sharpe. Chase date was 16 Jul — overdue. |
+| Request Snowflake access via ITOps | Segmented Storefront | |
+| Post acknowledgement in #recruitment-engineering-vilnius confirming agreement to bring Ryan's candidates in for interview | Recruitment — Vilnius 2026 | [#recruitment-engineering-vilnius](https://zilch.enterprise.slack.com/archives/C0B5PL0S8JD/p1784107565296849) |
 
 
 ## Soon
@@ -21,7 +22,7 @@
 | Task | Project | Notes |
 |---|---|---|
 | Press for better attendance at hold-to-account meeting — raise at next synch | DevOps Ownership and Accountability | Retro action 13 Jul |
-| Find out how on-call affects contract employees | On Call Rota | Eligibility, compensation, legal/contractual implications. |
+| Find out how on-call affects contract employees | All Teams On-Call 2026 | Eligibility, compensation, legal/contractual implications. |
 | Ask Chris Walker for feedback on Lukasz Kowalczyk and share it with him | New Web | |
 | Answer Kieran's question re process documentation for adding affiliate networks to Admin Portal | | [Thread](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1783670640420149) |
 | Plan fee-service handover changes into a sprint (target 13.Q) | Fee Service Handover | |
@@ -61,7 +62,8 @@
 | Stefan Amarie to create or find an epic for Module Federation POC (O5.KR3) | | | |
 | Louise Collins to respond re follow-up voice coaching session | | | Emailed with suggested availability |
 | Michael Davis to clarify Okta roles simplification spreadsheet | | | Responded with request for clarification. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783685411664999) |
-| Kieran Patel to share existing documentation links (PRD, design doc, Confluence) for Brand Defence / ZILCH-53063 | Brand Defence | | |
+| Kieran Patel to share Search Home UX EPICs | | 22 Jul | [Group DM](https://zilch.enterprise.slack.com/archives/C0BG105HF3R/p1784280596553909) |
+| Mark Reddington to respond re whether Arsenal fee display issue warrants a formal incident | | | [DM](https://zilch.enterprise.slack.com/archives/D07KU90T729/p1784042518135369) |
 
 ## Recurring
 
