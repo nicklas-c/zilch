@@ -4,17 +4,16 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Raise tickets for remedial actions agreed at PIR and document them in the Confluence page | Incident-523 PIR | After PIR meeting |
-| Share runbook writing guidance with Merchant team | All Teams On-Call 2026 | |
-| Discuss on-call rota with Merchant team on Monday | All Teams On-Call 2026 | Tentative rota built in JSM (4 days per person, 2 for EM). Validate cycle length with team. Clarify: does on-call merge with the existing firefighter role? (Take is: yes, it should.) |
 | Chase Nick Gilbert for Ephemeral workshop action list and ensure items are assigned to owning teams, not absorbed into DevOps | Ephemeral Environments | |
 | Schedule regular backlog analysis of security tickets | Drive Down Defect Backlog 2026 | Retro action 13 Jul. [#unicorn](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1783955560144189) |
-| Review engineering roles/levels spreadsheet (desired state) | | Michael Davis asked you and Grzegorz to take another look. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783949323066099) |
-| Find out which architects work with which teams — is Spend Platform working with Abhishek or Saeed? | | |
 | Prioritise geo expansion KR items ZILCH-51748 and ZILCH-51747 for Merchant team | Global Market Readiness | [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784191731419739) |
 | Chase Tom McKenzie for affiliate-integration-service test strategy write-up | | Was promised to George Sharpe. Chase date was 16 Jul — overdue. |
 | Request Snowflake access via ITOps | Segmented Storefront | |
 | Post acknowledgement in #recruitment-engineering-vilnius confirming agreement to bring Ryan's candidates in for interview | Recruitment — Vilnius 2026 | [#recruitment-engineering-vilnius](https://zilch.enterprise.slack.com/archives/C0B5PL0S8JD/p1784107565296849) |
+| Complete Sponsored Search rollout to all staff | Sponsored Retailer Search | Kieran checking with SalesOps. Once confirmed, proceed with rollout. [#unicorn](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1784621763225319) |
+| Find out from DevOps what happens if teams adjust their notification rules — will they be overwritten the next time Terraform is applied? | | Agreed to report back to EMs group. Grzegorz particularly keen to know. |
+| Story out the GABD epic | Sponsored Retailer Search | [ZILCH-53638](https://payzilch.atlassian.net/browse/ZILCH-53638) |
+| Take ZILCH-53474 into next sprint | | Rob Nelson request. Stefan helping in #mobile-error-log-review. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784634554945229) |
 
 
 ## Soon
@@ -28,7 +27,6 @@
 | Plan fee-service handover changes into a sprint (target 13.Q) | Fee Service Handover | |
 | Get written onboarding guide from Jacek (how to build, run, test the code) | Amr and Reeya Onboarding | For Amr — Jacek on leave for Amr's first week. By 22 Jul. |
 | Draft welcome email for Amr and Reeya | Amr and Reeya Onboarding | By 25 Jul. |
-| Set up initial 1:1s for Amr and Reeya | Amr and Reeya Onboarding | By 25 Jul. |
 | Add Amr to Slack channels | Amr and Reeya Onboarding | 27 Jul. |
 | Add Amr to team ceremonials | Amr and Reeya Onboarding | 27 Jul. |
 | Add Amr to Merchant team in LinearB and DataDog | Amr and Reeya Onboarding | 27 Jul. |
@@ -62,8 +60,6 @@
 | Stefan Amarie to create or find an epic for Module Federation POC (O5.KR3) | | | |
 | Louise Collins to respond re follow-up voice coaching session | | | Emailed with suggested availability |
 | Michael Davis to clarify Okta roles simplification spreadsheet | | | Responded with request for clarification. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783685411664999) |
-| Kieran Patel to share Search Home UX EPICs | | 22 Jul | [Group DM](https://zilch.enterprise.slack.com/archives/C0BG105HF3R/p1784280596553909) |
-| Mark Reddington to respond re whether Arsenal fee display issue warrants a formal incident | | | [DM](https://zilch.enterprise.slack.com/archives/D07KU90T729/p1784042518135369) |
 
 ## Recurring
 
