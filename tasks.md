@@ -4,22 +4,16 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Chase Nick Gilbert for Ephemeral workshop action list and ensure items are assigned to owning teams, not absorbed into DevOps | Ephemeral Environments | |
-| Schedule regular backlog analysis of security tickets | Drive Down Defect Backlog 2026 | Retro action 13 Jul. [#unicorn](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1783955560144189) |
-| Prioritise geo expansion KR items ZILCH-51748 and ZILCH-51747 for Merchant team | Global Market Readiness | [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784191731419739) |
-| Chase Tom McKenzie for affiliate-integration-service test strategy write-up | | Was promised to George Sharpe. Chase date was 16 Jul — overdue. |
-| Request Snowflake access via ITOps | Segmented Storefront | |
-| Post acknowledgement in #recruitment-engineering-vilnius confirming agreement to bring Ryan's candidates in for interview | Recruitment — Vilnius 2026 | [#recruitment-engineering-vilnius](https://zilch.enterprise.slack.com/archives/C0B5PL0S8JD/p1784107565296849) |
-| Complete Sponsored Search rollout to all staff | Sponsored Retailer Search | Kieran checking with SalesOps. Once confirmed, proceed with rollout. [#unicorn](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1784621763225319) |
-| Find out from DevOps what happens if teams adjust their notification rules — will they be overwritten the next time Terraform is applied? | | Agreed to report back to EMs group. Grzegorz particularly keen to know. |
-| Story out the GABD epic | Sponsored Retailer Search | [ZILCH-53638](https://payzilch.atlassian.net/browse/ZILCH-53638) |
-| Take ZILCH-53474 into next sprint | | Rob Nelson request. Stefan helping in #mobile-error-log-review. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784634554945229) |
+| Schedule a fire drill for the new alerting mechanism | All Teams On-Call 2026 | |
+| Report back to EMs group on notification rules / Terraform overwrite answer | | Grzegorz particularly keen to know. |
 
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
+| Review Merchant backlog and categorise into intake work streams | Merchant Intake Management | Starting point: understand what the streams are and their relative shapes. |
+| Consider Marcin Żołna's request for incident-response workshop from DevOps/Platform | All Teams On-Call 2026 | [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784802736831949) |
 | Press for better attendance at hold-to-account meeting — raise at next synch | DevOps Ownership and Accountability | Retro action 13 Jul |
 | Find out how on-call affects contract employees | All Teams On-Call 2026 | Eligibility, compensation, legal/contractual implications. |
 | Ask Chris Walker for feedback on Lukasz Kowalczyk and share it with him | New Web | |
@@ -52,7 +46,7 @@
 
 | Task | Project | Chase date | Notes |
 |---|---|---|---|
-| Tom McKenzie to provide write-up on affiliate-integration-service test strategy and coverage | | 16 Jul | Promised to George Sharpe. Not urgent but want the team to look responsive. |
+| Tom McKenzie to provide write-up on affiliate-integration-service test strategy and coverage | | 28 Jul | Promised to George Sharpe. Discussed in 1:1 23 Jul. |
 | Tom McKenzie to introduce gate on PR-merge builds so no merge can turn a Maestro test red | | 23 Jul | Tests now stable and passing. Gate expected within a couple of weeks. |
 | Nick Gilbert to create epic for FAQ Slack bot | DevOps Ownership and Accountability | 21 Jul | Retro action 13 Jul |
 | Nick Gilbert to set up regular DevOps-internal Ephemeral Environments update meeting | Ephemeral Environments | 21 Jul | Retro action 13 Jul |
@@ -60,6 +54,14 @@
 | Stefan Amarie to create or find an epic for Module Federation POC (O5.KR3) | | | |
 | Louise Collins to respond re follow-up voice coaching session | | | Emailed with suggested availability |
 | Michael Davis to clarify Okta roles simplification spreadsheet | | | Responded with request for clarification. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1783685411664999) |
+| ITOps to grant Snowflake access | Segmented Storefront | | Requested 23 Jul. |
+
+## Reminders
+
+| Reminder | Trigger | Project | Notes |
+|---|---|---|---|
+| Prioritise geo expansion KR items ZILCH-51748 and ZILCH-51747 for Merchant team | Sprint planning | Global Market Readiness | [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784191731419739) |
+| Take ZILCH-53474 into next sprint | Sprint planning | | Rob Nelson request. Stefan helping in #mobile-error-log-review. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784634554945229) |
 
 ## Recurring
 

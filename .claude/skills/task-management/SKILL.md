@@ -1,6 +1,6 @@
 ---
 name: task-management
-description: Manage the to-do list, waiting-on items, and recurring tasks in tasks.md
+description: Manage the to-do list, waiting-on items, reminders, and recurring tasks in tasks.md
 ---
 
 # Task Management
@@ -17,6 +17,7 @@ The file has the following sections:
 - **Soon** — tasks to address in the near term
 - **Later** — lower-priority items
 - **Waiting On** — things I'm waiting on from others (with optional chase dates)
+- **Reminders** — items to surface at a specific occasion (e.g. sprint planning, refinement, a particular 1:1) rather than to action unprompted
 - **Recurring** — tasks that repeat on a schedule
 
 Each section uses a markdown table. Do not alter the table structure or column headings.
@@ -61,6 +62,15 @@ I will often ask to see my tasks — either to pick a next action or to groom an
 - When grooming:
     - I may ask you to move tasks to change priority. You may do this without further permission, so long as no information is lost.
     - I may ask you to add or remove tasks — follow the standard rules above.
+
+### Reminders
+
+Reminders are items that should be surfaced at a specific occasion rather than actioned unprompted. They differ from tasks: a task is something to do now or soon; a reminder is something to remember *when the moment comes*.
+
+- The "Trigger" column identifies the occasion (e.g. "Sprint planning", "Refinement", "1:1 with Steve").
+- When the user is prepping for an occasion, scan the Reminders section and surface any items matching that trigger.
+- Once a reminder has been actioned, remove it from the list.
+- If something initially looks like a task but is really "remember to do X at occasion Y", propose adding it as a reminder rather than a task.
 
 ### Recurring and Waiting On
 

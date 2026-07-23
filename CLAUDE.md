@@ -213,7 +213,9 @@ The only path to behaviour change is system change.
 
 ## Date Handling
 
-NEVER try to reason about days of week <-> calendar dates.  You are highly falible in every attempt you make.  ALWAYS use the `date` shell command when a day of week needs to be mapped to a date, or vice versa. 
+NEVER try to reason about days of week <-> calendar dates.  You are highly fallible in every attempt you make.  ALWAYS use the `date` shell command when a day of week needs to be mapped to a date, or vice versa.
+
+NEVER include a day of week alongside a calendar date unless you have JUST run a `date` shell command to verify it in the same response.  If you have not run the command, write only the date.  Do not volunteer day-of-week information unprompted.
 
 ---
 
