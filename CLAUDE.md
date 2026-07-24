@@ -65,6 +65,7 @@ Entries resolve to events — a meeting, a decision, a completion, a release.
 - If ambiguous whether a tag applies, ask
 - Format: `[Display Name](srkb://entity_type/entity-slug)`
 - Tag even when it seems obvious from context — it enables filtering
+- If no entity exists that accurately represents the thing being referenced, leave the text untagged. Never substitute an approximate entity. If the gap seems like it warrants a new entity, propose one — but never silently use a wrong one.
 
 ### Project Awareness
 
