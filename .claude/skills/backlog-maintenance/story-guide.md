@@ -6,7 +6,7 @@
 - **Description** — must not be empty; see content guidance below.
 - **Acceptance Criteria** — required; see acceptance criteria guidance below.
 - **Parent Epic** — must belong to an epic.
-- **Owned By** — must be set. For stories, the correct value is almost always "Product Initiative". Other permitted values are "Engineering Initiative" and "KTLO (Keeping the Lights On)", but these should be rare and warrant scrutiny — if the value isn't product-driven, consider whether the issue should be a Task instead.
+- **Owned By** — must be set. For stories, the correct value is almost always "Product Innovation". "Engineering Initiatives" is possible but should be actively challenged — if the value isn't product-driven, consider whether the issue should be a Task instead. "KTLO (Keep the Lights On)" is always wrong on a Story — either it's not really a story, or it's not really KTLO.
 - **Labels** — must include at least one of `backend`, `frontend`, and `qa`. The label should reflect the discipline(s) expected to work on the ticket. Multiple labels are permitted where more than one discipline is involved.
 
 ## Content Guidance

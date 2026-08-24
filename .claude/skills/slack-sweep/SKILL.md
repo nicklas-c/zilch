@@ -108,6 +108,7 @@ Write the timestamp captured in step one to `./slack-sweep-timestamp.txt`. This 
 
 **STOP** Do not proceed before the user has reviewed the proposals and confirmed.
 - Ask the user for confirmation or amendments to the proposed log and task changes.
+- Log entries and task updates are **separate approvals**. Confirmation of one does not imply confirmation of the other. If the user confirms logs only, do not touch tasks — and vice versa.
 - If the response is ambiguous, seek clarification from the user.
 - If any doubt remains, make no change.  The user can request log and task writes in a follow-up prompt.
 

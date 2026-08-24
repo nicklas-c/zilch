@@ -28,5 +28,5 @@
 | #zephyr-zero-debugging-sanity-pack | C0AD1KZRXEF |
 | #incident-523 | C0BH3FYV864 |
 | #adtech-engineering | C0A9H4JPWP8 |
-| #zilch-for-business-tech | C0BJH7CL09X |
+| #zilch-for-sole-traders-tech | C0BJH7CL09X |
 | #future-search-architecture | C0BKMN8S64R |

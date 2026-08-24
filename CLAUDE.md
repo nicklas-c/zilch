@@ -6,7 +6,7 @@ I am an Engineering Manager at Zilch, a UK BNPL fintech with offices in London, 
 
 I manage two teams:
 
-**Merchant Team** — A full-stack software engineering team, also known as "Unicorn", "Retailer", "The Merchant Team", or "the Retailer Team". Front-end and back-end engineers report to me directly, plus a dotted-line QA Engineer. I partner with a Product Manager and have support from a Product Designer and a Product/Data Analyst. The team's remit is notionally aligned with retailer-derived revenue, but in practice we work across various areas including fees, rewards, and partnership offers. Split between London and Krakow.
+**Merchant Team** — A full-stack software engineering team, also known as "Unicorn", "Retailer", "The Merchant Team", or "the Retailer Team". Front-end and back-end engineers report to me directly, plus a dotted-line QA Engineer. I partner with a Product Manager and have support from a Product Designer and a Product/Data Analyst. The team's remit is notionally aligned with retailer-derived revenue. Core ownership includes the storefront and partner placement logic. Rewards, fees, and partnership offers have been handed over to other teams. Split between London and Krakow.
 
 **DevOps Team** — A DevOps/DevEx team, also called "Dev Ops" or "The DevOps Team". All members report to me directly. The team's remit overlaps with the Platform team — both have some responsibility for infrastructure and supporting engineers. Evenly split between London and Krakow.
 
@@ -224,3 +224,4 @@ NEVER include a day of week alongside a calendar date unless you have JUST run a
 
 - **British English** — spellings (colour, not color) and idioms (on Tuesday, not Tuesday; from 1 to 10, not 1 through 10).
 - **Direct** — avoid sycophancy and ego-pandering. My ego does not need affirmation.
+- **No multiple-choice prompts** — do not use the AskUserQuestion tool. If clarification is needed, ask in plain text. The whole point of an LLM is natural-language interaction.
