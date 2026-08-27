@@ -10,6 +10,8 @@
 | Set up new 1:1 calendar series for all direct reports | | Old calendar runs ended. Nick Gilbert flagged it. [DM](https://zilch.enterprise.slack.com/archives/D07R7PHMFED/p1786958637656159) |
 | Review CMP prototype brief and provide feedback | AdTech | Mike Ilin shared, expecting feedback before next week's presentation. [Group DM](https://zilch.enterprise.slack.com/archives/C0BQZPKQ51Q/p1787060945812859) |
 | Link `storefront-hero-carousel` LD flag to Jira ticket (or delegate to team) | | George Sharpe request. [DM](https://zilch.enterprise.slack.com/archives/D07DQRWH3AQ/p1786460247655449) |
+| Bring ZILCH-55133 (auth lambda monitoring/handover) into next Merchant refinement | | Phil created ticket. Auth lambda unmonitored in Datadog, missing service tag. Agreed it goes on Merchant backlog. [Post](https://zilch.enterprise.slack.com/archives/C03EDM9MSCT/p1787755828606509) |
+| Check I14 O4 KR2-4 owners — storefront internationalisation (KR2) may fall to Merchant | | Parry posted OKR tracker. KR2-4 unowned. [Post](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1787834933180089) |
 
 
 ## Soon
@@ -20,7 +22,7 @@
 | Review Merchant backlog and categorise into intake work streams | Merchant Intake Management | Starting point: understand what the streams are and their relative shapes. |
 | Speak to DevOps team about where the Merchant review requirement on customer-service repo is encoded — not apparently CODEOWNERS | Rewards & Offer Services Handover | Jan Michalak hit this requesting a review on PR #4387. [Thread](https://zilch.enterprise.slack.com/archives/C03NXR62HQ8/p1785139524895099) |
 | Press for better attendance at hold-to-account meeting — raise at next synch | DevOps Ownership and Accountability | Retro action 13 Jul |
-| Plan fee-service handover changes into a sprint (target 13.Q) | Fee Service Handover | |
+| Respond to Steve re iOS app performance getting worse | | He flagged it's only getting worse. [DM](https://zilch.enterprise.slack.com/archives/D097D2RU0UQ/p1787760075608339) |
 | Review competency matrix and consider next career move | | Steve wants a walk-through conversation discussing where I think I stand on each point vs where he thinks I stand. Andrzej is making the matrix more EM-specific — can wait for that or use as-is. Ball is in my court. |
 | Finalise list of Skills IQ skills | | |
 | Start writing Phil Stevenson's next appraisal | | Six months early — keeps feedback consistent. Consider doing for all reports. |
