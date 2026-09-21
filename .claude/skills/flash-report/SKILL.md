@@ -31,7 +31,7 @@ Reports for the Merchant team and DevOps team should be treated as separate exer
 4. Phase four is to generate a draft report
    - Use the example report in ./example.md as a guide to formatting.
    - Compare with the previous week's report to ensure that status-quo updates aren't presented as new information.
-   - Generate a draft report in mardown format in the /temp folder off the project root.
+   - Generate a draft report in markdown format in `./content/temp/`.
 
 ## JQL Queries
 

@@ -25,6 +25,7 @@ This project is an instance of **SitRep** (Situation Report) — a system that a
 | **Skills** | Codified instructions for commonly performed duties. Invoked by name. |
 | **Task List** | `./tasks.md` — managed via the `task-management` skill. |
 | **External Sources** | Read-only access via MCP: Confluence, Jira, Slack. Writing to these is strictly forbidden. |
+| **Content Directory** | `./content/` — output directory for generated content (reports, drafts, documents). Use `./content/temp/` for transient outputs such as flash report drafts. Do not use `./temp/` or the project root. |
 
 
 ---

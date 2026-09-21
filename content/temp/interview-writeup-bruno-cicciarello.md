@@ -1,0 +1,9 @@
+Bruno's CV presents a strong L4 profile — 20+ years' experience, progression to Staff Engineer / Senior Architect at TomTom, relevant React Native and TypeScript expertise, fintech experience at Kraken, excellent location and tooling fit. However, the interview did not substantiate the seniority the CV implies.
+
+Communication quality was the most significant concern. Answers were consistently lengthy relative to their substance, with a poor signal-to-noise ratio throughout. An AI adoption question required three redirections before yielding concrete examples, with initial responses defaulting to abstract, philosophical framing. This pattern was present across all questions.
+
+A motivation question produced the weakest L4 signals. The most enthusiastic project - a cloud migration at TomTom, valued for its well-defined scope, learning opportunity, and focus on architecture — was glossed over quickly. The least enthusiastic project was taken as an opportunity to air frustrations about organisational dysfunction: unautomated manual processes, unimplemented architectural recommendations, and a role described as "screaming into the void." When pressed on what action he took, the answer was that he raised it with his manager and nothing changed. An L4 candidate should either demonstrate having navigated such friction more effectively, or exercise greater discretion in how they present it during an interview.
+
+The Redux refactoring at Kraken was the strongest example of proactive technical contribution, but was framed reactively — product requests exposed architectural debt, which he then addressed. Michał's question about challenging product decisions drew a competent example of collaborating with a PM on UI edge cases.
+
+Given the gap between paper and interview, an L3 offer is difficult to justify.
