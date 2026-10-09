@@ -4,32 +4,35 @@
 
 | Task | Project | Notes |
 |---|---|---|
-| Prepare for mid-year lightweight performance review | | Review now live. Self-reviews due 8 Sep, manager ratings due 15 Sep. Start considering ratings and talking points for each direct report. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1787130141995119) |
-| Set up 1:1 with Nick Gilbert — promised today | | [DM](https://zilch.enterprise.slack.com/archives/D07R7PHMFED/p1788342838304399) |
 | Link `storefront-hero-carousel` LD flag to Jira ticket (or delegate to team) | | George Sharpe request. [DM](https://zilch.enterprise.slack.com/archives/D07DQRWH3AQ/p1786460247655449) |
 | Bring ZILCH-55133 (auth lambda monitoring/handover) into next Merchant refinement | | Phil created ticket. Auth lambda unmonitored in Datadog, missing service tag. Agreed it goes on Merchant backlog. [Post](https://zilch.enterprise.slack.com/archives/C03EDM9MSCT/p1787755828606509) |
 | Check I14 O4 KR2-4 owners — storefront internationalisation (KR2) may fall to Merchant | | Parry posted OKR tracker. KR2-4 unowned. [Post](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1787834933180089) |
-| Assign CMP epic owners in unicorn | CMP Prototype | [#cmp-engineering](https://zilch.enterprise.slack.com/archives/C0A9H4JPWP8/p1788778060466129) |
-| Create and assign ADR tickets for CMP steel thread epics | CMP Prototype | Kieran flagged as next step, target sprint 14.4. [Post](https://zilch.enterprise.slack.com/archives/C0A9H4JPWP8/p1789031784338919) |
-| Complete Lattice manager reviews | | Due 15 Sep |
-| Chat with Nick Gilbert about Ephemeral Environments townhall presentation plan before going on leave | Ephemeral Environments | [GDM](https://zilch.enterprise.slack.com/archives/C0C0YBFFG7L/p1789054360556099) |
-| Reply to Steve Rayko re GitHub contacts — do we have existing contacts/meetings with them? | | [DM](https://zilch.enterprise.slack.com/archives/D097D2RU0UQ/p1788860210058329) |
-| Follow up on Datadog committed spend not showing correctly in cloud cost data — Steve's correction to flash report | Datadog Cost Optimisation | [DM](https://zilch.enterprise.slack.com/archives/D097D2RU0UQ/p1788534036063979) |
+| Review `rewards-toggle-anywhere` flag status — acknowledge and close the loop | | Kieran tagged you to review. Loyalty asked to remove; team confirmed still needed for Polish ECJ Anywhere flow. [Thread](https://zilch.enterprise.slack.com/archives/C03NXR62HQ8/p1789568284076889) |
+| Follow up on AWS JDBC wrapper efm2 bug — confirm whether Merchant team needs to act | | Affects affiliate-service, offer-service, rewards-service (owned/former-owned by Merchant). Sam recommends disabling efm2 or upgrading library. [Thread](https://zilch.enterprise.slack.com/archives/C03NXR62HQ8/p1789644050396979) |
+| Add suggestion for F2F meeting agenda (15 Oct) | | Steve requested input. [Post](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1789729866247539) |
+| Check whether EC-3208, EC-4011, EC-4057, and EC-4053 still need manager questionnaires — all still in Planning | | [#unicorn](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1790703518859719), [#unicorn](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1790931546563549) |
+| Sign off ZILCH-56289 (Phil Stevenson's request) | | [#team-devops](https://zilch.enterprise.slack.com/archives/C03EDM9MSCT/p1790772199674199) |
+| Read BFCM Technology Support confluence page (Mark Reddington mentioned you) | | [DM](https://zilch.enterprise.slack.com/archives/D08C735G9FA/p1790553445932099) |
+| Read Phil's o11y migration doc on collection/shipping component changes and consider how to work it up into a full plan | Observability Platform Migration | [#team-devops](https://zilch.enterprise.slack.com/archives/C03EDM9MSCT/p1790766032263199) |
 | Check ZILCH-49514 (Insecure local networking in iOS) — Rob Nelson mentioned you in a Jira comment | | |
-| Read up on outstanding Lambda CVE release-please PRs flagged by Martin Thorlby-Witham — understand the ask and delegate if necessary | | [Thread](https://zilch.enterprise.slack.com/archives/CCW04B38D/p1787930739985899) |
-| Follow up on Grzegorz's request for on-call rota / firefighter Slack group sync — DevOps team hasn't responded | | [Thread](https://zilch.enterprise.slack.com/archives/C01J1KBUS1E/p1788173501324879) |
 | Deep-dive on o11y migration vendor collateral — review Grafana commercial strategy, Coralogix pitch, and Groundcover model in detail. Fill knowledge gaps on key concepts (OTel, eBPF, adaptive telemetry, dual-running). | Observability Platform Migration | Also confirm Datadog contract renewal status. |
+| Review and respond to Grzegorz Ziemiański's market expansion plan — explicit acknowledgement requested | Global Market Readiness | [Thread](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1790154268384269) |
+| Test the LD SDK sequencing hypothesis for storefront-hero-carousel flag (Kieran's request to you and Ossie) | Segmented Storefront | [Post](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1790151766754479) |
+| Check why DevOps approval is now required for scheduler releases (Chris Kucybala's question) | | [Post](https://zilch.enterprise.slack.com/archives/C01J1KBUS1E/p1790155978076999) |
+| Respond to George Sharpe re `curated-shop-again-retailers` flag — resolve flag so data export can be disabled | | Data export on since 20 May; one of the most expensive. [GDM](https://zilch.enterprise.slack.com/archives/C0C40G5KBSQ/p1790170270707789) |
+| Review AdMarketplace auction project brief on ProductBoard (Kieran's request) | AdMarketplace Search Auction | Kieran has since shared a Confluence-based Sponsored Search brief which likely supersedes this. [Original DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1790872324418749), [New DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1791472421800509) |
+| Respond to Kieran re CMP points / product capacity split question | | [DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1790940382444139) |
+| Investigate Quiddi timeout issue affecting retailer-service e2e in dev-sp/qa-sit/staging since ~1 Oct — Jakub Pałka has chased | | [Thread](https://zilch.enterprise.slack.com/archives/C03NXR62HQ8/p1791474125743079) |
 
 
 ## Soon
 
 | Task | Project | Notes |
 |---|---|---|
-| Press for better attendance at hold-to-account meeting — raise at next synch | DevOps Ownership and Accountability | Retro action 13 Jul |
-| Respond to Steve re iOS test pass rates getting worse | | He flagged they're only getting worse. [DM](https://zilch.enterprise.slack.com/archives/D097D2RU0UQ/p1787760075608339) |
 | Review competency matrix and consider next career move | | Steve wants a walk-through conversation discussing where I think I stand on each point vs where he thinks I stand. Andrzej is making the matrix more EM-specific — can wait for that or use as-is. Ball is in my court. |
 | Define a standard output format for the slack-sweep skill | | Single-pass template covering digest, proposed logs, and proposed tasks. Aim for consistency. |
 | Investigate feasibility of integrating Claude with LinearB — add to DevOps backlog | | Documentation link shared in synch meeting chat. |
+| Review Sponsored Search AdMarketplace brief on Confluence (Kieran's request) | AdMarketplace Search Auction | [DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1791472421800509) |
 
 ## Later
 
@@ -52,7 +55,7 @@
 | Kieran Patel / Crinan Strachan to confirm whether ZILCH-51587 (non-affiliated retailers) should be converted to Epic or kept as-is | | | [Group DM](https://zilch.enterprise.slack.com/archives/C0BPH13H51V/p1786610080746909) |
 | George Garrett to confirm whether ZILCH-43457 (Featured Tiles outdated) is still an issue | | | On holiday. [DM](https://zilch.enterprise.slack.com/archives/D0B7DSMHBHQ/p1786550785752799) |
 | Tom McKenzie to review batch-rejected tickets and flag any to restore | | | [DM](https://zilch.enterprise.slack.com/archives/D0825CH1AK0/p1786542232587559) |
-| Steve Rayko to confirm whether I'm clear to brief the DevOps team on the o11y migration | Observability Platform Migration | | Asked 9 Sep. [DM](https://zilch.enterprise.slack.com/archives/D097D2RU0UQ/p1788970900527299) |
+| ITOPS to grant Ossie Nwokedi permissions to manage on-call overrides | | | [DM](https://zilch.enterprise.slack.com/archives/D07D07G8T7V/p1790266265300299) |
 
 ## Reminders
 
@@ -62,6 +65,8 @@
 | Take ZILCH-53474 into next sprint | Sprint planning | | Rob Nelson request. Stefan helping in #mobile-error-log-review. [#eng-management](https://zilch.enterprise.slack.com/archives/C028GA4CW80/p1784634554945229) |
 | Refinement proportionality — 45 mins × 4 engineers to refine a simple analytics event ticket. Execution time < refinement time. | Retro | | 2026-07-31 session |
 | Raise late starts / standup absences as a concern — three people missed standup on 1 Sep (Reeya, Stefan, Tom McKenzie) | Retro | | |
+| Discuss career trajectory — L5 assumption may be wrong; does he actually want it, or should we hire an external L5? See KB log entry 2026-09-24 for full notes. | 1:1 with Phil Stevenson | | |
+| Raise communication patterns — difference between raising a specific concern (productive) and cycling through objections until one sticks (unproductive). Frame as a team agreement, not a reprimand. See KB log 2026-09-28. | Retro (DevOps) | | |
 
 ## Recurring
 
