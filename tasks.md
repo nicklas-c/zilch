@@ -23,6 +23,9 @@
 | Review AdMarketplace auction project brief on ProductBoard (Kieran's request) | AdMarketplace Search Auction | Kieran has since shared a Confluence-based Sponsored Search brief which likely supersedes this. [Original DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1790872324418749), [New DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1791472421800509) |
 | Respond to Kieran re CMP points / product capacity split question | | [DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1790940382444139) |
 | Investigate Quiddi timeout issue affecting retailer-service e2e in dev-sp/qa-sit/staging since ~1 Oct — Jakub Pałka has chased | | [Thread](https://zilch.enterprise.slack.com/archives/C03NXR62HQ8/p1791474125743079) |
+| Add Dimitris Dimitrelos to Merchant Team segment in LaunchDarkly for semantic search profanity filter testing | Semantic Search | [Post](https://zilch.enterprise.slack.com/archives/C07JKP2E080/p1791552423613669) |
+| Define go/no-go criteria and POC scope for Observability Platform Migration (Steve's request) | Observability Platform Migration | [Group DM](https://zilch.enterprise.slack.com/archives/C0C85357Q2Y/p1791547463826119) |
+| Arrange Coralogix demo (proper demo, not just slides) | Observability Platform Migration | [Group DM](https://zilch.enterprise.slack.com/archives/C0C85357Q2Y/p1791547463826119) |
 
 
 ## Soon
@@ -67,6 +70,7 @@
 | Raise late starts / standup absences as a concern — three people missed standup on 1 Sep (Reeya, Stefan, Tom McKenzie) | Retro | | |
 | Discuss career trajectory — L5 assumption may be wrong; does he actually want it, or should we hire an external L5? See KB log entry 2026-09-24 for full notes. | 1:1 with Phil Stevenson | | |
 | Raise communication patterns — difference between raising a specific concern (productive) and cycling through objections until one sticks (unproductive). Frame as a team agreement, not a reprimand. See KB log 2026-09-28. | Retro (DevOps) | | |
+| Cover Kieran's feedback on Stefan re stakeholder communication — going to stakeholders instead of Product about going live with one vendor before the other | 1:1 with Stefan Amarie | | [DM](https://zilch.enterprise.slack.com/archives/D0B1VUFEM2Q/p1791550329955329) |
 
 ## Recurring
 
