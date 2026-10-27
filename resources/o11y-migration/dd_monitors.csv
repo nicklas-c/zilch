@@ -1,0 +1,17 @@
+monitor_type,count,percent_of_total
+integration,835,36.2
+log,431,18.7
+metric,256,11.1
+anomaly,227,9.8
+apm,203,8.8
+synthetics,192,8.3
+forecast,70,3.0
+error-tracking,44,1.9
+composite,22,1.0
+event,13,0.6
+rum,7,0.3
+watchdog,4,0.2
+cost,2,0.1
+database-monitoring,2,0.1
+custom,1,0.0
+TOTAL,2309,100.0

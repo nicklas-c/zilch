@@ -33,3 +33,4 @@
 | #cmp-engineering | C0A9H4JPWP8 |
 | #zilch-for-sole-traders-tech | C0BJH7CL09X |
 | #future-search-architecture | C0BKMN8S64R |
+| #grafana-poc-internal | C0C9ZHJAFB2 |

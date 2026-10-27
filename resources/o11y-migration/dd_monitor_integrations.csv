@@ -1,0 +1,26 @@
+integration,sub_service,count
+Kubernetes,,477
+AWS,ALB,68
+AWS,SQS,63
+AWS,Lambda,56
+AWS,SNS,13
+AWS,RDS,13
+AWS,API Gateway,10
+AWS,SageMaker,6
+AWS,EC2,5
+AWS,Kinesis Analytics,4
+AWS,Kinesis,3
+AWS,NLB,3
+AWS,ElastiCache,2
+AWS,MWAA,1
+AWS,Step Functions,1
+AWS,AppFlow,1
+AWS,CodeDeploy,1
+JVM,,71
+Datadog,Agent / usage,12
+PostgreSQL,Aurora,10
+SQL Server,,10
+Node.js runtime,,2
+Resilience4j,,2
+Flink (custom),,1
+TOTAL,,835
