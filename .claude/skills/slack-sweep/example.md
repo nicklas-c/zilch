@@ -1,32 +1,34 @@
-## Digest (2026-07-01 12.00 to 2026-07-02 09.46)
+## Digest (2026-07-01 12:00 to 2026-07-02 09:46)
 
-### Directed at you
-- **Steve Rayko** (DM) — Asked if Phil can do focused effort on Big Fixer Agent Swarm tomorrow. You proposed Piotr as firefighter instead; Steve agreed on condition Piotr gets context from Phil. You asked where to find detail on the last push; Steve said talk to Saeed Aghaee.
-- **Jacek Zanko** (DM) — Changed his Friday vacation request to use the Aug 15 additional day off. Needs re-approval in Bamboo.
+### Big Fixer Agent Swarm
+- **Steve asked about Phil doing focused effort tomorrow; you proposed Piotr instead, Steve agreed**
+- You asked Steve where to find detail on the last push; he said talk to Saeed Aghaee
 
-### Team activity
-- **#unicorn** — Jacek implemented profanity filter for semantic search using java-profanity-filter library. Asked Kieran to review when back. Added `semantic_supressed_by_profanity` mixpanel attribute.
-- **#tech-devops** — Duncan Field merged temporary fix for customer-service CI build issue. Michał Baran had the same problem; pointed to rebase onto main.
+### Semantic Search
+- Jacek implemented profanity filter using java-profanity-filter library, asked Kieran to review
 
-### Cross-team / organisational
-- **#team-of-teams-prod-eng-arch** — Kevin Came posted delivery standup notes. Merchant item: "Sponsored search being released this week." Kieren clarified it's deployed behind LD flag; remaining blocker is categorising uncategorised retailers.
-- **#eng-management** — Discussion about LinearB metrics follow-up. No decisions taken.
+### Sponsored Retailer Search
+- Deployed to prod behind LD flag. Remaining blocker: categorising uncategorised retailers (Kieren confirmed)
 
-### FYI (low priority)
-- **#london-office** — Office closed Friday for maintenance. Access via side entrance only.
+### Team
+- Jacek changed Friday vacation to use Aug 15 additional day off; needs Bamboo re-approval
+
+### Miscellaneous
+- LinearB metrics follow-up discussed in #eng-management — no decisions taken
+- London office closed Friday for maintenance; side entrance only
 
 ---
 
-## Proposed Logs
+## Proposed Log Entries
 
-- Steve Rayko asked if Phil Stevenson could do focused effort on Big Fixer Agent Swarm tomorrow
-  - Proposed using Piotr Niebylski (duty firefighter) instead. Steve agreed on condition Piotr gets context.
-  - Asked Steve for detail on the last push; he said talk to Saeed Aghaee. [DM](link)
-- Jacek Zanko implemented profanity filter for semantic search
-  - Using java-profanity-filter library. Aho-Corasick matching, multilingual word lists.
-  - Added `semantic_supressed_by_profanity` mixpanel attribute. [Thread](link)
-- Sponsored Retailer Search deployed to production behind LD flag
-  - Remaining blocker: categorising uncategorised retailers. Kieren Messenger confirmed. [Thread](link)
+1. `2026-07-01`
+> [Steve Rayko](srkb://people/steve-rayko) asked if [Phil Stevenson](srkb://people/phil-stevenson) could do focused effort on Big Fixer Agent Swarm tomorrow
+> - Proposed using [Piotr Niebylski](srkb://people/piotr-niebylski) (duty firefighter) instead. Steve agreed on condition Piotr gets context. [DM](link)
+> - Asked Steve for detail on the last push; he said talk to [Saeed Aghaee](srkb://people/saeed-aghaee). [DM](link)
+
+2. `2026-07-01`
+> [Sponsored Retailer Search](srkb://projects/sponsored-retailer-search) deployed to production behind LD flag
+> - Remaining blocker: categorising uncategorised retailers. [Kieren Messenger](srkb://people/kieren-messenger) confirmed. [Thread](link)
 
 ---
 
@@ -34,13 +36,13 @@
 
 ### Add
 #### Next
-- Brief Piotr Niebylski on Big Fixer Agent Swarm context from Phil Stevenson — [DM](link)
-- Talk to Saeed Aghaee about Big Fixer Agent Swarm scope — [DM](link)
+1. Brief Piotr Niebylski on Big Fixer Agent Swarm context from Phil Stevenson — [DM](link)
+2. Talk to Saeed Aghaee about Big Fixer Agent Swarm scope — [DM](link)
 #### Soon
-- Read QA proposal from Stefan and comment - [DM](link)
+3. Read QA proposal from Stefan and comment — [DM](link)
 
 ### Remove
-- None
+None.
 
 ### Resolve (Waiting On)
-- None
+None.

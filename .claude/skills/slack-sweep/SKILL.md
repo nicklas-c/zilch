@@ -66,31 +66,50 @@ Read every thread. Any message with a reply count > 0 must be expanded using `sl
 
 ### 3. Digest and Proposals
 
-Produce output following the format provided in `example.md` in this skill's folder.  The output consist of three parts:
+Produce output following the format provided in `example.md` in this skill's folder. The output consists of three parts. Before producing any output, resolve all entity references against the knowledge base (`list_entities`) so that proposed tags are verified, not assumed.
 
-#### Part 1: Summary
-A concise and structured summary of messages since the last sweep.
-- Show the time window in the Digest heading, as per `example.md`.  Use `date -r <timestamp>` to convert timestamps to readable date times.  **DO NOT** try to infer the date and time - you are not reliable at that.
-- Surface what's **notable** — decisions, announcements, requests, blockers, status changes.
-- Skip routine noise — bot messages, automated notifications, social chatter — unless they carry signal.
-- Highlight anything directed at the user specifically (mentions, DMs, requests).
+#### Part 1: Digest
 
-#### Part 2: Proposed Logs Entries
-A list of logs entries proposed for writing to the knowledge base
-- Include anything that is **substantive** — meaning it represents an observation, event, decision, or piece of information worth recording.
-- One entry per discrete item (not one mega-entry for the whole sweep).
-- Include Slack links where appropriate to refer back to the source conversation.
-- Format as nested bullets mirroring the journal structure: headline as the top-level bullet, sub-entries indented beneath.
+A tight summary acting as a **safety net** — the purpose is to ensure nothing important is missed, not to retell every message. The user will have read most of these already; the digest should let them quickly spot anything they haven't.
 
-Example:
+**Format:**
+- Show the time window in the heading. Use `date -r <timestamp>` to convert timestamps to readable datetimes. **DO NOT** try to infer the date and time — you are not reliable at that.
+- Group items by **project, team, or topic** — not by source channel. Use a **Miscellaneous** section as a catch-all for items that don't fit a group.
+- One line per item. Enough to recognise it, not enough to replace reading the original. If a conversation had multiple substantive points, use sub-bullets — but keep each sub-bullet to one line.
+- **Bold** items you judge to be most important or most likely to need attention.
+- Include everything — the digest is a completeness check, not a curated selection. Even routine items belong here (WFH notices, self-recovered alerts, bot notifications). The filtering happens in Part 2, not here.
+- Stick to the facts of what was said. Do not infer actions, draw conclusions, or editoralise. If the user needs to do something, that belongs in Part 3 (task proposals), not the digest.
+
+#### Part 2: Proposed Log Entries
+
+A numbered list of entries proposed for writing to the knowledge base. Each entry is presented **verbatim as it would be logged** — ready to write without reformatting.
+
+**Format for each entry:**
 ```
-- Lukasz Kowalczyk took emergency partial day off on 1 Jul
-  - Needed time off 11:00–14:30 Poland time. Approved.
-  - Still attending 3pm Chris Walker call re New Web. [DM](link)
-- Abhishek reviewed Snowflake staging proposal, favours Option 2
-  - Concerns about data mixing risk in Option 1
-  - Suggested involving InfoSec. [Thread](link)
+N. `YYYY-MM-DD`
+> Headline text with [Entity Tag](srkb://type/slug) inline
+> - Sub-entry with detail and [tags](srkb://type/slug) as appropriate. [Source](link)
+> - Further sub-entry if needed.
 ```
+
+**Rules:**
+- Headlines should be **headlines only** — the event or decision in one sentence. Push detail, context, and reasoning into sub-entries.
+- Tags must be **verified against the entity list**. Do not tag entities that don't exist. If an untagged reference seems like it warrants a new entity, note that separately — do not embed a speculative tag.
+- Apply tags at the correct scope: headline-level tags cascade to all sub-entries; sub-entry tags scope to that bullet only. Tag at headline level when the entity is central to the whole entry; tag at sub-entry level when the entity is relevant only to that detail.
+- Include Slack links in sub-entries to refer back to the source conversation.
+- One entry per discrete event (not one mega-entry for the whole sweep).
+
+**What to log — and what not to:**
+
+Only propose logging something that would be useful in a future briefing, status report, or 1:1 prep. The following are **not worth logging**:
+- Someone working from home, arriving late, or taking a routine single day off
+- Alerts that fired and self-recovered without intervention
+- Routine sprint ceremonies happening as scheduled
+- PR reviews, merges, and deployments proceeding normally
+- Bot notifications and automated reminders
+- Social or off-topic conversation
+
+**Do** log: decisions, blockers, staffing changes (extended absence, new starters, departures), project milestones, escalations, cross-team requests, incidents requiring action, and anything surprising or non-obvious.
 
 #### Part 3: Proposed Task Updates
 
@@ -98,6 +117,7 @@ Read the tasks list in `./tasks.md` to familiarise yourself with tasks currently
 - If any messages suggest an action item for the user — something they need to do, have been asked to do, or are waiting on — suggest adding a task.
 - If any messages suggest a task on the list has been completed, or a waiting-on has been satisfied, suggest removing the task.
 - Include Slack links where appropriate to refer back to the source conversation.
+- Present as a **numbered list** grouped by action type (Add, Remove, Resolve).
 
 
 ### 5. Update Timestamp
