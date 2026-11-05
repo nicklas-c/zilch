@@ -1,21 +1,22 @@
 ## Digest (2026-07-01 12:00 to 2026-07-02 09:46)
 
 ### Big Fixer Agent Swarm
-- **Steve asked about Phil doing focused effort tomorrow; you proposed Piotr instead, Steve agreed**
-- You asked Steve where to find detail on the last push; he said talk to Saeed Aghaee
-
-### Semantic Search
-- Jacek implemented profanity filter using java-profanity-filter library, asked Kieran to review
+- **Steve asked about Phil doing focused effort; you proposed Piotr instead, Steve agreed**
+- You asked Steve where to find detail on the last push — he said talk to Saeed
 
 ### Sponsored Retailer Search
-- Deployed to prod behind LD flag. Remaining blocker: categorising uncategorised retailers (Kieren confirmed)
+- Deployed to prod behind LD flag; remaining blocker is categorising uncategorised retailers
 
-### Team
-- Jacek changed Friday vacation to use Aug 15 additional day off; needs Bamboo re-approval
+### Semantic Search
+- Jacek implemented profanity filter, asked Kieran to review
+
+### DevOps
+- Duncan merged temp fix for customer-service CI build; Michał had the same issue
 
 ### Miscellaneous
-- LinearB metrics follow-up discussed in #eng-management — no decisions taken
-- London office closed Friday for maintenance; side entrance only
+- LinearB metrics follow-up in #eng-management — no decisions
+- Jacek changed Friday vacation to use Aug 15 day off; needs Bamboo re-approval
+- London office closed Friday; side entrance only
 
 ---
 

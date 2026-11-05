@@ -75,9 +75,10 @@ A tight summary acting as a **safety net** — the purpose is to ensure nothing 
 **Format:**
 - Show the time window in the heading. Use `date -r <timestamp>` to convert timestamps to readable datetimes. **DO NOT** try to infer the date and time — you are not reliable at that.
 - Group items by **project, team, or topic** — not by source channel. Use a **Miscellaneous** section as a catch-all for items that don't fit a group.
-- One line per item. Enough to recognise it, not enough to replace reading the original. If a conversation had multiple substantive points, use sub-bullets — but keep each sub-bullet to one line.
+- Compress aggressively. The goal is recognition, not reconstruction — just enough detail to know what a conversation was about. If the user doesn't recognise it, they can ask or go to Slack.
+- Collapse related items into a single line. Multiple routine support requests, WFH notices, or bot pings should be summarised together, not listed individually. E.g. "Various DevOps support requests: staging rollback, ECR tag fix, deployment question" — not three separate entries.
 - **Bold** items you judge to be most important or most likely to need attention.
-- Include everything — the digest is a completeness check, not a curated selection. Even routine items belong here (WFH notices, self-recovered alerts, bot notifications). The filtering happens in Part 2, not here.
+- Include everything — the digest is a completeness check, not a curated selection. Even routine items belong here, but they should be compressed and collapsed rather than given individual entries. The filtering happens in Part 2, not here.
 - Stick to the facts of what was said. Do not infer actions, draw conclusions, or editoralise. If the user needs to do something, that belongs in Part 3 (task proposals), not the digest.
 
 #### Part 2: Proposed Log Entries
