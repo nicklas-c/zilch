@@ -1,0 +1,274 @@
+Zilch - PII/Sensitive Data | Steve Dugnan
+
+undefined undefined
+Recorded on Nov 9, 2026 via , 25m
+
+
+
+Participants
+
+Grafana
+Charlie Lutterloch, Commercial Account Executive, Acquisition
+Steven Dungan, Staff Product Manager
+Phil Cherry, Manager, Solutions Engineering
+
+Zilch
+Nandini Muraleedharan
+Robert Nelson, Head Of Engineering
+Philip Stevenson, Senior DevOps Engineer
+Vitalie Rusu, Lead Software Engineer
+Ramsay
+Nicklas Chapman, Engineering Manager
+
+Other
+Julien Morvan
+
+
+
+Transcript
+
+0:00 | Charlie
+Enjoy Charlie. 
+
+0:29 | Charlie
+Yeah, I'm going to split this into. 
+
+0:35 | Charlie
+Two or three bits, a bit more of an understanding of Filch. Hey, it's Vitaly, How's it going? 
+
+0:43 | Vitalie
+Busy Monday? 
+
+0:44 | Charlie
+Busy Monday. Same here, man, same here. 
+
+0:51 | Charlie
+You're all in the office today, right? 
+
+0:55 | Vitalie
+Yeah, it works. Good. 
+
+0:58 | Charlie
+Stuff. Were you in the other call as well? Vitaly? It was a good chunk. 
+
+1:04 | Vitalie
+Yeah, that one was mostly about SQL and for platform and DevOps. 
+
+1:11 | Charlie
+Understood, man, understood, Stephen, how's it going? You? Okay? 
+
+1:18 | Steven
+I'm still on mute Good. How are we doing folks? 
+
+1:21 | Charlie
+Good. Thank you for the flexibility as well. Stephen. I do appreciate it. Of course… Nandini, how you doing? Julian, how you doing? I think we should, Hello, I'm good. How are you? Good? I think we should happy to kick off Good to see everyone's faces again for the second time today. It's it's always good. And all the new faces, good to see. You. Hope you've had a good weekend. Yeah, happy to kick things off if that's okay. Got, we've I don't know, 30 minutes Absolutely flies by. So, the goal of this session is all around things like PII, incentive data. These were one of the critical topics that came out of the conversation a few weeks ago, And ultimately, we want this 30 minutes to cover A, Stephen to get a little bit of a better understanding of how you're currently doing it in Datadog. I can relay information. I'm only so good at it. So it'd be good to get it from your side, possibly from yourself, Nandini. And then off the back of that, Stephen has a few kind of talking points that we can go through on how we're tackling PII, sensitive data. And if you were to come across to Grafana, what you ultimately get from that. So, Stephen, I'll let you kind of introduce yourself but Nandini, if that's okay, if you're possibly the best place to give a little bit of an explanation on kind of how you're dealing with kind of sensitive data and then a pass floor to you, But Stephen be good to get an introduction to yourself. 
+
+2:49 | Steven
+Absolutely folks. So, I'm Stephen, Dungan, I'm a staff product manager here primarily working on our telemetry pipelines, products. And yeah, looking forward to hear what you are looking for as far as sensitive data protection. Yeah. 
+
+3:04 | Nandini
+Yeah. Hi. So I'm an application security engineer. So to start with for, in Datadog, we have sensitive data scanner. So initially, I think two years back when we started, I mean first we enabled it, So we enabled it for all our… logs and the we can use. I mean we can configure rules, I mean, particularly which kind of sensitive data we need to identify. So we were mainly focusing on PII initially and also the card data PCI. And the thing is we enabled it because that was a new tool available to us and we enabled it. And later on, I mean it cost us a lot. So we were, it was on for a long, I think more than three… or four months. So we had to pause it. Yeah. So and later on we started using it. I mean every, I would say three months or six months, we switch it on and see like what it is getting identified. The thing is like we were not confident enough to mask the sensitive data which is coming into the logs. So we know, we knew there are, there is a capability where we can mask certain field which, where we expect sensitive data, But we were not using that as much. And since it was very expensive and later on at this stage now, when we don't want to proceed with Datadog, so we didn't spend much time on that to refine that further the rules which we have. But for the PCI perspective, we, I think for auditing, especially we were enabling it and see to detect anything passed in our logs. And we have identified the card data for example, and we had to fix it. So that's what. So it's not like regularly the scan is happening and identifying the things. Yeah. So it's like on whenever there is a demand, I mean, whenever it is required, we enable it And we see the logs and we, and normally, I raise tickets for the team. So if it is a PC, of course, it's like a P1 incident. So, but for the, in the near, I mean, in the past, I mean at least for this year, we didn't find any card data exposed in the logs. So it's like mostly the PIN, we are aware of that. And yeah, so that is the thing. 
+
+6:10 | Steven
+Okay. Interesting. If I understood it correctly, you're kind of turning it on and off at select times. 
+
+6:17 | Nandini
+Is that right? Yes. Yeah, Because yeah, we cannot accommodate to run it because we, the thing is like we want to cover the whole logs, all our service logs. So that's what, so especially for the PII For the PCI, yeah, we are aware which are the services which deal with card data. So we know the, and we can select the services which we want to come under that particular rule to detect card data. So, yeah. 
+
+6:49 | Steven
+So for certain services? 
+
+6:51 | Nandini
+And one more thing, we were aware, we are aware that there is an agent level… detection possible. So, I'm not sure we are completely using that film or some devops guys. They might be knowing it because I think now they're in datadog, there is, some capability where through aids and by default, some sensitive datas will get masked. It will not be… I mean ingesting into logs. So that is also there one side, But still we see a lot of PII… in our logs And there was an initiative initially created and there were a lot of tickets And we, and there are some work going on. Yeah. Still teams are working on to mask the PII, Yeah. 
+
+7:53 | Steven
+Can you help me understand? Like for, if I understood correctly, you're treating Pai and PCI differently? Do you keep it on all the time for certain logs or certain services or do you turn it off across the board for extended periods of time? 
+
+8:07 | Nandini
+So, it's off by default. I mean, we have the rules, it's off And we switch it on only when required. What? Okay. 
+
+8:18 | Steven
+What makes it required? 
+
+8:20 | Nandini
+It's for the complaints because we want to know what all data is getting ingested. I mean, the sensitive data is getting ingested and we want to know and we can't switch it on and see. So we, the thing is like when it was initially enabled, so there were a lot of tickets raised and assigned to different teams and teams were working on that. So we knew, and we are aware that it's reduced. Yeah. So that is I'm keeping in mind. So it's because of the cost. Again it's turned off. And when, yeah, when needed, usually it's like three every three or four months. I just enable it for two or three days and then switch it off. And then we'll get that logs. So we can identify which particular services… We are aware of ingesting sensitive data. And based on that, I raise the tickets and assign to the team. Yeah, And similarly, all sorts of sensitive data like the JWT tokens or whatever. So, yeah… Got it. 
+
+9:30 | Charlie
+Just want to make sure we're getting the most out of this, right? Should we focus on what you're aiming to get out what you want to see? And yeah, see if I appreciate, we understand a little bit more around what Zilch is trying to do? Should we focus on what you guys are looking for in a new tool as well? I'm conscious, I want to make sure that we show you a little bit more around what Grafana's doing as well. But thank you, Nandini. 
+
+9:54 | Nandini
+Yeah. So one thing to add is like, so the one most important thing is We want this feature, right? So we want to know like the amount of sensitive data which is present in our logs. So we need that visibility like what all sensitive data is getting ingested. So that is the whole ask, I mean if there is no Datadog, we need something through Grafana where we can, where we'll be able to use it and see like what sensitive data is getting ingested into our logs. 
+
+10:30 | Steven
+Got it. So I guess I'm just trying to understand because something that we were working on is building this. The reason I'm asking these questions is just to make sure I understand exactly what you're looking for. We're not trying to look at Datalog and say we're building exactly this. So maybe, sorry, the last question before we can definitely get into what you're suggesting Charlie, but I'm just trying to understand because this is new to me. What is the occasion that makes you turn it on and off again? And then from there, do you need to delete it from the databases? Do you just fix it going forward? What happens when you turn it on? And there are many things detected and you raise all these tickets? 
+
+11:09 | Julien
+It's just like a reactive kind of thing. We've just done it on. There should be no, nothing there. But if there is, then we can find it. It's basically that. 
+
+11:21 | Steven
+Got it. 
+
+11:23 | Nandini
+And we know that there is a retention. So it's like two weeks or something. Yeah, there is a retention period. So if there is like, I… don't know that the, If there is any, The complaints issue. So in that case, we'll have to delete, So we have to ask Datadog directly and ask them to delete it or else it's like, yeah, So we wait for that to pass that period where the logs will be there. And, yeah. 
+
+11:59 | Julien
+So just to add quickly, so to context, we're turning off on Datadog Why? Because it's too expensive, right? If we can run it all the time, then we would, But we don't because it's, way too expensive That's it. So if you want to build your own and we can run it at all time, then please do so And we can have an alert as soon as something comes up and we get in Slack or whatever. And then we can act on it straight away That'll be the preferred situation. 
+
+12:31 | Steven
+Got it. Okay. Cool. Yeah. So maybe, okay, next on the agenda. That makes a lot of sense. I'm sure if we have more time, we could go into some more detail, but I'm happy to kind of I'm probably repeating myself a bit here but relay a few of the capabilities we already have today. And then I can talk about kind of what we're in the early stages of building as well. And just when I realized some of the things we had today, like please just stop me if you've heard about it before. I'll also say like I don't own every single tool we have here. We have a lot of tools that can be used for this job. So I may not have the detailed answers to everything. But Pappy just walked through like a few basic things that we have today. The first, maybe I'll ask also like do you intend to use Alloy or the Vanilla Hotel Collector or haven't decided yet for collecting data? 
+
+13:17 | Philip
+You're on mute. So… Hey, sorry, Normally my headphones are synced up. Yeah. So we're going to test out both, But we're planning to use OpenTelemetry Operator anyway. So it should be easy enough to switch between them. 
+
+13:37 | Steven
+Got it. Okay. I asked that because in addition to kind of like the OTL processes for like transform rear deck filter, things like that you can use to handle it with like regular expressions, we have a tool in Alloy that's just one GA called secret filter which does kind of what it says. It's focused more like right now the backend libraries GitLeaks. So it focuses on things like keys and passwords and things like that. But that exists today. We have also we have the ability to kind of write handwrite rules for logs or for you can also filter traces as well as opposed to based on attributes, You can basically drop data that has certain values in it as well. So that's an option as well. In terms of a capability we have today, I know some of our field has gotten very clever too around and I think we actually documented how to do it in the product too as far as using like watchers to alert for things coming in. But generally we have like a wide toolkit for kind of detecting and redacting things that come in. And then finally in the backend we have for logs and developing for traces, the ability to delete Data. So we've I believe we've already serviced that API in logs. So you no longer actually, yes, I'm sure we have, so you no longer need to rely on a support ticket to do that or rely on it to age out. So that's kind of the most of the toolkit we have today. I'm sure I missed something, but generally like a wide variety of tools that you can kind of run on your own Kind of what's missing. There is probably the centralized tool control plan dedicated to managing and detecting all kinds of sensitive data That's what we are working on building in the very early stages today. But maybe I'll stop there and see what questions you have so far. 
+
+15:15 | Nandini
+Yeah. So I have one question. So the thing is like, is it possible like we can enable that specific scan, the sensitive data scan for a specific service, not the whole services. Is there something like that possible? I mean we have a lot of services, right? So we don't need the scan to happen for all the services. So some selected services. So, is that available? 
+
+15:42 | Steven
+Yeah. So within the tools I just offered, you can like scope them very finely. Also with the thing we are building, we are making it so that you can kind of scope to specific services as well, Exactly. 
+
+15:53 | Nandini
+Yeah. Okay. Yep. 
+
+15:57 | Julien
+So when you say early stage, how early is it? 
+
+16:01 | Nandini
+Like, 
+
+16:02 | Steven
+We plan to preview with a handful of contracted customers this quarter. 
+
+16:08 | Julien
+This quarter. Okay? 
+
+16:09 | Steven
+Yep. So when I say this quarter, I always need to check myself on this. Our fiscal quarter started last week and ends at the end of January. So sometime in that time period? 
+
+16:19 | Julien
+Okay. 
+
+16:20 | Steven
+Cool. Yep. But hopefully earlier than later, yes. Yeah, of course. But yeah. And then the very first thing we're doing just to kind of give you an idea of our timeline is we're focused on logs. We think it can expand to traces later and maybe even metric labels. But focus on logs. Very first thing is going to be control plane and cloud side detection. So the idea is kind of exactly what it does. It'll like scan everything that comes in or at least like what you indicate you want scanned. And then it'll give you kind of a, at first a UI just to kind of surface here's. What we've detected. And here's… some things you can do about it. So that's like the very first, like where we're starting with enough customers have said this is valuable. It's basically, you get that control plane where you can configure these are the things I want. We'll give you a preselected list of regular expressions. You can also add your own, And then we'll try to like surface. Hey, here are some statistics for what we're finding. We'll kind of tell you what the follow up actions you can take are You can delete from the database. You can, of course, talk to your teams and create source code, our ultimate source code, you can fix with rules in your collectors Going forward. The next thing we'd want to add after that is some sort of like intelligent detection focused on first human names, and then we would see what we need to get beyond that. But the idea there is basically knowing regular expressions have limitations where at some point you're just getting to a lot of false positives without much return… kind of how we see the next three Ish months playing out for us. But then we can certainly expand the workflows beyond that based on feedback You mentioned alerts that comes up a lot. Certainly some customers express. We'd rather this run client side. 
+
+17:57 | Julien
+I'm curious to know how many, if you have a lot of clients that are asking for this, if, yeah. 
+
+18:02 | Steven
+I think we're going to have a no problem at all. Filling up our preview is what I would say. Okay, So you're not alone, correct? 
+
+18:10 | Julien
+And going back to my point I had earlier where we were posing it in Datalog because it cost too much money. Do you think I'm guessing the cost? Do you have an estimation on cost already Or is there No, Okay. I can see Charlie shaking his head. So cool. Yep. 
+
+18:32 | Steven
+We'll see how preview goes. We definitely have not made any pricing or packaging decisions at this point yet. 
+
+18:40 | Nandini
+I was… just. 
+
+18:44 | Charlie
+Going to say. 
+
+18:45 | Nandini
+You can? 
+
+18:46 | Charlie
+Say lockstep on that as well with you to give you updates as and when they happen, But yeah, Steven's answer. 
+
+18:53 | Nandini
+Yeah. So I think, I believe there would be a dashboard view of this, right? Once a scan is happening, we'll get a dashboard view of that. 
+
+19:04 | Steven
+Correct. It would be a UI plugin, but the same idea exactly. We will see how valuable that is going forward. But yeah, primarily, I can see if I have a mockup handy to show you kind of directionally what we are thinking here. If you're curious, The GA, secret filter also has like a dashboard that probably doesn't have nearly the depth that we are planning on here. But I'm happy to share that with you Again. That just covers secrets and not things like Pai, PCI. I'm probably not going to be able to do this on the fly. So let me just follow up with Charlie and send you some things afterwards. 
+
+19:41 | Nandini
+Yeah, sure. Thank you. 
+
+19:44 | Steven
+I guess maybe the question since you asked about the cost like what? Like if we like stop this, let's say we just have what I talked about today. We put all our engineers on something else tomorrow, Like how would that affect your trajectory? We're not planning on that to be clear, but I'm just kind of curious like how important this capability is to you all. 
+
+20:07 | Julien
+I think that would be a question for Oli, who's not on the call? I believe. Okay, So. 
+
+20:13 | Robert
+I mean, it's I might weigh in slightly, Sorry, sorry, guys. I joined a bit late but I'm Rob, I'm VP of engineering for some of our engineering teams. Sure. So am I, right? Nandini Julian in saying, I think you've said it on this call, right? That we turn on the existing sensitive data scanner occasionally so that we can catch these sensitive data, things that are spilling into the logs. Yeah, We don't leave it on all the time because it costs to do so, right? Yeah, I wouldn't say so much as ad hoc but it's something we do on occasion, right? And the system benefits from us doing that We catch issues. But this I don't think is a blocker to us, you know, Using a different tool. The fact that you have one in development right now is very, sounds very positive And, and that it will become available to us as far as. 
+
+21:11 | Steven
+That's the hope yep. 
+
+21:12 | Robert
+Yeah, It's we don't rely on this day to day, Right? Guys, Jillian and Nadine, if we were, if we didn't have this for a month, would it, would things be crashing down? 
+
+21:22 | Nandini
+I mean, yeah. So basically, the things like we, If it is under development, so we know that, okay, sometimes it's coming up. So it's we are moving away from Datadog and we don't have anything for long. So, yeah. So that's what? So we want something, But if it is in a development stage, so we can understand, yeah, it will be like fully, I mean available, Yeah, It. 
+
+21:54 | Robert
+Will arrive, right? Yeah. 
+
+22:00 | Robert
+It would be nice though Stephen, if we, seeing as we're doing a proof of concept at the moment with Kifano, if like I don't know if there's like early access to that type of tool or like or you have some test results from your own testing to show what the tool would produce, what kinds of things it sees and like letting us understand a bit more deeply about it. 
+
+22:21 | Steven
+Yeah. What, I guess, yeah, in terms of test results, what would you like to see Or like what's ideal to like learn about here? Ah. 
+
+22:31 | Robert
+What a report would look like? What data it would contain, what cases it covers, what you're trying to achieve with it? Yeah. 
+
+22:39 | Steven
+Yeah, I mean, so I can describe what we're trying to achieve with it and I think we can probably get some screenshots to show you like what we're going for here. We're getting to the place now where it's just testing ops internally. So, based on what Charlie told me about your timeline, like we can see about, Access, but like I don't think we can, typically, we don't preview this early without going to contracted customers. We do, I bet the first half of the call, I mentioned, we have a number of tools that already exist today that are, that can be used for this purpose. We have a secrets specific client side filter that's already GA, focused narrowly on secrets and not, yeah, PCI. Yeah, But yeah, absolutely happy, to share a little bit more about like what I described today? Yeah, In terms of, yeah, were you here yet when I talked about kind of our direction Or I can I? 
+
+23:29 | Robert
+Can hit that again. I did. Yeah, No, no, that was great. 
+
+23:31 | Steven
+Thanks. Okay. Perfect. 
+
+23:39 | Steven
+Cool. So, it sounds like I owe you all through Charlie, kind of a little bit more information about what today actually in the future. Actually looks like. I'm happy to share what we're doing with the secrets filter thing I mentioned and that already exists. And then I'm happy to share a little bit more about what this preview actually looks like with the caveat that it's still early development. 
+
+24:01 | Ramsay
+Cool. Thanks. Yeah. 
+
+24:04 | Robert
+Thanks for the information. Stephen. Yeah, of course. Did I? 
+
+24:07 | Steven
+Is there anything else while I'm here that I can answer for y'all. 
+
+24:12 | Ramsay
+No, Nothing From me? 
+
+24:15 | Steven
+I'm sure there will be something eventually though. 
+
+24:18 | Ramsay
+Yeah. So, yeah, for sure. Don't know. 
+
+24:21 | Steven
+Perfect. 
+
+24:22 | Julien
+Just keep trying That's all Once we try it, we'll have, you know, and see it as well? 
+
+24:28 | Steven
+Perfect. 
+
+24:30 | Vitalie
+Just wait to start using it after we have a lot of questions. 
+
+24:34 | Steven
+We will try to move it as fast as we can. Yeah, I, you are not the only ones asking to answer Julian's question for sure? 
+
+24:44 | Charlie
+Okay. I'm just conscious there's five minutes left. Are we? Sorry, I may have misread that? Are we, Stephen? Where are you planning to set up another session to show or spend the next five minutes to kind of show some updates? 
+
+24:57 | Steven
+I think I can share that offline with you when I track it down. Yeah, Perfect. Because we're still a little early, But, yeah, certainly, as we get further along, like once you all are with us, I'm happy to share more as we bring this out of private preview and beyond Cool. 
+
+25:14 | Charlie
+I'm happy with that, Stephen. Thank you for jumping on, Really, really appreciate this Nandini Julian, Phil Vitaly, everyone. Thank you for jumping in As I say always, you're always very interactive, very inquisitive so, thank you very much again, Stephen, let's catch up offline as well And you can sort of do a run through of the outcomes, what's up, what's coming up, what's in store ahead of A, your POC and B, sort of kind of, a migration timeline as well. So, you guys know what to expect. But thanks for the time. Again, I'll give you all back five or six minutes. 
+
+25:44 | Vitalie
+Thank you. Bye. Thank you. Bye. 

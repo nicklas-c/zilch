@@ -2,21 +2,14 @@
 
 ### Big Fixer Agent Swarm
 - **Steve asked about Phil doing focused effort; you proposed Piotr instead, Steve agreed**
-- You asked Steve where to find detail on the last push — he said talk to Saeed
 
-### Sponsored Retailer Search
-- Deployed to prod behind LD flag; remaining blocker is categorising uncategorised retailers
-
-### Semantic Search
-- Jacek implemented profanity filter, asked Kieran to review
-
-### DevOps
-- Duncan merged temp fix for customer-service CI build; Michał had the same issue
+### Merchant Team
+- Jacek implemented semantic search profanity filter, asked Kieran to review
+- Sponsored Retailer Search deployed to prod behind LD flag; one blocker remains
 
 ### Miscellaneous
 - LinearB metrics follow-up in #eng-management — no decisions
-- Jacek changed Friday vacation to use Aug 15 day off; needs Bamboo re-approval
-- London office closed Friday; side entrance only
+- Jacek changed Friday vacation; London office closed Friday
 
 ---
 

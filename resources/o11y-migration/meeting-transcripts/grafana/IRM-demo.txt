@@ -1,0 +1,225 @@
+Grafana & Zilch - Grafana IRM Demo
+
+undefined undefined
+Recorded on Oct 2, 2026 via , 52m
+
+
+
+Participants
+
+Grafana
+Charlie Lutterloch, Commercial Account Executive, Acquisition
+Ward Bekker, Senior Principal Emerging Products Manager
+
+Zilch
+Mark Reddington, Senior Service Delivery Manager
+Nandini Muraleedharan
+David Ramsay
+
+
+
+Transcript
+
+0:00 | Ward
+you kind of an update on that, what is available, what is not available. So I'll do that during the demo. So what I'm gonna do is I'm gonna go through a few steps. So first of all, I'm going to go through paging. So the OnCall part was something that you currently didn't do in datadog, you're doing that right now in jcm. But one of the benefits of moving to grafana IRM, is that you also get that for free. So that would be well for free. It is part of the cost of IRM. So you would get that together with the incident piece of IRM. From there on, I want to show you a bit around the slack workflow. So we do also have a slack bot or app that allows you to interact with anything IRM. I'm going to focus a bit on some of the lifecycle and incidents, part, the records, so around making sure that there's like proper governance around incidents. The… so Nandini last time you mentioned that you needed to have private incident handling. So there is a way to create incidents that are private. So only for the people that are invited to participate in incidents. So I can show you a bit on how that works. And then from there on we can go into investigations, review, show a little bit on how the post incident response process could work, etc. But first before I want to start, I just want to give you kind of an idea on where we are with automatic incidents and investigations to show you a little bit like what's the art of the possible there and give a kind of a good starting point before I really dive into all the details of our offering. Sounds good. Anything that I missed there? Anything that I should definitely answer? 
+
+2:10 | Ward
+And if not, we can get started. Yeah, cool. All right. So this is actually a live recording of a workflow that I executed a bit earlier and the total runtime from receiving to a PR that actually fixes the issue that there is my demo environment is around like three minutes and 15 seconds. And it gives a good overview of how we do automatic investigation, root cause analysis with AI, but also giving you the possibility to automatically create prs and essentially have that fix ready within the time that it typically takes for people to wake up and get some coffee and open their laptop when they have a possible critical alert and receive that page. So let me just walk you through that and show you kind of what is possible there today. In this case, I have a, this is a monitoring demo website which is an E commerce website. There's a payment service. Obviously we like money if we have an E commerce website. So when there's something wrong with the payment service, we definitely want to make sure that there is an alert being triggered. So in this case, payment error rate is high. So that could be an SLO alert. As an example. We have all kinds of functionality around that. And when you trigger an alert, there's of course, various ways that you receive alerts. So in this case, this is the web page where you get one or multiple alerts because we actually do deduplication based on the typical labels that are present in the alert just to make sure that the person that's OnCall is not going to be pinged for the same alert like multiple times. And we of course, are able to automatically do certain workflow items. So in this case, in my alert, I actually had a piece of workflow that created an incident automatically because if the error rate is high and it's on the payment service, it's probably something I want to automatically apologies… investigate here. So here, you can see the timeline a little bit similar to what you saw with datadog. And this timeline allows you to collect all the relevant information and collaborate either here within the web app. Or within the mobile app. And I'll show you later on a little bit more in detail what's possible there. So here, there's an assistant investigation also automatically kicked off. So this is the AI part… of our workflow. And what it's doing is you can actually see that there's a bunch of stuff. So I'm pausing it along the way because sometimes it goes a little bit too fast is that it will automatically kick off a root cause analysis. And what we're doing is we're looking through all the telemetry through all the services, there's all kinds of systems that we use to give you even faster results like infrastructure memories which is kind of a cache. And then we also come up with some reasons why this might be failing. And we're going to prove it or disprove it because that is a good way to keep AI honest. And the cool thing is this is actually connected also to your source code. So it has access to your GitHub here, you can see it's actually searching the code. So it's actually able to find, okay, what were the latest commits that are deployed to my production environment? And did it introduce any bugs? So unfortunately, AI is getting too smart. So it's actually able to pick up that. I indeed deliberately introduced a bug in my code as part of a feature flag and it now creates a mitigation PR automatically. So here you can see it's actually using the GitHub MCP to create a branch and create a PR. And yeah, if you are a little bit adventurous, you can also put this automatically into production or maybe push that to deploy that to a lower environment to verify if that bug is actually fixed there. So this is all automatically, you don't need to do anything about it. This will be done by the grafana AI or the grafana assistant and you can specify runbooks. So we do allow you to specify skills which allow you to guide a bit. Some of the things that are not related to the rca because the rca is something that, we make sure it is high quality as fast as possible at that kind of stuff. But if there are some specific processes or structures that you want to have followed as part of your company processes that can be then specified in a scale. So one of the things that I do is if it's the payment service, I'll ask it to create a PR and the PR has a certain structure. So of course, AI is like, it's getting smarter and smarter every day like it's ridiculous if you compare that to last year around this time, it barely became functional. And now as you can see like one year, we have some incredible models and those models are typically going in the right direction especially because if you have your telemetry in grafana, and you're connecting the right data sources and MCP servers with great data, you actually get very good recommendations here. But it might be that we're or the assistant is not entirely correct. So we also show you a report where you can actually walk through all the evidence and then make up your own. Mind and you can actually, so this is a fully autonomous conversation… but you can always add more hypothesis that it needs to prove or disprove or steer the conversation in a direction. And then, so it found indeed the conform trigger. Indeed, I set that variable here. And then it was actually fixing the defective codes that caused the incident, the high error rate. And then it shows a few traces that are relevant that you can manually inspect. And there's a mitigation PR on that's pushed automatically to my GitHub where we have a structure depending on, yeah, that can be specified actually in your scale as kind of a runbook on how you want to have your message, your PR message structured and this is already ready. So, so if you actually would look at this live, that only takes about like three, three and a half minutes from the alert being triggered to actually have a fix ready. So imagine indeed, if this is happening in middle of the night, this is an enormous speed up that you would have. That would you normally not have if you need to do that all manually especially when it's a service that you might not be that familiar with. So this could dramatically improve your response. So just, yeah, as a kind of a high level view on how all those components that I'm going to show today are gonna, is able to work together? Any questions about this so far? No? 
+
+9:37 | Mark
+Nothing specific. It's just observations. I mean, it's just I'm seeing very similar features and capabilities. You know, what we get, you know, in other tools… you know, agentic software factories, and so on. It's all it's the way forward. So, but I don't feel we're there yet. We, I think we're still very much in a present position ourselves where we'd still want our engineers to be doing manual PR reviews and things which this would help facilitate. Doesn't push beyond that. So it gets them quicker to that point. I guess. So. Yeah, I mean, it's definitely. I think as you say, are the feasible… I'm not sure where I'm not sure we're fully weapons free with that kind of ability. Yeah, yeah. 
+
+10:25 | Ward
+Exactly. And like depending also a little bit on how adventurous you are. Indeed, you want to automate stuff. If not one of the things that we allow you to do is from this investigation, like this is creating using our assistant to automatically create that PR. But you might just want to say, hey, this is the root cause analysis. Just pull that in into my coding environment. And then the developer will use its own cloud code or codecs or copilot to actually make the fix slightly more manual if you will. And for that, we do have a tool called gcx which is the grafana cli which is optimized for agentic usage, which actually allows you to connect and pull in all that relevant context into your coding environment. So there's many ways around it and it depends a bit and like on how far you are as a company. But yeah, we're definitely tracking in that direction. And like you mentioned, it, based on the show of the first reverse demo that you gave, there's like a lot of similarities. And that was also my point right at the end as part of the conclusion where I said, well based on what you showed, I think were like 90 97 99 percent around that percentage point, very similar in functionality, which is good. Yeah, of course, if you want to migrate away, yeah. 
+
+11:58 | Mark
+I mean, I think what you've just walked us through, yeah, what you just walked us through, there is sort of possibly tomorrow's world a little for us at the moment. So if we were to do a migration certainly as part of this, it's not about just going like for like we're we'd be looking to elevate, and innovate where we are today. But we do still need to achieve where we are today. So there were key features in, you know, what we do today which we are still making more robust, and industrializing. So I'm keen to see some of the, you know, if let's say we've got a muddier looking incident and there's a lot of others, you know, there's several folks collaborating across slack, how that is being integrated with, you know, the data points that have been brought back onto your grafana, IRM. Yeah, yeah. 
+
+12:52 | Ward
+Yeah, yeah, exactly. Exactly. So, we can take a look at how that works today in grafana IRM. So just to give you kind of a high level view of, the main concepts here. And this is probably very similar to what you already have. One of the benefits is we support basically any incoming signal. So of course, we like you to alert from grafana, but there's a bunch of other systems even datadog that we can accept as long as it's if it's Json and it can be delivered to a rest endpoint. We, we can essentially process that. And then we go through an alerting processing pipeline there where you potentially can enrich the content. So do some lookups, even some AI enrichment is something supported. Of course, you do need to make sure that if you have a very high… frequent triggering alerts, you might not want to do all kinds of AI enrichment because that can be quite costly. You do need to make sure it's relevant and useful, but it, there's a lot of possibilities there. And then we group it. So we, what we'll do is we look at some of the key value pairs that are part of the message. And based on that, we can deduplicate it which will remove a lot of noise that when you are sending or notifying the people that are OnCall from when we have the alert, it actually goes into an alert group. And alert group will be the thing that notifies the person that is OnCall and the notification that is based on an escalation. So there's an escalation schedule or an escalation workflow. And that will determine what will happen with that notification. And that can be for example delivered to somebody that's OnCall and that can be a team that can be individual, can also be a webhook and they of course, are notified in the various ways as you would expect. We have very good slack integration. There's a very nice mobile app that we have for android and iOS and there's of course, the website, the grafana cloud web interface, that is also possible. And as I mentioned, we have the gcx, the cloud cli that can also interact with all the resources that you have available here. So from there on, sorry, yeah, go. 
+
+15:29 | Mark
+Ahead. Yeah, just to pause. So just around then I guess, yeah, the capability to escalate and the efficiency and, you know, the availability of tools to support that. I mean again that's sort of expected and it's good to see you've got it. What level of, I guess underpinning service mapping is needed to sort of migrate here and establish in order to make that effective. So we do map and do discovery on all of our services across our microservice platform. So presumably that's something that would map straight into this. And at a service level, we can define which teams should be getting targeted or which individuals and so on or build rules around how that's done. And presumably the same underpinning service mapping is what drives some of the alert enrichment and knowing where the alerts are coming from. Therefore who should be addressing it and so on. So I just wanted to get a sense of that. I don't see it represented there but I'm presuming that's key to how all that routing works, yeah. 
+
+16:39 | Ward
+Exactly. So let's dive into that concretely the way. So we connect through other to all kinds of channels where like sources of alerts. So for example, this one is the commerce IRM, every integration is basically owned by a team. So every team controls their own workflow. And this one is not a great one because there's a bunch of broken stuff there. This is shared demo environment. So… anyway, and what you can see here is that you get a certain payload, you define, what are the labels that you're going to use for routing? If they are not there on the alert, you can use alert arrangement to make sure that that's part of the payload. So for example, if you have an alert where you need to associate with a certain service or a certain team name? That can be done as kind of an external lookup. And then that is available then for us for the grouping and also for the routing here. So here, you can see that we have a few example routes. So this shared demo environment. So it's a slightly messy environment. But for example, namespace or service name based on that, you can then trigger certain escalation chains. And… this is kind of the way that we the duplication the routing and that kind of stuff is typically always label based on and that can be on a surface, but it can also be on other labels that are important for your business. 
+
+18:29 | Mark
+Okay. And then the actual team structure and how that applies to the, again, I guess the underlying infrastructure and software workloads, right? I mean that's defined, is that defined in grafana as well or is that just run as sort of live discovery? 
+
+18:46 | Ward
+That's by convention. So there's no enforcement specifically that certain services are part of a team. We do have something called a service center that allows you to understand what your services are and like which team is… responsible for it. So there is some mapping but it's not enforced. So it is free form and it's just conventions. So it's like I always recommend folks when they are working through kind of a setup like this is that they will always have like maybe some additional alerts that will check whether telemetry actually is labeled correctly. And that when they are testing out or organizing their new IRM setup is that they always make sure that indeed the labeling is correct because otherwise, yeah, you will have some issues with alerts that are not delivered to the right endpoint. But that is made, yeah like the, for example, gcx dcli tool together with agentic coding tools can do that quite efficiently automatically for you. 
+
+19:58 | Mark
+Yeah. I mean this is quite fundamental for us because like I say, I can't remember the number now, but we've got several services microservices both internal that we deploy, but also sort of emulating what we externally connect to as well. And so being able to build that service catalog and ownership model will drive a lot of who gets what, and how we respond and how the incident management is also then dealt with. So all the way from, you know, managing tracking the deployment service, health, being able to report on that from owning the content of the alerts and the monitoring supplied across their services by team. And therefore when alarms and alerts fire, the response to that and the escalation paths being defined for those teams as well. So it all stems from that low level service mapping, really? Yeah. 
+
+20:59 | Ward
+Exactly. And it also depends on how you provision the environment. So there's a lot of customers where they have everything in terraform, and the configuration also becomes part of a CLI CD process where there's additional checks. So both from the observability perspective. So hey, like I have a new service, I'm going to put it up. I want to have it observed that there is like an auto instrumentation that also makes sure that it's correctly labeled, but also that automatically, it will provide the monitoring for it as well, making sure that there's the proper IRM flow additional attached and configured to it. And that, yeah, that depends a bit on how far you want to go with your automation. 
+
+21:45 | Mark
+Yeah. Okay. Thank you. Cool. 
+
+21:51 | Ward
+So just to go back here when there is an alert group and it's notified, we can do a few things. So typically, we divide it up in two parts where we say the first 60 seconds is probably some triaging, where you try to resolve it by a runbook, maybe even auto resolve it. If that is not something that you can resolve on your own. It makes more needs more time. Then you're going to declare that incident where you have an incident coordination and resolution process where you are indeed creating an incident, a timeline that you can all collaborate. It will do a lot of automation steps. So let's say you want to make sure there's also a related record in Jira as part of your company process, making sure there's a slack channel automatically created where people can collaborate, all types of automations that's something that we do there in part of the incident process when you are working through it. Of course, there are some you… procedures around which roles need to be assigned. Maybe you have some specific fields that need to be signed in to keep track of it. And we also allow you to create tasks so to make sure there's proper follow up. And that was also something that was important for your workflow. And then in the end, that will mean that hopefully the incident will be resolved. And we also make sure there's proper or, then statistics will be kept of how fast those processes go. And that's both from the IRM perspective as from the incident perspective, making sure that we can have a good show back on the effectiveness of your organization. And so here, just to make that very concrete, there's insights on the alert groups where we show like how alerts are being come on load where we can see how much people are being bombarded with alerts. And there we go. 
+
+24:20 | Ward
+So, which integration gets a lot of alerts, the meantime to respond, meantime to resolve. So all those important metrics to understand how you're doing on the alert group front. And then we have the same overview here also for incidents where you can actually indeed understand and, you can for example track depending on the way that you label incidents, whether which surface has the most incidents in the last week and which teams need to do a little bit better. And of all this information, this is just a default dashboard. It's just metrics that you can all also use as a custom dashboard, making sure that, you have a good follow up, a good idea of how people are tracking. So in this case, you can see which people didn't restart their post incident report yet. 
+
+25:12 | Mark
+And do your AI tools support the dashboard creation as well and report generation? Yep? 
+
+25:19 | Ward
+Yep. Yeah. Various ways. Cool. So there's a, in the assistant, we can ask it to create dashboard for us. There is also what we now are doing with AI that's pretty cool. Is all kinds of automations where you could create a post mortem digest or an OnCall handover doc or that kind of stuff completely automatic. So, like these automations, the, that's driven by AI have access to all the important parts of our grafana cloud platform and then are able to run that in the background for you. So that is something that you can either deliver to your team or deliver to yourself automatically. And there's also watchers… which allow you to also automatically create alerts for it. So let's say you're interested in… the perform of like, the delivery of some post instant reports or like if their people are following up with their tasks from some of the incidents, you can create a watcher that will check for undesired… statistics and then report on that. So you could then use that as an escalation and actually create an investigation for that as well. So, this is some of the new AI functionality that we have making it slightly less deterministic, but it can be incredibly helpful here. Yeah. 
+
+26:58 | Mark
+No, that would be powerful and useful. Yeah, cool. 
+
+27:02 | Ward
+All right. Let me show you. So I'm just going to go very quickly through those things because, you of course know how this all have a good idea on how this should work. Of course. So the thing is every team owns its own integration so it can do its own routing based on the labels. You can set the security in that way that other teams cannot mess with your integration, making sure that every team is not going to be fighting each other because they mess up their alerting, everything that you see in grafana cloud. We, we provide apis for it. There's terraform for the… provisioning of this. And that can now also done be done by the agentic tooling using the gcx, the cli, the integrations. They typically point to an escalation chain. You can make as many as you want. Again, they can be owned by teams specifically where depending on the level, you might want to have a slightly different flow. So here, you can see that there is all kinds of workflow that is possible here. There can even be web books being triggered if you have them. And there's a bunch of stuff here that allows you to page, people, escalate it after people don't respond. And depending on the severity, it will actually allow you to do a default notification or an important notification. And important is a way that I, that everybody can like every user. So if I'm a user here, so what I… can actually specify how I want to be… notified depending on the severity. So this is not the P1 or the P level. This is more around the way of notification because let's say I typically when it's just a standard alert, I just first want to ping by slack, but I probably will live on slack. And then if I don't respond, then I might want to get a phone call or mobile push there's a special mode in our mobile app. We'll push important and that will break through your do not disturb. So if you put your phone on silent, it will still ring with the mobile app. Yeah. So be careful with that because you're going to be woken up. Yeah. And then all the typical notification… channels are supported here as you would expect. Cool. So of course, when the escalation says, you need to notify somebody that is on a schedule. So we have all kinds of scheduling functionality here. What we do is we have rotations and there's all kinds of ways to set up the rotations. And we also allow you to do that in layers and those layers as you can see a higher layer takes precedence. So that means that, yeah, that allows you to set up this in all kinds of various ways. We also have an automated way to do request shift swaps to request overrides, and that's depending on your settings will be actually be done also on slack. So we have a bunch of specific slack integration points where we can, for example, in the team channel, we can actually notify that, for example, no one is OnCall or do a weekly report on how everybody's doing that kind of stuff that is all available here. And then, yeah, this is the final schedule. And yeah, this is how you probably would expect this all to function. We also check whether the schedule is good or it has gaps or people are overloaded as kind of a quality check here and it's fully time zone aware because, yeah, so. 
+
+31:04 | Mark
+I guess just on this and there's a lot of similarity there to the jsm tooling as well. So I don't expect the data support and schedules we have there to be very different to what you're expecting. So the obvious question there is how easy would it be to migrate from our existing jsm schedules into grafana? And that's I guess the tip of an iceberg for a lot of this really which is, you know, bringing in the data from our existing tool sets, you know, that's something we wouldn't want to be sort of filling this from scratch. You've got to establish migration paths to do that. 
+
+31:43 | Ward
+Yeah. We do. So I do know, I'm not entirely sure how that works for GSM, we did have or we do have an… one for OpsGenie where we were able to automate around 80 percent. So there's always going to be changes of differences in some of the models that are not automatically one to one transferable and need some manual interaction. But yeah, we typically are able to automate a lot. We also have a pro surf team that has a lot of experience with these types of migration because it happens quite frequently for let's assume that we don't have any tooling for GSM nowadays. With the agentic tooling, it is dramatic how fast migrations can go. So, yeah, it's something we of course, need to prove and discover depending on GSM, I need to ask the, in the organization if we have experiences with that. But yeah, I have seen migrations where we use the agentic tooling. And yeah, it's those types of things. They definitely are accelerated with coding tools nowadays. Cool. Okay. And yeah, the question of course is like, does it need to be like, are you using, how… do you say terraform or what is the? 
+
+33:10 | Mark
+I'm not sure how we're managing the schedules now, whether it is through terraform, we're a heavy. 
+
+33:16 | David
+Terraform group, jsm's manual. Yeah, a lot of everything else is terraform. 
+
+33:21 | Ward
+Yeah, yeah. 
+
+33:23 | Mark
+I think David, if I'm right in saying those things, like I was talking about earlier, all the service mapping and sort of how that aligns to a lot of the metrics and hooks we have on our services in datadog, a lot of that's managed through terraform, I believe. Yeah. 
+
+33:39 | David
+Correct. A lot of the older stuff isn't but most of the new stuff is and a lot of the monitors and a lot of the figures are defined in terraform. 
+
+33:47 | Ward
+There. Yeah… cool. Go. All right. So, these are the schedules and from there on, if you get an alert, you get notified of course. So there is a specific view that I can have where I can only see only the ones that I'm interested in based on my membership by the way membership that's all automatic. Are you using entraid for your… group permission? Yeah. 
+
+34:30 | Mark
+Yeah. Okay. 
+
+34:32 | Ward
+Okay. Cool. Yeah. So work very similar. So we allow you to connect with grafana cloud. It will look when you log in, to understand if that person is a member of a certain group and based on that will associate you with the relevant team you. 
+
+34:48 | David
+Support skim pushing. Yeah. 
+
+34:51 | Ward
+We also support skim, so you can out do out of band provisioning that's especially for like an IRM cases. Is that important? Because you don't want people to log in of the requirement to have people log in to be able to configure their schedule. Otherwise the migration is always going to be very painful. Yeah, that's a great point there. Cool. So when people then are onboarded, they get of course get notified. So this is the typical UX. You can completely customize by the way how this looks, you can attach runbooks. You can do deep links into the platform to allow them to directly go to that service or maybe a dedicated page to the IRM that's all up to you. We give you a full timeline of what is happening with the specific alerts. And then from here on, we can also go into that incident flow where I can declare an incident. It will take over some of the labels that are relevant. It will also link back to the alert group. There might be some required custom fields depending on how important that is for your organization. So you could also notice in the insights that you can report on those custom labels. So that allows you to keep track on whether a report is not completed. So in this case, it's not started. And we also allow you to configure some of those key things as, okay, if this is a security incident, we might want to keep it private. So this will limit the visibility. There will be automatically a slack channel created and all kinds of other actions here. So here, you can see this is the slack channel that is created. So I'm now declaring an incident and just to give you kind of an idea on how that looks. Then on the slack slide side is, let me see slack. Where is it? Let me go here to the right environment… there. Cool. So we, I'm actually already invited here. So there's two main channels where all the alerts for a certain team and all the incidents for a certain team are posted. And we can actually see here that there's automatically incident created for the E commerce, low pass rate. So that's the incident that I had created. There's a bunch of workflow that I can do just from here where I can say, okay, I want to make sure that I'm the commander or somebody else is the commander here. So I can make myself the commander, those roles. They might be called differently in your organization. You can totally do that. And then from there on, I can do all the chatting as you probably already do today with your existing solution one. Question that you had last time is like, well, it's a bit cumbersome. If I want to remember a thing. Remember… then I need to indeed instrument it with a robot and then, or another icon and then it gets added to my timeline. So this is exactly how that works. Also in grafana, let me go back here to the timeline. So you can see that we also on the timeline, everything gets reflected and this is then want to remember is automatically kept. We're actually going to do that automatically in the future. So that's something that we're going to launch during the opscon… timeline. And I believe that's the end of October where we automatically in how do you say that? Collect all the conversation that is happening on slack? So that you don't need to manually attack that because that's, what. 
+
+38:48 | Mark
+I found was, when I was looking at the same feature in datadog. Well, I guess a year ago, now, the discussion then was around automation. So it was about automating the population of the timeline. Yeah. So that you said, you know, you know, as someone that had to go there and pull out all the pertinent salient points from the timeline, digest it reinvent it, recraft it and put it into the time. You know, the truth was being able to just tag specific entries that go into the timeline was important. That then became evident as being, I think a fundamental driver for then the AI features. Because everything I'm seeing certainly in the datadog toolset, you know, the AI features then drive off those timelines and that data to then enrich make proposed root cause statements, highlight tasks that have been captured, highlight tasks that haven't been captured. And a lot of what I'm doing today is, you know, in managing some of the instances driven by the ability to just get that stuff in a timeline. So having that auto, I mean, you can do it in datadog, but I've never seen it work completely. So, yeah, it would certainly be a feature I'd be interested in although there was always a worry that you end up replicating your slack channels, in your IRM tool. But if it drives and powers the, you know, the accuracy of… you need to record on an incident record and then, you know, determine what needs to be done or has been done that I think is powerful. It's certainly something that would be interesting. Yeah. 
+
+40:35 | Ward
+Exactly. And one of the things that we do allow you to do is we like the grafana app is not only for… like interacting with incidents, it's also the, so the ask assistant button, I did need to connect it here. So you do have a bot here available and that allows you to ask it. If you say grafana, please summarize the incident so far. So these are all kinds of questions and then it will just leverage the AI for that. So there's a lot of workflow possibilities. 
+
+41:15 | Mark
+Yeah, that's good. That's good. Yeah. 
+
+41:21 | Ward
+Cool. Yeah. And then like I mentioned, everything gets reflected on the timeline… here. And yeah, you can automatically do status updates if you want, which can get broadcasted. There can be an automatically doc created. So, one thing that you did ask around the post incident report creation. So we do allow you to, when you say, okay, this is resolved. We do… allow you to lever. I'm not sure. That button is not here for my demo environment to generate based on AI reports on what is happening. We also allow you to create a report in Google docs as an example that will use kind of templating language, allowing you to auto populate it. And another thing that we allow you to do is, of course, you can copy the activity log and use that and then put that in… the assistant to create a PR for. 
+
+42:32 | Mark
+that, yeah, you can link to other documentation tools. And the only reason I say that is I know our ciso is not a fan of Google. 
+
+42:42 | Ward
+Yeah, that depends on the integration there. I see your hands up, Charlie or at least one hand that was. 
+
+42:51 | Charlie
+More for a, for an admin piece, right? I'm conscious, we're sort of kind of coming to the end of. 
+
+42:55 | Ward
+The water. Oh, yeah. Yeah. It's already almost. Yeah. 
+
+42:58 | Charlie
+Yeah, they do fly by. I will, if that's okay. It usually sort of takes five, six, seven minutes to do to wrap up question number one mark. 
+
+43:09 | Mark
+Has this? 
+
+43:11 | Charlie
+Slash, is this beginning to cover what you need to see? And I guess the follow up question to that is what haven't, you seen? And shall we get some time to dig into that? 
+
+43:25 | Mark
+So, yeah, I think it's clear that I think things have moved on since I think an earlier demo that I'd seen, I can see the features there, the automations and the AI features. I think enriching this a lot more. I think, I mean, I could sit here and probe and ask questions all day about it to sort of see what's in the toy jar as it were. But I think I've seen enough to feel there's certainly I think sufficient features for us to consider we haven't yet. I mean, I'd like to see how you know, the post mortem generation works but that's something that, you know, maybe I could play around with if I could get hold of. I don't know like a demo environment myself. I'd be interested to see how I could, maybe I could even sort of have a play and I don't know if that's possible. And I guess that's in terms of next steps. In that regard. I think… it's for it to really be pressure tested, probably look at as part of a wider POC, how it hooks into the work that they're doing with the engineering because all of this ultimately is going to hook off of the work they're doing there. It feels very alert driven here rather than I've got a very incident sort of start point view on it. But the flow here and I think where we're going as well is the accuracy of our observability and the alerts and your alert groups that come off the back of, that would drive how we manage the incidents. And to be fair, the incident handling becomes it's more event handling. It's more alert handling. And I think that's going to be… you know, the bread and butter of how we use it. There will be other use cases for incident management like tracking vendor incidents that have caused us problems and things like that as well. But those are slightly separate sort of use cases. So I think that's the next step probably is to then see against I haven't checked in with Steve and his team as to whether they're planning to do more structured POC or not. 
+
+45:41 | Charlie
+Cool. That makes sense. I think one of the next things we are going to do in the wider POC is have a bit of a kickoff. And within that, we could probably maybe… you and someone like ward maybe in a room and workshop it a little bit. So you can, I feel like that is a rabbit hole you do want to spend a bit of time in. So if you want to kind of have a little bit of a workshop? 
+
+46:03 | Mark
+Yeah. I think a lot of the things that would underpin how IRM worked would have been discussed and then implemented as part of the observability. So the service mapping and the team structures and the escalation paths? 
+
+46:18 | Nandini
+And all. 
+
+46:19 | Mark
+of that will sit with the observability IRM is a possible outcome from that. And it feels as though that's a lighter piece in itself. But from what I've seen, I think it covers most things. The only thing I haven't seen there is auto generated post mortem, but, you know, I'm sure we can cover that. 
+
+46:38 | Charlie
+That makes sense. What I will do, I've noted to have another… kind of workshop with you and your team, maybe just more of a half an hour because I think we've organised with Sean to do a bit of a kickoff for the pov as well. I'm going to come back on site and see you guys. So cool. That makes sense in terms of next steps for me, go and take an outer step. We're going to catch up or speak with the pov team. That's kind of going to be dedicated to this. I just wanted to make sure that a, you're being I guess involved where you need to be. But B, also seeing everything you need to see from your answer there, I feel like it keeps us on the same track, but it might make sense to maybe catch up before we come back on site. Say, look, this is what we've spoken about with the POC team. Does this align with what you need to see and maybe possibly even get another session like this with ward as well where you can POC and prod it? 
+
+47:27 | Mark
+Yeah. The reality is from an incident management point of view, I don't see us doing anything here with grafana or IRM unless we're doing it with the observability platform. So. 
+
+47:35 | Charlie
+Makes sense. Makes total sense. All right. Cool. With that being said, I'm happy with that, David Nadine, I appreciate your off camera unless there's anything you had to add as little as it sounds, I can give you guys two minutes back. 
+
+47:52 | Mark
+Nothing from our side? 
+
+47:54 | Nandini
+Yeah, nothing. So I was just looking into the security side. So, yeah, if you could, I mean, let me know. So is there any like security pack kind of thing coming with grafana? I would like to know that's it. 
+
+48:17 | Mark
+So more around the vulnerability detection, yeah. 
+
+48:20 | Nandini
+Vulnerability management. Yeah. So that's what? Yeah. 
+
+48:25 | Ward
+Let me indeed ask around. So that is part of the grafana cloud that I'm less focused on. So I'll ask the right people and come back with some answers for that. And. 
+
+48:36 | Mark
+Again, just the context there is, whilst I use the case management, the work management in datadog, to provide a link between incident tasks and engineering Jira's then dini does the same. From a vulnerability point of view. She uses the same work item tracking, to track vulnerabilities that have been identified, creates them as work items in datadog. And then they have a correlating Jira ticket and there's a reason for doing that segregation is that now dini needs as I do on the incidents. Now, dini needs a view on the vulnerabilities from our own perspective, but the actual work's being tracked against engineering backlogs in Jira, and if we did it in our own Jira and try to manage that, with the teams coming into our Jira projects, nothing would get done because it won't be sitting in their backlogs, it won't be sitting in their sprint planning. It needs to happen in their own backlogs. So that's the premise it's the same sort of use. 
+
+49:42 | Ward
+Case in that. 
+
+49:43 | Mark
+Regard, yeah, that. 
+
+49:45 | Ward
+Makes a lot of sense. Like I mentioned, I do know that we have this for ourselves internally, but I don't know if we have that available for customers or that we have plans to open that up. So that's what I'm going to check, but it makes a lot of sense what you're mentioning? 
+
+49:59 | Nandini
+Yeah. And the other thing is like, I mean, we are using datadog, sensitive data scanner available in datadog. It's like identifying any PII or any secrets passed in our logs. So that feature we are using in datadog. So just want to know like, yeah. 
+
+50:20 | Ward
+We can already do that by the way through kind of watchers that allow you to do that. So with AI, we can definitely do that. There is also, I don't know like the vulnerability pattern scanners that is based on known exploits, it will actually look at your logs for those. But like if it's some like simple PII scans that we were able to do today, like that's not a problem at all. Yeah. 
+
+50:46 | Nandini
+Yeah, that's what? Yeah, that is one thing we are expecting. Yeah, obviously in the logs, we would like, we should know like whether we are passing any sensitive data in logs in production. Yeah. 
+
+50:59 | Ward
+Yeah, yeah, exactly. Exactly. So there's various ways that we can already help you there, so. 
+
+51:03 | Mark
+I guess four things that got called out there, Charlie. And then was one on the incident side was post mortem generation. The thing for both me and then dini was, I guess the task management tracking which links to the incident, post mortems on my side. But the vulnerability management on dini's side, then there's the vulnerability detection and integration into that. And then the last piece was the security and PII… scanning. Cool. 
+
+51:30 | Charlie
+All right. I'll note that down ward and I will go back and work that out. There was a few areas that we worked out with Steve and Sean that aren't actually going to translate just due to the fact that datadog has the tool. Grafana. Doesn't. I can just work out what those are specifically if they are here. Okay? We can work that out and get back to you via email or slack. Other than that, I am happy with this catch up with other guys soon and we'll possibly get back on site with you guys, mark, David and Nandini back end midway through this month. So I'll, keep you in touch. 
+
+52:10 | Mark
+Yeah, probably avoid I'm just thinking where are we? Beginning of October? Yeah. As we start to eat into November, it's going to get messy for us. It gets, it gets, very busy across the business. So just bear that in mind. 
+
+52:22 | Charlie
+Cool. Okay. Perfect. All right. Thank you for the time. I'll there's a little follow up in the slack channel as well. 
+
+52:29 | Ward
+Thank you. Cheers, fellas. Bye bye. 

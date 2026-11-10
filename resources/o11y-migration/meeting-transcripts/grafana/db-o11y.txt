@@ -1,0 +1,234 @@
+Zilch & Grafana - Database Observability
+
+undefined undefined
+Recorded on Nov 9, 2026 via , 26m
+
+
+
+Participants
+
+Grafana
+Charlie Lutterloch, Commercial Account Executive, Acquisition
+Jeremy Heller, Product Manager
+Davies Oludare, Senior Solutions Engineer
+Cristian Greco, Principal Software Engineer
+
+Zilch
+Ramsay
+Nick Gilbert, DevOps Engineer
+Philip Stevenson, Senior DevOps Engineer
+Nicklas Chapman, Engineering Manager
+Lukasz Kowalczyk, Senior DevOps Engineer
+Piotr Niebylski, Lead DevOps Engineer
+Vitalie Rusu, Lead Software Engineer
+
+
+
+Transcript
+
+0:00 | Davies
+you, Charlie. Yeah. Just for a quick recap, I guess before we pass on to Jeremy, Essentially today, your main database is a large SQL server on RTS carries about 90 percent of your DB traffic. And usually when you have incidents, you start there, you do a triage, and then go from there. Right At the moment you're calling from the calling service into database metrics. You sort queries by max duration on the load and then decide what to kill or what to keep. Based on what you see in Postgres DBM. The goal today is really to show you a couple of things, you know, what does that look like? You know, in Grafana in one place from service to query? But then at the same time, we'll give you an overview of Postgres database observability which is EGA today. In RDS. Also included, Aurora is also included. And then at the same time, we'll also show you what's possible with SQL Server which is serviced as slightly newer on the Grafana side. But on that note, I'll pass on to Jeremy. Yeah, please feel free to take over. 
+
+1:06 | Jeremy
+Yeah, sure. Thanks, Davey. So, hi, everyone. I'm Jeremy, I'm the product manager on a database, the reliability team here at Grafana. I'm actually joined by Christian Greco. He's our engineering lead on this quad. So I see he joined as well. And yeah, so I want to share with the team here the current product as well as new features we have in our development environment right now. Before I do that, I just want to just check in What current tools are you using at Zilch to monitor your SQL servers, monitor Postgres. What are you currently doing? What's it currently like? 
+
+1:41 | Nick
+It's currently pretty much just a data collection that is then hooked up to each of the databases… that we have a collector for the SQL Server in RDS. Then we have a collector for the Aurora Postgres. 
+
+2:03 | Jeremy
+Okay. And how many Then? 
+
+2:04 | Nick
+We're using the, Yeah, Sorry, go on. 
+
+2:06 | Jeremy
+No, go for it. Nick. So, yeah. 
+
+2:11 | Nick
+And then we're just running that all through Datadog and the database. Okay? That's the page. 
+
+2:19 | Jeremy
+Okay. So most of your like query analysis and optimization runs through Datadog, index maintenance, that kind of thing. 
+
+2:28 | Ramsay
+No. So that's how we track incidents. So, My team is directly responsible for indexing and managing the databases. So, Okay. Not, Nick's fault that he doesn't know it's just, he's not necessarily involved in the process. So we do have some long term statistics that we pull from Microsoft SQL Server itself. So we interrogate its internal performance monitors, do things like track index age and so on and so forth. Based on that, we have a DBA who From a contractor which dedicates a bunch of time to analyzing that. We also run Aws's performance monitor. So we have their performance insights querying against it. So that's where a lot of our index creation and optimization is coming from. 
+
+3:19 | Jeremy
+Microsoft. 
+
+3:21 | Ramsay
+Because we pay for enterprise, we've got access to their best practice analyzer that runs constantly on the cluster. And so a lot of the queries kick out of that as to maintenance… Where we primarily use Datadog is in the event of an outage or an incident. So long wait queries are one of our big ones. And we, It's not uncommon when we get really busy to get like a lock chain just due to the fact that Microsoft SQL Server is really bad with this. So you end up get these Daisy chain worth of locks So you can't really trace down what was the instantiating query. You've just got to like ride the wave and hope that nothing Kind of locks for too long With that. If we do see it, first thing we generally do is disable the Datadog monitoring agent because it can be quite noisy with regards to lock because it is obviously the parent of a lot of them. So we'll then do that to kind of clear things down. We do have as Nick said, the Datadog agent That's where our primary Datadog source is. But we do also have the Microsoft SQL. As for Aurora that is 100 percent through Datadog. We don't touch the Postgres Aurora directly That we just let Datadog do its thing. 
+
+4:37 | Jeremy
+Okay. Makes a lot of sense For like the deadlocks or I guess root blocking identification. Do you have any tools I don't know, like from Redgate or anything that you use? Or do you mostly kind of do ad hoc queries? Basically, how do you resolve those? 
+
+4:51 | Ramsay
+So as a result, using time experience, we don't run any of the specific tooling against it. We've looked at a few of them Deadlocks are monitored out of Datadog. So they trigger the alerts. If there are any persistent deadlocks, If there are any serious deadlocks, one or two people will get CloudWatch alerts directly. Yeah. Now, we'd have to be really broken for that to happen. But that covers if Datadog is down. 
+
+5:16 | Jeremy
+Okay. Makes sense. And do you ever run into like overhead effect? You mentioned turning off Datadog collector from time to time. 
+
+5:22 | Ramsay
+Yeah. So we have seen it specifically on our read replicas. We've seen it once or twice where our ITAM team are running a whole bunch of queries And they're basically lagging out the read replica. And one of the main queries that's lagging it out because they're just doing so many queries is the Datadog monitoring. So we will then pause the collector on the read replica. Let it all catch up. Let them read replicas get back up into sync. So they're not too far drifted, resume the collector and carry on. 
+
+5:55 | Jeremy
+Okay, Cool. And I think just one last question before I do a demo, is Your OpenTelemetry stance when you're moving to Grafana, are you running all on the OTEL collector? Do you have any requirements for OpenTelemetry? Are you running Alloy? Like, how should I understand your telemetry pipeline on Grafana? 
+
+6:16 | Nick
+We are currently exploring options there. So we're not necessarily opposed to Alloy or a different collector. We're looking at the native standard OTEL and we're considering Alloy as well. Cool. 
+
+6:32 | Ramsay
+Cool. 
+
+6:33 | Jeremy
+All right. Well, I'm going to go ahead and show the latest that we have in the product including SQL Server, what we have primarily from the query store. But as I go, feel free to just ask questions. I want this just to be interactive And I'd love like your feedback as well with what I'm going to share. So, yeah, let's just take a look. All right. Let me know. Can you see my screen? Yep? All right. So this is our database observability product. This is based on data we get from Alloy. So you can either install. If you're managing like a self managed database, you can install Alloy on the host to also get host metrics or you can have Alloy just running like on a virtual machine or Kubernetes off the database. And then like remotely query it's like pgstat statements, pgstat activity or the query store from SQL Server, Christian's also leading our SQL Server implementation on the call here. So if we want to get deeper into the nuts and bolts of how that works, we can also talk about that in the call. But our idea with the product is to try to tell you at a first glance what's happening when you've onboarded a bunch of databases with Grafana, Where do you need to direct your attention? So at the top here, we're going to have recommendations. This is not in production yet. We're working to launch our first iteration of recommendations. The first ones are going to be around query latency degradation and query spikes. So query latency degradation shows up. If we've seen over seven days that you have queries that are regressing. So the execution is getting longer and longer. So we can take a look at that in a second. What I also want to show you is we want to give you a high level view across your fleet. So if you have a mixed fleet of SQL Server and Postgres and MySQL, we can show you all of your instances here. And on this overview page, we're just going to show you your top five. We can also talk about that by different categories like error rates on queries, average latency or things like wait time. So if we want to look at wait time, we can come in here and open this up and look at the specific server. And we can see like there's specific queries here that are waiting an awful lot over the, I guess last seven days, Let's make this like an hour So you can see. So this is data. I believe this is ops data, or maybe this is Dev data. We have a couple different data sources that we run against, But you can see here, like the specific queries that are taking a long time. We also have like connection saturation, and, yeah, connection saturation, and Postgres and MySQL. Yeah. So this is like a starting point. You can also save a view here. Sorry. 
+
+9:26 | Ramsay
+I'm going to jump in here. How are you marking that? That is connection saturation? 
+
+9:31 | Jeremy
+How are you marking this connection? This is the Like on Postgres. This is the ratio between active connections and max connections on the server. Yeah. And we don't have this for SQL Server and it's not really a relevant as far as I understand it. It's not really a relevant concern on SQL Server, but it is definitely on Postgres and MySQL. Yeah, that's why. 
+
+9:55 | Ramsay
+I was sort of asking because if you were going to tell me you can do that in MS SQL, I'd be like, right, where do we sign? Because obviously Microsoft SQL deals with database connections differently. 
+
+10:05 | Jeremy
+Yep. Yeah. So if we need extra features around SQL Server and connection management, we can definitely talk about that, but it's not in the product today. So you can save a view here. So if you have a specific, my cloud account or region or like a label set you have set in Alloy that you care about, I can actually go ahead and group this, say by cluster. If I had a cluster label… Then I'll only see the certain instances I care about here. And the other thing that I can do is take a look at everything that I have onboarded. You can see all the stats. And I can also group these. So if we have like a cluster label, I can group these by cluster. I think in this case, these are the Kubernetes clusters. But you can see like what's running on this connecting to this GCP cluster that we have, All right. So that's the high level starting point. But what I also want to show you is if I click on one of these, and before I do that, we're gonna talk about SQL server. So before I click on this instance, I also want to show you a new panel that we added where you can see this is on Azure. I think this is managed instance. So on the first level, you can see metrics that we're pulling in from SQL Server, Christian recently added this and I think it's pretty cool. So you can see a lot of the internal processes and you can also see configuration state. So if the in use value is drifting from what's configured, so it might change after a database restart. So you can see that here. And we also pull in if you're integrated with our cloud provider integration, you can also see the live metrics coming in from like from this is from managed instance on Azure, but you can see the same thing from Aws. If I click the Aws, we'll see the RDS metrics coming in from RDS. So you get the SQL server metrics plus the raw cloud infrastructure. Yeah. So if no questions, I will just jump in and click on one of these instances and we can dive a little bit deeper into the specific queries running. All right… instance. So this is a view of your performance on a specific instance. This used to be our landing page for database observability, where you see all the queries across all your instances. But we're scoping this down to just be based on a single instance. So you can see rate error and duration of all the transactions, as well as the wait events over time. And you can also see instead. Of these buckets for wait events, you can also see them broken down by the exact types which may be more or less understandable depending on your point of view. But you can see the wait events running. And I think the most interesting thing is the specific queries that are running. So these are the normalized queries we get out of the database. And you can set up like the scrape intervals on Alloway for how frequently you want to collect these, collect exact samples as well as the table information and wait events and so on. But you can sort this table by a whole bunch of different metrics. So you can sort it by wait time. You could sort it by execution duration and see what are the slowest queries. But let's take a look at like this select query is pretty interesting. A lot of lock wait and let's take a look. So we have the a… page to actually look at the query itself. So you can see this is the normalized text we get from the database. You can also take a look at the instance is missing. Let's refresh this. So this is a in development stack right now is our development environment. So it could be a few. So the instance is missing from this one. But again, this is the rate error iteration. Let me just be clear that SQL Server is going to be in private preview coming up around the sixteenth of November or so with the next Alloy launch. And then we're going to be onboarding customers and waves for this. So we'll need the newest Alloy version 122, The support SQL Server, Postgres and MySQL are both GA, and have been GA since April. So, yeah, SQL Server is brand new. You can also take a look at the exact executions. So query executions that have been sampled via Alloy. This is over the last hour And we also have at least on Postgres and MySQL a way to link via like a trace parent ID. This is this project called SQL Commenter, You can link back to specific traces that include this query execution. We haven't I don't think Christian, we've looked at that yet. For SQL Server, how to do trace linkages? Could be wrong? No, not at the moment. No. Yeah. So it's still a work in progress for SQL Server. We do have that support for Postgres. We pull in the wait events. We have not built in the blocking chain view yet. That's something that we have on our roadmap… to add in. It's. Like a blocking diagnosis experience here. But we do capture the wait events. We also capture. The tables involved with the query execution… They can see where index is applied. You can see foreign keys if there are any, and so on. And then we also capture explain plans. So this explain plan is just a single node. Yeah, but we capture explain plans as well. And I think the last cool thing is we have the AI assistant in here. So if you want to, Basically, if you've got an alert on this specific query, we could ask the assistant to say optimize it. And what it can do is it can give you a preliminary assessment on what's going on. It can take a look at the explained plan and the table information, and wait events, and so on as well as the metrics and propose either rewrites like redoing joins. It can suggest adding indexes. And what I really like is you can also share, You can share this… assessment like internally with your teams. So if you're like on the front line dealing with escalations, like just regular OnCall support, you can get an analysis here. You can do that kind of a triage, and then you can send off this analysis to the database team, for example, to kind of kick off an actual index lifecycle work. Yeah. So this is what we currently got in the product. I think I didn't show you the recommendations which I could take a peek at, But if you guys have any questions before I show you the concept of recommendations, it's still in development? 
+
+17:08 | Ramsay
+No, that looks good. What's the timeline on traceability for MS SQL? 
+
+17:14 | Jeremy
+Linking back to traces from the application. Yeah, Going to be a couple quarters Ramsey, Cool. Going to be a couple quarters. Yep… in the chat. All right. So last thing is recommendations. So this is going to be the starting point of our app in the future. Like we're going to have recommendations where if we detect that we think an index is missing or we think that there's an index that's not being used appropriately, we want to tell you about it. We might not necessarily alert you on all these things because they're not really critical, but we want to just make you aware that there might be some indexes that are being unused, hogging resources. And the first one we're starting with is query latency. So I know there's one firing right now. There's one active one. But I can also take a look and see if there's closed recommendations actually that aren't in Let's see. Let's take a look over the last like seven days in here. So we should see, yeah, there's a bunch of these historical recommendations that fired. So we had connections being refused at one point. And then we had a bunch of query latency and so configurations and spikes. So if I take a look at this active one, what you see is okay. So we can definitely see there's just this pattern Of increasing latency. And then it drops down. Not sure why. So if I am again triaging this, I can actually go ahead here and do like find the root cause and we can see what the AI comes up with. Just keep in mind this is very much a beta right now. We are working on integrating this potentially with the AI investigations feature that the AI team is working on. And we're doing a couple of weeks about innovation starting today into the middle of December, middle of no, yeah, middle of December where we are going to be thinking about how this is done in a very modern way kind of recommendations. So stay tuned for that. But we really want to get to the root cause as quickly as possible for things like this. So, yeah, I guess if you have any thoughts or general Feedback so far on what you've seen or anything you'd like to see in addition Things you think might be missing. Yeah. 
+
+19:45 | Ramsay
+No, it looks good. I'll say this is further than I thought you guys were, which is nice to see. Yeah. 
+
+19:54 | Davies
+Quick question, Ramzi. You asked about the SQL server DB traceability? Yeah. Is that a deal breaker for you, mate? Or? 
+
+20:04 | Ramsay
+Might not be for me. I think a couple of our application support teams are going to miss it because I have seen in root cause analysis that Datadog is very good at being like. This is why your app is slow. It is the database and this is the query. So, I think if they lost that, there might be a little bit of hand holding and, you know, Understood, But it's yeah… With the multi node clusters, how are you guys managing? Like the simple one is disk space specifically in Microsoft SQL Server? Can you show me what you guys are pulling for those? 
+
+20:45 | Jeremy
+Let's see. So… Let's take a look at the metrics we got once it loads here. All right. So on Aws, we have, this is from SQL Server itself. OK. So we do have storage capacity on here, disk, operation, disk latency, and then we also have on the cloud infrastructure side. So, if you want to pull this in from Aws, We have let's see if we have disk. I don't think we're getting disk from Aws, what I can see. 
+
+21:21 | Ramsay
+Yeah. So it's only allocated, not underpinned, OK. 
+
+21:26 | Nick
+Do. 
+
+21:26 | Philip
+you have also the query level metrics for storage and things? Can we do that in here? If we can publish… them? 
+
+21:38 | Jeremy
+Query level metrics for storage? 
+
+21:42 | Cristian
+Do you mean like for each single query, how many blocks are being read or written or stuff? 
+
+21:48 | Nick
+Like that? Yeah. 
+
+21:48 | Philip
+Yeah, things like that. Things like I will query and stuff. 
+
+21:52 | Cristian
+Not yet. At the moment. We only show, yeah, duration, error and rate, But I think it should be easy to pull. 
+
+22:01 | Jeremy
+Cool. Yeah, And fill out the kind of feedback we're looking for during the private preview that we're about to launch And it's just making sure we dial this in for SQL Server specifically. 
+
+22:10 | Philip
+Yeah. I'm trying to think of some of the things that I would look at. 
+
+22:13 | Jeremy
+Normally, when. 
+
+22:15 | Philip
+I'm kind of debugging a query. 
+
+22:18 | Nick
+Yeah. Do we have stuff like, and this is more general DB, but do we have stuff like storage pressure and Io pressure metrics like that? I didn't see them in the… Can you? 
+
+22:35 | Cristian
+Open again the drawer, Jeremy? 
+
+22:37 | Nick
+Yeah, sure. Yeah, it might have been there. I might have just missed it. 
+
+22:40 | Cristian
+Yeah, there should be storage information here. This is all coming from the, yeah, from the query store internals? 
+
+22:50 | Jeremy
+Yeah. 
+
+22:51 | Nick
+You've got throughput there. Yes? 
+
+22:56 | Cristian
+OK. This is like aggregated it's not per query though. 
+
+23:00 | Nick
+Yeah, yeah. 
+
+23:02 | Cristian
+And then in the other tab in the cloud provider, there might be some missing metrics here, but this is all configurable So you can choose which metrics you want to import from CloudWatch in this case or from the cloud provider in general. 
+
+23:18 | Nick
+A nice one would be to be able to see the max theoretical throughput of the disk that we've got and how much of that we're using? Okay? 
+
+23:28 | Cristian
+You mean depending on the instance type, I guess you get a. 
+
+23:31 | Nick
+We attach volumes sometimes. So sometimes we have provision dial, which is useful to be able to see in the same view. Okay? 
+
+23:45 | Jeremy
+That makes sense. 
+
+23:50 | Jeremy
+Right. Anything on the Postgres side, I guess feature wise that you guys think you specifically need or challenges you've run into on Postgres that are especially, I don't know critical. 
+
+24:11 | Nick
+No, I don't think we've. 
+
+24:13 | Philip
+Yeah, there's not much from my side. I think it's generally better supported, right? So we don't have as many issues or concerns around that. Yeah. 
+
+24:25 | Nick
+OK. I guess it's been much more solid. It might be a size thing, but we haven't run into many issues. 
+
+24:30 | Jeremy
+OK. Most of the attention is on SQL Server and getting that healthy. 
+
+24:37 | Charlie
+Cool. 
+
+24:42 | Charlie
+Look, I'm happy we're Jeremy unless you have anything else quickly, I'm more than happy to sort of call it there. As I said, the goal here is to at least is to get a good introduction to the product and the team. So, Jeremy from my side as well, thank you for spending the time And Zilch team. Thank you for jumping on As always. You were very inquisitive and I enjoy it. So, thank you. We have a PII call for today as well. I will share the recording of this And please, if you have any further questions, fire them in the Slack channel, We'll try and get them sort of answered to the best of our ability, But thank you again. 
+
+25:20 | Nicklas
+One quick question. If you don't mind, Charlie before you go All good. I think you said you'd also share the recording from Friday's call. I don't know if you sent that yet, or are we still expecting that? 
+
+25:31 | Charlie
+Yeah. So I shared it all in the Zilch Grafana and the Grafana Cloud POC Slack channels. So there's two of them. I've shared them in both of them. 
+
+25:40 | Nicklas
+That's fine. I haven't looked yet, but I will grab it from there. Thank you. 
+
+25:45 | Charlie
+All good, Perfect. David. I can see you're typing in that, So, yeah, Nicholas, I can send it over directly but they're all in there. Mine. 
+
+25:52 | Ramsay
+Is just to ask for the installation documents for the OTEL and to be included in the preview as part of our POC, Not being able to monitor Microsoft SQL is going to be a deal breaker. 
+
+26:05 | Charlie
+OK, Cool. We'll get back to you on that Cool. Thank you team. See you soon. 
+
+26:12 | Jeremy
+Cheers. 
+
+26:12 | Cristian
+Thank you. Bye. 

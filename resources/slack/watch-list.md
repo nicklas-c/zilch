@@ -26,3 +26,4 @@
 | #cmp-engineering | C0A9H4JPWP8 |
 | #future-search-architecture | C0BKMN8S64R |
 | #grafana-poc-internal | C0C9ZHJAFB2 |
+| #temp-tech-blackfriday-prep | C07USAH3PDL |
