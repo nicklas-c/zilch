@@ -27,3 +27,4 @@
 | #future-search-architecture | C0BKMN8S64R |
 | #grafana-poc-internal | C0C9ZHJAFB2 |
 | #temp-tech-blackfriday-prep | C07USAH3PDL |
+| #recruitment-engineering-devops | C0CHABFQJPN |

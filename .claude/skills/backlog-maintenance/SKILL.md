@@ -37,6 +37,9 @@ Maintain the Merchant team's Jira backlog in a healthy, well-structured state. T
 | In Refinement | `filter = ".Merchant Workflow: In Refinement"` |
 | Ready for Planning | `filter = ".Merchant Workflow: Ready for Planning"` |
 | Planned | `filter = ".Merchant Workflow: Planned"` |
+
+**Hygiene filters are scoped to post-triage tickets** — they catch field gaps on tickets that have already moved out of Created. They do not cover tickets still in Created, because those haven't been triaged yet and aren't expected to have all fields populated. When assessing tickets in Created (triage mode), apply the Field Requirements by State gates directly to the ticket data. Never use a hygiene filter's inclusion or exclusion of a ticket as evidence of compliance.
+
 | Hygiene: Defects missing priority | `filter = ".Merchant Hygiene: Defects Missing Priority"` |
 | Hygiene: Tech Debt missing priority | `filter = ".Merchant Hygiene: Tech Debt Missing Priority"` |
 | Hygiene: Epics missing owner | `filter = ".Merchant Hygiene: Epics Missing Owner"` |
